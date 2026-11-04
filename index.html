@@ -1,0 +1,1882 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<title>Garimpo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: poço de garimpo à esquerda (régua de profundidade por camadas de pedra), bancada de jogo à direita; no celular o poço vira faixa horizontal no topo. Visual único escuro, à luz de lamparina. */
+:root {
+  --rock: #1c1410;
+  --rock-2: #2a1e17;
+  --rock-3: #3a2a20;
+  --paper: #f1e4cc;
+  --muted: #b8a28b;
+  --lamp: #f2b84b;
+  --lamp-ink: #2a1a08;
+  --danger: #e07a5f;
+  --line: #6b5848;
+  --t1: #8f8274; --t2: #d9d2c3; --t3: #a77fe0; --t4: #e6a03b; --t5: #34d1c3;
+  --f-display: "Alfa Slab One", "Rockwell", "Georgia", serif;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+[hidden] { display: none !important; }
+body {
+  background: var(--rock);
+  color: var(--paper);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--rock); }
+
+.app {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+  gap: 32px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-block: 28px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  box-sizing: border-box;
+}
+
+/* ---------- Poço ---------- */
+.shaft-wrap { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px); align-self: start; display: grid; gap: 10px; }
+.depth-read { font-family: var(--f-mono); font-size: 13px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.depth-read b { display: block; font-family: var(--f-display); font-weight: 400; font-size: 34px; line-height: 1; color: var(--lamp); letter-spacing: 0; text-transform: none; font-variant-numeric: tabular-nums; }
+.shaft { position: relative; display: flex; flex-direction: column; height: min(72vh, 620px); border-radius: 4px; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(0,0,0,.35); }
+.band { flex: 1; position: relative; padding: 6px 8px; font-size: 11px; line-height: 1.2; font-weight: 700; letter-spacing: .03em; min-height: 0; }
+.band span { opacity: .92; }
+.band small { display: block; font-family: var(--f-mono); font-weight: 500; font-size: 10px; opacity: .75; }
+.band.reached::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 2px var(--lamp); }
+.marker {
+  position: absolute; left: 0; right: 0; height: 0; top: calc(var(--p, 0) * 100%);
+  transition: top .9s cubic-bezier(.3,.7,.2,1), left .9s cubic-bezier(.3,.7,.2,1);
+  pointer-events: none;
+}
+.marker::before { content: ""; position: absolute; left: -4px; right: -4px; top: -1px; height: 2px; background: var(--lamp); box-shadow: 0 0 12px 3px rgba(242,184,75,.55); }
+.marker::after { content: ""; position: absolute; right: -9px; top: -7px; border: 7px solid transparent; border-right-color: var(--lamp); }
+
+/* ---------- Bancada ---------- */
+main { min-width: 0; display: grid; align-content: start; gap: 24px; }
+.brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.brand h1 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(40px, 7vw, 64px); line-height: .95; color: var(--lamp); letter-spacing: .01em; text-wrap: balance; }
+.brand p { margin: 0; color: var(--muted); font-family: var(--f-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+
+.panel { background: var(--rock-2); border-radius: 6px; padding: 24px; display: grid; gap: 18px; min-width: 0; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+h2 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(26px, 4.4vw, 36px); line-height: 1.1; text-wrap: balance; }
+h3 { margin: 0; font-size: 15px; letter-spacing: .02em; }
+p { margin: 0; max-width: 62ch; }
+.rules { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.rules li { display: grid; grid-template-columns: 26px 1fr; gap: 8px; align-items: baseline; }
+.rules li b { font-family: var(--f-mono); color: var(--lamp); font-size: 13px; }
+
+.tiers { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 8px; border-radius: 999px; background: var(--rock-3); font-size: 13px; font-weight: 700; white-space: nowrap; }
+.chip i { width: 10px; height: 10px; border-radius: 2px; transform: rotate(45deg); background: var(--c); }
+.chip em { font-style: normal; font-family: var(--f-mono); font-weight: 500; color: var(--muted); font-size: 12px; }
+
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.mode { background: var(--rock-3); border-radius: 6px; padding: 18px; display: grid; gap: 12px; align-content: space-between; }
+.mode .best { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+button, .btn {
+  font: 700 16px/1 var(--f-body); cursor: pointer; border: 0; border-radius: 6px;
+  padding: 13px 18px; background: var(--lamp); color: var(--lamp-ink);
+  transition: transform .08s ease, filter .15s ease;
+}
+button:hover { filter: brightness(1.08); }
+button:active { transform: translateY(1px); }
+button.ghost { background: transparent; color: var(--paper); box-shadow: inset 0 0 0 1.5px var(--line); }
+button.ghost:hover { box-shadow: inset 0 0 0 1.5px var(--muted); }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--t5); outline-offset: 2px; }
+button:disabled { opacity: .5; cursor: default; }
+
+input[type="text"], input[type="number"] {
+  font: 400 18px/1.2 var(--f-body); color: var(--paper); background: var(--rock);
+  border: 1.5px solid var(--rock-3); border-radius: 6px; padding: 12px 14px; min-width: 0;
+}
+input[type="number"] { width: 6.5em; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+input::placeholder { color: #8a7766; }
+label.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* ---------- Rodada ---------- */
+.round-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.pips { display: flex; gap: 6px; }
+.pip { width: 12px; height: 12px; border-radius: 2px; transform: rotate(45deg); background: var(--rock-3); }
+.pip.now { background: var(--lamp); }
+.pip[data-t="0"] { background: #4a3a30; }
+.pip[data-t="1"] { background: var(--t1); } .pip[data-t="2"] { background: var(--t2); }
+.pip[data-t="3"] { background: var(--t3); } .pip[data-t="4"] { background: var(--t4); } .pip[data-t="5"] { background: var(--t5); }
+.prompt { font-family: var(--f-display); font-weight: 400; font-size: clamp(28px, 5vw, 44px); line-height: 1.08; text-wrap: balance; margin: 0; }
+.hint { color: var(--muted); font-size: 14px; }
+.timer { height: 8px; background: var(--rock-3); border-radius: 99px; overflow: hidden; }
+.timer > div { height: 100%; width: 100%; background: var(--lamp); transform-origin: left; }
+.timer.low > div { background: var(--danger); }
+.clock { font-family: var(--f-mono); font-variant-numeric: tabular-nums; color: var(--muted); font-size: 14px; }
+form.dig { display: flex; gap: 10px; }
+form.dig input { flex: 1; }
+.msg { min-height: 1.5em; font-size: 15px; color: var(--danger); }
+.shake { animation: shake .32s; }
+@keyframes shake { 25% { transform: translateX(-6px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
+
+.result { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; background: var(--rock-3); border-radius: 6px; padding: 16px; }
+.gem { width: 34px; height: 34px; border-radius: 4px; transform: rotate(45deg); background: var(--c); box-shadow: 0 0 18px -2px var(--c); }
+.result .what { min-width: 0; }
+.result .what b { display: block; font-size: 20px; overflow-wrap: anywhere; }
+.result .what span { color: var(--muted); font-size: 14px; }
+.result .pts { font-family: var(--f-display); font-size: 30px; color: var(--lamp); font-variant-numeric: tabular-nums; }
+.lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.lists ol, .lists ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.lists li { display: flex; justify-content: space-between; gap: 10px; font-size: 15px; padding-bottom: 6px; border-bottom: 1px solid var(--rock-3); }
+.lists li span:last-child { font-family: var(--f-mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.note { font-size: 13px; color: var(--muted); }
+
+/* ---------- Fim ---------- */
+.final { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.final .big { font-family: var(--f-display); font-size: clamp(54px, 10vw, 84px); line-height: .9; color: var(--lamp); font-variant-numeric: tabular-nums; }
+.recap { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.recap li { display: grid; grid-template-columns: 16px minmax(0,1fr) auto; gap: 10px; align-items: baseline; padding-bottom: 8px; border-bottom: 1px solid var(--rock-3); }
+.recap li .pip { width: 10px; height: 10px; }
+.recap li small { display: block; color: var(--muted); font-size: 13px; }
+.recap li .p { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+textarea.share { width: 100%; box-sizing: border-box; font: 500 14px/1.5 var(--f-mono); color: var(--paper); background: var(--rock); border: 1.5px solid var(--rock-3); border-radius: 6px; padding: 12px; resize: none; }
+
+footer { color: var(--muted); font-size: 12px; }
+
+@media (max-width: 720px) {
+  .app { grid-template-columns: minmax(0, 1fr); gap: 18px; padding-block: 16px 32px; }
+  .shaft-wrap { position: relative; top: auto; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 12px; }
+  .depth-read b { font-size: 26px; }
+  .shaft { flex-direction: row; height: 46px; }
+  .band { padding: 4px; font-size: 0; }
+  .band small { display: none; }
+  .marker { top: 0; bottom: 0; left: calc(var(--p, 0) * 100%); right: auto; width: 0; height: auto; }
+  .marker::before { left: -1px; right: auto; top: -4px; bottom: -4px; width: 2px; height: auto; }
+  .marker::after { display: none; }
+  .panel { padding: 18px; }
+  form.dig { flex-direction: column; }
+  .result { grid-template-columns: auto 1fr; }
+  .result .pts { grid-column: 1 / -1; justify-self: end; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+
+<div class="app">
+  <aside class="shaft-wrap" aria-label="Profundidade do garimpo">
+    <div class="depth-read">Profundidade <b id="depth">0 m</b></div>
+    <div class="shaft" id="shaft"></div>
+  </aside>
+
+  <main>
+    <header class="brand">
+      <h1>Garimpo</h1>
+      <p>Quanto mais rara a resposta, mais fundo você cava</p>
+    </header>
+
+    <!-- Tela inicial -->
+    <section class="panel" id="scr-start">
+      <div class="eyebrow">Como jogar</div>
+      <ul class="rules">
+        <li><b>7</b><span>perguntas por jogo, todas sobre o Brasil. Cada uma pede uma coisa só.</span></li>
+        <li><b>25s</b><span>pra responder cada uma. Errou a grafia ou deu algo fora da lista? Dá pra tentar de novo enquanto o tempo corre.</span></li>
+        <li><b>1 m</b><span>de profundidade por ponto. A resposta que todo mundo daria vale pouco; a que quase ninguém lembra vale até 100.</span></li>
+        <li><b>700</b><span>metros é o fundo do poço: só chega lá quem acerta raríssimas nas 7.</span></li>
+      </ul>
+      <div class="tiers" id="tier-legend"></div>
+      <div class="modes">
+        <div class="mode">
+          <div>
+            <h3>Jogo do dia</h3>
+            <p class="hint" id="daily-label"></p>
+          </div>
+          <div class="best" id="daily-best"></div>
+          <button id="btn-daily" type="button">Descer no poço</button>
+        </div>
+        <div class="mode">
+          <div>
+            <h3>Ilimitado</h3>
+            <p class="hint">Escolha qualquer número de 1 a 9999. O mesmo número sempre traz as mesmas perguntas.</p>
+          </div>
+          <div class="best" id="free-best"></div>
+          <div class="row">
+            <label class="sr" for="game-num">Número do jogo</label>
+            <input type="number" id="game-num" min="1" max="9999" value="51" inputmode="numeric">
+            <button id="btn-free" type="button">Jogar</button>
+            <button id="btn-rand" type="button" class="ghost">Sortear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodada -->
+    <section class="panel" id="scr-play" hidden>
+      <div class="round-head">
+        <div class="eyebrow" id="play-label"></div>
+        <div class="pips" id="pips" aria-hidden="true"></div>
+      </div>
+      <p class="prompt" id="prompt"></p>
+      <p class="hint" id="hint"></p>
+      <div>
+        <div class="timer" id="timer"><div id="timer-bar"></div></div>
+      </div>
+      <form class="dig" id="dig" autocomplete="off">
+        <label class="sr" for="answer">Sua resposta</label>
+        <input type="text" id="answer" placeholder="Digite uma resposta" autocapitalize="off" spellcheck="false" enterkeyhint="go">
+        <button type="submit" id="btn-dig">Cavar</button>
+      </form>
+      <div class="row" style="justify-content:space-between">
+        <div class="msg" id="msg" role="status" aria-live="polite"></div>
+        <div class="clock" id="clock">25,0 s</div>
+      </div>
+    </section>
+
+    <!-- Revelação -->
+    <section class="panel" id="scr-reveal" hidden>
+      <div class="round-head">
+        <div class="eyebrow" id="rev-label"></div>
+        <div class="pips" id="pips2" aria-hidden="true"></div>
+      </div>
+      <p class="prompt" id="rev-prompt" style="font-size:clamp(22px,3.6vw,30px)"></p>
+      <div class="result" id="rev-result"></div>
+      <div class="lists">
+        <div>
+          <h3>O que quase todo mundo responde</h3>
+          <ol id="rev-common"></ol>
+        </div>
+        <div>
+          <h3>Pedras que ficaram no fundo</h3>
+          <ul id="rev-deep"></ul>
+        </div>
+      </div>
+      <p class="note">A raridade de cada resposta é uma estimativa nossa de como os brasileiros tendem a responder, não uma contagem de jogadores.</p>
+      <div class="row"><button id="btn-next" type="button">Próxima pergunta</button></div>
+    </section>
+
+    <!-- Fim -->
+    <section class="panel" id="scr-end" hidden>
+      <div class="eyebrow" id="end-label"></div>
+      <div class="final">
+        <div class="big" id="end-score"></div>
+        <div>
+          <h2 id="end-layer"></h2>
+          <p class="hint" id="end-fact"></p>
+        </div>
+      </div>
+      <ol class="recap" id="recap"></ol>
+      <div>
+        <label class="eyebrow" for="share" style="display:block;margin-bottom:8px">Resultado pra compartilhar</label>
+        <textarea class="share" id="share" rows="3" readonly></textarea>
+      </div>
+      <div class="row">
+        <button id="btn-copy" type="button">Copiar resultado</button>
+        <button id="btn-again" type="button" class="ghost">Jogar outro número</button>
+        <button id="btn-home" type="button" class="ghost">Voltar ao início</button>
+      </div>
+    </section>
+
+    <footer>Jogo original em português. Perguntas e respostas sobre o Brasil; a lista de cada pergunta é grande, mas não infinita.</footer>
+  </main>
+</div>
+
+<script>
+/*ENGINE-START*/
+const PTS = { 1: 10, 2: 30, 3: 55, 4: 80, 5: 100 };
+const TIER = { 1: "Óbvia", 2: "Comum", 3: "Boa", 4: "Rara", 5: "Raríssima" };
+const EMOJI = { 0: "⬛", 1: "🪨", 2: "⬜", 3: "🟪", 4: "🟧", 5: "💎" };
+const ROUNDS = 7, SECONDS = 25, MAX = 700;
+
+const LAYERS = [
+  { name: "Terra roxa", fact: "O solo vermelho e fértil do Paraná e de São Paulo.", bg: "#7a3424", ink: "#f6dccb" },
+  { name: "Cascalho", fact: "É aqui que o garimpeiro começa a lavar a bateia.", bg: "#6e5e4e", ink: "#f1e4cc" },
+  { name: "Quartzo", fact: "Cristal de rocha, comum em Minas Gerais e Goiás.", bg: "#cfc6b8", ink: "#2a1e17" },
+  { name: "Ametista", fact: "Ametista do Sul, no Rio Grande do Sul, leva o nome da pedra.", bg: "#6c4a9e", ink: "#efe4ff" },
+  { name: "Topázio imperial", fact: "A pedra-símbolo de Ouro Preto, em Minas Gerais.", bg: "#c97a22", ink: "#2a1606" },
+  { name: "Esmeralda", fact: "Bahia, Goiás e Minas Gerais têm garimpos de esmeralda.", bg: "#1f7a52", ink: "#e2fff0" },
+  { name: "Turmalina Paraíba", fact: "Descoberta no interior da Paraíba no fim dos anos 1980.", bg: "#1fa79d", ink: "#03231f" },
+  { name: "Diamante", fact: "Diamantina, em Minas Gerais, nasceu do garimpo de diamante.", bg: "#e4ecef", ink: "#1c2a30" }
+];
+function layerFor(score) { return LAYERS[Math.min(7, Math.floor(score / 100))]; }
+
+/* Cada linha: "<raridade 1-5> Nome|apelido|apelido". 1 = óbvia, 5 = raríssima. */
+const PROMPTS = [
+{ q: "Um estado brasileiro", hint: "Os 26 estados e o Distrito Federal valem. Siglas também.", a: `
+1 São Paulo|SP
+1 Rio de Janeiro|RJ|Rio
+2 Minas Gerais|MG|Minas
+2 Bahia|BA
+3 Rio Grande do Sul|RS
+3 Paraná|PR
+3 Santa Catarina|SC
+3 Pernambuco|PE
+3 Ceará|CE
+3 Amazonas|AM
+4 Goiás|GO
+4 Pará|PA
+4 Espírito Santo|ES
+4 Maranhão|MA
+4 Paraíba|PB
+4 Rio Grande do Norte|RN
+4 Mato Grosso|MT
+4 Mato Grosso do Sul|MS
+4 Distrito Federal|DF
+4 Alagoas|AL
+5 Sergipe|SE
+5 Piauí|PI
+5 Tocantins|TO
+5 Acre|AC
+5 Rondônia|RO
+5 Roraima|RR
+5 Amapá|AP` },
+
+{ q: "Uma capital de estado brasileiro", hint: "Brasília também conta.", a: `
+1 São Paulo
+1 Rio de Janeiro|Rio
+2 Brasília
+2 Salvador
+2 Belo Horizonte|BH
+3 Recife
+3 Fortaleza
+3 Curitiba
+3 Porto Alegre|POA
+3 Manaus
+3 Florianópolis|Floripa
+4 Belém
+4 Goiânia
+4 Natal
+4 Vitória
+4 João Pessoa
+4 Maceió
+4 São Luís
+4 Cuiabá
+4 Campo Grande
+5 Aracaju
+5 Teresina
+5 Palmas
+5 Rio Branco
+5 Porto Velho
+5 Boa Vista
+5 Macapá`, no: [["Rio Grande|Santos|Campinas|Niterói|Foz do Iguaçu|Petrópolis", "é uma cidade importante, mas não é capital de estado."]] },
+
+{ q: "Um time de futebol brasileiro", hint: "Clubes de qualquer divisão, de preferência pelo nome mais usado.", a: `
+1 Flamengo|Mengão|Mengo
+1 Corinthians|Timão
+2 Palmeiras|Verdão
+2 São Paulo|SPFC|Tricolor Paulista
+2 Vasco da Gama|Vasco
+3 Grêmio
+3 Internacional|Inter|Colorado
+3 Santos|Peixe
+3 Cruzeiro
+3 Atlético Mineiro|Galo|Atlético-MG
+3 Fluminense|Flu
+3 Botafogo|Fogão
+4 Bahia
+4 Vitória
+4 Sport|Sport Recife
+4 Fortaleza
+4 Ceará
+4 Athletico Paranaense|Athletico|Atlético Paranaense|Furacão
+4 Coritiba|Coxa
+4 Goiás
+4 Red Bull Bragantino|Bragantino
+4 Juventude
+4 Náutico
+4 Santa Cruz
+4 Ponte Preta
+4 Guarani
+5 Paysandu|Papão
+5 Remo
+5 Chapecoense|Chape
+5 Avaí
+5 Figueirense
+5 Criciúma
+5 América Mineiro|América-MG
+5 Atlético Goianiense
+5 Cuiabá
+5 Portuguesa|Lusa
+5 Mirassol
+5 CRB
+5 CSA
+5 ABC
+5 Paraná Clube
+5 Joinville
+5 Ituano
+5 Novorizontino
+5 Bangu
+5 Madureira
+5 Volta Redonda
+5 Sampaio Corrêa
+5 Treze
+5 XV de Piracicaba
+5 Ferroviária
+5 Brasil de Pelotas
+5 Vila Nova
+5 Londrina`, no: [["Atlético", "pode ser mais de um clube. Diga qual: Atlético Mineiro, Athletico Paranaense ou Atlético Goianiense."]] },
+
+{ q: "Uma fruta nativa do Brasil", hint: "Só vale fruta que já existia por aqui antes de chegar de fora.", a: `
+1 Açaí
+1 Caju
+2 Maracujá
+2 Goiaba
+2 Jabuticaba
+2 Abacaxi
+3 Cupuaçu
+3 Pitanga
+3 Guaraná
+3 Cacau
+3 Pequi
+3 Cajá|Taperebá
+4 Umbu|Imbu
+4 Buriti
+4 Mangaba
+4 Jenipapo
+4 Araçá
+4 Bacuri
+4 Pitomba
+4 Camu-camu
+4 Pupunha
+5 Cambuci
+5 Murici
+5 Tucumã
+5 Bacaba
+5 Cagaita
+5 Uvaia
+5 Grumixama
+5 Araticum
+5 Bacupari
+5 Juçara`, no: [["Banana|Manga|Acerola|Mamão|Laranja|Coco|Jaca|Carambola|Limão|Melancia|Maçã|Uva|Morango|Abacate|Tangerina|Mexerica", "é muito brasileira no prato, mas veio de fora."]] },
+
+{ q: "Uma comida típica brasileira", hint: "Pratos, salgados e doces da culinária nacional.", a: `
+1 Feijoada
+1 Pão de queijo
+1 Coxinha
+2 Brigadeiro
+2 Moqueca
+2 Acarajé
+2 Churrasco
+2 Farofa
+3 Pastel
+3 Tapioca
+3 Baião de dois
+3 Vatapá
+3 Cuscuz
+3 Escondidinho
+3 Pamonha
+3 Tutu de feijão|Tutu
+3 Quindim
+3 Feijão tropeiro|Tropeiro
+4 Bobó de camarão|Bobó
+4 Carne de sol
+4 Tacacá
+4 Pato no tucupi
+4 Arroz carreteiro
+4 Virado à paulista
+4 Galinhada
+4 Caruru
+4 Canjica
+4 Cocada
+4 Pé de moleque
+4 Beijinho
+4 Romeu e julieta
+4 Paçoca
+4 Bolo de rolo
+5 Maniçoba
+5 Barreado
+5 Arroz de cuxá|Cuxá
+5 Sarapatel
+5 Buchada de bode|Buchada
+5 Arroz com pequi|Arroz de pequi
+5 Mungunzá
+5 Vaca atolada
+5 Cartola
+5 Sagu de vinho|Sagu
+5 Torta capixaba
+5 Frango com quiabo
+5 Xinxim de galinha|Xinxim` },
+
+{ q: "Um instrumento que se toca no samba", hint: "Da roda de samba à bateria da escola.", a: `
+1 Pandeiro
+1 Cavaquinho|Cavaco
+2 Surdo
+2 Tamborim
+2 Cuíca
+3 Violão|Violão de 7 cordas|Violão sete cordas|Sete cordas
+3 Agogô
+3 Reco-reco
+3 Repique|Repinique|Repique de mão
+3 Caixa|Caixa de guerra
+4 Tantã|Tan-tan
+4 Banjo
+4 Chocalho
+4 Ganzá
+4 Apito
+4 Rebolo
+5 Prato e faca
+5 Timbal
+5 Atabaque
+5 Frigideira
+5 Bandolim` },
+
+{ q: "Um animal da fauna brasileira", hint: "Bichos nativos: mamíferos, aves, répteis, peixes.", a: `
+1 Onça-pintada|Onça
+1 Capivara
+1 Mico-leão-dourado|Mico-leão
+2 Arara
+2 Tucano
+2 Jacaré
+2 Tamanduá-bandeira|Tamanduá
+2 Preguiça|Bicho-preguiça
+2 Boto-cor-de-rosa|Boto|Boto-rosa
+3 Arara-azul
+3 Lobo-guará
+3 Tatu
+3 Sucuri
+3 Papagaio
+3 Anta
+3 Quati
+3 Peixe-boi
+3 Piranha
+3 Sagui|Mico
+4 Arara-vermelha
+4 Tatu-bola
+4 Tartaruga-marinha
+4 Ariranha
+4 Ema
+4 Seriema
+4 Jabuti
+4 Bugio|Guariba
+4 Macaco-prego
+4 Jiboia
+4 Pirarucu
+4 Jaguatirica
+4 Harpia|Gavião-real
+4 Tuiuiú
+4 Beija-flor
+4 Sabiá
+4 Bem-te-vi
+4 Quero-quero
+4 Gambá
+4 Cascavel
+4 Jararaca
+5 Muriqui
+5 Uirapuru
+5 Cutia
+5 Paca
+5 Ouriço-cacheiro
+5 Cachorro-do-mato
+5 Irara
+5 Mutum
+5 Jacu
+5 Surucucu
+5 Veado-campeiro
+5 Tamanduá-mirim
+5 Cervo-do-pantanal
+5 Ararajuba
+5 Lontra
+5 Tracajá`, no: [["Leão|Tigre|Elefante|Girafa|Zebra|Canguru|Panda|Hipopótamo|Rinoceronte|Camelo|Pinguim-imperador|Urso", "não é nativo do Brasil."]] },
+
+{ q: "Uma novela da Globo", hint: "Vale novela antiga, recente ou remake.", a: `
+1 Avenida Brasil
+2 O Clone
+2 Pantanal
+2 Senhora do Destino
+2 Vale Tudo
+3 A Favorita
+3 Mulheres Apaixonadas
+3 Laços de Família
+3 O Rei do Gado
+3 Roque Santeiro
+3 Caminho das Índias
+3 Fina Estampa
+3 A Força do Querer
+3 Terra Nostra
+3 Renascer
+4 Amor à Vida
+4 Cheias de Charme
+4 Da Cor do Pecado
+4 Belíssima
+4 Páginas da Vida
+4 Celebridade
+4 Paraíso Tropical
+4 Duas Caras
+4 Mulheres de Areia
+4 Tieta
+4 Explode Coração
+4 O Cravo e a Rosa
+4 Chocolate com Pimenta
+4 Alma Gêmea
+4 Por Amor
+4 Cordel Encantado
+4 Império
+4 Verdades Secretas
+4 Salve Jorge
+4 Malhação
+4 Totalmente Demais
+4 Mania de Você
+4 Terra e Paixão
+4 Travessia
+4 Vai na Fé
+5 Amor de Mãe
+5 A Próxima Vítima
+5 Torre de Babel
+5 Rainha da Sucata
+5 Que Rei Sou Eu?
+5 Tropicaliente
+5 Quatro por Quatro
+5 O Bem-Amado
+5 Gabriela
+5 Dancin' Days
+5 Selva de Pedra
+5 Irmãos Coragem
+5 Escrava Isaura
+5 Pecado Capital
+5 Kubanacan
+5 Insensato Coração
+5 Passione
+5 Viver a Vida
+5 Ti Ti Ti
+5 Top Model
+5 A Viagem
+5 História de Amor
+5 Força de um Desejo` },
+
+{ q: "Um cantor ou cantora brasileira", hint: "De qualquer gênero e época. Nome artístico basta.", a: `
+1 Roberto Carlos
+1 Anitta
+1 Ivete Sangalo|Ivete
+2 Caetano Veloso|Caetano
+2 Gilberto Gil|Gil
+2 Chico Buarque|Chico
+2 Elis Regina|Elis
+2 Tim Maia
+2 Marília Mendonça
+2 Rita Lee
+3 Gal Costa|Gal
+3 Maria Bethânia|Bethânia
+3 Milton Nascimento|Milton|Bituca
+3 Djavan
+3 Marisa Monte
+3 Jorge Ben Jor|Jorge Ben
+3 Cazuza
+3 Ney Matogrosso
+3 Zeca Pagodinho
+3 Ludmilla
+3 Pabllo Vittar
+3 Gusttavo Lima
+3 Luan Santana
+3 Seu Jorge
+3 Lulu Santos
+3 Claudia Leitte
+3 Daniela Mercury
+3 Alcione
+3 Luiz Gonzaga
+3 Raul Seixas
+4 Tom Jobim
+4 João Gilberto
+4 Vinicius de Moraes
+4 Elza Soares
+4 Cássia Eller
+4 Beth Carvalho
+4 Clara Nunes
+4 Paulinho da Viola
+4 Cartola
+4 Alceu Valença
+4 Zé Ramalho
+4 Belchior
+4 Fagner|Raimundo Fagner
+4 Gonzaguinha
+4 Erasmo Carlos
+4 Vanessa da Mata
+4 Emicida
+4 Liniker
+4 Iza
+4 Simone
+4 Fábio Jr.|Fábio Júnior
+4 Ana Carolina
+4 Jão
+4 Zezé Di Camargo
+4 Leonardo
+4 Wesley Safadão
+4 Joelma
+4 Sandy
+4 Ana Castela
+4 Péricles
+4 Thiaguinho
+4 Alexandre Pires
+4 Nando Reis
+4 Renato Russo
+4 Lenine
+4 Arnaldo Antunes
+4 Elba Ramalho
+4 Sidney Magal
+5 Nara Leão
+5 Dominguinhos
+5 Adoniran Barbosa
+5 Noel Rosa
+5 Céu
+5 Tulipa Ruiz
+5 Criolo
+5 Zélia Duncan
+5 Ângela Maria
+5 Cauby Peixoto
+5 Elizeth Cardoso
+5 Jackson do Pandeiro
+5 Ednardo
+5 Geraldo Azevedo
+5 Leci Brandão
+5 Jards Macalé
+5 Itamar Assumpção
+5 Tom Zé
+5 Moraes Moreira
+5 Baby do Brasil
+5 Dona Ivone Lara
+5 Clementina de Jesus
+5 Johnny Hooker
+5 Mart'nália
+5 Teresa Cristina
+5 Xande de Pilares` },
+
+{ q: "Alguém que já jogou pela Seleção Brasileira", hint: "Masculina ou feminina, de qualquer época.", a: `
+1 Pelé
+1 Neymar
+1 Ronaldo|Ronaldo Fenômeno|Fenômeno|R9
+2 Ronaldinho|Ronaldinho Gaúcho
+2 Romário
+2 Kaká
+2 Vinícius Júnior|Vini Jr|Vinicius Jr|Vini
+3 Zico
+3 Garrincha|Mané Garrincha
+3 Rivaldo
+3 Cafu
+3 Roberto Carlos
+3 Marta
+3 Casemiro
+3 Thiago Silva
+3 Daniel Alves|Dani Alves
+3 Marcelo
+3 Alisson
+3 Adriano|Imperador
+3 Bebeto
+3 Sócrates
+4 Rivellino
+4 Jairzinho
+4 Tostão
+4 Taffarel
+4 Dunga
+4 Júlio César
+4 Lúcio
+4 Juninho Pernambucano
+4 Denílson
+4 Edmundo
+4 Raí
+4 Falcão|Paulo Roberto Falcão
+4 Careca
+4 Júnior
+4 Zagallo
+4 Gérson
+4 Carlos Alberto Torres
+4 Raphinha
+4 Richarlison
+4 Gabriel Jesus
+4 Rodrygo
+4 Formiga
+4 Cristiane
+4 Hulk
+4 Oscar
+4 David Luiz
+4 Marquinhos
+4 Ederson
+4 Fernandinho
+4 Willian
+4 Philippe Coutinho|Coutinho
+4 Robinho
+4 Luís Fabiano
+4 Gilberto Silva
+4 Zé Roberto
+5 Didi
+5 Vavá
+5 Nilton Santos
+5 Djalma Santos
+5 Leônidas da Silva|Leônidas
+5 Clodoaldo
+5 Amarildo
+5 Gilmar
+5 Zito
+5 Mauro Silva
+5 Aldair
+5 Branco
+5 Mazinho
+5 Müller
+5 Valdir Peres
+5 Toninho Cerezo|Cerezo
+5 Éder
+5 Friedenreich
+5 Ademir de Menezes|Ademir
+5 Zizinho
+5 Pepe
+5 Sissi
+5 Debinha
+5 Pretinha
+5 Elano
+5 Kléberson` },
+
+{ q: "Uma praia brasileira", hint: "Pelo nome da praia. \"Praia do\" é opcional.", strip: "^(praia|baia) (d[aeo]s? )?", a: `
+1 Copacabana
+1 Ipanema
+2 Porto de Galinhas
+2 Jericoacoara|Jeri
+2 Leblon
+3 Baía do Sancho|Sancho
+3 Praia do Forte
+3 Praia da Pipa|Pipa
+3 Barra da Tijuca
+3 Maragogi
+3 Canoa Quebrada
+3 Boa Viagem
+3 Ponta Negra
+3 Praia do Futuro
+3 Arpoador
+4 Lopes Mendes
+4 Jurerê
+4 Joaquina
+4 Praia do Rosa
+4 Praia Mole
+4 Praia de Iracema|Iracema
+4 Pajuçara
+4 Praia dos Carneiros
+4 Prainha
+4 Grumari
+4 Praia do Gunga
+4 Taipu de Fora
+4 Praia do Espelho
+4 Ponta Verde
+4 Itaúnas
+4 Praia Vermelha
+4 Geribá
+4 Praia do Francês
+4 Maresias
+5 Baía dos Porcos
+5 Praia do Sono
+5 Praia da Ferradura
+5 Cumbuco
+5 Tambaba
+5 Coqueirinho
+5 Praia do Madeiro
+5 Porto da Barra
+5 Itapuã
+5 Stella Maris
+5 Camburi
+5 Juquehy
+5 Castelhanos
+5 Praia do Cassino|Cassino
+5 Praia Brava
+5 Praia dos Ingleses
+5 Taíba
+5 Lagoinha
+5 Morro Branco
+5 Barra Grande` },
+
+{ q: "Uma marca criada no Brasil", hint: "Empresa ou produto que nasceu aqui, mesmo que hoje tenha dono estrangeiro.", a: `
+1 Havaianas
+1 Natura
+1 O Boticário|Boticário
+2 Guaraná Antarctica|Antarctica
+2 Petrobras
+2 Embraer
+2 Nubank
+2 Magazine Luiza|Magalu
+2 Itaú
+2 Bradesco
+3 Brahma
+3 Sadia
+3 Perdigão
+3 Casas Bahia
+3 Cacau Show
+3 Garoto
+3 Lacta
+3 Ypê
+3 Bombril
+3 Tramontina
+3 Renner|Lojas Renner
+3 Riachuelo
+3 Melissa
+3 iFood
+3 Globo|Rede Globo
+3 Vale
+3 Gol
+3 Azul
+4 Hering
+4 Osklen
+4 Arezzo
+4 Schutz
+4 Granado
+4 Seara
+4 Piracanjuba
+4 Itambé
+4 Kopenhagen
+4 Habib's
+4 Giraffas
+4 Spoleto
+4 Bob's
+4 Chilli Beans
+4 Positivo
+4 Multilaser
+4 PicPay
+4 Banco do Brasil
+4 Caixa|Caixa Econômica Federal
+4 Correios
+4 Ambev
+4 Mormaii
+4 Reserva
+4 Farm
+4 Tok&Stok|Tok Stok
+4 Olympikus
+4 Rider
+4 Grendene
+4 Ipanema
+4 Eudora
+4 Bauducco
+4 Guaraná Jesus
+4 Havan
+4 Pernambucanas
+4 Marisa
+4 Mate Leão
+4 Yoki
+5 Dori
+5 Totvs
+5 Stone
+5 QuintoAndar
+5 Tigre
+5 Gerdau
+5 WEG
+5 Marcopolo
+5 Quem Disse, Berenice?|Quem Disse Berenice`, no: [["Mercado Livre", "nasceu na Argentina."], ["Nestlé", "é suíça."], ["Coca-Cola|Avon|McDonald's", "é americana."], ["Fini", "é espanhola."], ["C&A", "nasceu na Holanda."]] },
+
+{ q: "Um ponto turístico do Rio de Janeiro", hint: "Na cidade do Rio.", a: `
+1 Cristo Redentor|Cristo
+1 Pão de Açúcar|Bondinho|Bondinho do Pão de Açúcar
+2 Maracanã
+2 Copacabana
+2 Escadaria Selarón|Selarón
+2 Arcos da Lapa|Lapa
+2 Ipanema
+3 Corcovado
+3 Lagoa Rodrigo de Freitas|Lagoa
+3 Jardim Botânico
+3 Museu do Amanhã
+3 Theatro Municipal|Teatro Municipal
+3 Floresta da Tijuca
+3 Pedra da Gávea
+3 Sambódromo|Marquês de Sapucaí|Sapucaí
+3 Santa Teresa|Bondinho de Santa Teresa
+3 Arpoador|Pedra do Arpoador
+3 Leblon
+4 Pedra Bonita
+4 Real Gabinete Português de Leitura|Real Gabinete
+4 Confeitaria Colombo
+4 Mureta da Urca
+4 Ilha Fiscal
+4 Parque Lage
+4 Forte de Copacabana
+4 Morro Dois Irmãos|Dois Irmãos
+4 Vista Chinesa
+4 Mirante Dona Marta
+4 Boulevard Olímpico
+4 Catedral Metropolitana
+4 Paço Imperial
+4 Quinta da Boa Vista
+4 AquaRio
+4 Pedra do Sal
+4 Feira de São Cristóvão
+4 Museu Nacional
+4 Praia Vermelha
+4 Museu de Arte do Rio|MAR
+4 Cais do Valongo
+4 Morro da Urca
+4 Aterro do Flamengo|Parque do Flamengo
+4 Biblioteca Nacional
+4 Igreja da Candelária|Candelária
+4 Mosteiro de São Bento
+5 Pista Cláudio Coutinho
+5 Morro da Babilônia
+5 Prainha
+5 Grumari
+5 Pedra do Telégrafo
+5 Ilha de Paquetá|Paquetá
+5 Museu Histórico Nacional
+5 Centro Cultural Banco do Brasil|CCBB
+5 Cidade das Artes
+5 Estádio Nilton Santos|Engenhão
+5 Planetário
+5 Museu de Arte Moderna|MAM
+5 Igreja da Penha
+5 Largo do Boticário
+5 Parque das Ruínas`, no: [["Ilha Grande|Búzios|Arraial do Cabo|Paraty|Petrópolis", "fica no estado do Rio, mas fora da capital."]] },
+
+{ q: "Uma comida ou bebida de festa junina", hint: "O que aparece nas barraquinhas de arraiá.", a: `
+1 Pamonha
+1 Canjica
+1 Pipoca|Pipoca doce
+1 Quentão
+2 Pé de moleque
+2 Paçoca
+2 Milho cozido|Milho|Milho verde
+2 Curau
+2 Cocada
+2 Maçã do amor
+2 Bolo de milho
+2 Vinho quente
+3 Cuscuz
+3 Arroz doce
+3 Cachorro-quente
+3 Quebra-queixo
+3 Pinhão
+3 Bolo de fubá
+3 Amendoim|Amendoim cozido
+3 Pé de moça
+3 Mungunzá
+3 Bolo de mandioca|Bolo de aipim|Bolo de macaxeira
+4 Doce de abóbora
+4 Cajuzinho
+4 Pastel
+4 Espetinho|Churrasquinho
+4 Cachaça|Pinga
+4 Sagu
+4 Mané pelado
+4 Algodão doce
+4 Batata-doce
+5 Bolo de puba
+5 Bom-bocado
+5 Queijadinha
+5 Rapadura
+5 Beiju
+5 Caldo verde
+5 Caldo de feijão|Caldinho de feijão
+5 Caldo de mandioca
+5 Doce de leite
+5 Chocolate quente` },
+
+{ q: "Uma escola de samba do carnaval do Rio", hint: "Do Grupo Especial ou das divisões de acesso, de hoje ou de antigamente.", a: `
+1 Mangueira|Estação Primeira de Mangueira
+1 Beija-Flor|Beija-Flor de Nilópolis
+2 Portela
+2 Salgueiro|Acadêmicos do Salgueiro
+3 Imperatriz Leopoldinense|Imperatriz
+3 Mocidade|Mocidade Independente de Padre Miguel|Mocidade Independente
+3 Unidos da Tijuca
+3 Vila Isabel|Unidos de Vila Isabel
+3 Grande Rio|Acadêmicos do Grande Rio
+3 Viradouro|Unidos do Viradouro
+4 Império Serrano
+4 São Clemente
+4 União da Ilha|União da Ilha do Governador
+4 Paraíso do Tuiuti|Tuiuti
+4 Estácio de Sá
+4 Unidos de Padre Miguel
+4 Porto da Pedra|Unidos do Porto da Pedra
+4 Caprichosos de Pilares
+5 Tradição
+5 Império da Tijuca
+5 Em Cima da Hora
+5 Acadêmicos de Santa Cruz|Santa Cruz
+5 Acadêmicos do Cubango|Cubango
+5 Inocentes de Belford Roxo
+5 Unidos de Bangu
+5 Arranco do Engenho de Dentro|Arranco
+5 Unidos do Jacarezinho
+5 Lins Imperial
+5 Vizinha Faladeira
+5 Unidos da Ponte
+5 Acadêmicos da Rocinha
+5 Alegria da Zona Sul`, no: [["Vai-Vai|Gaviões da Fiel|Mancha Verde|Rosas de Ouro|Mocidade Alegre|X-9 Paulistana|Império de Casa Verde|Águia de Ouro", "é do carnaval de São Paulo."]] },
+
+{ q: "Um ser ou lenda do folclore brasileiro", hint: "Assombrações, protetores da mata, lendas regionais.", a: `
+1 Saci|Saci-Pererê
+1 Curupira
+1 Mula sem cabeça
+2 Iara|Yara|Mãe-d'água
+2 Boitatá
+2 Boto|Boto-cor-de-rosa
+2 Cuca
+2 Lobisomem
+3 Caipora
+3 Negrinho do Pastoreio
+3 Bumba meu boi|Boi-bumbá
+3 Mapinguari
+3 Vitória-régia
+3 Bicho-papão
+3 Homem do saco|Velho do saco
+4 Corpo-seco
+4 Pisadeira
+4 Matinta Pereira|Matinta Perera|Matinta
+4 Cobra Grande|Boiúna
+4 Comadre Fulozinha
+4 Cabeça de cuia
+4 Papa-figo
+4 Loira do banheiro
+4 Boi da cara preta
+4 Mãe do ouro
+5 Romãozinho
+5 Alamoa
+5 Capelobo
+5 Ipupiara
+5 Labatut
+5 Quibungo
+5 Barba Ruiva
+5 Caboclo d'água
+5 Porca dos sete leitões
+5 Jurupari
+5 Anhangá` },
+
+{ q: "Um rio que corre pelo Brasil", hint: "Pode escrever com ou sem \"Rio\".", strip: "^rio (d[aeo]s? )?", a: `
+1 Rio Amazonas
+1 Rio São Francisco|Velho Chico
+2 Rio Tietê
+2 Rio Paraná
+2 Rio Negro
+3 Rio Solimões
+3 Rio Tocantins
+3 Rio Araguaia
+3 Rio Xingu
+3 Rio Tapajós
+3 Rio Madeira
+3 Rio Paraíba do Sul
+3 Rio Iguaçu
+3 Rio Pinheiros
+3 Rio Paraguai
+3 Rio Uruguai
+4 Rio Purus
+4 Rio Juruá
+4 Rio Doce
+4 Rio Jequitinhonha
+4 Rio Parnaíba
+4 Rio Capibaribe
+4 Rio Paranapanema
+4 Rio Grande
+4 Rio Teles Pires
+4 Rio Japurá
+4 Rio Trombetas
+4 Rio Branco
+4 Rio Piracicaba
+4 Rio Mamoré
+4 Rio Guaporé
+4 Rio Itajaí-Açu|Itajaí
+4 Rio das Velhas
+4 Rio Jaguaribe
+4 Rio Beberibe
+5 Rio Jari
+5 Rio Mearim
+5 Rio Paraopeba
+5 Rio Potengi
+5 Rio Gurupi
+5 Rio Pardo
+5 Rio Javari
+5 Rio Içá
+5 Rio Juruena
+5 Rio Aripuanã
+5 Rio Tamanduateí
+5 Rio Jacuí
+5 Rio Taquari
+5 Rio Pelotas
+5 Rio Ribeira de Iguape|Ribeira
+5 Rio Mogi-Guaçu
+5 Rio Paraguaçu
+5 Rio de Contas
+5 Rio Vaza-Barris
+5 Rio Itapecuru
+5 Rio Pindaré
+5 Rio Oiapoque
+5 Rio Mucuri
+5 Rio Piranhas-Açu|Piranhas
+5 Rio Sapucaí
+5 Rio Cuiabá
+5 Rio Miranda
+5 Rio Aquidauana
+5 Rio Carioca
+5 Rio Capivari
+5 Rio Paraíba` },
+
+{ q: "Um programa da TV brasileira", hint: "Auditório, humor, jornal, infantil, reality. Atual ou antigo.", a: `
+1 Big Brother Brasil|BBB
+1 Jornal Nacional|JN
+1 Fantástico
+2 Domingão do Faustão|Faustão|Domingão
+2 Caldeirão do Huck|Caldeirão
+2 Programa Silvio Santos|Silvio Santos
+2 Xou da Xuxa
+2 Castelo Rá-Tim-Bum
+2 Sítio do Picapau Amarelo|Sítio do Pica-Pau Amarelo
+3 A Praça é Nossa
+3 Programa do Jô|Jô Soares Onze e Meia
+3 Altas Horas
+3 Mais Você
+3 Domingo Legal
+3 Os Trapalhões|Trapalhões
+3 Casseta & Planeta|Casseta e Planeta|Casseta & Planeta Urgente
+3 Zorra Total|Zorra
+3 Pânico na TV|Pânico
+3 CQC|Custe o Que Custar
+3 A Grande Família
+3 Programa do Ratinho|Ratinho
+3 Video Show
+3 Escolinha do Professor Raimundo
+3 Encontro|Encontro com Fátima Bernardes
+4 Globo Repórter
+4 Profissão Repórter
+4 Esporte Espetacular
+4 Globo Rural
+4 Criança Esperança
+4 Hebe
+4 Cassino do Chacrinha|Discoteca do Chacrinha|Chacrinha
+4 TV Pirata
+4 Os Normais
+4 Tá no Ar
+4 Balão Mágico|Turma do Balão Mágico
+4 TV Colosso
+4 Mundo da Lua
+4 Bom Dia & Cia|Bom Dia e Cia
+4 Conversa com Bial
+4 Roda Viva
+4 Vai Que Cola
+4 Sai de Baixo
+4 A Fazenda
+4 No Limite
+4 Casos de Família
+4 Linha Direta
+4 Cidade Alerta
+4 Brasil Urgente
+4 Domingo Espetacular
+4 Programa Raul Gil|Raul Gil
+4 Show do Milhão
+4 Porta da Esperança
+5 Rá-Tim-Bum
+5 Glub Glub
+5 Cocoricó
+5 X-Tudo
+5 Planeta Xuxa
+5 Bambalalão
+5 Perdidos na Noite
+5 Programa Livre
+5 Sabadaço
+5 TV Mulher
+5 Armação Ilimitada
+5 A Comédia da Vida Privada|Comédia da Vida Privada
+5 Toma Lá, Dá Cá|Toma Lá Dá Cá
+5 Lady Night
+5 Provocações
+5 Metrópolis`, no: [["Chaves|Chapolin", "é mexicano, mesmo sendo a cara da TV brasileira."]] },
+
+{ q: "Alguém que foi presidente do Brasil", hint: "Da República, de Deodoro até hoje. Sobrenome ou apelido serve.", a: `
+1 Lula|Luiz Inácio Lula da Silva
+1 Jair Bolsonaro|Bolsonaro
+2 Dilma Rousseff|Dilma
+2 Fernando Henrique Cardoso|FHC|Fernando Henrique
+2 Getúlio Vargas|Getúlio|Vargas
+3 Juscelino Kubitschek|JK|Juscelino
+3 Fernando Collor|Collor
+3 Michel Temer|Temer
+3 José Sarney|Sarney
+4 Itamar Franco|Itamar
+4 Jânio Quadros|Jânio
+4 João Goulart|Jango
+4 Deodoro da Fonseca|Deodoro|Marechal Deodoro
+5 Floriano Peixoto|Floriano
+5 Prudente de Morais
+5 Campos Sales
+5 Rodrigues Alves
+5 Afonso Pena
+5 Nilo Peçanha
+5 Hermes da Fonseca
+5 Venceslau Brás|Wenceslau Braz
+5 Delfim Moreira
+5 Epitácio Pessoa
+5 Artur Bernardes
+5 Washington Luís
+5 José Linhares
+5 Eurico Gaspar Dutra|Dutra
+5 Café Filho
+5 Carlos Luz
+5 Nereu Ramos
+5 Ranieri Mazzilli
+5 Castelo Branco
+5 Costa e Silva
+5 Emílio Médici|Médici|Garrastazu Médici
+5 Ernesto Geisel|Geisel
+5 João Figueiredo|Figueiredo`, no: [["Tancredo Neves|Tancredo", "foi eleito em 1985, mas morreu antes de tomar posse."], ["Júlio Prestes", "venceu a eleição de 1930, mas não chegou a tomar posse."], ["Dom Pedro|Dom Pedro I|Dom Pedro II|Pedro II", "foi imperador, não presidente."], ["Rui Barbosa", "concorreu, mas nunca foi presidente."]] },
+
+{ q: "Um livro de autor brasileiro", hint: "Romance, poesia, teatro, infantil. O título basta.", a: `
+1 Dom Casmurro
+2 Memórias Póstumas de Brás Cubas|Memórias Póstumas|Brás Cubas
+2 O Cortiço
+2 Vidas Secas
+2 Capitães da Areia
+2 A Hora da Estrela
+2 O Alquimista
+2 Grande Sertão: Veredas|Grande Sertão
+3 Macunaíma
+3 Iracema
+3 O Guarani
+3 Senhora
+3 Quincas Borba
+3 Gabriela, Cravo e Canela|Gabriela
+3 Dona Flor e Seus Dois Maridos|Dona Flor
+3 Os Sertões
+3 O Quinze
+3 Triste Fim de Policarpo Quaresma|Policarpo Quaresma
+3 Auto da Compadecida|O Auto da Compadecida
+3 O Meu Pé de Laranja Lima|Meu Pé de Laranja Lima
+3 Quarto de Despejo
+3 Torto Arado
+3 Morte e Vida Severina
+3 O Menino Maluquinho|Menino Maluquinho
+4 Memórias de um Sargento de Milícias
+4 A Moreninha
+4 O Ateneu
+4 Menino de Engenho
+4 São Bernardo
+4 O Tempo e o Vento
+4 Cidade de Deus
+4 Lavoura Arcaica
+4 A Paixão Segundo G.H.
+4 Laços de Família
+4 O Mulato
+4 Lucíola
+4 A Escrava Isaura
+4 Feliz Ano Velho
+4 Olhai os Lírios do Campo
+4 Incidente em Antares
+4 Esaú e Jacó
+4 O Alienista
+4 A Bolsa Amarela
+4 Marcelo, Marmelo, Martelo
+4 Sagarana
+4 Primeiras Estórias
+4 Fogo Morto
+4 Angústia
+4 Terras do Sem-Fim
+4 Tieta do Agreste
+4 Dois Irmãos
+4 O Avesso da Pele
+4 Perto do Coração Selvagem
+4 Reinações de Narizinho
+4 Budapeste
+5 Inocência
+5 Mar Morto
+5 O Filho Eterno
+5 Relato de um Certo Oriente
+5 A Rosa do Povo
+5 Claro Enigma
+5 Alguma Poesia
+5 Bom-Crioulo
+5 O Pagador de Promessas
+5 Vestido de Noiva
+5 Lira dos Vinte Anos
+5 Noite na Taverna
+5 Felicidade Clandestina
+5 Ponciá Vicêncio
+5 Olhos d'Água
+5 Estorvo
+5 O Picapau Amarelo`, no: [["Os Lusíadas|O Primo Basílio|Os Maias|Ensaio sobre a Cegueira", "é de autor português."], ["O Pequeno Príncipe", "é de um autor francês."], ["Dom Quixote", "é de um autor espanhol."]] },
+
+{ q: "Um esporte em que o Brasil já ganhou medalha olímpica", hint: "Qualquer cor de medalha, masculino ou feminino.", a: `
+1 Vôlei|Voleibol
+1 Futebol|Futebol feminino|Futebol masculino
+2 Judô
+2 Natação
+2 Atletismo
+2 Ginástica artística|Ginástica
+2 Vôlei de praia
+3 Vela|Iatismo
+3 Boxe
+3 Skate
+3 Surfe|Surf
+3 Canoagem
+3 Basquete|Basquetebol
+4 Taekwondo
+4 Hipismo
+4 Tênis
+5 Tiro esportivo|Tiro
+5 Maratona aquática
+5 Pentatlo moderno|Pentatlo` },
+
+{ q: "Uma bebida brasileira", hint: "Drinques, refrigerantes, sucos e infusões com cara de Brasil.", a: `
+1 Caipirinha
+1 Cachaça|Pinga
+1 Guaraná|Guaraná Antarctica
+2 Chimarrão
+2 Caldo de cana|Garapa
+2 Cafezinho|Café
+3 Tereré
+3 Mate|Chá mate|Mate gelado
+3 Quentão
+3 Batida
+3 Cajuína
+3 Tubaína
+3 Açaí
+4 Rabo de galo
+4 Caju amigo
+4 Leite de onça
+4 Capeta
+4 Vinho quente
+4 Guaraná Jesus
+5 Aluá
+5 Tiquira
+5 Cauim
+5 Xibé` },
+
+{ q: "Uma palavra do português que veio do tupi", hint: "Palavras do dia a dia, não nomes de lugar.", a: `
+1 Abacaxi
+1 Capivara
+1 Jacaré
+2 Pipoca
+2 Mandioca
+2 Caju
+2 Maracujá
+2 Tatu
+2 Tapioca
+2 Arara
+3 Peteca
+3 Perereca
+3 Mingau
+3 Jabuti
+3 Carioca
+3 Piranha
+3 Sucuri
+3 Jiboia
+3 Tucano
+3 Urubu
+3 Sabiá
+3 Capim
+3 Cupim
+3 Catapora
+3 Pitanga
+3 Jabuticaba
+3 Paçoca
+4 Cutucar
+4 Pereba
+4 Xará
+4 Sapeca
+4 Jururu
+4 Pindaíba
+4 Sururu
+4 Siri
+4 Ipê
+4 Jacarandá
+4 Cipó
+4 Caatinga
+4 Quati
+4 Cutia
+4 Tamanduá
+4 Araçá
+4 Mirim
+4 Capoeira
+4 Pororoca
+5 Nhenhenhém
+5 Pamonha
+5 Socó
+5 Biboca
+5 Tocaia
+5 Arapuca
+5 Piracema
+5 Cumbuca
+5 Mutirão
+5 Tiririca
+5 Puçá
+5 Taquara
+5 Babaçu
+5 Pirão`, no: [["Cafuné|Moleque|Caçula|Quitanda|Bunda|Cochilar|Fubá|Miçanga", "vem de línguas africanas (do quimbundo), não do tupi."]] },
+
+{ q: "Uma cidade histórica brasileira", hint: "Cidades conhecidas pelo centro histórico colonial ou imperial.", a: `
+1 Ouro Preto
+1 Paraty
+2 Olinda
+2 Salvador
+2 Tiradentes
+3 São João del-Rei
+3 Diamantina
+3 Mariana
+3 Petrópolis
+3 São Luís
+3 Congonhas
+4 Goiás|Cidade de Goiás|Goiás Velho
+4 Pirenópolis
+4 Sabará
+4 Penedo
+4 Lençóis
+4 Cachoeira
+4 Porto Seguro
+4 Laranjeiras
+4 São Cristóvão
+4 Alcântara
+4 Antônio Prado
+4 Serro
+4 São Francisco do Sul
+5 Corumbá de Goiás
+5 Igarassu
+5 Icó
+5 Aracati
+5 Viçosa do Ceará
+5 Natividade
+5 Iguape
+5 Santana de Parnaíba
+5 Laguna
+5 Lapa
+5 Rio de Contas
+5 Mucugê
+5 Itu
+5 São José do Barreiro` },
+
+{ q: "Um doce da confeitaria brasileira", hint: "Doces de festa, de padaria e de vó que todo brasileiro conhece.", a: `
+1 Brigadeiro
+1 Beijinho
+2 Pudim|Pudim de leite
+2 Paçoca
+2 Quindim
+2 Pé de moleque
+2 Cocada
+2 Doce de leite
+3 Bolo de rolo
+3 Romeu e julieta
+3 Cajuzinho
+3 Bem-casado
+3 Olho de sogra
+3 Goiabada
+3 Pavê
+3 Canjica
+3 Curau
+3 Arroz doce
+3 Mousse de maracujá
+3 Bolo de cenoura|Bolo de cenoura com chocolate
+4 Cartola
+4 Bombom
+4 Sonho
+4 Rapadura
+4 Doce de abóbora
+4 Bolo de fubá
+4 Pamonha doce
+4 Cuscuz de tapioca
+4 Queijadinha
+4 Bom-bocado
+4 Maria-mole
+4 Suspiro
+4 Quebra-queixo
+4 Pé de moça
+4 Torta de limão
+4 Sagu
+4 Ambrosia
+4 Bolo Souza Leão|Souza Leão
+4 Cueca virada
+5 Mãe-benta
+5 Baba de moça
+5 Papo de anjo
+5 Toucinho do céu
+5 Doce de buriti
+5 Doce de cidra
+5 Cocada puxa
+5 Bananada
+5 Mungunzá
+5 Beiju doce
+5 Brevidade
+5 Sequilho` }
+];
+
+function norm(s) {
+  return String(s).toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/&/g, " e ")
+    .replace(/[^a-z0-9 ]+/g, " ")
+    .replace(/\s+/g, " ").trim()
+    .replace(/^(o|a|os|as) /, "");
+}
+
+function prep(p) {
+  const strip = p.strip ? new RegExp(p.strip) : null;
+  p.key = s => { let n = norm(s); if (strip) n = n.replace(strip, ""); return n.replace(/ /g, ""); };
+  p.entries = p.a.trim().split("\n").map(l => {
+    l = l.trim();
+    const tier = +l[0];
+    const names = l.slice(2).split("|").map(x => x.trim()).filter(Boolean);
+    return { tier, name: names[0], keys: [...new Set(names.map(p.key))].filter(Boolean) };
+  });
+  p.nopes = (p.no || []).map(([names, why]) => {
+    const list = names.split("|");
+    return { why, name: list[0], keys: list.map(p.key) };
+  });
+}
+PROMPTS.forEach(prep);
+
+function lev(a, b) {
+  if (Math.abs(a.length - b.length) > 2) return 99;
+  const m = a.length, n = b.length;
+  let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+    prev = cur;
+  }
+  return prev[n];
+}
+
+/* Devolve {kind:"ok", entry} | {kind:"no", nope} | null */
+function match(p, input) {
+  const q = p.key(input);
+  if (!q) return null;
+  const pool = [
+    ...p.entries.map(e => ({ kind: "ok", item: e, keys: e.keys })),
+    ...p.nopes.map(n => ({ kind: "no", item: n, keys: n.keys }))
+  ];
+  const variants = [q, q.endsWith("s") ? q.slice(0, -1) : q + "s"];
+  for (const v of variants) for (const c of pool) if (c.keys.includes(v)) return c;
+  const tol = q.length <= 4 ? 0 : q.length <= 8 ? 1 : 2;
+  if (!tol) return null;
+  let best = null, bd = 99, tie = false;
+  for (const c of pool) for (const k of c.keys) {
+    if (k.length <= 4) continue;
+    const d = lev(q, k);
+    if (d < bd) { bd = d; best = c; tie = false; }
+    else if (d === bd && best !== c) tie = true;
+  }
+  return best && bd <= tol && !tie ? best : null;
+}
+
+function rng(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a = (a + 0x6D2B79F5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function gamePrompts(n) {
+  const r = rng((n * 2654435761 + 97) >>> 0);
+  const idx = PROMPTS.map((_, i) => i);
+  for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
+  return idx.slice(0, ROUNDS);
+}
+function dailyNumber(d = new Date()) {
+  const start = new Date(2026, 10, 1);
+  const today = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  return Math.max(1, Math.round((today - start) / 864e5) + 1);
+}
+/*ENGINE-END*/
+
+/* ---------------- Interface ---------------- */
+const $ = id => document.getElementById(id);
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const TIERCOL = { 0: "#4a3a30", 1: "var(--t1)", 2: "var(--t2)", 3: "var(--t3)", 4: "var(--t4)", 5: "var(--t5)" };
+
+let S = null;   // estado da partida
+let tick = null;
+
+function buildShaft() {
+  const sh = $("shaft");
+  sh.innerHTML = LAYERS.map((L, i) =>
+    `<div class="band" data-i="${i}" style="background:${L.bg};color:${L.ink}${i === 7 ? ";flex:.55" : ""}"><span>${L.name}</span><small>${i * 100} m</small></div>`
+  ).join("") + `<div class="marker" id="marker"></div>`;
+}
+function setDepth(score) {
+  $("depth").textContent = score + " m";
+  // 7 faixas de 100 m e o diamante no fundo (faixa menor)
+  const total = 7 + 0.55;
+  const p = Math.min(score, MAX) / 100 / total;
+  $("shaft").style.setProperty("--p", p.toFixed(4));
+  document.querySelectorAll(".band").forEach(b => b.classList.toggle("reached", S && +b.dataset.i === Math.min(7, Math.floor(score / 100)) && score > 0));
+}
+
+function show(id) {
+  ["scr-start", "scr-play", "scr-reveal", "scr-end"].forEach(s => $(s).hidden = s !== id);
+  window.scrollTo({ top: 0 });
+}
+
+function legend() {
+  $("tier-legend").innerHTML = [1, 2, 3, 4, 5].map(t =>
+    `<span class="chip" style="--c:${TIERCOL[t]}"><i></i>${TIER[t]}<em>${PTS[t]} m</em></span>`).join("");
+}
+
+function bestLabel(n) {
+  const b = store.get("garimpo:best:" + n);
+  return b !== null ? `Seu recorde no #${n}: ${b} m` : "";
+}
+
+function home() {
+  clearInterval(tick);
+  S = null;
+  const d = dailyNumber();
+  $("daily-label").textContent = `Jogo #${d}. As mesmas 7 perguntas pra todo mundo hoje.`;
+  $("daily-best").textContent = bestLabel(d);
+  const n = clampNum($("game-num").value);
+  $("free-best").textContent = bestLabel(n);
+  setDepth(0);
+  show("scr-start");
+}
+
+function clampNum(v) { v = Math.floor(+v); return v >= 1 && v <= 9999 ? v : 1; }
+
+function start(n, daily) {
+  S = { n, daily, list: gamePrompts(n), i: 0, score: 0, results: [] };
+  try { history.replaceState(null, "", "#jogo-" + n); } catch (e) {}
+  setDepth(0);
+  round();
+}
+
+function pips(el) {
+  el.innerHTML = S.list.map((_, k) => {
+    const r = S.results[k];
+    return `<span class="pip${k === S.i && !r ? " now" : ""}"${r ? ` data-t="${r.tier}"` : ""}></span>`;
+  }).join("");
+}
+
+function round() {
+  const p = PROMPTS[S.list[S.i]];
+  $("play-label").textContent = `${S.daily ? "Jogo do dia" : "Ilimitado"} #${S.n} · Pergunta ${S.i + 1} de ${ROUNDS}`;
+  $("prompt").textContent = p.q;
+  $("hint").textContent = p.hint || "";
+  $("msg").textContent = "";
+  $("answer").value = "";
+  $("answer").disabled = false;
+  $("btn-dig").disabled = false;
+  pips($("pips"));
+  show("scr-play");
+  $("answer").focus();
+  const end = performance.now() + SECONDS * 1000;
+  clearInterval(tick);
+  const upd = () => {
+    const left = Math.max(0, end - performance.now());
+    $("timer-bar").style.transform = `scaleX(${left / (SECONDS * 1000)})`;
+    $("timer").classList.toggle("low", left < 6000);
+    $("clock").textContent = (left / 1000).toFixed(1).replace(".", ",") + " s";
+    if (left <= 0) { clearInterval(tick); finishRound(null, ""); }
+  };
+  upd();
+  tick = setInterval(upd, 100);
+}
+
+function submit(e) {
+  e.preventDefault();
+  if (!S || $("scr-play").hidden) return;
+  const raw = $("answer").value.trim();
+  if (!raw) return;
+  const p = PROMPTS[S.list[S.i]];
+  const m = match(p, raw);
+  const msg = $("msg");
+  if (m && m.kind === "ok") { clearInterval(tick); finishRound(m.item, raw); return; }
+  msg.textContent = m && m.kind === "no"
+    ? `${m.item.name} ${m.item.why}${m.item.why.includes("Diga qual") ? "" : " Tenta outra."}`
+    : `Não achei “${raw}” na lista dessa pergunta. Confere a grafia ou tenta outra.`;
+  const f = $("dig"); f.classList.remove("shake"); void f.offsetWidth; f.classList.add("shake");
+  $("answer").select();
+}
+
+function finishRound(entry, raw) {
+  const p = PROMPTS[S.list[S.i]];
+  const tier = entry ? entry.tier : 0;
+  const pts = entry ? PTS[tier] : 0;
+  S.results[S.i] = { tier, pts, name: entry ? entry.name : null, raw };
+  S.score += pts;
+  setDepth(S.score);
+  $("answer").disabled = true;
+  $("btn-dig").disabled = true;
+
+  $("rev-label").textContent = `Pergunta ${S.i + 1} de ${ROUNDS}`;
+  $("rev-prompt").textContent = p.q;
+  pips($("pips2"));
+  $("rev-result").innerHTML = entry
+    ? `<div class="gem" style="--c:${TIERCOL[tier]}"></div><div class="what"><b>${esc(entry.name)}</b><span>${TIER[tier]}${!entry.keys.includes(p.key(raw)) ? ` · você escreveu “${esc(raw)}”` : ""}</span></div><div class="pts">+${pts} m</div>`
+    : `<div class="gem" style="--c:${TIERCOL[0]}"></div><div class="what"><b>O tempo acabou</b><span>Nenhuma pedra nessa rodada.</span></div><div class="pts">+0 m</div>`;
+
+  const common = [...p.entries].sort((a, b) => a.tier - b.tier).slice(0, 5);
+  $("rev-common").innerHTML = common.map(e => `<li><span>${esc(e.name)}</span><span>${TIER[e.tier]}</span></li>`).join("");
+  const r = rng(S.n * 31 + S.i * 7 + 5);
+  const topTier = Math.max(...p.entries.map(e => e.tier));
+  const deepPool = p.entries.filter(e => e.tier === topTier && e !== entry);
+  const deep = [];
+  while (deep.length < 3 && deepPool.length) deep.push(deepPool.splice(Math.floor(r() * deepPool.length), 1)[0]);
+  $("rev-deep").innerHTML = deep.map(e => `<li><span>${esc(e.name)}</span><span>+${PTS[e.tier]} m</span></li>`).join("");
+
+  $("btn-next").textContent = S.i + 1 < ROUNDS ? "Próxima pergunta" : "Ver resultado";
+  show("scr-reveal");
+  $("btn-next").focus();
+}
+
+function next() {
+  if (!S) return;
+  S.i++;
+  if (S.i < ROUNDS) round(); else finish();
+}
+
+function finish() {
+  const L = layerFor(S.score);
+  $("end-label").textContent = `${S.daily ? "Jogo do dia" : "Ilimitado"} #${S.n} · fim da descida`;
+  $("end-score").textContent = S.score + " m";
+  $("end-layer").textContent = S.score >= MAX ? "Você chegou ao diamante" : `Você parou na camada de ${L.name.charAt(0).toLowerCase() + L.name.slice(1)}`;
+  $("end-fact").textContent = L.fact;
+  $("recap").innerHTML = S.list.map((pi, k) => {
+    const r = S.results[k];
+    return `<li><span class="pip" data-t="${r.tier}"></span><div>${esc(PROMPTS[pi].q)}<small>${r.name ? esc(r.name) + " · " + TIER[r.tier] : "Sem resposta"}</small></div><span class="p">+${r.pts}</span></li>`;
+  }).join("");
+  const line = S.results.map(r => EMOJI[r.tier]).join("");
+  $("share").value = `Garimpo #${S.n} · ${S.score} m (${L.name})\n${line}`;
+  const key = "garimpo:best:" + S.n;
+  const prev = +(store.get(key) || -1);
+  if (S.score > prev) store.set(key, String(S.score));
+  show("scr-end");
+}
+
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+function copyShare() {
+  const t = $("share");
+  const b = $("btn-copy");
+  const done = ok => { b.textContent = ok ? "Copiado" : "Selecionei o texto, é só copiar"; setTimeout(() => b.textContent = "Copiar resultado", 1800); };
+  try {
+    navigator.clipboard.writeText(t.value).then(() => done(true), () => { t.select(); done(false); });
+  } catch (e) { t.select(); done(false); }
+}
+
+function fromHash() {
+  const m = /^#jogo-(\d{1,4})$/.exec(location.hash);
+  if (m) $("game-num").value = clampNum(m[1]);
+}
+
+function boot() {
+  buildShaft();
+  legend();
+  fromHash();
+  home();
+  $("btn-daily").onclick = () => start(dailyNumber(), true);
+  $("btn-free").onclick = () => start(clampNum($("game-num").value), false);
+  $("btn-rand").onclick = () => { $("game-num").value = 1 + Math.floor(Math.random() * 9999); $("free-best").textContent = bestLabel(clampNum($("game-num").value)); };
+  $("game-num").addEventListener("input", () => $("free-best").textContent = bestLabel(clampNum($("game-num").value)));
+  $("game-num").addEventListener("keydown", e => { if (e.key === "Enter") $("btn-free").click(); });
+  $("dig").addEventListener("submit", submit);
+  $("btn-next").onclick = next;
+  $("btn-copy").onclick = copyShare;
+  $("btn-again").onclick = () => { $("game-num").value = 1 + Math.floor(Math.random() * 9999); home(); $("game-num").focus(); };
+  $("btn-home").onclick = home;
+  window.addEventListener("hashchange", () => { if (!S) { fromHash(); home(); } });
+}
+boot();
+</script>
+
+</html>
