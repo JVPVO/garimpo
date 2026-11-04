@@ -1,0 +1,435 @@
+{
+  "category": "mamiferos",
+  "prompt": "Cite um mamífero brasileiro",
+  "source": "https://pt.wikipedia.org/wiki/Lista_de_mamíferos_do_Brasil",
+  "notes": "Espécies de mamíferos nativas do Brasil; o artigo é da espécie e foi verificado na pt.wikipedia; tags = grupo taxonômico.",
+  "items": [
+    {
+      "name": "Onça-pintada",
+      "article": "Panthera onca",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    },
+    {
+      "name": "Onça-parda",
+      "article": "Puma concolor",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    },
+    {
+      "name": "Jaguatirica",
+      "article": "Jaguatirica",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    },
+    {
+      "name": "Gato-do-mato-pequeno",
+      "article": "Gato-do-mato-pequeno",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    },
+    {
+      "name": "Gato-maracajá",
+      "article": "Gato-maracajá",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    },
+    {
+      "name": "Gato-do-mato-grande",
+      "article": "Gato-do-mato-grande",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    },
+    {
+      "name": "Gato-palheiro",
+      "article": "Gato-dos-pampas",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    },
+    {
+      "name": "Lobo-guará",
+      "article": "Lobo-guará",
+      "tags": {
+        "grupo": "canídeo"
+      }
+    },
+    {
+      "name": "Raposa-do-campo",
+      "article": "Raposa-do-campo",
+      "tags": {
+        "grupo": "canídeo"
+      }
+    },
+    {
+      "name": "Graxaim-do-campo",
+      "article": "Graxaim-do-campo",
+      "tags": {
+        "grupo": "canídeo"
+      }
+    },
+    {
+      "name": "Cachorro-do-mato",
+      "article": "Graxaim-do-mato",
+      "tags": {
+        "grupo": "canídeo"
+      }
+    },
+    {
+      "name": "Cachorro-vinagre",
+      "article": "Cachorro-vinagre",
+      "tags": {
+        "grupo": "canídeo"
+      }
+    },
+    {
+      "name": "Cachorro-do-mato-de-orelhas-curtas",
+      "article": "Cachorro-do-mato-de-orelhas-curtas",
+      "tags": {
+        "grupo": "canídeo"
+      }
+    },
+    {
+      "name": "Mão-pelada",
+      "article": "Mão-pelada",
+      "tags": {
+        "grupo": "procionídeo"
+      }
+    },
+    {
+      "name": "Quati-de-cauda-anelada",
+      "article": "Quati-de-cauda-anelada",
+      "tags": {
+        "grupo": "procionídeo"
+      }
+    },
+    {
+      "name": "Jupará",
+      "article": "Jupará",
+      "tags": {
+        "grupo": "procionídeo"
+      }
+    },
+    {
+      "name": "Anta",
+      "article": "Anta",
+      "tags": {
+        "grupo": "tapirídeo"
+      }
+    },
+    {
+      "name": "Queixada",
+      "article": "Queixada",
+      "tags": {
+        "grupo": "tayassuídeo"
+      }
+    },
+    {
+      "name": "Cateto",
+      "article": "Caititu",
+      "tags": {
+        "grupo": "tayassuídeo"
+      }
+    },
+    {
+      "name": "Capivara",
+      "article": "Capivara",
+      "tags": {
+        "grupo": "roedor"
+      }
+    },
+    {
+      "name": "Paca",
+      "article": "Paca",
+      "tags": {
+        "grupo": "roedor"
+      }
+    },
+    {
+      "name": "Caxinguelê",
+      "article": "Guerlinguetus aestuans",
+      "tags": {
+        "grupo": "roedor"
+      }
+    },
+    {
+      "name": "Ouriço-cacheiro",
+      "article": "Coendou prehensilis",
+      "tags": {
+        "grupo": "roedor"
+      }
+    },
+    {
+      "name": "Ratão-do-banhado",
+      "article": "Myocastor coypus",
+      "tags": {
+        "grupo": "roedor"
+      }
+    },
+    {
+      "name": "Preá",
+      "article": "Preá",
+      "tags": {
+        "grupo": "roedor"
+      }
+    },
+    {
+      "name": "Mocó",
+      "article": "Mocó",
+      "tags": {
+        "grupo": "roedor"
+      }
+    },
+    {
+      "name": "Tatu-galinha",
+      "article": "Tatu-galinha",
+      "tags": {
+        "grupo": "dasipodídeo"
+      }
+    },
+    {
+      "name": "Tatu-canastra",
+      "article": "Tatu-canastra",
+      "tags": {
+        "grupo": "dasipodídeo"
+      }
+    },
+    {
+      "name": "Tatu-bola",
+      "article": "Tatu-bola-do-nordeste",
+      "tags": {
+        "grupo": "dasipodídeo"
+      }
+    },
+    {
+      "name": "Tatu-peba",
+      "article": "Tatupeba",
+      "tags": {
+        "grupo": "dasipodídeo"
+      }
+    },
+    {
+      "name": "Preguiça-comum",
+      "article": "Preguiça-comum",
+      "tags": {
+        "grupo": "preguiça"
+      }
+    },
+    {
+      "name": "Preguiça-de-coleira",
+      "article": "Preguiça-de-coleira",
+      "tags": {
+        "grupo": "preguiça"
+      }
+    },
+    {
+      "name": "Tamanduá-bandeira",
+      "article": "Tamanduá-bandeira",
+      "tags": {
+        "grupo": "mirmecofagídeo"
+      }
+    },
+    {
+      "name": "Tamanduá-mirim",
+      "article": "Tamanduá-mirim",
+      "tags": {
+        "grupo": "mirmecofagídeo"
+      }
+    },
+    {
+      "name": "Bugio-ruivo",
+      "article": "Bugio-ruivo",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Bugio-preto",
+      "article": "Bugio-preto",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Muriqui-do-sul",
+      "article": "Muriqui-do-sul",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Muriqui-do-norte",
+      "article": "Muriqui-do-norte",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Mico-leão-dourado",
+      "article": "Mico-leão-dourado",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Mico-leão-de-cara-dourada",
+      "article": "Mico-leão-de-cara-dourada",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Sagui-de-tufo-branco",
+      "article": "Sagui-de-tufo-branco",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Sauim-de-coleira",
+      "article": "Sauim-de-coleira",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Uacari-branco",
+      "article": "Uacari-branco",
+      "tags": {
+        "grupo": "primate"
+      }
+    },
+    {
+      "name": "Veado-campeiro",
+      "article": "Veado-campeiro",
+      "tags": {
+        "grupo": "cervídeo"
+      }
+    },
+    {
+      "name": "Veado-mateiro",
+      "article": "Veado-mateiro",
+      "tags": {
+        "grupo": "cervídeo"
+      }
+    },
+    {
+      "name": "Veado-catingueiro",
+      "article": "Veado-catingueiro",
+      "tags": {
+        "grupo": "cervídeo"
+      }
+    },
+    {
+      "name": "Cervo-do-pantanal",
+      "article": "Cervo-do-pantanal",
+      "tags": {
+        "grupo": "cervídeo"
+      }
+    },
+    {
+      "name": "Boto-cor-de-rosa",
+      "article": "Boto-cor-de-rosa",
+      "tags": {
+        "grupo": "cetáceo"
+      }
+    },
+    {
+      "name": "Boto-cinza",
+      "article": "Sotalia guianensis",
+      "tags": {
+        "grupo": "cetáceo"
+      }
+    },
+    {
+      "name": "Baleia-jubarte",
+      "article": "Baleia-jubarte",
+      "tags": {
+        "grupo": "cetáceo"
+      }
+    },
+    {
+      "name": "Baleia-franca-austral",
+      "article": "Baleia-franca-austral",
+      "tags": {
+        "grupo": "cetáceo"
+      }
+    },
+    {
+      "name": "Peixe-boi-da-amazônia",
+      "article": "Peixe-boi-da-amazônia",
+      "tags": {
+        "grupo": "sirênio"
+      }
+    },
+    {
+      "name": "Peixe-boi-marinho",
+      "article": "Peixe-boi-marinho",
+      "tags": {
+        "grupo": "sirênio"
+      }
+    },
+    {
+      "name": "Ariranha",
+      "article": "Ariranha",
+      "tags": {
+        "grupo": "mustelídeo"
+      }
+    },
+    {
+      "name": "Lontra-neotropical",
+      "article": "Lontra-neotropical",
+      "tags": {
+        "grupo": "mustelídeo"
+      }
+    },
+    {
+      "name": "Irara",
+      "article": "Irara",
+      "tags": {
+        "grupo": "mustelídeo"
+      }
+    },
+    {
+      "name": "Furão-pequeno",
+      "article": "Furão-pequeno",
+      "tags": {
+        "grupo": "mustelídeo"
+      }
+    },
+    {
+      "name": "Leão-marinho",
+      "article": "Leão-marinho-da-patagônia",
+      "tags": {
+        "grupo": "otarídeo"
+      }
+    },
+    {
+      "name": "Gambá-comum",
+      "article": "Gambá-comum",
+      "tags": {
+        "grupo": "marsupial"
+      }
+    },
+    {
+      "name": "Gambá-de-orelha-branca",
+      "article": "Gambá-de-orelha-branca",
+      "tags": {
+        "grupo": "marsupial"
+      }
+    },
+    {
+      "name": "Gato-mourisco",
+      "article": "Jaguarundi",
+      "tags": {
+        "grupo": "felídeo"
+      }
+    }
+  ]
+}

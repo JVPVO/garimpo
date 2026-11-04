@@ -1,0 +1,470 @@
+{
+  "category": "tv_globinho",
+  "prompt": "Cite um desenho ou série que passou na TV Globinho",
+  "source": "https://pt.wikipedia.org/wiki/TV_Globinho",
+  "notes": "Programas citados no artigo 'TV Globinho' (pt.wikipedia) como exibidos no bloco, entre 2000 e 2015 e na faixa da Globo Internacional; o nome é o título usado na exibição brasileira e o artigo é o da pt.wikipedia. Não entram desenhos que só passaram em outros infantis da Globo. tipo = desenho, anime ou série.",
+  "items": [
+    {
+      "name": "101 Dálmatas",
+      "article": "101 Dalmatians: The Series",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "A Lenda de Tarzan",
+      "article": "The Legend of Tarzan",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "A Pequena Sereia",
+      "article": "A Pequena Sereia (telessérie)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Aladdin",
+      "article": "Aladdin (telessérie)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "As Aventuras de Brandy e Sr. Bigodes",
+      "article": "Brandy & Mr. Whiskers",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "As Aventuras de Jackie Chan",
+      "article": "As Aventuras de Jackie Chan",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Astro Boy",
+      "article": "Astro Boy",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Avatar: A Lenda de Aang",
+      "article": "Avatar: The Last Airbender",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Bakugan",
+      "article": "Bakugan",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Beyblade",
+      "article": "Beyblade",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Bob Esponja",
+      "article": "SpongeBob SquarePants",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Buzz Lightyear do Comando Estelar",
+      "article": "Buzz Lightyear of Star Command",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "CatDog",
+      "article": "CatDog",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Catscratch",
+      "article": "Catscratch",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Caverna do Dragão",
+      "article": "Dungeons & Dragons (série animada)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Como Treinar o Seu Dragão: A Série",
+      "article": "DreamWorks Dragons",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Danny Phantom",
+      "article": "Danny Phantom",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Digimon",
+      "article": "Digimon Adventure",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Dragon Ball",
+      "article": "Dragon Ball (anime)",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Dragon Ball GT",
+      "article": "Dragon Ball GT",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Dragon Ball Z",
+      "article": "Dragon Ball Z",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Ducktales",
+      "article": "DuckTales",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Esquadrão de Heróis",
+      "article": "The Super Hero Squad Show",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Família-X",
+      "article": "The X's",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "George, o Rei da Floresta",
+      "article": "George of the Jungle (desenho de 2007)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Gormiti",
+      "article": "Gormiti, che miti",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Hamtaro",
+      "article": "Hamtaro",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Hannah Montana",
+      "article": "Hannah Montana",
+      "tags": {
+        "tipo": "série"
+      }
+    },
+    {
+      "name": "Hércules",
+      "article": "Hercules (série da Disney)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Homem-Aranha",
+      "article": "Spider-Man: The Animated Series",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "iCarly",
+      "article": "iCarly",
+      "tags": {
+        "tipo": "série"
+      }
+    },
+    {
+      "name": "Inspetor Bugiganga",
+      "article": "Inspetor Bugiganga (2001)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Inu-Yasha",
+      "article": "InuYasha",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Jake Long - O Dragão Ocidental",
+      "article": "American Dragon: Jake Long",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Jimmy Neutron",
+      "article": "The Adventures of Jimmy Neutron: Boy Genius",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Kamen Rider: O Cavaleiro Dragão",
+      "article": "Kamen Rider: Dragon Knight",
+      "tags": {
+        "tipo": "série"
+      }
+    },
+    {
+      "name": "Kim Possible",
+      "article": "Kim Possible",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Lilo e Stitch",
+      "article": "Lilo and Stitch: The Series",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Luluzinha",
+      "article": "Little Lulu",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "O Espetacular Homem-Aranha",
+      "article": "The Spectacular Spider-Man",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "O Point do Mickey",
+      "article": "House of Mouse",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Os Anjinhos",
+      "article": "Rugrats",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Os Feiticeiros de Waverly Place",
+      "article": "Os Feiticeiros de Waverly Place",
+      "tags": {
+        "tipo": "série"
+      }
+    },
+    {
+      "name": "Os Padrinhos Mágicos",
+      "article": "The Fairly OddParents",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Os Simpsons",
+      "article": "Os Simpsons",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Os Substitutos",
+      "article": "The Replacements (desenho animado)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Os Vingadores",
+      "article": "Os Vingadores: Os Super-Heróis mais Poderosos da Terra",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Phineas e Ferb",
+      "article": "Phineas e Ferb",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Pokémon",
+      "article": "Pokémon (anime)",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Power Rangers",
+      "article": "Power Rangers",
+      "tags": {
+        "tipo": "série"
+      }
+    },
+    {
+      "name": "Power Rangers: S.P.D.",
+      "article": "Power Rangers: Space Patrol Delta",
+      "tags": {
+        "tipo": "série"
+      }
+    },
+    {
+      "name": "Quarteto Fantástico",
+      "article": "Fantastic Four: World's Greatest Heroes",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Rabiscos Ariscos",
+      "article": "Stickin' Around",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Rocket Power",
+      "article": "Rocket Power",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Shaman King",
+      "article": "Shaman King",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Sorriso Metálico",
+      "article": "Braceface",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Star Wars: The Clone Wars",
+      "article": "Star Wars: The Clone Wars (telessérie de 2008)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Tico e Teco e os Defensores da Lei",
+      "article": "Chip 'n Dale Rescue Rangers",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Timão e Pumba",
+      "article": "Timon & Pumbaa",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Três Espiãs Demais",
+      "article": "Totally Spies!",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Ultimate Homem Aranha",
+      "article": "Ultimate Spider-Man (telessérie animada)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "W.I.T.C.H.",
+      "article": "W.I.T.C.H. (série animada)",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Yin Yang Yo!",
+      "article": "Yin Yang Yo!",
+      "tags": {
+        "tipo": "desenho"
+      }
+    },
+    {
+      "name": "Yu-Gi-Oh!",
+      "article": "Yu-Gi-Oh! Duel Monsters",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Yu-Gi-Oh! GX",
+      "article": "Yu-Gi-Oh! GX",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Zack e Cody",
+      "article": "The Suite Life of Zack & Cody",
+      "tags": {
+        "tipo": "série"
+      }
+    }
+  ]
+}

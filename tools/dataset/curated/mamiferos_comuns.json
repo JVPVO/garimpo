@@ -1,0 +1,21 @@
+{
+  "category": "mamiferos_comuns",
+  "prompt": "Cite um mamífero brasileiro",
+  "source": "https://pt.wikipedia.org/wiki/Categoria:Mam%C3%ADferos_do_Brasil",
+  "notes": "Nomes populares, incluindo grupos que o jogador fala de verdade (onça, macaco, baleia).",
+  "items": [
+    {"name": "Onça"}, {"name": "Onça-pintada"}, {"name": "Onça-parda"}, {"name": "Suçuarana"},
+    {"name": "Jaguatirica"}, {"name": "Gato-do-mato"}, {"name": "Macaco"}, {"name": "Mico"},
+    {"name": "Sagui"}, {"name": "Bugio"}, {"name": "Muriqui"}, {"name": "Macaco-prego"},
+    {"name": "Baleia"}, {"name": "Golfinho"}, {"name": "Boto"}, {"name": "Peixe-boi"},
+    {"name": "Lontra"}, {"name": "Ariranha"}, {"name": "Furão"}, {"name": "Irara"},
+    {"name": "Quati"}, {"name": "Guaxinim"}, {"name": "Coatá"}, {"name": "Preguiça"},
+    {"name": "Tamanduá"}, {"name": "Tatu"}, {"name": "Tatu-bola"}, {"name": "Capivara"},
+    {"name": "Cutia"}, {"name": "Paca"}, {"name": "Cotia"}, {"name": "Veado"},
+    {"name": "Cervo"}, {"name": "Lobo-guará"}, {"name": "Raposa"}, {"name": "Cachorro-do-mato"},
+    {"name": "Gambá"}, {"name": "Morcego"}, {"name": "Rato"}, {"name": "Camundongo"},
+    {"name": "Porco-do-mato"}, {"name": "Queixada"}, {"name": "Caititu"}, {"name": "Anta"},
+    {"name": "Bicho-preguiça"}, {"name": "Elefante-marinho"}, {"name": "Leão-marinho"},
+    {"name": "Foca"}, {"name": "Morsa"}
+  ]
+}

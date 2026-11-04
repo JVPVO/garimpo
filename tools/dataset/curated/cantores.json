@@ -1,0 +1,722 @@
+{
+  "category": "cantores",
+  "prompt": "Cite um cantor brasileiro",
+  "source": "https://pt.wikipedia.org/wiki/Categoria:Cantores_do_Brasil",
+  "notes": "Cantores e cantoras brasileiros solo, de várias eras e gêneros (MPB, bossa nova, rock, samba, pagode, sertanejo, forró, axé, brega, pop, rap). Bandas e duplas ficaram de fora; vocalistas de banda só entram quando a carreira solo é a principal.",
+  "items": [
+    {
+      "name": "Adoniran Barbosa",
+      "article": "Adoniran Barbosa",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Adriana Calcanhotto",
+      "article": "Adriana Calcanhotto",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Alceu Valença",
+      "article": "Alceu Valença",
+      "tags": {
+        "genero": "forró"
+      }
+    },
+    {
+      "name": "Alcione",
+      "article": "Alcione (cantora)",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Almir Sater",
+      "article": "Almir Sater",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Amado Batista",
+      "article": "Amado Batista",
+      "tags": {
+        "genero": "brega"
+      }
+    },
+    {
+      "name": "Ana Carolina",
+      "article": "Ana Carolina (cantora)",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Ana Castela",
+      "article": "Ana Castela",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Anitta",
+      "article": "Anitta",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Arlindo Cruz",
+      "article": "Arlindo Cruz",
+      "tags": {
+        "genero": "pagode"
+      }
+    },
+    {
+      "name": "Arnaldo Antunes",
+      "article": "Arnaldo Antunes",
+      "tags": {
+        "genero": "rock"
+      }
+    },
+    {
+      "name": "Bebel Gilberto",
+      "article": "Bebel Gilberto",
+      "tags": {
+        "genero": "bossa nova"
+      }
+    },
+    {
+      "name": "Belchior",
+      "article": "Belchior",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Beth Carvalho",
+      "article": "Beth Carvalho",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Bezerra da Silva",
+      "article": "Bezerra da Silva",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Caetano Veloso",
+      "article": "Caetano Veloso",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Carlinhos Brown",
+      "article": "Carlinhos Brown",
+      "tags": {
+        "genero": "axé"
+      }
+    },
+    {
+      "name": "Cartola",
+      "article": "Cartola (cantor)",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Cássia Eller",
+      "article": "Cássia Eller",
+      "tags": {
+        "genero": "rock"
+      }
+    },
+    {
+      "name": "Céu",
+      "article": "Céu (cantora)",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Chico Buarque",
+      "article": "Chico Buarque",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Clara Nunes",
+      "article": "Clara Nunes",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Claudia Leitte",
+      "article": "Claudia Leitte",
+      "tags": {
+        "genero": "axé"
+      }
+    },
+    {
+      "name": "Criolo",
+      "article": "Criolo",
+      "tags": {
+        "genero": "rap"
+      }
+    },
+    {
+      "name": "Daniel",
+      "article": "Daniel (cantor)",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Daniela Mercury",
+      "article": "Daniela Mercury",
+      "tags": {
+        "genero": "axé"
+      }
+    },
+    {
+      "name": "Diogo Nogueira",
+      "article": "Diogo Nogueira",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Djavan",
+      "article": "Djavan",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Dominguinhos",
+      "article": "Dominguinhos",
+      "tags": {
+        "genero": "forró"
+      }
+    },
+    {
+      "name": "Dona Ivone Lara",
+      "article": "Dona Ivone Lara",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Duda Beat",
+      "article": "Duda Beat",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Elba Ramalho",
+      "article": "Elba Ramalho",
+      "tags": {
+        "genero": "forró"
+      }
+    },
+    {
+      "name": "Elis Regina",
+      "article": "Elis Regina",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Elza Soares",
+      "article": "Elza Soares",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Emicida",
+      "article": "Emicida",
+      "tags": {
+        "genero": "rap"
+      }
+    },
+    {
+      "name": "Erasmo Carlos",
+      "article": "Erasmo Carlos",
+      "tags": {
+        "genero": "jovem guarda"
+      }
+    },
+    {
+      "name": "Fábio Jr.",
+      "article": "Fábio Jr.",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Fafá de Belém",
+      "article": "Fafá de Belém",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Fagner",
+      "article": "Fagner",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Fernanda Abreu",
+      "article": "Fernanda Abreu",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Gal Costa",
+      "article": "Gal Costa",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Geraldo Azevedo",
+      "article": "Geraldo Azevedo",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Gilberto Gil",
+      "article": "Gilberto Gil",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Gonzaguinha",
+      "article": "Gonzaguinha",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Guilherme Arantes",
+      "article": "Guilherme Arantes",
+      "tags": {
+        "genero": "pop rock"
+      }
+    },
+    {
+      "name": "Gusttavo Lima",
+      "article": "Gusttavo Lima",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Ivete Sangalo",
+      "article": "Ivete Sangalo",
+      "tags": {
+        "genero": "axé"
+      }
+    },
+    {
+      "name": "Iza",
+      "article": "Iza (cantora)",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Jackson do Pandeiro",
+      "article": "Jackson do Pandeiro",
+      "tags": {
+        "genero": "forró"
+      }
+    },
+    {
+      "name": "Jão",
+      "article": "Jão",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "João Gilberto",
+      "article": "João Gilberto",
+      "tags": {
+        "genero": "bossa nova"
+      }
+    },
+    {
+      "name": "Jorge Aragão",
+      "article": "Jorge Aragão",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Jorge Ben Jor",
+      "article": "Jorge Ben Jor",
+      "tags": {
+        "genero": "samba-rock"
+      }
+    },
+    {
+      "name": "Lenine",
+      "article": "Lenine (cantor)",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Lobão",
+      "article": "Lobão (músico)",
+      "tags": {
+        "genero": "rock"
+      }
+    },
+    {
+      "name": "Luan Santana",
+      "article": "Luan Santana",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Ludmilla",
+      "article": "Ludmilla",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Luísa Sonza",
+      "article": "Luísa Sonza",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Luiz Gonzaga",
+      "article": "Luiz Gonzaga",
+      "tags": {
+        "genero": "forró"
+      }
+    },
+    {
+      "name": "Lulu Santos",
+      "article": "Lulu Santos",
+      "tags": {
+        "genero": "pop rock"
+      }
+    },
+    {
+      "name": "Marcelo D2",
+      "article": "Marcelo D2",
+      "tags": {
+        "genero": "rap"
+      }
+    },
+    {
+      "name": "Margareth Menezes",
+      "article": "Margareth Menezes",
+      "tags": {
+        "genero": "axé"
+      }
+    },
+    {
+      "name": "Maria Bethânia",
+      "article": "Maria Bethânia",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Maria Rita",
+      "article": "Maria Rita",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Marília Mendonça",
+      "article": "Marília Mendonça",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Marina Lima",
+      "article": "Marina Lima",
+      "tags": {
+        "genero": "pop rock"
+      }
+    },
+    {
+      "name": "Marina Sena",
+      "article": "Marina Sena",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Marisa Monte",
+      "article": "Marisa Monte",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Martinho da Vila",
+      "article": "Martinho da Vila",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Melody",
+      "article": "Melody (cantora)",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Michel Teló",
+      "article": "Michel Teló",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Milton Nascimento",
+      "article": "Milton Nascimento",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Nana Caymmi",
+      "article": "Nana Caymmi",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Nelson Cavaquinho",
+      "article": "Nelson Cavaquinho",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Pabllo Vittar",
+      "article": "Pabllo Vittar",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Paulinho da Viola",
+      "article": "Paulinho da Viola",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Péricles",
+      "article": "Péricles (cantor)",
+      "tags": {
+        "genero": "pagode"
+      }
+    },
+    {
+      "name": "Pitty",
+      "article": "Pitty",
+      "tags": {
+        "genero": "rock"
+      }
+    },
+    {
+      "name": "Raul Seixas",
+      "article": "Raul Seixas",
+      "tags": {
+        "genero": "rock"
+      }
+    },
+    {
+      "name": "Reginaldo Rossi",
+      "article": "Reginaldo Rossi",
+      "tags": {
+        "genero": "brega"
+      }
+    },
+    {
+      "name": "Renato Teixeira",
+      "article": "Renato Teixeira",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Rita Lee",
+      "article": "Rita Lee",
+      "tags": {
+        "genero": "rock"
+      }
+    },
+    {
+      "name": "Roberta Miranda",
+      "article": "Roberta Miranda",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Roberta Sá",
+      "article": "Roberta Sá",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Roberto Carlos",
+      "article": "Roberto Carlos",
+      "tags": {
+        "genero": "jovem guarda"
+      }
+    },
+    {
+      "name": "Sabotage",
+      "article": "Sabotage (cantor)",
+      "tags": {
+        "genero": "rap"
+      }
+    },
+    {
+      "name": "Sérgio Reis",
+      "article": "Sérgio Reis",
+      "tags": {
+        "genero": "sertanejo"
+      }
+    },
+    {
+      "name": "Seu Jorge",
+      "article": "Seu Jorge",
+      "tags": {
+        "genero": "samba"
+      }
+    },
+    {
+      "name": "Simone",
+      "article": "Simone",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Thiaguinho",
+      "article": "Thiaguinho",
+      "tags": {
+        "genero": "pagode"
+      }
+    },
+    {
+      "name": "Tiago Iorc",
+      "article": "Tiago Iorc",
+      "tags": {
+        "genero": "pop"
+      }
+    },
+    {
+      "name": "Tim Maia",
+      "article": "Tim Maia",
+      "tags": {
+        "genero": "soul"
+      }
+    },
+    {
+      "name": "Tom Jobim",
+      "article": "Tom Jobim",
+      "tags": {
+        "genero": "bossa nova"
+      }
+    },
+    {
+      "name": "Toquinho",
+      "article": "Toquinho",
+      "tags": {
+        "genero": "bossa nova"
+      }
+    },
+    {
+      "name": "Vanessa da Mata",
+      "article": "Vanessa da Mata",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Vinicius de Moraes",
+      "article": "Vinicius de Moraes",
+      "tags": {
+        "genero": "bossa nova"
+      }
+    },
+    {
+      "name": "Wanderléa",
+      "article": "Wanderléa",
+      "tags": {
+        "genero": "jovem guarda"
+      }
+    },
+    {
+      "name": "Wando",
+      "article": "Wando",
+      "tags": {
+        "genero": "brega"
+      }
+    },
+    {
+      "name": "Zé Ramalho",
+      "article": "Zé Ramalho",
+      "tags": {
+        "genero": "rock"
+      }
+    },
+    {
+      "name": "Zeca Baleiro",
+      "article": "Zeca Baleiro",
+      "tags": {
+        "genero": "mpb"
+      }
+    },
+    {
+      "name": "Zeca Pagodinho",
+      "article": "Zeca Pagodinho",
+      "tags": {
+        "genero": "pagode"
+      }
+    },
+    {
+      "name": "Zélia Duncan",
+      "article": "Zélia Duncan",
+      "tags": {
+        "genero": "mpb"
+      }
+    }
+  ]
+}

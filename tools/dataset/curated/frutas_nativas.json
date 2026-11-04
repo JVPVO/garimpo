@@ -1,0 +1,419 @@
+{
+  "category": "frutas_nativas",
+  "prompt": "Cite uma fruta nativa do Brasil",
+  "source": "https://www.embrapa.br/busca-de-publicacoes/-/publicacao/1129419/a-arca-de-noe-das-frutas-nativas-brasileiras",
+  "notes": "Frutas nativas do Brasil segundo a obra da Embrapa 'A arca de Noé das frutas nativas brasileiras' (2021), complementada pelas listas de frutas nativas da Amazônia, do Cerrado e da Mata Atlântica. Espécies exóticas (banana, laranja, manga, jaca, coco, acerola, graviola, goiaba) ficaram de fora. Cada título foi conferido na pt.wikipedia.",
+  "items": [
+    {
+      "name": "Açaí",
+      "article": "Açaí",
+      "tags": {
+        "bioma": "Amazônia",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Cupuaçu",
+      "article": "Cupuaçu",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Bacuri",
+      "article": "Bacuri",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Biribá",
+      "article": "Biribá",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Araçá-boi",
+      "article": "Eugenia stipitata",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Camu-camu",
+      "article": "Camu-camu",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Abiu",
+      "article": "Abieiro",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Pupunha",
+      "article": "Pupunha",
+      "tags": {
+        "bioma": "Amazônia",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Tucumã",
+      "article": "Tucumã",
+      "tags": {
+        "bioma": "Amazônia",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Bacaba",
+      "article": "Bacaba",
+      "tags": {
+        "bioma": "Amazônia",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Patauá",
+      "article": "Patauá",
+      "tags": {
+        "bioma": "Amazônia",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Inajá",
+      "article": "Inajá",
+      "tags": {
+        "bioma": "Amazônia",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Uxi",
+      "article": "Uxi",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Cajuí",
+      "article": "Cajuí",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Mapati",
+      "article": "Pourouma cecropiifolia",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Cubiu",
+      "article": "Solanum sessiliflorum",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Guaraná",
+      "article": "Guaraná",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Cacau",
+      "article": "Cacau",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Jenipapo",
+      "article": "Jenipapo",
+      "tags": {
+        "bioma": "Amazônia"
+      }
+    },
+    {
+      "name": "Pequi",
+      "article": "Pequi",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Cagaita",
+      "article": "Cagaiteira",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Araticum",
+      "article": "Araticum",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Gabiroba",
+      "article": "Gabiroba",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Bocaiúva",
+      "article": "Bocaiuva",
+      "tags": {
+        "bioma": "Cerrado",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Jatobá",
+      "article": "Jatobá",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Sapucaia",
+      "article": "Sapucaia",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Tucum",
+      "article": "Tucum",
+      "tags": {
+        "bioma": "Cerrado",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Guapeva",
+      "article": "Pouteria torta",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Guabiju",
+      "article": "Guabiju",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Guamirim",
+      "article": "Guamirim",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Chichá",
+      "article": "Sterculia chicha",
+      "tags": {
+        "bioma": "Cerrado"
+      }
+    },
+    {
+      "name": "Cambuí",
+      "article": "Cambuí",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Jabuticaba",
+      "article": "Jabuticaba",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Pitanga",
+      "article": "Pitanga",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Grumixama",
+      "article": "Grumixameira",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Cambuci",
+      "article": "Cambuci (fruta)",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Uvaia",
+      "article": "Uvaia",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Cereja-do-rio-grande",
+      "article": "Eugenia involucrata",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Cabeludinha",
+      "article": "Plinia glomerata",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Cambucá",
+      "article": "Cambucá",
+      "tags": {
+        "bioma": "Mata Atlântica"
+      }
+    },
+    {
+      "name": "Butiá",
+      "article": "Butiá",
+      "tags": {
+        "bioma": "Mata Atlântica",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Jerivá",
+      "article": "Jerivá",
+      "tags": {
+        "bioma": "Mata Atlântica",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Juçara",
+      "article": "Içara (palmeira)",
+      "tags": {
+        "bioma": "Mata Atlântica",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Mangaba",
+      "article": "Mangaba",
+      "tags": {
+        "bioma": "Caatinga"
+      }
+    },
+    {
+      "name": "Umbu",
+      "article": "Umbuzeiro",
+      "tags": {
+        "bioma": "Caatinga"
+      }
+    },
+    {
+      "name": "Licuri",
+      "article": "Syagrus coronata",
+      "tags": {
+        "bioma": "Caatinga",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Catolé",
+      "article": "Catolé",
+      "tags": {
+        "bioma": "Caatinga",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Caju",
+      "article": "Caju",
+      "tags": {
+        "bioma": "Caatinga"
+      }
+    },
+    {
+      "name": "Carandá",
+      "article": "Carandá",
+      "tags": {
+        "bioma": "Pantanal",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Cajá",
+      "article": "Spondias mombin",
+      "tags": {
+        "tipo": "fruta"
+      }
+    },
+    {
+      "name": "Murici",
+      "article": "Murici"
+    },
+    {
+      "name": "Ingá",
+      "article": "Ingá"
+    },
+    {
+      "name": "Jaracatiá",
+      "article": "Jaracatiá"
+    },
+    {
+      "name": "Pitomba",
+      "article": "Pitomba"
+    },
+    {
+      "name": "Bacupari",
+      "article": "Bacupari"
+    },
+    {
+      "name": "Araçá",
+      "article": "Araçá"
+    },
+    {
+      "name": "Maracujá",
+      "article": "Maracujá"
+    },
+    {
+      "name": "Abacaxi",
+      "article": "Ananás"
+    },
+    {
+      "name": "Buriti",
+      "article": "Buriti",
+      "tags": {
+        "bioma": "Cerrado",
+        "tipo": "palmeira"
+      }
+    },
+    {
+      "name": "Babaçu",
+      "article": "Babaçu",
+      "tags": {
+        "tipo": "palmeira"
+      }
+    }
+  ]
+}

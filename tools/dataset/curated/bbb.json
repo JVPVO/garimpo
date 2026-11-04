@@ -1,0 +1,776 @@
+{
+  "category": "bbb",
+  "prompt": "Cite um participante do Big Brother Brasil",
+  "source": "https://pt.wikipedia.org/wiki/Lista_de_participantes_do_Big_Brother_Brasil",
+  "notes": "Participantes com artigo próprio na pt.wikipedia (Categoria:Participantes do Big Brother Brasil), todas as edições. Uma entrada por pessoa: quem voltou em outra edição fica com a passagem de melhor resultado (pódio) ou, sem pódio, a primeira. edicao = edição dessa passagem; resultado = como saiu do programa.",
+  "items": [
+    {
+      "name": "Adrilles Jorge",
+      "article": "Adrilles Jorge",
+      "tags": {
+        "edicao": 15,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Alberto Cowboy",
+      "article": "Alberto Cowboy",
+      "tags": {
+        "edicao": 7,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Aline Campos",
+      "article": "Aline Campos",
+      "tags": {
+        "edicao": 26,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Aline Dahlen",
+      "article": "Aline Dahlen",
+      "tags": {
+        "edicao": 14,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Aline Wirley",
+      "article": "Aline Wirley",
+      "tags": {
+        "edicao": 23,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Ana Clara",
+      "article": "Ana Clara (apresentadora)",
+      "tags": {
+        "edicao": 18,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Ana Paula Renault",
+      "article": "Ana Paula Renault",
+      "tags": {
+        "edicao": 26,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Antonio Carlos Júnior",
+      "article": "Antonio Carlos Júnior",
+      "tags": {
+        "edicao": 23,
+        "resultado": "expulso"
+      }
+    },
+    {
+      "name": "Ariadna Arantes",
+      "article": "Ariadna Arantes",
+      "tags": {
+        "edicao": 11,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Arthur Aguiar",
+      "article": "Arthur Aguiar",
+      "tags": {
+        "edicao": 22,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Babu Santana",
+      "article": "Babu Santana",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Bia do Brás",
+      "article": "Bia do Brás",
+      "tags": {
+        "edicao": 24,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Bianca Andrade",
+      "article": "Bianca Andrade",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Bruna Griphao",
+      "article": "Bruna Griphao",
+      "tags": {
+        "edicao": 23,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Camilla de Lucas",
+      "article": "Camilla de Lucas",
+      "tags": {
+        "edicao": 21,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Carla Diaz",
+      "article": "Carla Diaz",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Carol Peixinho",
+      "article": "Carol Peixinho",
+      "tags": {
+        "edicao": 19,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Daniele Hypólito",
+      "article": "Daniele Hypólito",
+      "tags": {
+        "edicao": 25,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Davi Brito",
+      "article": "Davi Brito",
+      "tags": {
+        "edicao": 24,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Dicesar",
+      "article": "Dicesar",
+      "tags": {
+        "edicao": 10,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Diego Hypólito",
+      "article": "Diego Hypólito",
+      "tags": {
+        "edicao": 25,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Diogo Almeida",
+      "article": "Diogo Almeida",
+      "tags": {
+        "edicao": 25,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Domitila Barros",
+      "article": "Domitila Barros",
+      "tags": {
+        "edicao": 23,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Douglas Silva",
+      "article": "Douglas Silva",
+      "tags": {
+        "edicao": 22,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Edílson Capetinha",
+      "article": "Edílson Capetinha",
+      "tags": {
+        "edicao": 26,
+        "resultado": "expulso"
+      }
+    },
+    {
+      "name": "Fernando Fernandes",
+      "article": "Fernando Fernandes (paratleta)",
+      "tags": {
+        "edicao": 2,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Fiuk",
+      "article": "Fiuk",
+      "tags": {
+        "edicao": 21,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Flávia Viana",
+      "article": "Flávia Viana",
+      "tags": {
+        "edicao": 7,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Flay",
+      "article": "Flay",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Francine Piaia",
+      "article": "Francine Piaia",
+      "tags": {
+        "edicao": 9,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Fred Bruno",
+      "article": "Fred Bruno",
+      "tags": {
+        "edicao": 23,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Fred Nicácio",
+      "article": "Fred Nicácio",
+      "tags": {
+        "edicao": 23,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Gabi Martins",
+      "article": "Gabi Martins",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Gabriel Santana",
+      "article": "Gabriel Santana",
+      "tags": {
+        "edicao": 23,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Gil do Vigor",
+      "article": "Gil do Vigor",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Gleici Damasceno",
+      "article": "Gleici Damasceno",
+      "tags": {
+        "edicao": 18,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Gracyanne Barbosa",
+      "article": "Gracyanne Barbosa",
+      "tags": {
+        "edicao": 25,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Grazi Massafera",
+      "article": "Grazi Massafera",
+      "tags": {
+        "edicao": 5,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Gyselle Soares",
+      "article": "Gyselle Soares",
+      "tags": {
+        "edicao": 8,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Henri Castelli",
+      "article": "Henri Castelli",
+      "tags": {
+        "edicao": 26,
+        "resultado": "retirado"
+      }
+    },
+    {
+      "name": "Íris Stefanelli",
+      "article": "Íris Stefanelli",
+      "tags": {
+        "edicao": 7,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Isabelle Nogueira",
+      "article": "Isabelle Nogueira",
+      "tags": {
+        "edicao": 24,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Jade Picon",
+      "article": "Jade Picon",
+      "tags": {
+        "edicao": 22,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Jaque Khury",
+      "article": "Jaque Khury",
+      "tags": {
+        "edicao": 8,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Jaquelline",
+      "article": "Jaquelline",
+      "tags": {
+        "edicao": 18,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Jean Wyllys",
+      "article": "Jean Wyllys",
+      "tags": {
+        "edicao": 5,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Jonas Sulzbach",
+      "article": "Jonas Sulzbach",
+      "tags": {
+        "edicao": 12,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Juliana Alves",
+      "article": "Juliana Alves",
+      "tags": {
+        "edicao": 3,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Juliana Lopes",
+      "article": "Juliana Lopes",
+      "tags": {
+        "edicao": 4,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Juliano Floss",
+      "article": "Juliano Floss",
+      "tags": {
+        "edicao": 26,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Juliette",
+      "article": "Juliette",
+      "tags": {
+        "edicao": 21,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Kamilla Salgado",
+      "article": "Kamilla Salgado",
+      "tags": {
+        "edicao": 13,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Karol Conká",
+      "article": "Karol Conká",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Kaysar Dadour",
+      "article": "Kaysar Dadour",
+      "tags": {
+        "edicao": 18,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Key Alves",
+      "article": "Key Alves",
+      "tags": {
+        "edicao": 23,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Kleber Bambam",
+      "article": "Kleber Bambam",
+      "tags": {
+        "edicao": 1,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Linn da Quebrada",
+      "article": "Linn da Quebrada",
+      "tags": {
+        "edicao": 22,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Lucas Chumbo",
+      "article": "Lucas Chumbo",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Lucas Penteado",
+      "article": "Lucas Penteado",
+      "tags": {
+        "edicao": 21,
+        "resultado": "desistente"
+      }
+    },
+    {
+      "name": "Manu Gavassi",
+      "article": "Manu Gavassi",
+      "tags": {
+        "edicao": 20,
+        "resultado": "terceiro"
+      }
+    },
+    {
+      "name": "Marcelo Dourado",
+      "article": "Marcelo Dourado",
+      "tags": {
+        "edicao": 10,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Marcelo Zulu",
+      "article": "Marcelo Zulu",
+      "tags": {
+        "edicao": 4,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Mari Gonzalez",
+      "article": "Mari Gonzalez",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Maria Bomani",
+      "article": "Maria Bomani",
+      "tags": {
+        "edicao": 22,
+        "resultado": "expulso"
+      }
+    },
+    {
+      "name": "Marinalva de Almeida",
+      "article": "Marinalva de Almeida",
+      "tags": {
+        "edicao": 17,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Marvvila",
+      "article": "Marvvila",
+      "tags": {
+        "edicao": 23,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "MC Bin Laden",
+      "article": "MC Binn",
+      "tags": {
+        "edicao": 24,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "MC Guimê",
+      "article": "MC Guimê",
+      "tags": {
+        "edicao": 23,
+        "resultado": "expulso"
+      }
+    },
+    {
+      "name": "Naiara Azevedo",
+      "article": "Naiara Azevedo",
+      "tags": {
+        "edicao": 22,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Nego Di",
+      "article": "Nego Di",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Paulo André",
+      "article": "Paulo André (velocista)",
+      "tags": {
+        "edicao": 22,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Pedro Scooby",
+      "article": "Pedro Scooby",
+      "tags": {
+        "edicao": 22,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Petrix Barbosa",
+      "article": "Petrix Barbosa",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Pocah",
+      "article": "Pocah",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Projota",
+      "article": "Projota",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Pyong Lee",
+      "article": "Pyong Lee",
+      "tags": {
+        "edicao": 20,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Rafa Kalimann",
+      "article": "Rafa Kalimann",
+      "tags": {
+        "edicao": 20,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Renata Saldanha",
+      "article": "Renata Saldanha",
+      "tags": {
+        "edicao": 25,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Rodrigo França",
+      "article": "Rodrigo França",
+      "tags": {
+        "edicao": 19,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Rodriguinho",
+      "article": "Rodriguinho (cantor)",
+      "tags": {
+        "edicao": 24,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Sabrina Sato",
+      "article": "Sabrina Sato",
+      "tags": {
+        "edicao": 3,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Sarah Andrade",
+      "article": "Sarah Andrade",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Slim Rimografia",
+      "article": "Slim Rimografia",
+      "tags": {
+        "edicao": 14,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Sol Vega",
+      "article": "Sol Vega",
+      "tags": {
+        "edicao": 4,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Solange Couto",
+      "article": "Solange Couto",
+      "tags": {
+        "edicao": 26,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Thelma Assis",
+      "article": "Thelma Assis",
+      "tags": {
+        "edicao": 20,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Tiago Abravanel",
+      "article": "Tiago Abravanel",
+      "tags": {
+        "edicao": 22,
+        "resultado": "desistente"
+      }
+    },
+    {
+      "name": "Vanessa Lopes",
+      "article": "Vanessa Lopes",
+      "tags": {
+        "edicao": 24,
+        "resultado": "desistente"
+      }
+    },
+    {
+      "name": "Vanessa Mesquita",
+      "article": "Vanessa Mesquita",
+      "tags": {
+        "edicao": 14,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Vanessa Pascale",
+      "article": "Vanessa Pascale",
+      "tags": {
+        "edicao": 1,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Viih Tube",
+      "article": "Viih Tube",
+      "tags": {
+        "edicao": 21,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Vinícius Rodrigues",
+      "article": "Vinícius Rodrigues",
+      "tags": {
+        "edicao": 24,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Vitória Strada",
+      "article": "Vitória Strada",
+      "tags": {
+        "edicao": 25,
+        "resultado": "eliminado"
+      }
+    },
+    {
+      "name": "Vivian Amorim",
+      "article": "Vivian Amorim",
+      "tags": {
+        "edicao": 17,
+        "resultado": "vice"
+      }
+    },
+    {
+      "name": "Wanessa Camargo",
+      "article": "Wanessa Camargo",
+      "tags": {
+        "edicao": 24,
+        "resultado": "expulso"
+      }
+    },
+    {
+      "name": "Yasmin Brunet",
+      "article": "Yasmin Brunet",
+      "tags": {
+        "edicao": 24,
+        "resultado": "eliminado"
+      }
+    }
+  ]
+}

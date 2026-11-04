@@ -1,0 +1,26 @@
+{
+  "category": "comida_mundo_extra",
+  "prompt": "Cite um prato internacional",
+  "source": "https://pt.wikipedia.org/wiki/Lista_de_pratos",
+  "notes": "Complemento do acervo internacional: pratos que o brasileiro come ou conhece pelo nome, incluindo Estrogonofe (Strogonoff/Stroganoff).",
+  "items": [
+    {"name": "Estrogonofe"}, {"name": "Goulash"}, {"name": "Sashimi"}, {"name": "Temaki"},
+    {"name": "Uramaki"}, {"name": "Okonomiyaki"}, {"name": "Takoyaki"}, {"name": "Yakitori"},
+    {"name": "Kimchi"}, {"name": "Bibimbap"}, {"name": "Bulgogi"}, {"name": "Banh mi"},
+    {"name": "Tom yum"}, {"name": "Curry verde"}, {"name": "Curry vermelho"}, {"name": "Naan"},
+    {"name": "Samosa"}, {"name": "Biryani"}, {"name": "Frango tandoori"}, {"name": "Tikka masala"},
+    {"name": "Tabule"}, {"name": "Cuscuz marroquino"}, {"name": "Tagine"}, {"name": "Shakshuka"},
+    {"name": "Tapas"}, {"name": "Gazpacho"}, {"name": "Tortilla"}, {"name": "Quesadilla"},
+    {"name": "Enchilada"}, {"name": "Fajita"}, {"name": "Bangers and mash"},
+    {"name": "Shepherd's pie"}, {"name": "Bratwurst"}, {"name": "Sauerkraut"}, {"name": "Raclette"},
+    {"name": "Quiche"}, {"name": "Ratatouille"}, {"name": "Bouillabaisse"}, {"name": "Cassoulet"},
+    {"name": "Bolognese"}, {"name": "Gnocchi"}, {"name": "Ravioli"}, {"name": "Ossobuco"},
+    {"name": "Panna cotta"}, {"name": "Mac and cheese"}, {"name": "Caesar salad"},
+    {"name": "Spring roll"}, {"name": "Dumpling"}, {"name": "Ramen"}, {"name": "Yakisoba"},
+    {"name": "Poke"}, {"name": "Burrito"}, {"name": "Nachos"}, {"name": "Guacamole"},
+    {"name": "Ceviche"}, {"name": "Empanada"}, {"name": "Arepas"}, {"name": "Poutine"},
+    {"name": "Fish and chips"}, {"name": "Schnitzel"}, {"name": "Pretzel"}, {"name": "Waffle"},
+    {"name": "Cheesecake"}, {"name": "Tiramisù"}, {"name": "Gelato"}, {"name": "Churros"},
+    {"name": "Croissant"}, {"name": "Baguete"}, {"name": "Crepe"}, {"name": "Fondue"}
+  ]
+}

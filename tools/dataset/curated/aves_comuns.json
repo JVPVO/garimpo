@@ -1,0 +1,21 @@
+{
+  "category": "aves_comuns",
+  "prompt": "Cite uma ave brasileira",
+  "source": "https://pt.wikipedia.org/wiki/Categoria:Aves_do_Brasil",
+  "notes": "Nomes populares que o brasileiro realmente fala, inclusive famílias/grupos (pica-pau, tucano), que antes eram descartados como 'termo guarda-chuva'.",
+  "items": [
+    {"name": "Pica-pau"}, {"name": "Tucano"}, {"name": "Arara"}, {"name": "Papagaio"},
+    {"name": "Periquito"}, {"name": "Maritaca"}, {"name": "Gavião"}, {"name": "Coruja"},
+    {"name": "Beija-flor"}, {"name": "Garça"}, {"name": "Urubu"}, {"name": "Gralha"},
+    {"name": "Jacu"}, {"name": "Inhambu"}, {"name": "Ema"}, {"name": "Seriema"},
+    {"name": "Tuiuiú"}, {"name": "Sabiá"}, {"name": "Bem-te-vi"}, {"name": "João-de-barro"},
+    {"name": "Canário-da-terra"}, {"name": "Curió"}, {"name": "Pintassilgo"},
+    {"name": "Coleirinho"}, {"name": "Tiziu"}, {"name": "Sanhaço"}, {"name": "Saíra"},
+    {"name": "Tiê"}, {"name": "Maçarico"}, {"name": "Socó"}, {"name": "Biguá"},
+    {"name": "Carcará"}, {"name": "Carrapateiro"}, {"name": "Araponga"}, {"name": "Aracuã"},
+    {"name": "Mutum"}, {"name": "Macuco"}, {"name": "Jacutinga"}, {"name": "Pavão"},
+    {"name": "Anu"}, {"name": "Tesourinha"}, {"name": "Andorinha"}, {"name": "Gaivota"},
+    {"name": "Atobá"}, {"name": "Fragata"}, {"name": "Flamingo"}, {"name": "Tachã"},
+    {"name": "Saracura"}, {"name": "Frango-d'água"}, {"name": "Pardal"}, {"name": "Sabiá-laranjeira"}
+  ]
+}

@@ -1,0 +1,477 @@
+{
+  "category": "aves",
+  "prompt": "Cite uma ave brasileira",
+  "source": "https://pt.wikipedia.org/wiki/Lista_de_aves_do_Brasil",
+  "notes": "Espécies nativas ou emblemáticas do Brasil; o artigo é da espécie (não gênero/família) e foi verificado na pt.wikipedia; tags = hábito.",
+  "items": [
+    {
+      "name": "Arara-azul-grande",
+      "article": "Arara-azul-grande",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Arara-vermelha",
+      "article": "Arara-vermelha",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Arara-canindé",
+      "article": "Arara-canindé",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Arara-azul-de-lear",
+      "article": "Arara-azul-de-lear",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Ararinha-azul",
+      "article": "Ararinha-azul",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Tucano-toco",
+      "article": "Tucanuçu",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Papagaio-verdadeiro",
+      "article": "Papagaio-verdadeiro",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Papagaio-charão",
+      "article": "Papagaio-da-serra",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Periquito-rico",
+      "article": "Periquito-verde",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Caturrita",
+      "article": "Myiopsitta monachus",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Canário-da-terra",
+      "article": "Canário-da-terra-verdadeiro",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Coleirinho",
+      "article": "Coleirinho",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Tiziu",
+      "article": "Tiziu",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Curió",
+      "article": "Curió",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Cardeal-do-nordeste",
+      "article": "Cardeal-do-nordeste",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Sabiá-laranjeira",
+      "article": "Sabiá-laranjeira",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Bem-te-vi",
+      "article": "Bem-te-vi",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "João-de-barro",
+      "article": "João-de-barro",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Quero-quero",
+      "article": "Quero-quero",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Ema",
+      "article": "Ema",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Jacutinga",
+      "article": "Jacutinga",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Galo-da-serra",
+      "article": "Galo-da-serra",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Araponga",
+      "article": "Araponga-comum",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Tiê-sangue",
+      "article": "Tiê-sangue",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Carcará",
+      "article": "Carcará",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Gavião-real",
+      "article": "Gavião-real",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Gavião-carijó",
+      "article": "Gavião-carijó",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Carrapateiro",
+      "article": "Carrapateiro",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Ximango",
+      "article": "Ximango",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Acauã",
+      "article": "Acauã",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Urubu-de-cabeça-preta",
+      "article": "Urubu-de-cabeça-preta",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Urubu-rei",
+      "article": "Urubu-rei",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Urubu-de-cabeça-vermelha",
+      "article": "Urubu-de-cabeça-vermelha",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Garça-branca-grande",
+      "article": "Garça-branca-grande",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Garça-moura",
+      "article": "Garça-moura",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Cabeça-seca",
+      "article": "Cabeça-seca",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Tuiuiú",
+      "article": "Jaburu",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Biguá",
+      "article": "Biguá",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Jaçanã",
+      "article": "Jaçanã",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Curicaca",
+      "article": "Curicaca",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Anu-preto",
+      "article": "Anu-preto",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Anu-branco",
+      "article": "Anu-branco",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Alma-de-gato",
+      "article": "Alma-de-gato",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Coruja-buraqueira",
+      "article": "Coruja-buraqueira",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Coruja-das-torres",
+      "article": "Coruja-das-torres",
+      "tags": {
+        "habito": "noturno"
+      }
+    },
+    {
+      "name": "Coruja-orelhuda",
+      "article": "Coruja-orelhuda",
+      "tags": {
+        "habito": "noturno"
+      }
+    },
+    {
+      "name": "Murucututu",
+      "article": "Murucututu",
+      "tags": {
+        "habito": "noturno"
+      }
+    },
+    {
+      "name": "Urutau",
+      "article": "Urutau-comum",
+      "tags": {
+        "habito": "noturno"
+      }
+    },
+    {
+      "name": "Curiango",
+      "article": "Curiango-comum",
+      "tags": {
+        "habito": "noturno"
+      }
+    },
+    {
+      "name": "Beija-flor-tesoura",
+      "article": "Beija-flor-tesoura",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Martim-pescador-grande",
+      "article": "Martim-pescador-grande",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Pica-pau-do-campo",
+      "article": "Pica-pau-do-campo",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Chupim",
+      "article": "Chupim",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Gralha-azul",
+      "article": "Gralha-azul",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Curruíra",
+      "article": "Curruíra",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Mutum-de-penacho",
+      "article": "Mutum-de-penacho",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Jacuguaçu",
+      "article": "Jacuguaçu",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Jacu-cigano",
+      "article": "Jacu-cigano",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Tico-tico",
+      "article": "Tico-tico",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Araçari-castanho",
+      "article": "Araçari-castanho",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Maracanã",
+      "article": "Maracanã-de-cara-amarela",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Japim",
+      "article": "Japim-soldado",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Guaxe",
+      "article": "Guaxe",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Sanhaço-cinzento",
+      "article": "Sanhaço-cinzento",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Saíra-sete-cores",
+      "article": "Saíra-sete-cores",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Trinca-ferro",
+      "article": "Trinca-ferro",
+      "tags": {
+        "habito": "diurno"
+      }
+    },
+    {
+      "name": "Fim-fim",
+      "article": "Fim-fim",
+      "tags": {
+        "habito": "diurno"
+      }
+    }
+  ]
+}
