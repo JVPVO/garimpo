@@ -91,16 +91,20 @@ def resolve_titles(titles: list[str]) -> dict[str, dict]:
         data = wp_api(titles="|".join(batch), redirects="1", prop="pageprops|info")
         pages = data.get("query", {}).get("pages", [])
         redirects = {r["from"]: r["to"] for r in data.get("query", {}).get("redirects", [])}
+        normalized = {n["from"]: n["to"] for n in data.get("query", {}).get("normalized", [])}
         by_title = {p["title"]: p for p in pages}
         for original in batch:
-            target = redirects.get(original, original)
+            norm_title = normalized.get(original, original)
+            target = redirects.get(norm_title, norm_title)
             page = by_title.get(target) or by_title.get(original)
             if not page or page.get("missing"):
                 out[original] = {"title": None, "qid": None, "pageid": None}
                 continue
+            props = page.get("pageprops") or {}
             out[original] = {
                 "title": page["title"],
-                "qid": (page.get("pageprops") or {}).get("wikibase_item"),
+                "qid": props.get("wikibase_item"),
                 "pageid": page.get("pageid"),
+                "disambig": "disambiguation" in props,
             }
     return out

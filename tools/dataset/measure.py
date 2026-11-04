@@ -159,8 +159,9 @@ def composite(answers: list[dict]) -> list[dict]:
             out["sl"] = math.log10(1 + a["sl"])
         if a.get("wf"):
             out["wf"] = a["wf"]
-        if a.get("gravity"):
-            out["gravity"] = math.log10(1 + a["gravity"])
+        gravity = a.get("g", a.get("gravity"))
+        if gravity:
+            out["gravity"] = math.log10(1 + gravity)
         return out
 
     rows = [metric(a) for a in answers]
@@ -171,7 +172,7 @@ def composite(answers: list[dict]) -> list[dict]:
         col = [0.0] * len(rows)
         if present:
             ranks = _ranks([v for _, v in present])
-            for (i, _), rk in zip(present, ranks, strict=True):
+            for (i, _), rk in zip(present, ranks):
                 col[i] = rk
         pct[key] = col
 
@@ -198,7 +199,7 @@ def composite(answers: list[dict]) -> list[dict]:
     score = []
     for idx in range(len(rows)):
         s = 0.0
-        for key, z in zip(("pv", "sl", "wf", "gravity"), zs, strict=True):
+        for key, z in zip(("pv", "sl", "wf", "gravity"), zs):
             if key in rows[idx]:
                 s += WEIGHTS[key] * z[idx]
         score.append(s)

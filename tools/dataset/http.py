@@ -18,10 +18,21 @@ ROOT = Path(__file__).resolve().parents[2]
 CACHE = ROOT / ".cache" / "dataset"
 CACHE.mkdir(parents=True, exist_ok=True)
 
-UA = "GarimpoDataset/1.0 (Brazilian-trivia rarity research; https://github.com/jotave/garimpo)"
+UA = "GarimpoDatasetBot/1.0 (educational trivia game)"
 
 _session = requests.Session()
 _session.headers.update({"User-Agent": UA})
+
+
+_last_net = [0.0]
+
+
+def _polite(min_interval: float = 0.3) -> None:
+    """Serialise network calls: at most ~3 requests per second to Wikimedia."""
+    wait = min_interval - (time.time() - _last_net[0])
+    if wait > 0:
+        time.sleep(wait)
+    _last_net[0] = time.time()
 
 
 def _key(url: str, params: dict | None) -> str:
@@ -48,12 +59,15 @@ def cached_json(url: str, params: dict | None = None, *, namespace: str = "http"
         if cached is not None:
             return cached
     last: Exception | None = None
-    for attempt in range(retries):
+    for attempt in range(max(retries, 6)):
         try:
+            _polite()
             r = _session.get(url, params=params, timeout=timeout,
                              headers={"Accept": "application/json"})
-            if r.status_code == 429:
-                time.sleep(5 * (attempt + 1))
+            if r.status_code in (429, 503):
+                wait = r.headers.get("Retry-After")
+                time.sleep(float(wait) if wait and wait.isdigit() else 5 * (attempt + 1))
+                last = RuntimeError(f"HTTP {r.status_code}")
                 continue
             r.raise_for_status()
             data = r.json()
