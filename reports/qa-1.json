@@ -1,0 +1,288 @@
+{
+  "game": "Garimpo",
+  "qa": 1,
+  "date": "2026-11-04",
+  "environment": {
+    "url": "http://localhost:5173",
+    "browser": "Chrome via agent-browser (real browser session)",
+    "viewports": ["1280x800", "390x844"],
+    "dataset": {
+      "prompts": 116,
+      "answers": 2336,
+      "label": "where the dev server stood during this playtest"
+    }
+  },
+  "dives": [
+    {
+      "name": "obvious daily",
+      "mode": "daily",
+      "label": "04 nov",
+      "answers": ["Páginas da Vida", "Tijuca", "Londrina", "Roberto Carlos", "As Tartarugas Ninja", "Morumbi", "Curupira"],
+      "depth": 325,
+      "tier": "Granada · xisto",
+      "quote": "325 metros. / Granada · xisto / Nenhuma gema no caminho."
+    },
+    {
+      "name": "deliberately rare",
+      "mode": "unlimited",
+      "label": "semente 283",
+      "answers": ["Vespasiano", "Gilka Machado", "Efó", "Roraima", "Bananada", "Corinthians Alagoano", "Cainamé"],
+      "depth": 691,
+      "tier": "Diamante · kimberlito",
+      "quote": "691 metros. / Diamante · kimberlito / 7 gemas no caminho."
+    }
+  ],
+  "final": {
+    "total": 76,
+    "max": 110,
+    "percent": 69.1,
+    "weakest": "mobile",
+    "weakest_tied": ["mobile", "replay"],
+    "single_weakest_before_fixes": "trust",
+    "scores": [
+      {
+        "category": "first_impression",
+        "score": 9,
+        "evidence": "The home screen lands: 'Sete respostas. Uma mina.' over the hatched shaft, with '116 perguntas · 700 m' and the 691 m record; it never looks like a template."
+      },
+      {
+        "category": "clarity",
+        "score": 6,
+        "evidence": "The prompt and 'enter para cravar' are clear, but the answer placeholder is nearly invisible and 'p 19' sitting above '1 em 16' is never defined."
+      },
+      {
+        "category": "visual",
+        "score": 7,
+        "evidence": "Desktop home/round are composed and legible, but the result headline starts at y=738 on an 800 px viewport, so '691 metros.' is cut off; mobile 'Como medimos' scrolls sideways."
+      },
+      {
+        "category": "typography",
+        "score": 8,
+        "evidence": "The Fraunces/Plex pairing carries the mine motif well; the mono metadata drops to 9.5 px and the reveal prints '1 wikis' for a single sitelink."
+      },
+      {
+        "category": "answer_feedback",
+        "score": 9,
+        "evidence": "After the fix, Enter shows the full paper reveal ('p 19 / 1 em 16 / 0→63 m') and a timeout reads 'sem resposta'; before, Enter submitted and skipped the sheet entirely."
+      },
+      {
+        "category": "rarity_fairness",
+        "score": 8,
+        "evidence": "Monotonic and verified: São Paulo (UF) p 0 → 10 m vs Roraima p 96 → 99 m; Flamengo p 19 → 63 m, Juventude p 34 → 74 m, obvious São Paulo FC p 5 → 45 m."
+      },
+      {
+        "category": "speed",
+        "score": 7,
+        "evidence": "25 s per prompt, immediate submit/next, no spinner; the timer hits 0 and reveals, though the opening second is busy with the reveal animation."
+      },
+      {
+        "category": "mobile",
+        "score": 5,
+        "evidence": "Playable at 390×844, but the method page scrolls sideways (443 vs 375 px), the result score begins below the 844 px fold, and the reveal wraps '0 → 47' with the 'm' alone."
+      },
+      {
+        "category": "audio",
+        "score": 6,
+        "evidence": "The mute control swaps ◉/◌ and persists in localStorage; the engine is fully synthesized (no files) with strike/tick/gem voices, but headless playback cannot be judged by ear."
+      },
+      {
+        "category": "replay",
+        "score": 5,
+        "evidence": "The archive opens past dives, but 'Descer de novo' on the archived 691 m unlimited dive starts the daily instead, and reloading after starting seed 8842 lands on Home."
+      },
+      {
+        "category": "trust",
+        "score": 6,
+        "evidence": "Invalid structural answers ('clube', 'sport') used to pay 45/54 m; they are now refused. The seed URL, daily memory and streak still misreport."
+      }
+    ]
+  },
+  "before_fixes": {
+    "total": 69,
+    "weakest": "trust",
+    "scores": [
+      { "category": "first_impression", "score": 9 },
+      { "category": "clarity", "score": 6 },
+      { "category": "visual", "score": 7 },
+      { "category": "typography", "score": 8 },
+      { "category": "answer_feedback", "score": 4 },
+      { "category": "rarity_fairness", "score": 8 },
+      { "category": "speed", "score": 7 },
+      { "category": "mobile", "score": 5 },
+      { "category": "audio", "score": 6 },
+      { "category": "replay", "score": 5 },
+      { "category": "trust", "score": 4 }
+    ]
+  },
+  "hillclimb": [
+    {
+      "iter": 1,
+      "weakest": "trust",
+      "change": "src/game/match.ts: reject a single structural token (clube, futebol, esporte, sport, associacao, municipal, estadio, parque, cidade, estado, time) before any fuzzy match. 'clube' and 'sport' now return 'não está no acervo desta pergunta'; Flamengo, Juventude, São Paulo, Corinthians Alagoano, Londrina, Lagarto, Tijuca and Morumbi still match.",
+      "category_before": 4,
+      "category_after": 6,
+      "total_before": 69,
+      "total_after": 71
+    },
+    {
+      "iter": 2,
+      "weakest": "answer_feedback",
+      "change": "src/screens/Round.tsx: stopPropagation on the submit Enter so the reveal's global handler does not consume the same keypress. src/screens/Reveal.tsx: timeouts now read 'sem resposta' and 'O tempo acabou antes da sua resposta...'. Verified Enter → reveal (p 19, 0→63 m), second Enter → pergunta 2, and a full seven-answer keyboard dive at '318 metros.'",
+      "category_before": 4,
+      "category_after": 9,
+      "total_before": 71,
+      "total_after": 76
+    }
+  ],
+  "defects": [
+    {
+      "id": "D1",
+      "severity": "P0",
+      "status": "fixed",
+      "summary": "Enter submitted and skipped the reveal.",
+      "evidence": "Typing 'Flamengo' and pressing Enter once landed on 'Cite um cantor brasileiro que começa com M' with the ledger showing 'Clube de Regatas do Flamengo 63 m' and no sheet.",
+      "file": "src/screens/Round.tsx:115-121, src/App.tsx:183-195"
+    },
+    {
+      "id": "D2",
+      "severity": "P0",
+      "status": "fixed",
+      "summary": "A structural word bought a real answer.",
+      "evidence": "'clube' matched 'São Paulo Futebol Clube' (p 5, 0→45 m); 'sport' matched 'Sport Club Corinthians Paulista' (p 11, 0→54 m).",
+      "file": "src/game/match.ts:44-80"
+    },
+    {
+      "id": "D3",
+      "severity": "P1",
+      "status": "fixed",
+      "summary": "A timeout claimed the answer was out of catalog.",
+      "evidence": "With no answer, the sheet read 'o tempo acabou / — / não está no acervo desta pergunta / A sua ficou fora dele...'; it now reads 'sem resposta / O tempo acabou antes da sua resposta...'.",
+      "file": "src/screens/Reveal.tsx:110-121"
+    },
+    {
+      "id": "D4",
+      "severity": "P1",
+      "status": "open",
+      "summary": "Seed links break immediately.",
+      "evidence": "'semente 8842' is rewritten to #s=4020521479; HASH_SEED only accepts 1–4 digits, so reload lands on Home. Opening #s=8842 while the app is already open does nothing because the hash is read only when the dataset loads.",
+      "file": "src/App.tsx:26, src/App.tsx:85, src/App.tsx:104-107"
+    },
+    {
+      "id": "D5",
+      "severity": "P1",
+      "status": "open",
+      "summary": "An archived dive replays the wrong thing.",
+      "evidence": "Opening the 691 m archived dive ('ILIMITADO · SEMENTE 283') and pressing 'Descer de novo' started the daily ('04 nov · pergunta 1/7', 'Cite uma novela dos anos 2000') instead of seed 283.",
+      "file": "src/App.tsx:364"
+    },
+    {
+      "id": "D6",
+      "severity": "P1",
+      "status": "open",
+      "summary": "The daily is stored, never remembered.",
+      "evidence": "After a 325 m daily, localStorage has dailyDone {'04 nov': {...}}, but Home reads dailyDone['2026-11-04']; the button still says 'Descer' and never 'Descer de novo / hoje: 325 m'.",
+      "file": "src/screens/Home.tsx:24, src/game/storage.ts:42"
+    },
+    {
+      "id": "D7",
+      "severity": "P1",
+      "status": "open",
+      "summary": "Unlimited dives reset the daily streak.",
+      "evidence": "After a daily then seed 283, the store was streak {last: 'semente 283', count: 1}; the archive showed '1 em sequência'.",
+      "file": "src/game/storage.ts:44-60"
+    },
+    {
+      "id": "D8",
+      "severity": "P1",
+      "status": "open",
+      "summary": "Mobile 'Como medimos' overflows horizontally.",
+      "evidence": "document.documentElement.scrollWidth was 443 against a 375 px client width; the 405 px table is clipped ('sobre aqu', 'sobre um l', 'postos pe') and a horizontal scrollbar appears.",
+      "file": "src/index.css:1517, src/index.css:1456"
+    },
+    {
+      "id": "D9",
+      "severity": "P1",
+      "status": "open",
+      "summary": "The result hides its own score.",
+      "evidence": ".stage already pads 70 px for the topbar and .result adds another 64 px; the plate starts at y=134 and the headline at y=738, ending at y=833, so on 1280×800 '691 metros.' is below the fold. On 390×844 the headline starts at y≈750.",
+      "file": "src/index.css:1034-1045, src/index.css:241"
+    },
+    {
+      "id": "D10",
+      "severity": "P2",
+      "status": "open",
+      "summary": "The mobile reveal wraps the unit and the p-value.",
+      "evidence": "'0 → 47' renders with 'm' alone on the next line, and 'p 6 / 1 em 6' breaks into four lines.",
+      "file": "src/screens/Reveal.tsx:132-153"
+    },
+    {
+      "id": "D11",
+      "severity": "P2",
+      "status": "open",
+      "summary": "The answer placeholder is effectively invisible.",
+      "evidence": ".field::placeholder uses #423325 on #171210; 'sua resposta' is almost unreadable at 1280 and 390.",
+      "file": "src/index.css:525"
+    },
+    {
+      "id": "D12",
+      "severity": "P2",
+      "status": "open",
+      "summary": "'1 wikis'.",
+      "evidence": "Efó and Cainamé both render 'SITELINKS 1 wikis'; the singular is never handled.",
+      "file": "src/screens/Reveal.tsx:52"
+    },
+    {
+      "id": "D13",
+      "severity": "P2",
+      "status": "open",
+      "summary": "Two rarity scales sit side by side without labels.",
+      "evidence": "The reveal prints 'p 19' above '1 em 16'; p is the percentile and oneIn is the crowd share. Rio de Janeiro prints 'p 2 / 1 em 2' because 41.8% of the crowd says it. The method page never defines oneIn.",
+      "file": "src/screens/Reveal.tsx:76-80, src/game/score.ts:63-67"
+    },
+    {
+      "id": "D14",
+      "severity": "P2",
+      "status": "open",
+      "summary": "Gem tiers contradict the method table.",
+      "evidence": "The method maps gems to depth ('Quartzo leitoso ... 0–180 m'), but the result counts gems with tierForRarity(round.p). The 691 m dive shows '7 gemas' although every answer is 97–99 m, i.e. Quartzo on the printed table.",
+      "file": "src/screens/Method.tsx:127-150, src/screens/Result.tsx:81, src/game/score.ts:54-60"
+    }
+  ],
+  "verified": [
+    "Rare answers always paid more: Roraima 99 m vs São Paulo 10 m; Juventude 74 m vs Flamengo 63 m vs obvious São Paulo FC 45 m.",
+    "Empty submit does nothing: the button stays disabled, Enter does not advance, the timer keeps running.",
+    "The 25 s timer runs out, reveals, and keeps the round at 0 m; zero is never invented for an unknown answer.",
+    "Archive after finishing lists the dive and reopens its result; the 691 m dive is intact.",
+    "'Como medimos' is reachable from home, result and archive; source/data claims are legible on desktop.",
+    "Sound toggle is real state: ◉ → ◌, aria-label 'ligar som', persisted in garimpo:v1; the engine is procedural.",
+    "Two full dives completed: 325 m (obvious) and 691 m (rare); no crash, no stuck state.",
+    "After the fixes: Enter shows the reveal and a second Enter advances; a full seven-answer keyboard dive finished at '318 metros.'"
+  ],
+  "changed_files": [
+    "src/game/match.ts",
+    "src/screens/Round.tsx",
+    "src/screens/Reveal.tsx",
+    "reports/qa-1.md",
+    "reports/qa-1.json"
+  ],
+  "screenshots": [
+    "reports/shots/25-home-desktop-current.png",
+    "reports/shots/29-enter-fixed-reveal.png",
+    "reports/shots/30-timeout-fixed.png",
+    "reports/shots/28-clube-fixed.png",
+    "reports/shots/26-result-desktop-current.png",
+    "reports/shots/20-home-mobile.png",
+    "reports/shots/21-round-mobile.png",
+    "reports/shots/22-reveal-mobile.png",
+    "reports/shots/23-result-mobile.png",
+    "reports/shots/24-method-mobile.png",
+    "reports/shots/14-enter-skips-reveal.png",
+    "reports/shots/11-reload-after-timeout.png"
+  ],
+  "build": {
+    "command": "pnpm exec tsc --noEmit && pnpm build",
+    "result": "pass",
+    "modules": 35,
+    "built_ms": 212
+  }
+}

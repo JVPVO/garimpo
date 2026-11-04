@@ -1,0 +1,1061 @@
+{
+  "category": "novelas",
+  "prompt": "Cite uma novela da Globo",
+  "source": "https://pt.wikipedia.org/wiki/Lista_de_telenovelas_da_TV_Globo",
+  "notes": "Telenovelas produzidas e exibidas pela TV Globo, 1965-2025, a partir das listas por faixa horária (seis, sete, oito, nove e dez). Uma entrada por título: quando houve remake, fica a versão original. faixa = horário original de exibição.",
+  "items": [
+    {
+      "name": "Irmãos Coragem",
+      "article": "Irmãos Coragem",
+      "tags": {
+        "ano": 1970,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Selva de Pedra",
+      "article": "Selva de Pedra (1972)",
+      "tags": {
+        "ano": 1972,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Bem-Amado",
+      "article": "O Bem-Amado (telenovela)",
+      "tags": {
+        "ano": 1973,
+        "faixa": "dez",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Gabriela",
+      "article": "Gabriela (1975)",
+      "tags": {
+        "ano": 1975,
+        "faixa": "dez",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Pecado Capital",
+      "article": "Pecado Capital (1975)",
+      "tags": {
+        "ano": 1975,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Anjo Mau",
+      "article": "Anjo Mau",
+      "tags": {
+        "ano": 1976,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Escrava Isaura",
+      "article": "Escrava Isaura (telenovela de 1976)",
+      "tags": {
+        "ano": 1976,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Estúpido Cupido",
+      "article": "Estúpido Cupido",
+      "tags": {
+        "ano": 1976,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Casarão",
+      "article": "O Casarão",
+      "tags": {
+        "ano": 1976,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Saramandaia",
+      "article": "Saramandaia",
+      "tags": {
+        "ano": 1976,
+        "faixa": "dez",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Astro",
+      "article": "O Astro (1977)",
+      "tags": {
+        "ano": 1977,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Dancin' Days",
+      "article": "Dancin' Days",
+      "tags": {
+        "ano": 1978,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Cabocla",
+      "article": "Cabocla (1979)",
+      "tags": {
+        "ano": 1979,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Pai Herói",
+      "article": "Pai Herói",
+      "tags": {
+        "ano": 1979,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Água Viva",
+      "article": "Água Viva (telenovela)",
+      "tags": {
+        "ano": 1980,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Baila Comigo",
+      "article": "Baila Comigo (telenovela)",
+      "tags": {
+        "ano": 1981,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Ciranda de Pedra",
+      "article": "Ciranda de Pedra (1981)",
+      "tags": {
+        "ano": 1981,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Elas por Elas",
+      "article": "Elas por Elas",
+      "tags": {
+        "ano": 1982,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Guerra dos Sexos",
+      "article": "Guerra dos Sexos",
+      "tags": {
+        "ano": 1983,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Gata Comeu",
+      "article": "A Gata Comeu",
+      "tags": {
+        "ano": 1985,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Roque Santeiro",
+      "article": "Roque Santeiro",
+      "tags": {
+        "ano": 1985,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Ti Ti Ti",
+      "article": "Ti Ti Ti",
+      "tags": {
+        "ano": 1985,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Cambalacho",
+      "article": "Cambalacho",
+      "tags": {
+        "ano": 1986,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Roda de Fogo",
+      "article": "Roda de Fogo (1986)",
+      "tags": {
+        "ano": 1986,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Sinhá Moça",
+      "article": "Sinhá Moça (1986)",
+      "tags": {
+        "ano": 1986,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Brega & Chique",
+      "article": "Brega & Chique",
+      "tags": {
+        "ano": 1987,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Mandala",
+      "article": "Mandala (telenovela)",
+      "tags": {
+        "ano": 1987,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Outro",
+      "article": "O Outro",
+      "tags": {
+        "ano": 1987,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Sassaricando",
+      "article": "Sassaricando",
+      "tags": {
+        "ano": 1987,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Bebê a Bordo",
+      "article": "Bebê a Bordo",
+      "tags": {
+        "ano": 1988,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Vale Tudo",
+      "article": "Vale Tudo",
+      "tags": {
+        "ano": 1988,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Salvador da Pátria",
+      "article": "O Salvador da Pátria",
+      "tags": {
+        "ano": 1989,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Que Rei Sou Eu?",
+      "article": "Que Rei Sou Eu?",
+      "tags": {
+        "ano": 1989,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Tieta",
+      "article": "Tieta (telenovela)",
+      "tags": {
+        "ano": 1989,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Top Model",
+      "article": "Top Model (telenovela)",
+      "tags": {
+        "ano": 1989,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Barriga de Aluguel",
+      "article": "Barriga de Aluguel (telenovela)",
+      "tags": {
+        "ano": 1990,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Meu Bem, Meu Mal",
+      "article": "Meu Bem, Meu Mal",
+      "tags": {
+        "ano": 1990,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Rainha da Sucata",
+      "article": "Rainha da Sucata",
+      "tags": {
+        "ano": 1990,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Felicidade",
+      "article": "Felicidade (telenovela)",
+      "tags": {
+        "ano": 1991,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Dono do Mundo",
+      "article": "O Dono do Mundo",
+      "tags": {
+        "ano": 1991,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Vamp",
+      "article": "Vamp (telenovela)",
+      "tags": {
+        "ano": 1991,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "De Corpo e Alma",
+      "article": "De Corpo e Alma (telenovela)",
+      "tags": {
+        "ano": 1992,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Pedra sobre Pedra",
+      "article": "Pedra sobre Pedra",
+      "tags": {
+        "ano": 1992,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Fera Ferida",
+      "article": "Fera Ferida",
+      "tags": {
+        "ano": 1993,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Mulheres de Areia",
+      "article": "Mulheres de Areia (1993)",
+      "tags": {
+        "ano": 1993,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Renascer",
+      "article": "Renascer",
+      "tags": {
+        "ano": 1993,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Viagem",
+      "article": "A Viagem (1994)",
+      "tags": {
+        "ano": 1994,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Pátria Minha",
+      "article": "Pátria Minha",
+      "tags": {
+        "ano": 1994,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Quatro por Quatro",
+      "article": "Quatro por Quatro",
+      "tags": {
+        "ano": 1994,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Próxima Vítima",
+      "article": "A Próxima Vítima (telenovela)",
+      "tags": {
+        "ano": 1995,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Explode Coração",
+      "article": "Explode Coração",
+      "tags": {
+        "ano": 1995,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "História de Amor",
+      "article": "História de Amor",
+      "tags": {
+        "ano": 1995,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Rei do Gado",
+      "article": "O Rei do Gado",
+      "tags": {
+        "ano": 1996,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Indomada",
+      "article": "A Indomada",
+      "tags": {
+        "ano": 1997,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Por Amor",
+      "article": "Por Amor (telenovela brasileira)",
+      "tags": {
+        "ano": 1997,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Torre de Babel",
+      "article": "Torre de Babel (telenovela)",
+      "tags": {
+        "ano": 1998,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Força de um Desejo",
+      "article": "Força de um Desejo",
+      "tags": {
+        "ano": 1999,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Suave Veneno",
+      "article": "Suave Veneno",
+      "tags": {
+        "ano": 1999,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Terra Nostra",
+      "article": "Terra Nostra",
+      "tags": {
+        "ano": 1999,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Laços de Família",
+      "article": "Laços de Família",
+      "tags": {
+        "ano": 2000,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Cravo e a Rosa",
+      "article": "O Cravo e a Rosa",
+      "tags": {
+        "ano": 2000,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Uga Uga",
+      "article": "Uga Uga",
+      "tags": {
+        "ano": 2000,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Clone",
+      "article": "O Clone",
+      "tags": {
+        "ano": 2001,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Porto dos Milagres",
+      "article": "Porto dos Milagres",
+      "tags": {
+        "ano": 2001,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Coração de Estudante",
+      "article": "Coração de Estudante",
+      "tags": {
+        "ano": 2002,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Esperança",
+      "article": "Esperança (telenovela)",
+      "tags": {
+        "ano": 2002,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Celebridade",
+      "article": "Celebridade (telenovela)",
+      "tags": {
+        "ano": 2003,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Chocolate com Pimenta",
+      "article": "Chocolate com Pimenta",
+      "tags": {
+        "ano": 2003,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Kubanacan",
+      "article": "Kubanacan",
+      "tags": {
+        "ano": 2003,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Mulheres Apaixonadas",
+      "article": "Mulheres Apaixonadas",
+      "tags": {
+        "ano": 2003,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Da Cor do Pecado",
+      "article": "Da Cor do Pecado",
+      "tags": {
+        "ano": 2004,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Senhora do Destino",
+      "article": "Senhora do Destino",
+      "tags": {
+        "ano": 2004,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Alma Gêmea",
+      "article": "Alma Gêmea",
+      "tags": {
+        "ano": 2005,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "América",
+      "article": "América (telenovela)",
+      "tags": {
+        "ano": 2005,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Belíssima",
+      "article": "Belíssima",
+      "tags": {
+        "ano": 2005,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Cobras & Lagartos",
+      "article": "Cobras & Lagartos",
+      "tags": {
+        "ano": 2006,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Profeta",
+      "article": "O Profeta (2006)",
+      "tags": {
+        "ano": 2006,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Páginas da Vida",
+      "article": "Páginas da Vida",
+      "tags": {
+        "ano": 2006,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Duas Caras",
+      "article": "Duas Caras (telenovela)",
+      "tags": {
+        "ano": 2007,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Paraíso Tropical",
+      "article": "Paraíso Tropical",
+      "tags": {
+        "ano": 2007,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Favorita",
+      "article": "A Favorita",
+      "tags": {
+        "ano": 2008,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Caminho das Índias",
+      "article": "Caminho das Índias",
+      "tags": {
+        "ano": 2009,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Caras & Bocas",
+      "article": "Caras & Bocas",
+      "tags": {
+        "ano": 2009,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Viver a Vida",
+      "article": "Viver a Vida (telenovela)",
+      "tags": {
+        "ano": 2009,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Passione",
+      "article": "Passione",
+      "tags": {
+        "ano": 2010,
+        "faixa": "oito",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Vida da Gente",
+      "article": "A Vida da Gente",
+      "tags": {
+        "ano": 2011,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Cordel Encantado",
+      "article": "Cordel Encantado",
+      "tags": {
+        "ano": 2011,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Fina Estampa",
+      "article": "Fina Estampa",
+      "tags": {
+        "ano": 2011,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Insensato Coração",
+      "article": "Insensato Coração",
+      "tags": {
+        "ano": 2011,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Avenida Brasil",
+      "article": "Avenida Brasil (telenovela)",
+      "tags": {
+        "ano": 2012,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Cheias de Charme",
+      "article": "Cheias de Charme",
+      "tags": {
+        "ano": 2012,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Salve Jorge",
+      "article": "Salve Jorge",
+      "tags": {
+        "ano": 2012,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Amor à Vida",
+      "article": "Amor à Vida",
+      "tags": {
+        "ano": 2013,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Sangue Bom",
+      "article": "Sangue Bom",
+      "tags": {
+        "ano": 2013,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Em Família",
+      "article": "Em Família (telenovela)",
+      "tags": {
+        "ano": 2014,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Império",
+      "article": "Império (telenovela)",
+      "tags": {
+        "ano": 2014,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Regra do Jogo",
+      "article": "A Regra do Jogo (telenovela)",
+      "tags": {
+        "ano": 2015,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Babilônia",
+      "article": "Babilônia (telenovela)",
+      "tags": {
+        "ano": 2015,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Totalmente Demais",
+      "article": "Totalmente Demais (telenovela)",
+      "tags": {
+        "ano": 2015,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Velho Chico",
+      "article": "Velho Chico (telenovela)",
+      "tags": {
+        "ano": 2016,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Êta Mundo Bom!",
+      "article": "Êta Mundo Bom!",
+      "tags": {
+        "ano": 2016,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Força do Querer",
+      "article": "A Força do Querer",
+      "tags": {
+        "ano": 2017,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "O Outro Lado do Paraíso",
+      "article": "O Outro Lado do Paraíso",
+      "tags": {
+        "ano": 2017,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Segundo Sol",
+      "article": "Segundo Sol",
+      "tags": {
+        "ano": 2018,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "A Dona do Pedaço",
+      "article": "A Dona do Pedaço",
+      "tags": {
+        "ano": 2019,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Amor de Mãe",
+      "article": "Amor de Mãe",
+      "tags": {
+        "ano": 2019,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Bom Sucesso",
+      "article": "Bom Sucesso (telenovela)",
+      "tags": {
+        "ano": 2019,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Éramos Seis",
+      "article": "Éramos Seis (2019)",
+      "tags": {
+        "ano": 2019,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Salve-se Quem Puder",
+      "article": "Salve-se Quem Puder (telenovela)",
+      "tags": {
+        "ano": 2020,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Um Lugar ao Sol",
+      "article": "Um Lugar ao Sol (telenovela)",
+      "tags": {
+        "ano": 2021,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Pantanal",
+      "article": "Pantanal (2022)",
+      "tags": {
+        "ano": 2022,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Travessia",
+      "article": "Travessia (telenovela)",
+      "tags": {
+        "ano": 2022,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Terra e Paixão",
+      "article": "Terra e Paixão",
+      "tags": {
+        "ano": 2023,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Vai na Fé",
+      "article": "Vai na Fé",
+      "tags": {
+        "ano": 2023,
+        "faixa": "sete",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Garota do Momento",
+      "article": "Garota do Momento",
+      "tags": {
+        "ano": 2024,
+        "faixa": "seis",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Mania de Você",
+      "article": "Mania de Você",
+      "tags": {
+        "ano": 2024,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Três Graças",
+      "article": "Três Graças (telenovela)",
+      "tags": {
+        "ano": 2025,
+        "faixa": "nove",
+        "emissora": "Globo"
+      }
+    }
+  ]
+}

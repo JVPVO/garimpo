@@ -1,0 +1,152 @@
+{
+  "category": "bbb_campeoes",
+  "prompt": "Cite um campeão do Big Brother Brasil",
+  "source": "https://pt.wikipedia.org/wiki/Lista_de_participantes_do_Big_Brother_Brasil",
+  "notes": "Vencedores das 26 edições do BBB, conferidos na coluna 'Resultado' da lista de participantes da pt.wikipedia e na tabela de finalistas do artigo 'Big Brother Brasil'. Oito campeões não têm página própria nem redirecionamento na pt.wikipedia e ficaram de fora: Rodrigo Leonel (BBB 2), Cida (BBB 4), Diego Alemão (BBB 7), Rafinha (BBB 8), Maria Melillo (BBB 11), Fael (BBB 12), Fernanda Keulla (BBB 13) e Munik Nunes (BBB 16). Quando o campeão não tem artigo próprio, o campo article aponta o redirecionamento da pt.wikipedia que leva à página da edição.",
+  "items": [
+    {
+      "name": "Kleber Bambam",
+      "article": "Kleber Bambam",
+      "tags": {
+        "edicao": 1,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Dhomini",
+      "article": "Dhomini Ferreira",
+      "tags": {
+        "edicao": 3,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Jean Wyllys",
+      "article": "Jean Wyllys",
+      "tags": {
+        "edicao": 5,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Mara Viana",
+      "article": "Mara Viana",
+      "tags": {
+        "edicao": 6,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Max Porto",
+      "article": "Maximiliano de Oliveira Porto",
+      "tags": {
+        "edicao": 9,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Marcelo Dourado",
+      "article": "Marcelo Dourado",
+      "tags": {
+        "edicao": 10,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Vanessa Mesquita",
+      "article": "Vanessa Mesquita",
+      "tags": {
+        "edicao": 14,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Cézar Lima",
+      "article": "Cézar Lima",
+      "tags": {
+        "edicao": 15,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Emilly Araújo",
+      "article": "Emilly Araújo",
+      "tags": {
+        "edicao": 17,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Gleici Damasceno",
+      "article": "Gleici Damasceno",
+      "tags": {
+        "edicao": 18,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Paula von Sperling",
+      "article": "Paula Von Sperling",
+      "tags": {
+        "edicao": 19,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Thelma Assis",
+      "article": "Thelma Assis",
+      "tags": {
+        "edicao": 20,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Juliette",
+      "article": "Juliette",
+      "tags": {
+        "edicao": 21,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Arthur Aguiar",
+      "article": "Arthur Aguiar",
+      "tags": {
+        "edicao": 22,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Amanda Meirelles",
+      "article": "Amanda Meirelles",
+      "tags": {
+        "edicao": 23,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Davi Brito",
+      "article": "Davi Brito",
+      "tags": {
+        "edicao": 24,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Renata Saldanha",
+      "article": "Renata Saldanha",
+      "tags": {
+        "edicao": 25,
+        "resultado": "campeão"
+      }
+    },
+    {
+      "name": "Ana Paula Renault",
+      "article": "Ana Paula Renault",
+      "tags": {
+        "edicao": 26,
+        "resultado": "campeão"
+      }
+    }
+  ]
+}

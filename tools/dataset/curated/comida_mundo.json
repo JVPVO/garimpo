@@ -1,0 +1,20 @@
+{
+  "category": "comida_mundo",
+  "prompt": "Cite um prato internacional",
+  "source": "https://pt.wikipedia.org/wiki/Culin%C3%A1ria_do_mundo",
+  "notes": "Pratos estrangeiros que se comem no Brasil ou que são conhecidos pelo nome original.",
+  "items": [
+    {"name": "Pizza"}, {"name": "Hambúrguer"}, {"name": "Sushi"}, {"name": "Lasanha"},
+    {"name": "Espaguete"}, {"name": "Carbonara"}, {"name": "Risoto"}, {"name": "Paella"},
+    {"name": "Tacos"}, {"name": "Burrito"}, {"name": "Guacamole"}, {"name": "Nachos"},
+    {"name": "Curry"}, {"name": "Ramen"}, {"name": "Tempurá"}, {"name": "Pad thai"},
+    {"name": "Dim sum"}, {"name": "Frango frito"}, {"name": "Hot dog"}, {"name": "Croissant"},
+    {"name": "Baguete"}, {"name": "Fondue"}, {"name": "Goulash"}, {"name": "Moussaka"},
+    {"name": "Kebab"}, {"name": "Falafel"}, {"name": "Hummus"}, {"name": "Shawarma"},
+    {"name": "Ceviche"}, {"name": "Empanada"}, {"name": "Arepas"}, {"name": "Poutine"},
+    {"name": "Fish and chips"}, {"name": "Schnitzel"}, {"name": "Pretzel"}, {"name": "Waffle"},
+    {"name": "Panqueca"}, {"name": "Crepe"}, {"name": "Tiramisù"}, {"name": "Cheesecake"},
+    {"name": "Gelato"}, {"name": "Churros"}, {"name": "Yakisoba"}, {"name": "Frango à parmegiana"},
+    {"name": "Cuscuz marroquino"}, {"name": "Bibimbap"}, {"name": "Pho"}, {"name": "Pierogi"}
+  ]
+}

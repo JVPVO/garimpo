@@ -1,0 +1,638 @@
+{
+  "category": "escritores",
+  "prompt": "Cite um escritor brasileiro",
+  "source": "https://pt.wikipedia.org/wiki/Categoria:Escritores_do_Brasil",
+  "notes": "Canon da literatura brasileira (ficção, poesia, dramaturgia e ensaio literário) usado em escola e livraria; cada nome verificado na pt.wikipedia; tags = século de nascimento.",
+  "items": [
+    {
+      "name": "Machado de Assis",
+      "article": "Machado de Assis",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "José de Alencar",
+      "article": "José de Alencar",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Aluísio Azevedo",
+      "article": "Aluísio Azevedo",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Raul Pompeia",
+      "article": "Raul Pompeia",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Graciliano Ramos",
+      "article": "Graciliano Ramos",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Jorge Amado",
+      "article": "Jorge Amado",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Érico Veríssimo",
+      "article": "Érico Veríssimo",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Clarice Lispector",
+      "article": "Clarice Lispector",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Guimarães Rosa",
+      "article": "Guimarães Rosa",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Carlos Drummond de Andrade",
+      "article": "Carlos Drummond de Andrade",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Manuel Bandeira",
+      "article": "Manuel Bandeira",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Mário de Andrade",
+      "article": "Mário de Andrade",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Oswald de Andrade",
+      "article": "Oswald de Andrade",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Lima Barreto",
+      "article": "Lima Barreto (escritor)",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Monteiro Lobato",
+      "article": "Monteiro Lobato",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Cecília Meireles",
+      "article": "Cecília Meireles",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Vinicius de Moraes",
+      "article": "Vinicius de Moraes",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "João Cabral de Melo Neto",
+      "article": "João Cabral de Melo Neto",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Ferreira Gullar",
+      "article": "Ferreira Gullar",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Adélia Prado",
+      "article": "Adélia Prado",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Hilda Hilst",
+      "article": "Hilda Hilst",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Lygia Fagundes Telles",
+      "article": "Lygia Fagundes Telles",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Rachel de Queiroz",
+      "article": "Rachel de Queiroz",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Carolina Maria de Jesus",
+      "article": "Carolina Maria de Jesus",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Conceição Evaristo",
+      "article": "Conceição Evaristo",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Rubem Fonseca",
+      "article": "Rubem Fonseca",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Dalton Trevisan",
+      "article": "Dalton Trevisan",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "João Ubaldo Ribeiro",
+      "article": "João Ubaldo Ribeiro",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Raduan Nassar",
+      "article": "Raduan Nassar",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Moacyr Scliar",
+      "article": "Moacyr Scliar",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Luís Fernando Veríssimo",
+      "article": "Luis Fernando Verissimo",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Ana Cristina Cesar",
+      "article": "Ana Cristina Cesar",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Paulo Leminski",
+      "article": "Paulo Leminski",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Torquato Neto",
+      "article": "Torquato Neto",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Augusto dos Anjos",
+      "article": "Augusto dos Anjos",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Cruz e Sousa",
+      "article": "Cruz e Sousa",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Alphonsus de Guimaraens",
+      "article": "Alphonsus de Guimaraens",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Olavo Bilac",
+      "article": "Olavo Bilac",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Raimundo Correia",
+      "article": "Raimundo Correia",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Alberto de Oliveira",
+      "article": "Alberto de Oliveira",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Castro Alves",
+      "article": "Castro Alves",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Gonçalves Dias",
+      "article": "Gonçalves Dias",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Casimiro de Abreu",
+      "article": "Casimiro de Abreu",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Álvares de Azevedo",
+      "article": "Álvares de Azevedo",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Fagundes Varela",
+      "article": "Fagundes Varella",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Tomás Antônio Gonzaga",
+      "article": "Tomás António Gonzaga",
+      "tags": {
+        "seculo": 18
+      }
+    },
+    {
+      "name": "Basílio da Gama",
+      "article": "Basílio da Gama",
+      "tags": {
+        "seculo": 18
+      }
+    },
+    {
+      "name": "Santa Rita Durão",
+      "article": "Santa Rita Durão",
+      "tags": {
+        "seculo": 18
+      }
+    },
+    {
+      "name": "Gregório de Matos",
+      "article": "Gregório de Matos",
+      "tags": {
+        "seculo": 17
+      }
+    },
+    {
+      "name": "Antônio Vieira",
+      "article": "António Vieira",
+      "tags": {
+        "seculo": 17
+      }
+    },
+    {
+      "name": "José de Anchieta",
+      "article": "José de Anchieta",
+      "tags": {
+        "seculo": 16
+      }
+    },
+    {
+      "name": "Simões Lopes Neto",
+      "article": "João Simões Lopes Neto",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Ariano Suassuna",
+      "article": "Ariano Suassuna",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Nelson Rodrigues",
+      "article": "Nelson Rodrigues",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Dias Gomes",
+      "article": "Dias Gomes",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Gianfrancesco Guarnieri",
+      "article": "Gianfrancesco Guarnieri",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Plínio Marcos",
+      "article": "Plínio Marcos",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Martins Pena",
+      "article": "Martins Pena",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Gilberto Freyre",
+      "article": "Gilberto Freire",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Sérgio Buarque de Holanda",
+      "article": "Sérgio Buarque de Holanda",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Caio Prado Júnior",
+      "article": "Caio Prado Júnior",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Darcy Ribeiro",
+      "article": "Darcy Ribeiro",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Euclides da Cunha",
+      "article": "Euclides da Cunha",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Coelho Neto",
+      "article": "Coelho Neto",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "João do Rio",
+      "article": "João do Rio",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Júlia Lopes de Almeida",
+      "article": "Júlia Lopes de Almeida",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Francisca Júlia",
+      "article": "Francisca Júlia da Silva",
+      "tags": {
+        "seculo": 19
+      }
+    },
+    {
+      "name": "Gilka Machado",
+      "article": "Gilka Machado",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Marques Rebelo",
+      "article": "Marques Rebelo",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Ciro dos Anjos",
+      "article": "Ciro dos Anjos",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "José Lins do Rego",
+      "article": "José Lins do Rego",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "José Américo de Almeida",
+      "article": "José Américo de Almeida",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Autran Dourado",
+      "article": "Autran Dourado",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Murilo Rubião",
+      "article": "Murilo Rubião",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Manoel de Barros",
+      "article": "Manoel de Barros",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Mário Quintana",
+      "article": "Mário Quintana",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Paulo Mendes Campos",
+      "article": "Paulo Mendes Campos",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Rubem Braga",
+      "article": "Rubem Braga",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Fernando Sabino",
+      "article": "Fernando Sabino",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Otto Lara Resende",
+      "article": "Otto Lara Resende",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Carlos Heitor Cony",
+      "article": "Carlos Heitor Cony",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Sérgio Sant'Anna",
+      "article": "Sérgio Sant'Anna",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "João Antônio",
+      "article": "João Antônio (escritor)",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Caio Fernando Abreu",
+      "article": "Caio Fernando Abreu",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Chico Buarque",
+      "article": "Chico Buarque",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Marcelino Freire",
+      "article": "Marcelino Freire",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Itamar Vieira Junior",
+      "article": "Itamar Vieira Junior",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Jeferson Tenório",
+      "article": "Jeferson Tenório",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Carla Madeira",
+      "article": "Carla Madeira",
+      "tags": {
+        "seculo": 20
+      }
+    },
+    {
+      "name": "Daniel Galera",
+      "article": "Daniel Galera",
+      "tags": {
+        "seculo": 20
+      }
+    }
+  ]
+}

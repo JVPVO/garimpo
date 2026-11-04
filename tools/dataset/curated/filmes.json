@@ -1,0 +1,554 @@
+{
+  "category": "filmes",
+  "prompt": "Cite um filme brasileiro",
+  "source": "https://pt.wikipedia.org/wiki/Lista_de_filmes_brasileiros_com_mais_de_um_milh%C3%A3o_de_espectadores",
+  "notes": "Longas-metragens brasileiros lançados em cinema com mais de um milhão de espectadores (Ancine / Filme B): clássicos e comédia popular lado a lado. Apenas o primeiro filme de cada franquia; títulos abertamente de pornochanchada ficaram de fora. ano = ano de lançamento.",
+  "items": [
+    {
+      "name": "Roberto Carlos a 300 Quilômetros por Hora",
+      "article": "Roberto Carlos a 300 Quilômetros por Hora",
+      "tags": {
+        "ano": 1971
+      }
+    },
+    {
+      "name": "Independência ou Morte",
+      "article": "Independência ou Morte (filme)",
+      "tags": {
+        "ano": 1972
+      }
+    },
+    {
+      "name": "A Estrela Sobe",
+      "article": "A Estrela Sobe",
+      "tags": {
+        "ano": 1974
+      }
+    },
+    {
+      "name": "Dona Flor e Seus Dois Maridos",
+      "article": "Dona Flor e Seus Dois Maridos (filme de 1976)",
+      "tags": {
+        "ano": 1976
+      }
+    },
+    {
+      "name": "O Menino da Porteira",
+      "article": "O Menino da Porteira (1976)",
+      "tags": {
+        "ano": 1976
+      }
+    },
+    {
+      "name": "Xica da Silva",
+      "article": "Xica da Silva (filme)",
+      "tags": {
+        "ano": 1976
+      }
+    },
+    {
+      "name": "Lúcio Flávio, o Passageiro da Agonia",
+      "article": "Lúcio Flávio, o Passageiro da Agonia",
+      "tags": {
+        "ano": 1977
+      }
+    },
+    {
+      "name": "O Trapalhão nas Minas do Rei Salomão",
+      "article": "O Trapalhão nas Minas do Rei Salomão",
+      "tags": {
+        "ano": 1977
+      }
+    },
+    {
+      "name": "A Dama do Lotação",
+      "article": "A Dama do Lotação (filme)",
+      "tags": {
+        "ano": 1978
+      }
+    },
+    {
+      "name": "Nos Embalos de Ipanema",
+      "article": "Nos Embalos de Ipanema",
+      "tags": {
+        "ano": 1978
+      }
+    },
+    {
+      "name": "O Cortiço",
+      "article": "O Cortiço (1978)",
+      "tags": {
+        "ano": 1978
+      }
+    },
+    {
+      "name": "Bye Bye Brasil",
+      "article": "Bye Bye Brasil",
+      "tags": {
+        "ano": 1979
+      }
+    },
+    {
+      "name": "Pixote, a Lei do Mais Fraco",
+      "article": "Pixote, a Lei do Mais Fraco",
+      "tags": {
+        "ano": 1980
+      }
+    },
+    {
+      "name": "Bonitinha, mas Ordinária ou Otto Lara Resende",
+      "article": "Bonitinha, mas Ordinária ou Otto Lara Resende",
+      "tags": {
+        "ano": 1981
+      }
+    },
+    {
+      "name": "Eles Não Usam Black-tie",
+      "article": "Eles Não Usam Black-tie (filme)",
+      "tags": {
+        "ano": 1981
+      }
+    },
+    {
+      "name": "Menino do Rio",
+      "article": "Menino do Rio",
+      "tags": {
+        "ano": 1981
+      }
+    },
+    {
+      "name": "Amor Estranho Amor",
+      "article": "Amor Estranho Amor",
+      "tags": {
+        "ano": 1982
+      }
+    },
+    {
+      "name": "Os Trapalhões na Serra Pelada",
+      "article": "Os Trapalhões na Serra Pelada",
+      "tags": {
+        "ano": 1982
+      }
+    },
+    {
+      "name": "Pra Frente, Brasil",
+      "article": "Pra Frente, Brasil",
+      "tags": {
+        "ano": 1982
+      }
+    },
+    {
+      "name": "Bete Balanço",
+      "article": "Bete Balanço",
+      "tags": {
+        "ano": 1984
+      }
+    },
+    {
+      "name": "Memórias do Cárcere",
+      "article": "Memórias do Cárcere (filme)",
+      "tags": {
+        "ano": 1984
+      }
+    },
+    {
+      "name": "O Beijo da Mulher Aranha",
+      "article": "O Beijo da Mulher Aranha",
+      "tags": {
+        "ano": 1985
+      }
+    },
+    {
+      "name": "Rock Estrela",
+      "article": "Rock Estrela",
+      "tags": {
+        "ano": 1985
+      }
+    },
+    {
+      "name": "Eu Sei que Vou Te Amar",
+      "article": "Eu Sei que Vou Te Amar",
+      "tags": {
+        "ano": 1986
+      }
+    },
+    {
+      "name": "Lua de Cristal",
+      "article": "Lua de Cristal",
+      "tags": {
+        "ano": 1990
+      }
+    },
+    {
+      "name": "Carlota Joaquina, Princesa do Brazil",
+      "article": "Carlota Joaquina, Princesa do Brazil",
+      "tags": {
+        "ano": 1995
+      }
+    },
+    {
+      "name": "O Quatrilho",
+      "article": "O Quatrilho",
+      "tags": {
+        "ano": 1995
+      }
+    },
+    {
+      "name": "Central do Brasil",
+      "article": "Central do Brasil (filme)",
+      "tags": {
+        "ano": 1998
+      }
+    },
+    {
+      "name": "O Auto da Compadecida",
+      "article": "O Auto da Compadecida (filme)",
+      "tags": {
+        "ano": 2000
+      }
+    },
+    {
+      "name": "A Partilha",
+      "article": "A Partilha",
+      "tags": {
+        "ano": 2001
+      }
+    },
+    {
+      "name": "Cidade de Deus",
+      "article": "Cidade de Deus (filme)",
+      "tags": {
+        "ano": 2002
+      }
+    },
+    {
+      "name": "Carandiru",
+      "article": "Carandiru (filme)",
+      "tags": {
+        "ano": 2003
+      }
+    },
+    {
+      "name": "Deus É Brasileiro",
+      "article": "Deus É Brasileiro",
+      "tags": {
+        "ano": 2003
+      }
+    },
+    {
+      "name": "Lisbela e o Prisioneiro",
+      "article": "Lisbela e o Prisioneiro",
+      "tags": {
+        "ano": 2003
+      }
+    },
+    {
+      "name": "Os Normais - O Filme",
+      "article": "Os Normais - O Filme",
+      "tags": {
+        "ano": 2003
+      }
+    },
+    {
+      "name": "A Dona da História",
+      "article": "A Dona da História",
+      "tags": {
+        "ano": 2004
+      }
+    },
+    {
+      "name": "Cazuza - O Tempo Não Para",
+      "article": "Cazuza - O Tempo Não Para",
+      "tags": {
+        "ano": 2004
+      }
+    },
+    {
+      "name": "Olga",
+      "article": "Olga (filme)",
+      "tags": {
+        "ano": 2004
+      }
+    },
+    {
+      "name": "Sexo, Amor e Traição",
+      "article": "Sexo, Amor e Traição",
+      "tags": {
+        "ano": 2004
+      }
+    },
+    {
+      "name": "2 Filhos de Francisco",
+      "article": "2 Filhos de Francisco",
+      "tags": {
+        "ano": 2005
+      }
+    },
+    {
+      "name": "Se Eu Fosse Você",
+      "article": "Se Eu Fosse Você",
+      "tags": {
+        "ano": 2006
+      }
+    },
+    {
+      "name": "A Grande Família: O Filme",
+      "article": "A Grande Família: O Filme",
+      "tags": {
+        "ano": 2007
+      }
+    },
+    {
+      "name": "Tropa de Elite",
+      "article": "Tropa de Elite (filme)",
+      "tags": {
+        "ano": 2007
+      }
+    },
+    {
+      "name": "Meu Nome Não É Johnny",
+      "article": "Meu Nome Não É Johnny",
+      "tags": {
+        "ano": 2008
+      }
+    },
+    {
+      "name": "Divã",
+      "article": "Divã (filme)",
+      "tags": {
+        "ano": 2009
+      }
+    },
+    {
+      "name": "Chico Xavier",
+      "article": "Chico Xavier (filme)",
+      "tags": {
+        "ano": 2010
+      }
+    },
+    {
+      "name": "De Pernas pro Ar",
+      "article": "De Pernas pro Ar (2010)",
+      "tags": {
+        "ano": 2010
+      }
+    },
+    {
+      "name": "Muita Calma Nessa Hora",
+      "article": "Muita Calma Nessa Hora",
+      "tags": {
+        "ano": 2010
+      }
+    },
+    {
+      "name": "Nosso Lar",
+      "article": "Nosso Lar (filme)",
+      "tags": {
+        "ano": 2010
+      }
+    },
+    {
+      "name": "Assalto ao Banco Central",
+      "article": "Assalto ao Banco Central",
+      "tags": {
+        "ano": 2011
+      }
+    },
+    {
+      "name": "Bruna Surfistinha",
+      "article": "Bruna Surfistinha (filme)",
+      "tags": {
+        "ano": 2011
+      }
+    },
+    {
+      "name": "Cilada.com",
+      "article": "Cilada.com",
+      "tags": {
+        "ano": 2011
+      }
+    },
+    {
+      "name": "O Homem do Futuro",
+      "article": "O Homem do Futuro",
+      "tags": {
+        "ano": 2011
+      }
+    },
+    {
+      "name": "O Palhaço",
+      "article": "O Palhaço",
+      "tags": {
+        "ano": 2011
+      }
+    },
+    {
+      "name": "Qualquer Gato Vira-Lata",
+      "article": "Qualquer Gato Vira-Lata",
+      "tags": {
+        "ano": 2011
+      }
+    },
+    {
+      "name": "Até que a Sorte Nos Separe",
+      "article": "Até que a Sorte Nos Separe",
+      "tags": {
+        "ano": 2012
+      }
+    },
+    {
+      "name": "E Aí... Comeu?",
+      "article": "E Aí... Comeu?",
+      "tags": {
+        "ano": 2012
+      }
+    },
+    {
+      "name": "Gonzaga: de Pai pra Filho",
+      "article": "Gonzaga: de Pai pra Filho",
+      "tags": {
+        "ano": 2012
+      }
+    },
+    {
+      "name": "Os Penetras",
+      "article": "Os Penetras",
+      "tags": {
+        "ano": 2012
+      }
+    },
+    {
+      "name": "Faroeste Caboclo",
+      "article": "Faroeste Caboclo (filme)",
+      "tags": {
+        "ano": 2013
+      }
+    },
+    {
+      "name": "Meu Passado Me Condena",
+      "article": "Meu Passado Me Condena",
+      "tags": {
+        "ano": 2013
+      }
+    },
+    {
+      "name": "Minha Mãe É uma Peça",
+      "article": "Minha Mãe É uma Peça",
+      "tags": {
+        "ano": 2013
+      }
+    },
+    {
+      "name": "O Concurso",
+      "article": "O Concurso",
+      "tags": {
+        "ano": 2013
+      }
+    },
+    {
+      "name": "Somos Tão Jovens",
+      "article": "Somos Tão Jovens",
+      "tags": {
+        "ano": 2013
+      }
+    },
+    {
+      "name": "O Candidato Honesto",
+      "article": "O Candidato Honesto",
+      "tags": {
+        "ano": 2014
+      }
+    },
+    {
+      "name": "S.O.S. Mulheres ao Mar",
+      "article": "S.O.S. Mulheres ao Mar",
+      "tags": {
+        "ano": 2014
+      }
+    },
+    {
+      "name": "Loucas pra Casar",
+      "article": "Loucas pra Casar",
+      "tags": {
+        "ano": 2015
+      }
+    },
+    {
+      "name": "Vai que Cola – O Filme",
+      "article": "Vai que Cola – O Filme",
+      "tags": {
+        "ano": 2015
+      }
+    },
+    {
+      "name": "Tô Ryca",
+      "article": "Tô Ryca",
+      "tags": {
+        "ano": 2016
+      }
+    },
+    {
+      "name": "Um Suburbano Sortudo",
+      "article": "Um Suburbano Sortudo",
+      "tags": {
+        "ano": 2016
+      }
+    },
+    {
+      "name": "Os Parças",
+      "article": "Os Parças",
+      "tags": {
+        "ano": 2017
+      }
+    },
+    {
+      "name": "Polícia Federal: A Lei É para Todos",
+      "article": "Polícia Federal: A Lei É para Todos",
+      "tags": {
+        "ano": 2017
+      }
+    },
+    {
+      "name": "Os Farofeiros",
+      "article": "Os Farofeiros",
+      "tags": {
+        "ano": 2018
+      }
+    },
+    {
+      "name": "Turma da Mônica: Laços",
+      "article": "Turma da Mônica: Laços (filme)",
+      "tags": {
+        "ano": 2018
+      }
+    },
+    {
+      "name": "Minha Irmã e Eu",
+      "article": "Minha Irmã e Eu",
+      "tags": {
+        "ano": 2023
+      }
+    },
+    {
+      "name": "Ainda Estou Aqui",
+      "article": "Ainda Estou Aqui (filme de 2024)",
+      "tags": {
+        "ano": 2024
+      }
+    },
+    {
+      "name": "Chico Bento e a Goiabeira Maraviósa",
+      "article": "Chico Bento e a Goiabeira Maraviósa",
+      "tags": {
+        "ano": 2025
+      }
+    },
+    {
+      "name": "O Agente Secreto",
+      "article": "O Agente Secreto",
+      "tags": {
+        "ano": 2025
+      }
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "category": "desenhos",
+  "prompt": "Cite um desenho animado famoso no Brasil",
+  "source": "https://pt.wikipedia.org/wiki/Desenho_animado",
+  "notes": "Séries animadas de grande reconhecimento no Brasil, de qualquer emissora (Globo, SBT, Manchete, Cartoon Network, Nickelodeon, TV Cultura, canais infantis e streaming), dos anos 1960 aos 2020. Não repete títulos do conjunto da TV Globinho. Cada série foi conferida no seu próprio artigo da pt.wikipedia; tipo = origem ou década.",
+  "items": [
+    {
+      "name": "A Corrida Maluca",
+      "article": "Wacky Races",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "A Pantera Cor-de-Rosa",
+      "article": "A Pantera Cor-de-rosa (telessérie de 1969)",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "A Princesa e o Cavaleiro",
+      "article": "Ribbon no Kishi",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "A Turma do Bairro",
+      "article": "Codename: Kids Next Door",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "A Vaca e o Frango",
+      "article": "Cow and Chicken",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Aaahh!!! Monstros",
+      "article": "Aaahh!!! Real Monsters",
+      "tags": {
+        "tipo": "Nickelodeon"
+      }
+    },
+    {
+      "name": "As Aventuras de Gui & Estopa",
+      "article": "As Aventuras de Gui & Estopa",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "As Meninas Superpoderosas",
+      "article": "The Powerpuff Girls",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "As Tartarugas Ninja",
+      "article": "Tartarugas Ninja",
+      "tags": {
+        "tipo": "anos 80"
+      }
+    },
+    {
+      "name": "As Terríveis Aventuras de Billy e Mandy",
+      "article": "The Grim Adventures of Billy and Mandy",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Batman: A Série Animada",
+      "article": "Batman: The Animated Series",
+      "tags": {
+        "tipo": "super-heróis"
+      }
+    },
+    {
+      "name": "Ben 10",
+      "article": "Ben 10",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Bob, o Construtor",
+      "article": "Bob, o Construtor",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "Caillou",
+      "article": "Caillou",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "Coragem, o Cão Covarde",
+      "article": "Coragem, o Cão Covarde",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Dora, a Aventureira",
+      "article": "Dora the Explorer",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "Du, Dudu e Edu",
+      "article": "Ed, Edd n Eddy",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Formiga Atômica",
+      "article": "Atom Ant",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Futurama",
+      "article": "Futurama",
+      "tags": {
+        "tipo": "adulto"
+      }
+    },
+    {
+      "name": "Galinha Pintadinha",
+      "article": "Galinha Pintadinha",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "He-Man",
+      "article": "He-Man and the Masters of the Universe",
+      "tags": {
+        "tipo": "anos 80"
+      }
+    },
+    {
+      "name": "Hey Arnold!",
+      "article": "Hey Arnold!",
+      "tags": {
+        "tipo": "Nickelodeon"
+      }
+    },
+    {
+      "name": "Historietas Assombradas",
+      "article": "Historietas Assombradas para Crianças Malcriadas",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "Hora de Aventura",
+      "article": "Adventure Time",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Irmão do Jorel",
+      "article": "Irmão do Jorel",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "Johnny Bravo",
+      "article": "Johnny Bravo",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Jonny Quest",
+      "article": "Jonny Quest",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Manda-Chuva",
+      "article": "Top Cat",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Menino Maluquinho",
+      "article": "O Menino Maluquinho",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "Mundo Bita",
+      "article": "Mundo Bita",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "Naruto",
+      "article": "Naruto",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "O Clube das Winx",
+      "article": "Winx Club",
+      "tags": {
+        "tipo": "anos 2000"
+      }
+    },
+    {
+      "name": "O Incrível Mundo de Gumball",
+      "article": "O Incrível Mundo de Gumball",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "O Laboratório de Dexter",
+      "article": "Dexter's Laboratory",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "O Show da Luna",
+      "article": "O Show da Luna!",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "One Piece",
+      "article": "One Piece",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Os Cavaleiros do Zodíaco",
+      "article": "Os Cavaleiros do Zodíaco",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Os Flintstones",
+      "article": "Os Flintstones",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Os Jetsons",
+      "article": "The Jetsons",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Os Jovens Titãs",
+      "article": "Teen Titans (série animada)",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Os Smurfs",
+      "article": "Les Schtroumpfs",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Os Thornberrys",
+      "article": "The Wild Thornberrys",
+      "tags": {
+        "tipo": "Nickelodeon"
+      }
+    },
+    {
+      "name": "Patrulha Canina",
+      "article": "PAW Patrol",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "Peixonauta",
+      "article": "Peixonauta",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "Peppa Pig",
+      "article": "Peppa Pig",
+      "tags": {
+        "tipo": "infantil"
+      }
+    },
+    {
+      "name": "Pernalonga",
+      "article": "Bugs Bunny",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Pica-Pau",
+      "article": "The Woody Woodpecker Show",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Popeye",
+      "article": "Popeye",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Sailor Moon",
+      "article": "Sailor Moon",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Sakura Card Captors",
+      "article": "Cardcaptor Sakura",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Samurai X",
+      "article": "Rurouni Kenshin",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Scooby-Doo",
+      "article": "Scooby-Doo",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "She-Ra",
+      "article": "She-Ra",
+      "tags": {
+        "tipo": "anos 80"
+      }
+    },
+    {
+      "name": "Shurato",
+      "article": "Shurato",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Silverhawks",
+      "article": "SilverHawks",
+      "tags": {
+        "tipo": "anos 80"
+      }
+    },
+    {
+      "name": "Sítio do Picapau Amarelo",
+      "article": "Sítio do Picapau Amarelo (série animada)",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "South Park",
+      "article": "South Park",
+      "tags": {
+        "tipo": "adulto"
+      }
+    },
+    {
+      "name": "Speed Racer",
+      "article": "Speed Racer",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Steven Universo",
+      "article": "Steven Universe",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Super Campeões",
+      "article": "Captain Tsubasa",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Superman: A Série Animada",
+      "article": "Superman: A Série Animada",
+      "tags": {
+        "tipo": "super-heróis"
+      }
+    },
+    {
+      "name": "Thundercats",
+      "article": "ThunderCats",
+      "tags": {
+        "tipo": "anos 80"
+      }
+    },
+    {
+      "name": "Tom e Jerry",
+      "article": "Tom & Jerry",
+      "tags": {
+        "tipo": "clássico"
+      }
+    },
+    {
+      "name": "Tromba Trem",
+      "article": "Tromba Trem",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "Turma da Mônica",
+      "article": "Turma da Mônica (série animada)",
+      "tags": {
+        "tipo": "brasileiro"
+      }
+    },
+    {
+      "name": "Ursinhos Carinhosos",
+      "article": "Ursinhos Carinhosos",
+      "tags": {
+        "tipo": "anos 80"
+      }
+    },
+    {
+      "name": "Ursinhos Gummi",
+      "article": "Adventures of the Gummi Bears",
+      "tags": {
+        "tipo": "anos 80"
+      }
+    },
+    {
+      "name": "Xiaolin: O Duelo Milenar",
+      "article": "Xiaolin Showdown",
+      "tags": {
+        "tipo": "Cartoon Network"
+      }
+    },
+    {
+      "name": "Yu Yu Hakusho",
+      "article": "Yu Yu Hakusho",
+      "tags": {
+        "tipo": "anime"
+      }
+    },
+    {
+      "name": "Zé Colméia",
+      "article": "Yogi Bear",
+      "tags": {
+        "tipo": "clássico"
+      }
+    }
+  ]
+}

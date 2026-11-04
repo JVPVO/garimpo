@@ -1,0 +1,708 @@
+{
+  "category": "atores",
+  "prompt": "Cite um ator ou atriz brasileiros",
+  "source": "https://pt.wikipedia.org/wiki/Categoria:Atores_do_Brasil",
+  "notes": "Atores e atrizes brasileiros de cinema, TV e teatro com reconhecimento popular no Brasil; cada nome verificado na pt.wikipedia; tags = veículo principal.",
+  "items": [
+    {
+      "name": "Fernanda Montenegro",
+      "article": "Fernanda Montenegro",
+      "tags": {
+        "veiculo": "teatro"
+      }
+    },
+    {
+      "name": "Fernanda Torres",
+      "article": "Fernanda Torres",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Tony Ramos",
+      "article": "Tony Ramos",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Antônio Fagundes",
+      "article": "Antônio Fagundes",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Lima Duarte",
+      "article": "Lima Duarte",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Glória Pires",
+      "article": "Glória Pires",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Sônia Braga",
+      "article": "Sônia Braga",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Regina Duarte",
+      "article": "Regina Duarte",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Susana Vieira",
+      "article": "Susana Vieira",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Nathalia Timberg",
+      "article": "Nathalia Timberg",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Laura Cardoso",
+      "article": "Laura Cardoso",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Nicette Bruno",
+      "article": "Nicette Bruno",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Eva Wilma",
+      "article": "Eva Wilma",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Tônia Carrero",
+      "article": "Tônia Carrero",
+      "tags": {
+        "veiculo": "teatro"
+      }
+    },
+    {
+      "name": "Marco Nanini",
+      "article": "Marco Nanini",
+      "tags": {
+        "veiculo": "teatro"
+      }
+    },
+    {
+      "name": "Selton Mello",
+      "article": "Selton Mello",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Lázaro Ramos",
+      "article": "Lázaro Ramos",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Wagner Moura",
+      "article": "Wagner Moura",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Rodrigo Santoro",
+      "article": "Rodrigo Santoro",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Alice Braga",
+      "article": "Alice Braga",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Taís Araújo",
+      "article": "Taís Araújo",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Juliana Paes",
+      "article": "Juliana Paes",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Camila Pitanga",
+      "article": "Camila Pitanga",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Débora Falabella",
+      "article": "Débora Falabella",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Dira Paes",
+      "article": "Dira Paes",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Zezé Motta",
+      "article": "Zezé Motta",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Ruth de Souza",
+      "article": "Ruth de Souza",
+      "tags": {
+        "veiculo": "teatro"
+      }
+    },
+    {
+      "name": "Léa Garcia",
+      "article": "Léa Garcia",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Grande Otelo",
+      "article": "Grande Otelo",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Mazzaropi",
+      "article": "Mazzaropi",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Oscarito",
+      "article": "Oscarito",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Hugo Carvana",
+      "article": "Hugo Carvana",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "José Wilker",
+      "article": "José Wilker",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "José Mayer",
+      "article": "José Mayer",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Marcos Palmeira",
+      "article": "Marcos Palmeira",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Matheus Nachtergaele",
+      "article": "Matheus Nachtergaele",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Vinícius de Oliveira",
+      "article": "Vinícius de Oliveira",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Caio Blat",
+      "article": "Caio Blat",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Murilo Benício",
+      "article": "Murilo Benício",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Reynaldo Gianecchini",
+      "article": "Reynaldo Gianecchini",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Fábio Assunção",
+      "article": "Fabio Assunção",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Cauã Reymond",
+      "article": "Cauã Reymond",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Bruno Gagliasso",
+      "article": "Bruno Gagliasso",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Jesuíta Barbosa",
+      "article": "Jesuíta Barbosa",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Antônio Pitanga",
+      "article": "Antônio Pitanga",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Milton Gonçalves",
+      "article": "Milton Gonçalves",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Othon Bastos",
+      "article": "Othon Bastos",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Stênio Garcia",
+      "article": "Stênio Garcia",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Francisco Cuoco",
+      "article": "Francisco Cuoco",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Raul Cortez",
+      "article": "Raul Cortez",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Ary Fontoura",
+      "article": "Ary Fontoura",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Ney Latorraca",
+      "article": "Ney Latorraca",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Cláudia Raia",
+      "article": "Claudia Raia",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Vera Fischer",
+      "article": "Vera Fischer",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Maitê Proença",
+      "article": "Maitê Proença",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Christiane Torloni",
+      "article": "Christiane Torloni",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Malu Mader",
+      "article": "Malu Mader",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Patrícia Pillar",
+      "article": "Patricia Pillar",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Denise Fraga",
+      "article": "Denise Fraga",
+      "tags": {
+        "veiculo": "teatro"
+      }
+    },
+    {
+      "name": "Mariana Ximenes",
+      "article": "Mariana Ximenes",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Carolina Dieckmann",
+      "article": "Carolina Dieckmmann",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Giovanna Antonelli",
+      "article": "Giovanna Antonelli",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Letícia Sabatella",
+      "article": "Letícia Sabatella",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Renata Sorrah",
+      "article": "Renata Sorrah",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Betty Faria",
+      "article": "Betty Faria",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Marília Pêra",
+      "article": "Marília Pêra",
+      "tags": {
+        "veiculo": "teatro"
+      }
+    },
+    {
+      "name": "Irene Ravache",
+      "article": "Irene Ravache",
+      "tags": {
+        "veiculo": "teatro"
+      }
+    },
+    {
+      "name": "Andréa Beltrão",
+      "article": "Andréa Beltrão",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Bruna Lombardi",
+      "article": "Bruna Lombardi",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Glória Menezes",
+      "article": "Glória Menezes",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Tarcísio Meira",
+      "article": "Tarcísio Meira",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Ingrid Guimarães",
+      "article": "Ingrid Guimarães",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Tatá Werneck",
+      "article": "Tatá Werneck",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Paulo Gustavo",
+      "article": "Paulo Gustavo",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Leandro Hassum",
+      "article": "Leandro Hassum",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Fábio Porchat",
+      "article": "Fábio Porchat",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Gregório Duvivier",
+      "article": "Gregorio Duvivier",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Vladimir Brichta",
+      "article": "Vladimir Brichta",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Tonico Pereira",
+      "article": "Tonico Pereira",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Stepan Nercessian",
+      "article": "Stepan Nercessian",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Cássia Kis",
+      "article": "Cássia Kis",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Marjorie Estiano",
+      "article": "Marjorie Estiano",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Luana Piovani",
+      "article": "Luana Piovani",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Deborah Secco",
+      "article": "Deborah Secco",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Grazi Massafera",
+      "article": "Grazi Massafera",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Isis Valverde",
+      "article": "Isis Valverde",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Sophie Charlotte",
+      "article": "Sophie Charlotte",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Alexandre Rodrigues",
+      "article": "Alexandre Rodrigues (ator)",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Leandro Firmino",
+      "article": "Leandro Firmino",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Babu Santana",
+      "article": "Babu Santana",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Flávio Migliaccio",
+      "article": "Flávio Migliaccio",
+      "tags": {
+        "veiculo": "cinema"
+      }
+    },
+    {
+      "name": "Chico Anysio",
+      "article": "Chico Anysio",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Renato Aragão",
+      "article": "Renato Aragão",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Dedé Santana",
+      "article": "Dedé Santana",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Mussum",
+      "article": "Mussum",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Zacarias",
+      "article": "Zacarias (comediante)",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Ronald Golias",
+      "article": "Ronald Golias",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Jô Soares",
+      "article": "Jô Soares",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Paulo José",
+      "article": "Paulo José",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    },
+    {
+      "name": "Débora Bloch",
+      "article": "Débora Bloch",
+      "tags": {
+        "veiculo": "televisão"
+      }
+    }
+  ]
+}
