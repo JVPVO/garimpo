@@ -1,6 +1,8 @@
-import { Collar } from "../components/Collar.tsx";
+import { PixelSprite } from "../art/PixelSprite.tsx";
+import { LOGO, TOOLS } from "../art/sprites.ts";
 import type { Dataset } from "../game/types.ts";
 import { prettyDate, todayKey } from "../game/rng.ts";
+import { TIERS, dig } from "../game/score.ts";
 import type { Store } from "../game/storage.ts";
 
 type Props = {
@@ -12,11 +14,25 @@ type Props = {
   onMethod: () => void;
 };
 
-const SIGNALS = [
-  { name: "pageviews", weight: 50, note: "atenção no verbete, 12 meses" },
-  { name: "sitelinks", weight: 25, note: "quantas línguas têm verbete" },
-  { name: "corpus", weight: 20, note: "frequência no texto em português" },
-  { name: "gravidade", weight: 5, note: "população, quando é lugar" },
+/** Lower rarity bound of each tier, same cut points as tierForRarity. */
+const CUTS = [0, 0.4, 0.65, 0.82, 0.95, 1];
+
+const STEPS = [
+  {
+    n: "1",
+    title: "Responda rápido",
+    body: "Sete perguntas sobre o Brasil e o mundo. Cada uma tem 25 segundos e aceita muitas respostas certas.",
+  },
+  {
+    n: "2",
+    title: "A raridade é medida",
+    body: "Acessos na Wikipédia, em quantas línguas o verbete existe e a frequência no português dizem o quão óbvia ela é.",
+  },
+  {
+    n: "3",
+    title: "Quanto mais rara, mais fundo",
+    body: "Resposta óbvia cava com pá. Resposta rara chama a broca. O poço vai até 700 m.",
+  },
 ];
 
 export function Home({ dataset, store, onDaily, onSeed, onLog, onMethod }: Props) {
@@ -25,92 +41,118 @@ export function Home({ dataset, store, onDaily, onSeed, onLog, onMethod }: Props
   const record = store.dives.reduce((best, dive) => Math.max(best, dive.depth), 0);
   const streak = store.streak.count;
 
+  const ranges = TIERS.map((tier, index) => {
+    const lo = dig(CUTS[index]);
+    const hi = index === TIERS.length - 1 ? dig(1) : Math.max(lo, dig(CUTS[index + 1]) - 1);
+    return { tier, text: lo === hi ? `${lo} m` : `${lo}–${hi} m` };
+  });
+
   return (
     <div className="home">
-      <div className="home-grid">
-        <div className="home-main">
-          <Collar />
-          <h1 className="display">
-            Sete respostas.
-            <br />
-            Uma mina.
-          </h1>
-          <p className="lede">
-            Cada resposta desce o poço. Quanto mais rara, mais fundo — e a raridade é{" "}
-            <strong>medida em dados</strong>, não em opinião.
-          </p>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-logo">
+          <PixelSprite sprite={LOGO} scale={4} title="Capacete de mineiro com pá" />
+        </div>
+        <h1 id="hero-title" className="hero-title">
+          Garimpo
+        </h1>
+        <p className="hero-sub">Sete respostas. Uma mina.</p>
+        <p className="hero-lede">
+          Quanto mais rara a sua resposta, maior a máquina e mais fundo o poço. E a raridade é{" "}
+          <strong>medida em dados</strong>, não em opinião.
+        </p>
 
-          <div className="actions">
-            <button type="button" className="btn" onClick={onDaily}>
-              {done ? "Descer de novo" : "Descer"}
-              <span className="btn-meta">
-                {done ? `hoje: ${done.depth} m` : "7 perguntas · 25 s cada"}
-              </span>
-            </button>
-          </div>
-
-          <div className="links">
-            <span className="mono" style={{ color: "var(--iron)" }}>
-              diário · {prettyDate(today)}
-            </span>
-            <button type="button" onClick={onSeed}>
-              ilimitado
-            </button>
-            <button type="button" onClick={onLog}>
-              arquivo ({store.dives.length})
-            </button>
-            <button type="button" onClick={onMethod}>
-              como medimos
-            </button>
-          </div>
-
-          <div className="meta-line">
-            <span>pt.wikipedia · wikidata · wordfreq</span>
-            <span>régua de 0 a 700 m</span>
-          </div>
+        <div className="hero-cta">
+          <button type="button" className="btn btn-big" onClick={onDaily}>
+            {done ? "Descer de novo" : "Descer"}
+            <span className="btn-meta">{done ? `hoje: ${done.depth} m` : "poço do dia"}</span>
+          </button>
+          <button type="button" className="btn btn-ghost btn-tall" onClick={onSeed}>
+            Ilimitado
+          </button>
         </div>
 
-        <aside className="home-card" aria-label="a régua usada no jogo">
-          <p className="label" style={{ color: "var(--iron)" }}>
-            a régua
-          </p>
-          <p className="home-card-lede">
-            Quatro medidas públicas viram um posto percentual dentro do acervo de cada pergunta.
-          </p>
+        <ul className="hero-stats" aria-label="seus números">
+          <li>
+            <b>{record ? `${record} m` : "—"}</b>
+            <span>recorde</span>
+          </li>
+          <li>
+            <b>{streak > 0 ? streak : "—"}</b>
+            <span>{streak === 1 ? "dia seguido" : "dias seguidos"}</span>
+          </li>
+          <li>
+            <b>{store.dives.length}</b>
+            <span>{store.dives.length === 1 ? "poço aberto" : "poços abertos"}</span>
+          </li>
+        </ul>
+      </section>
 
-          <ul className="home-signals">
-            {SIGNALS.map((signal) => (
-              <li key={signal.name}>
-                <span className="n">{signal.name}</span>
-                <span className="track">
-                  <i style={{ width: `${signal.weight * 2}%` }} />
-                </span>
-                <span className="w">{signal.weight}%</span>
-                <span className="note">{signal.note}</span>
-              </li>
-            ))}
-          </ul>
+      <section className="panel howto" aria-labelledby="howto-title">
+        <h2 id="howto-title" className="section-title">
+          Como funciona
+        </h2>
+        <ol className="howto-steps">
+          {STEPS.map((step) => (
+            <li key={step.n}>
+              <span className="howto-n">{step.n}</span>
+              <div>
+                <b>{step.title}</b>
+                <p>{step.body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
 
-          <div className="home-card-foot">
-            <div>
-              <b>{dataset.stats.prompts}</b>
-              <span>perguntas</span>
-            </div>
-            <div>
-              <b>{dataset.stats.uniqueAnswers.toLocaleString("pt-BR")}</b>
-              <span>respostas</span>
-            </div>
-            <div>
-              <b>{record ? `${record} m` : "—"}</b>
-              <span>{streak > 1 ? `${streak} em sequência` : "seu recorde"}</span>
-            </div>
-          </div>
+        <p className="howto-kicker">Cada raridade, uma ferramenta</p>
+        <ol className="tool-row">
+          {ranges.map(({ tier, text }) => (
+            <li key={tier.id} data-tier={tier.id}>
+              <span className="tool-art">
+                <PixelSprite sprite={TOOLS[tier.tool].frames[0]} scale={2} />
+              </span>
+              <b>{tier.toolName}</b>
+              <span className="tool-label">{tier.label}</span>
+              <span className="tool-m">{text}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
 
-          <button type="button" className="home-card-link" onClick={onMethod}>
-            ver a conta inteira →
-          </button>
-        </aside>
-      </div>
+      <section className="entry-grid" aria-label="modos de jogo">
+        <button type="button" className="panel entry" onClick={onDaily}>
+          <span className="entry-kicker">diário · {prettyDate(today)}</span>
+          <b>O poço do dia</b>
+          <span>As mesmas sete perguntas para todo mundo, até a meia-noite.</span>
+          <span className="entry-go">{done ? `você desceu ${done.depth} m` : "descer →"}</span>
+        </button>
+        <button type="button" className="panel entry" onClick={onSeed}>
+          <span className="entry-kicker">ilimitado</span>
+          <b>Escolha uma semente</b>
+          <span>Um número de 1 a 9999 abre sempre a mesma mina. Bom para desafiar alguém.</span>
+          <span className="entry-go">escolher →</span>
+        </button>
+        <button type="button" className="panel entry" onClick={onLog}>
+          <span className="entry-kicker">arquivo</span>
+          <b>Seus poços</b>
+          <span>Cada descida fica guardada com a profundidade e as sete respostas.</span>
+          <span className="entry-go">
+            {store.dives.length ? `${store.dives.length} no arquivo →` : "ainda vazio"}
+          </span>
+        </button>
+        <button type="button" className="panel entry" onClick={onMethod}>
+          <span className="entry-kicker">como medimos</span>
+          <b>A régua</b>
+          <span>
+            {dataset.stats.prompts} perguntas e{" "}
+            {dataset.stats.uniqueAnswers.toLocaleString("pt-BR")} respostas medidas com dados
+            públicos.
+          </span>
+          <span className="entry-go">ver a conta →</span>
+        </button>
+      </section>
+
+      <p className="home-foot">pt.wikipedia · wikidata · wordfreq · régua de 0 a 700 m</p>
     </div>
   );
 }

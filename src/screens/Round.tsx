@@ -138,10 +138,10 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
   };
 
   const stratum = stratumForDepth(depth);
-  const band = `${stratum.label} · P${Math.round(stratum.pFrom * 100)}–${Math.round(stratum.pTo * 100)}`;
+  const band = `${stratum.label} · ${depth} m`;
 
   return (
-    <div className="round">
+    <div className="round panel panel-round">
       <div className="wick" data-urgent={urgent}>
         <i ref={bar} style={{ transform: `scaleX(${seconds / SECONDS})` }} />
       </div>
@@ -152,7 +152,11 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
         </span>
         <span
           className="mono"
-          style={{ fontSize: 15, color: urgent ? "var(--paper)" : "var(--ink-2)", fontWeight: urgent ? 600 : 400 }}
+          style={{
+            fontSize: 15,
+            color: urgent ? "var(--paper)" : "var(--ink-2)",
+            fontWeight: urgent ? 600 : 400,
+          }}
         >
           {`0:${String(seconds).padStart(2, "0")}`}
         </span>
@@ -208,9 +212,7 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
         </div>
       ) : rejected ? (
         <div className="rejected" id="field-hint" role="status" aria-live="polite">
-          <span>
-            “{rejected.text}” não está no acervo.
-          </span>
+          <span>“{rejected.text}” não está no acervo.</span>
           <b>Tente outra — o tempo continua.</b>
           <em>
             {rejected.count} tentativa{rejected.count > 1 ? "s" : ""}
@@ -229,15 +231,11 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
         onClick={submit}
         disabled={!value.trim()}
         data-corrected={Boolean(suggestion)}
-        style={{ marginTop: 26 }}
+        style={{ marginTop: 20 }}
       >
         {suggestion ? "Enviar" : "Cravar"}
         <span className="btn-meta">{suggestion ? "resposta corrigida" : "desce o poço"}</span>
       </button>
-
-      <div className="depth-readout">
-        {depth} m<small>{stratum.label.toLowerCase()}</small>
-      </div>
     </div>
   );
 }

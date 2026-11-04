@@ -17,7 +17,7 @@ export function Seed({ onStart, onHome }: Props) {
   };
 
   return (
-    <div className="stage-narrow">
+    <div className="stage-narrow panel">
       <div className="page-head">
         <h1>Ilimitado</h1>
         <span className="quiet">mesma semente, mesmas sete perguntas</span>
@@ -40,7 +40,12 @@ export function Seed({ onStart, onHome }: Props) {
             placeholder="8842"
             aria-label="número da semente"
           />
-          <button type="button" className="btn" onClick={() => start(Number(value) || 1)} style={{ width: 180 }}>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => start(Number(value) || 1)}
+            style={{ width: 180 }}
+          >
             Descer
             <span className="btn-meta">semente</span>
           </button>

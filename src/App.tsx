@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MineAudio } from "./audio/engine.ts";
-import { Plate } from "./components/Plate.tsx";
+import { PixelSprite } from "./art/PixelSprite.tsx";
+import { LOGO, type ToolId } from "./art/sprites.ts";
+import { DigCard } from "./components/DigCard.tsx";
+import { World, type WorldMark, type WorldMode } from "./components/World.tsx";
 import { findAnswer } from "./game/match.ts";
 import { dailySeed, prettyDate, selectPrompts, todayKey } from "./game/rng.ts";
-import { dig, tierForDepth } from "./game/score.ts";
+import { TIERS, dig, tierForDepth, tierForRarity } from "./game/score.ts";
 import { readStore, saveDive, writeStore, type Store } from "./game/storage.ts";
 import { CATEGORY_LABEL, sharesFor } from "./game/strata.ts";
 import type { Dataset, Dive, Prompt, Round as RoundResult } from "./game/types.ts";
@@ -42,6 +45,9 @@ export default function App() {
   const [index, setIndex] = useState(0);
   const [rounds, setRounds] = useState<RoundResult[]>([]);
   const [revealed, setRevealed] = useState(false);
+  const [digging, setDigging] = useState(false);
+  const [tool, setTool] = useState<ToolId>("pa");
+  const [announce, setAnnounce] = useState("");
   const [result, setResult] = useState<Dive | null>(null);
   const audio = useRef(new MineAudio()).current;
 
@@ -64,9 +70,20 @@ export default function App() {
     audio.setEnabled(store.sound);
   }, [audio, store.sound]);
 
-  const depth = useMemo(() => Math.min(700, rounds.reduce((total, round) => total + round.meters, 0)), [rounds]);
+  const depth = useMemo(
+    () =>
+      Math.min(
+        700,
+        rounds.reduce((total, round) => total + round.meters, 0),
+      ),
+    [rounds],
+  );
   const depthBefore = useMemo(
-    () => Math.min(700, rounds.slice(0, -1).reduce((total, round) => total + round.meters, 0)),
+    () =>
+      Math.min(
+        700,
+        rounds.slice(0, -1).reduce((total, round) => total + round.meters, 0),
+      ),
     [rounds],
   );
   const shares = useMemo(() => {
@@ -134,14 +151,26 @@ export default function App() {
         timedOut,
       };
       const nextRounds = [...rounds, round];
+      const tier = match ? tierForRarity(match.answer.rarity) : TIERS[0];
+      const before = Math.min(
+        700,
+        rounds.reduce((total, item) => total + item.meters, 0),
+      );
+      const after = Math.min(700, before + meters);
+      setTool(tier.tool);
+      setDigging(after > before);
+      setAnnounce(
+        match
+          ? `${tier.toolName}, resposta ${tier.label}: ${match.answer.n}, mais ${meters} metros. Profundidade: ${after} metros.`
+          : timedOut
+            ? `O tempo acabou. Profundidade: ${after} metros.`
+            : `Fora do acervo. Profundidade: ${after} metros.`,
+      );
       setRounds(nextRounds);
       setRevealed(true);
 
       if (match) {
         audio.strike(match.answer.points);
-        const tier = tierForDepth(
-          Math.min(700, nextRounds.reduce((total, item) => total + item.meters, 0)),
-        );
         audio.crumble(meters);
         if (tier.id >= 2) window.setTimeout(() => audio.gem(tier.id), 180);
       } else {
@@ -154,7 +183,10 @@ export default function App() {
   const finish = useCallback(
     (finalRounds: RoundResult[]) => {
       if (!config) return;
-      const total = Math.min(700, finalRounds.reduce((sum, round) => sum + round.meters, 0));
+      const total = Math.min(
+        700,
+        finalRounds.reduce((sum, round) => sum + round.meters, 0),
+      );
       const dive: Dive = {
         id: `${config.mode}:${config.label}:${config.seed}`,
         mode: config.mode,
@@ -195,8 +227,10 @@ export default function App() {
   }, [finish, index, prompts.length, rounds]);
 
   useEffect(() => {
-    if (screen !== "dive" || !revealed) return;
+    if (screen !== "dive" || !revealed || digging) return;
     const onKey = (event: KeyboardEvent) => {
+      // Só avança quando nada está focado; um botão focado trata o próprio Enter.
+      if (event.target !== document.body) return;
       if (event.key === "Enter") {
         event.preventDefault();
         next();
@@ -204,7 +238,51 @@ export default function App() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [next, revealed, screen]);
+  }, [digging, next, revealed, screen]);
+
+  const skipDig = useCallback(() => {
+    audio.stopDig();
+    setDigging(false);
+  }, [audio]);
+
+  useEffect(() => {
+    if (!digging) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Enter" || event.key === " " || event.key === "Escape") {
+        event.preventDefault();
+        skipDig();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [digging, skipDig]);
+
+  const marks = useMemo<WorldMark[]>(() => {
+    const list: { name: string | null; meters: number; p: number | null }[] =
+      screen === "result" && result
+        ? result.rounds.map((round) => ({ name: round.name, meters: round.meters, p: round.p }))
+        : screen === "dive"
+          ? rounds.map((round) => ({
+              name: round.matched?.n ?? null,
+              meters: round.meters,
+              p: round.matched?.rarity ?? null,
+            }))
+          : [];
+    let at = 0;
+    const out: WorldMark[] = [];
+    list.forEach((item, index) => {
+      at = Math.min(700, at + item.meters);
+      if (!item.name || item.meters <= 0) return;
+      out.push({
+        at,
+        index,
+        label: item.name,
+        meters: item.meters,
+        tier: tierForRarity(item.p ?? 0).id,
+      });
+    });
+    return out;
+  }, [result, rounds, screen]);
 
   const toggleSound = () => {
     const nextStore = { ...store, sound: !store.sound };
@@ -213,9 +291,11 @@ export default function App() {
   };
 
   const goHome = () => {
+    if (digging) audio.stopDig();
     setScreen("home");
     setRounds([]);
     setRevealed(false);
+    setDigging(false);
     clearHash();
   };
 
@@ -257,29 +337,47 @@ export default function App() {
 
   const activePrompt = prompts[index];
   const currentRound = rounds[rounds.length - 1];
+  const worldMode: WorldMode =
+    screen === "dive"
+      ? revealed
+        ? digging
+          ? "dig"
+          : "reveal"
+        : "round"
+      : screen === "result"
+        ? "result"
+        : "surface";
 
   return (
-    <div className="app" data-screen={screen}>
-      <aside className="rail" aria-hidden="true">
-        {screen !== "result" && screen !== "method" && screen !== "log" ? (
-          <div className="rail-inner">
-            <Plate
-              depth={screen === "dive" ? depth : 0}
-              channel={screen === "dive"}
-              shares={shares}
-              labels
-            />
-          </div>
-        ) : null}
-      </aside>
+    <div className="app" data-screen={screen} data-world={worldMode} data-digging={digging}>
+      <World
+        mode={worldMode}
+        depth={screen === "dive" ? depth : screen === "result" && result ? result.depth : 0}
+        tool={tool}
+        digging={digging}
+        marks={marks}
+        onDigStart={(ms) => audio.dig(tool, ms)}
+        onDigEnd={() => setDigging(false)}
+      />
+
+      <p className="sr-only" aria-live="polite">
+        {announce}
+      </p>
 
       <header className="topbar">
         <button
           type="button"
           className="brand"
           onClick={goHome}
-          style={{ background: "none", border: 0, padding: 0, cursor: "pointer", color: "var(--paper)" }}
+          style={{
+            background: "none",
+            border: 0,
+            padding: 0,
+            cursor: "pointer",
+            color: "var(--paper)",
+          }}
         >
+          <PixelSprite sprite={LOGO} scale={1} />
           Garimpo
         </button>
         <span className="quiet">
@@ -321,7 +419,9 @@ export default function App() {
       {screen === "dive" && activePrompt && (
         <>
           <main className="stage">
-            {revealed && currentRound ? (
+            {revealed && currentRound && digging ? (
+              <DigCard round={currentRound} onSkip={skipDig} />
+            ) : revealed && currentRound ? (
               <Reveal
                 prompt={activePrompt}
                 round={currentRound}
@@ -353,8 +453,12 @@ export default function App() {
                   <li key={prompt.id} data-empty={!round}>
                     <span className="n">{i + 1}</span>
                     <span>{round?.matched ? "◈" : "◇"}</span>
-                    <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                      {round ? (round.matched?.n ?? "fora do acervo") : CATEGORY_LABEL[prompt.cat] ?? prompt.cat}
+                    <span
+                      style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+                    >
+                      {round
+                        ? (round.matched?.n ?? (round.timedOut ? "sem resposta" : "fora do acervo"))
+                        : (CATEGORY_LABEL[prompt.cat] ?? prompt.cat)}
                     </span>
                     <span className="m">{round ? `${round.meters} m` : "—"}</span>
                   </li>
@@ -380,9 +484,10 @@ export default function App() {
                 mode: result.mode,
                 label: result.label,
                 seed: result.seed,
-                userSeed: result.mode === "unlimited"
-                  ? Number(result.label.replace(/\D/g, "")) || undefined
-                  : undefined,
+                userSeed:
+                  result.mode === "unlimited"
+                    ? Number(result.label.replace(/\D/g, "")) || undefined
+                    : undefined,
               })
             }
             onLog={() => setScreen("log")}
