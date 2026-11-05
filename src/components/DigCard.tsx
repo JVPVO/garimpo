@@ -43,12 +43,22 @@ export function DigCard({ round, onSkip }: Props) {
           <span className="digcard-m">+{round.meters} m</span>
         </div>
       </div>
-      <ol className="digcard-ladder" aria-label="Ferramentas, da resposta mais óbvia à mais rara">
+      <ol
+        className="digcard-ladder"
+        aria-label="Metros por ferramenta, da resposta mais óbvia à mais rara"
+      >
         {TIERS.map((item) => (
-          <li key={item.id} data-on={item.id === tier.id} data-past={item.id < tier.id}>
+          <li
+            key={item.id}
+            data-tier={item.id}
+            data-on={item.id === tier.id}
+            data-past={item.id < tier.id}
+            aria-current={item.id === tier.id ? "step" : undefined}
+            title={item.label}
+          >
             <PixelSprite sprite={TOOLS[item.tool].frames[0]} scale={1} />
             <span>{item.toolName}</span>
-            <em>{item.label}</em>
+            <em>{item.meters} m</em>
           </li>
         ))}
       </ol>

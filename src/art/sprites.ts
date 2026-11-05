@@ -9,7 +9,7 @@ export type Sprite = {
   rows: string[];
 };
 
-export type ToolId = "pa" | "aspirador" | "escavadeira" | "broca" | "broca-ultra";
+export type ToolId = "pa" | "aspirador" | "escavadeira" | "broca" | "broca-ultra" | "dinamite";
 export type MineralId =
   | "carvao"
   | "ferro"
@@ -18,6 +18,7 @@ export type MineralId =
   | "ouro"
   | "esmeralda"
   | "turmalina"
+  | "rubi"
   | "diamante";
 
 export const LOGO: Sprite = {
@@ -589,6 +590,113 @@ export const TOOLS: Record<ToolId, { name: string; frames: [Sprite, Sprite] }> =
       },
     ],
   },
+  dinamite: {
+    name: "Dinamite",
+    frames: [
+      {
+        w: 32,
+        h: 32,
+        palette: {
+          R: "#c8312b",
+          r: "#ec6a4f",
+          d: "#86201c",
+          P: "#f0b8a0",
+          T: "#d9c49a",
+          t: "#9c8660",
+          f: "#7a5a3a",
+          W: "#fffbe8",
+          Y: "#ffe066",
+          A: "#f28a2a",
+          o: "#0b0705",
+        },
+        rows: [
+          ".....................A...A......",
+          ".......................Y........",
+          "......................YWY.A.....",
+          "......................fY........",
+          "....................ff...A......",
+          "..................ff.......Y....",
+          ".................f..A...........",
+          "................f...............",
+          "................f...............",
+          "................f...............",
+          ".............oooooo.............",
+          ".............oPPPPo.............",
+          ".......ooooooorRRdooooooo.......",
+          ".......oPPPPoorRRdooPPPPo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          "......oTTTTTTTTTTTTTTTTTTo......",
+          "......otttttttttttttttttto......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          "......oTTTTTTTTTTTTTTTTTTo......",
+          "......otttttttttttttttttto......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......oooooooooooooooooo.......",
+          "................................",
+          "................................",
+        ],
+      },
+      {
+        w: 32,
+        h: 32,
+        palette: {
+          R: "#c8312b",
+          r: "#ec6a4f",
+          d: "#86201c",
+          P: "#f0b8a0",
+          T: "#d9c49a",
+          t: "#9c8660",
+          f: "#7a5a3a",
+          W: "#fffbe8",
+          Y: "#ffe066",
+          A: "#f28a2a",
+          o: "#0b0705",
+        },
+        rows: [
+          ".........................Y......",
+          ".....................A.WW.A.....",
+          ".......................YY...A...",
+          "......................A.........",
+          "....................ff....Y.....",
+          "..................ff............",
+          ".................f......A.......",
+          "................f...............",
+          "................f...............",
+          "................f...............",
+          ".............oooooo.............",
+          ".............oPPPPo.............",
+          ".......ooooooorRRdooooooo.......",
+          ".......oPPPPoorRRdooPPPPo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          "......oTTTTTTTTTTTTTTTTTTo......",
+          "......otttttttttttttttttto......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          "......oTTTTTTTTTTTTTTTTTTo......",
+          "......otttttttttttttttttto......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......orRRdoorRRdoorRRdo.......",
+          ".......oooooooooooooooooo.......",
+          "................................",
+          "................................",
+        ],
+      },
+    ],
+  },
 };
 
 export const MINERALS: Record<MineralId, { name: string; sprite: Sprite }> = {
@@ -821,6 +929,40 @@ export const MINERALS: Record<MineralId, { name: string; sprite: Sprite }> = {
       ],
     },
   },
+  rubi: {
+    name: "Rubi",
+    sprite: {
+      w: 16,
+      h: 16,
+      palette: {
+        W: "#fff4f4",
+        L: "#ff8a9a",
+        P: "#f25a72",
+        R: "#d8344f",
+        D: "#a01d36",
+        d: "#6a1024",
+        o: "#0b0705",
+      },
+      rows: [
+        "................",
+        "............W...",
+        "....oooooooo.W..",
+        "...oPPLLLLPPo...",
+        "..oPLLWWLLLPPo..",
+        ".oPPLWWLLLPPDDo.",
+        "oLLLLLLLLRRRRRRo",
+        "oRRRLLLLRRRRDDDo",
+        ".oRRRRLLRRRDDdo.",
+        "..oRRRRRRRDDdo..",
+        "...oRRRRRDDdo...",
+        "....oRRRDDdo....",
+        ".....oRRDdo.....",
+        "......oRdo......",
+        ".......oo.......",
+        "................",
+      ],
+    },
+  },
   diamante: {
     name: "Diamante",
     sprite: {
@@ -856,7 +998,14 @@ export const MINERALS: Record<MineralId, { name: string; sprite: Sprite }> = {
   },
 };
 
-export const TOOL_ORDER: ToolId[] = ["pa", "aspirador", "escavadeira", "broca", "broca-ultra"];
+export const TOOL_ORDER: ToolId[] = [
+  "pa",
+  "aspirador",
+  "escavadeira",
+  "broca",
+  "broca-ultra",
+  "dinamite",
+];
 
 export const MINERAL_ORDER: MineralId[] = [
   "carvao",
@@ -866,6 +1015,7 @@ export const MINERAL_ORDER: MineralId[] = [
   "ouro",
   "esmeralda",
   "turmalina",
+  "rubi",
   "diamante",
 ];
 

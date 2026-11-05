@@ -2,8 +2,7 @@ import { useEffect, useRef } from "react";
 import { PixelSprite } from "../art/PixelSprite.tsx";
 import { MINERALS, TOOLS } from "../art/sprites.ts";
 import { Counter } from "../components/Counter.tsx";
-import { TIERS, styleScale, tierForRarity } from "../game/score.ts";
-import { stratumForDepth } from "../game/strata.ts";
+import { TIERS, styleScale, tierForRarity, type Tier } from "../game/score.ts";
 import type { Answer, Prompt, Round as RoundResult } from "../game/types.ts";
 
 type Props = {
@@ -31,6 +30,63 @@ function formatViews(views: number | null): string {
   return `${views.toLocaleString("pt-BR")}/mês`;
 }
 
+/** Sparkle count per tier: none for coal, iron and copper, growing from gold to diamond. */
+const SPARKLES: Record<number, number> = { 4: 5, 5: 9, 6: 16 };
+
+/** Deterministic sparkle positions around the mineral (percent of the art box). */
+function sparkles(count: number) {
+  return Array.from({ length: count }, (_, i) => {
+    const angle = (i / count) * Math.PI * 2 + (i % 2 ? 0.4 : 0);
+    const radius = 38 + ((i * 37) % 17);
+    return {
+      x: 50 + Math.cos(angle) * radius,
+      y: 50 + Math.sin(angle) * radius,
+      delay: (i * 173) % 900,
+      big: i % 3 === 0,
+    };
+  });
+}
+
+/** "Você encontrou …": the big line under each answer, with the mineral it turned up. */
+function Find({ tier, meters }: { tier: Tier | null; meters: number }) {
+  if (!tier) {
+    return (
+      <div className="find" data-tier="0">
+        <p className="find-line">Nada encontrado</p>
+        <p className="find-meta">o poço não desceu nesta pergunta</p>
+      </div>
+    );
+  }
+  const count = SPARKLES[tier.id] ?? 0;
+  const exclaim = tier.id >= 4 ? "!" : "";
+  return (
+    <div className="find" data-tier={tier.id}>
+      <span className="find-art" aria-hidden="true">
+        <PixelSprite sprite={MINERALS[tier.find].sprite} scale={4} />
+        {sparkles(count).map((spark, i) => (
+          <i
+            key={i}
+            data-big={spark.big}
+            style={{
+              left: `${spark.x}%`,
+              top: `${spark.y}%`,
+              animationDelay: `${spark.delay}ms`,
+            }}
+          />
+        ))}
+      </span>
+      <div>
+        <p className="find-line">
+          Você encontrou <b>{tier.findName + exclaim}</b>
+        </p>
+        <p className="find-meta">
+          +{meters} m com {tier.tool === "aspirador" ? "o" : "a"} {tier.toolName.toLowerCase()}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function normalizer(prompt: Prompt, pick: (answer: Answer) => number) {
   const values = prompt.answers.map(pick);
   const min = Math.min(...values);
@@ -49,7 +105,6 @@ export function Reveal({ prompt, round, depthBefore, depthAfter, onNext, isLast 
   useEffect(() => {
     nextButton.current?.focus({ preventScroll: true });
   }, []);
-  const layer = stratumForDepth(Math.min(699, depthAfter));
   const popularityBars = normalizer(prompt, (answer) => Math.log10(1 + (answer.pv ?? 0)));
   const sitelinkBars = normalizer(prompt, (answer) => Math.log10(1 + answer.sl));
   const corpusBars = normalizer(prompt, (answer) => answer.wf);
@@ -76,6 +131,8 @@ export function Reveal({ prompt, round, depthBefore, depthAfter, onNext, isLast 
             {matched.n !== round.guess ? `no acervo: ${matched.n}` : "no acervo"}
           </p>
 
+          <Find tier={tier} meters={round.meters} />
+
           <hr />
 
           <div className="tier">
@@ -83,9 +140,7 @@ export function Reveal({ prompt, round, depthBefore, depthAfter, onNext, isLast 
             <div>
               <h2>{tier.label}</h2>
               <p className="tier-layer">
-                <PixelSprite sprite={MINERALS[layer.id].sprite} scale={1} /> cavou com{" "}
-                {tier.toolName.toLowerCase()} · camada de{" "}
-                {layer.label.charAt(0).toLowerCase() + layer.label.slice(1)}
+                {tier.toolName} · faixa {tier.id} de {TIERS.length} · {tier.meters} m
               </p>
             </div>
             <div
@@ -123,6 +178,7 @@ export function Reveal({ prompt, round, depthBefore, depthAfter, onNext, isLast 
           <p className="canonical">
             {round.timedOut ? "sem resposta" : "não está no acervo desta pergunta"}
           </p>
+          <Find tier={null} meters={0} />
           <hr />
           <p className="compare" style={{ marginTop: 0 }}>
             {round.timedOut ? (

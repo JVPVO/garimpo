@@ -12,7 +12,7 @@ export interface DigVoice {
   readonly end: number;
 }
 
-const MASTER_LEVEL = 0.9;
+const MASTER_LEVEL = 0.45;
 
 /**
  * Glue compressor + limiter + safety trim between the engine master and the
@@ -499,6 +499,58 @@ function brocaUltra(rig: Rig, at: number, T: number): number {
   return boomAt + 1.55;
 }
 
+/* ------------------------------------------------------------ dinamite */
+
+function dinamite(rig: Rig, at: number, T: number): number {
+  const boomAt = at + Math.max(0.35, Math.min(T - 0.3, 1.1));
+
+  // Fuse: thin, crackling hiss that brightens as it burns down.
+  const fuseBand = rig.filter("bandpass", 3800, 1.4);
+  fuseBand.frequency.setValueAtTime(3200, at);
+  fuseBand.frequency.linearRampToValueAtTime(5600, boomAt);
+  const fuse = rig.hold(at, boomAt + 0.01, 0.16, 0.05, 0.02);
+  rig.lfo(fuse.gain, 23, 0.06, at, boomAt, "square");
+  rig
+    .noiseSource(at, boomAt + 0.02, 1.1)
+    .connect(fuseBand)
+    .connect(rig.filter("highpass", 1800, 0.7))
+    .connect(fuse);
+  for (let t = at + 0.04; t < boomAt - 0.03; t += rand(0.05, 0.13)) {
+    rig
+      .noiseSource(t, t + 0.03)
+      .connect(rig.filter("bandpass", rand(2500, 6000), 3))
+      .connect(rig.hit(t, rand(0.08, 0.18), 0.012, 0.001));
+  }
+
+  // Boom: falling sub thump, dark blast and a long rumble tail.
+  const sub = rig.osc("sine", 64, boomAt, boomAt + 1.4);
+  sub.frequency.exponentialRampToValueAtTime(24, boomAt + 1);
+  sub.connect(rig.hit(boomAt, 0.8, 1.1, 0.004));
+  const blast = rig.filter("lowpass", 2400, 0.7);
+  blast.frequency.setValueAtTime(2400, boomAt);
+  blast.frequency.exponentialRampToValueAtTime(120, boomAt + 0.5);
+  rig
+    .noiseSource(boomAt, boomAt + 0.7, 0.7)
+    .connect(blast)
+    .connect(rig.hit(boomAt, 0.55, 0.5, 0.002));
+  const rumble = rig.filter("lowpass", 160, 1.2);
+  const rumbleGain = rig.hold(boomAt + 0.05, boomAt + 1.7, 0.38, 0.12, 1.1);
+  rig.lfo(rumbleGain.gain, 7, 0.12, boomAt, boomAt + 1.7);
+  rig
+    .noiseSource(boomAt, boomAt + 1.75, 0.5)
+    .connect(rumble)
+    .connect(rumbleGain);
+  // Pebbles falling back.
+  for (let i = 0; i < 6; i += 1) {
+    const t = boomAt + 0.35 + i * rand(0.09, 0.16);
+    rig
+      .noiseSource(t, t + 0.05)
+      .connect(rig.filter("bandpass", rand(900, 2200), 2))
+      .connect(rig.hit(t, rand(0.05, 0.1), 0.03, 0.001));
+  }
+  return boomAt + 1.8;
+}
+
 /* ------------------------------------------------------------- builder */
 
 const BUILDERS: Record<ToolId, (rig: Rig, at: number, T: number) => number> = {
@@ -507,15 +559,22 @@ const BUILDERS: Record<ToolId, (rig: Rig, at: number, T: number) => number> = {
   escavadeira,
   broca,
   "broca-ultra": brocaUltra,
+  dinamite,
 };
 
-/** Per-tool trim so the five tools land at similar loudness. */
+/**
+ * Per-tool trim so the six tools land at similar loudness. Measured as the
+ * loudest 400 ms window of an offline render (renderDig), aiming at about
+ * -19 dBFS; the low booms (broca ultra, dinamite) are allowed a little more
+ * energy because sub-bass reads quieter than the mid-range drills.
+ */
 const LEVELS: Record<ToolId, number> = {
   pa: 1.5,
-  aspirador: 0.9,
-  escavadeira: 1,
-  broca: 1,
-  "broca-ultra": 1,
+  aspirador: 0.68,
+  escavadeira: 0.72,
+  broca: 1.3,
+  "broca-ultra": 0.6,
+  dinamite: 0.68,
 };
 
 export function buildDig(

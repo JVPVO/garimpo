@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import { PixelSprite } from "../art/PixelSprite.tsx";
-import { TOOLS } from "../art/sprites.ts";
-import { TIERS } from "../game/score.ts";
+import { MINERALS, TOOLS } from "../art/sprites.ts";
+import { MAX_DEPTH, TIERS } from "../game/score.ts";
 import { STRATA } from "../game/strata.ts";
 import type { Dataset } from "../game/types.ts";
 
-const RANGES = ["p 0–39", "p 40–64", "p 65–81", "p 82–94", "p 95–100"];
+/** "p 0–34", … read from the live cut points so the table never drifts from the game. */
+const RANGES = TIERS.map((tier, index) => {
+  const lo = Math.round(tier.minRarity * 100);
+  const next = TIERS[index + 1];
+  const hi = next ? Math.max(lo, Math.round(next.minRarity * 100) - 1) : 100;
+  return `p ${lo}–${hi}`;
+});
 
 type Validation = {
   source: string;
@@ -102,20 +108,34 @@ raridade(i) = 1 - popularidade(i)`}</pre>
           </p>
 
           <h2>3 · A descida</h2>
-          <pre>{`pontos   = 1 + 9 · raridade^0,32   (1 a 10)
-metros   = round(pontos × 10)      (10 a 100 m)
-poço     = min(700, soma dos 7)`}</pre>
           <p>
-            A curva foi calibrada contra este acervo: 6 000 descidas simuladas com um modelo de
-            jogador por posição no acervo. A mediana fica em <b>≈ 346 m</b> e o décimo superior em{" "}
-            <b>≈ 426 m</b>; chegar aos 700 m exige seis respostas entre as mais raras de cada
-            pergunta, não uma sorte isolada. Uma resposta óbvia sempre rende 10 m, nunca zero.
+            Não há curva contínua: a raridade escolhe uma de seis faixas, e cada faixa cava um
+            número fixo de metros. Os metros são os pontos.
+          </p>
+          <ol className="ladder" aria-label="Metros por faixa de raridade">
+            {TIERS.map((tier) => (
+              <li key={tier.id} data-tier={tier.id}>
+                <b>{tier.toolName}</b> <span>{tier.meters} m</span>
+              </li>
+            ))}
+          </ol>
+          <pre>{`faixa  = a mais alta que a raridade alcança
+metros = os da faixa (10 a 100)
+poço   = min(${MAX_DEPTH}, soma dos 7)`}</pre>
+          <p>
+            Uma resposta óbvia sempre rende 10 m, nunca zero. Chegar aos {MAX_DEPTH} m exige sete
+            respostas na faixa mais rara (“uma em um milhão”) — uma por pergunta, não uma sorte
+            isolada. Os cortes de cada faixa são calibrados contra a distribuição de raridade do
+            acervo.
           </p>
         </div>
 
         <div>
           <h2>4 · As camadas</h2>
-          <p>Cada banda cobre uma janela de raridade e mostra quanto do acervo real caiu nela.</p>
+          <p>
+            O cenário do poço tem oito camadas de rocha por profundidade. A porcentagem mostra
+            quanto do acervo real cairia em cada uma.
+          </p>
           <div className="legend">
             {STRATA.map((stratum, index) => (
               <div
@@ -134,29 +154,45 @@ poço     = min(700, soma dos 7)`}</pre>
           </div>
 
           <h2>5 · As ferramentas</h2>
-          <p>Cada resposta cava com uma máquina que depende só da raridade dela.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Ferramenta</th>
-                <th>Raridade</th>
-                <th>Posto no acervo</th>
-              </tr>
-            </thead>
-            <tbody>
-              {TIERS.map((tier) => (
-                <tr key={tier.id}>
-                  <td>
-                    <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                      <PixelSprite sprite={TOOLS[tier.tool].frames[0]} scale={1} /> {tier.toolName}
-                    </span>
-                  </td>
-                  <td>{tier.label}</td>
-                  <td>{RANGES[tier.id - 1]}</td>
+          <p>
+            Cada resposta cava com uma máquina que depende só da raridade dela, e cada máquina
+            encontra um mineral.
+          </p>
+          <div className="table-scroll">
+            <table className="tools-table">
+              <thead>
+                <tr>
+                  <th>Ferramenta</th>
+                  <th>Posto</th>
+                  <th>Metros</th>
+                  <th>Encontra</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {TIERS.map((tier) => (
+                  <tr key={tier.id}>
+                    <td>
+                      <span className="tools-name">
+                        <PixelSprite sprite={TOOLS[tier.tool].frames[0]} scale={1} />
+                        <span>
+                          {tier.toolName}
+                          <small>{tier.label}</small>
+                        </span>
+                      </span>
+                    </td>
+                    <td className="mono">{RANGES[tier.id - 1]}</td>
+                    <td className="mono">{tier.meters} m</td>
+                    <td>
+                      <span className="tools-name">
+                        <PixelSprite sprite={MINERALS[tier.find].sprite} scale={1} />
+                        {tier.findName}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <h2>6 · O acervo</h2>
           <p>

@@ -9,7 +9,12 @@ export type Store = {
   streak: { last: string; count: number; freezes: number };
 };
 
-const empty: Store = { dives: [], sound: true, dailyDone: {}, streak: { last: "", count: 0, freezes: 0 } };
+const empty: Store = {
+  dives: [],
+  sound: true,
+  dailyDone: {},
+  streak: { last: "", count: 0, freezes: 0 },
+};
 
 export function readStore(): Store {
   try {

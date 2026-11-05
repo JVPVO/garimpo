@@ -12,12 +12,12 @@ percentile. Nothing here is a wireframe sketch — everything is meant to be typ
 If only three things from this sheet survive implementation, they are:
 
 1. **The cross-section is not decoration, it is the layout.** The depth axis (0 → 700 m) is a
-   printed survey plate that is present on every screen, flush to the left edge, and *always shows
-   all 700 m*. You never scroll the shaft. Only the pin moves.
+   printed survey plate that is present on every screen, flush to the left edge, and _always shows
+   all 700 m_. You never scroll the shaft. Only the pin moves.
 2. **The strata are drawn with hatch patterns, not fills.** Seven named bands, seven different
    pattern vocabularies (pebbles, bedding, cleavage, joints, veins, folds, indicator crystals).
    If a band can be recognised with the colour removed, the plate is correct.
-3. **Rarity is never a colour.** Five tiers, five *silhouettes*, plus a tick count, plus the tier
+3. **Rarity is never a colour.** Five tiers, five _silhouettes_, plus a tick count, plus the tier
    name in text. Colour is the last cue, not the first.
 
 ---
@@ -27,7 +27,7 @@ If only three things from this sheet survive implementation, they are:
 > **On this screen, an answer's rarity becomes a metre of shaft — and the strata you cut through
 > are the dataset's own rarity bands, so the cross-section you're standing in is the histogram.**
 
-Everything else follows. The plate is a *geological survey of a corpus*, drawn as if a 19th-century
+Everything else follows. The plate is a _geological survey of a corpus_, drawn as if a 19th-century
 mining engineer had charted Portuguese Wikipedia. The seven named strata are not geology-flavoured
 set dressing: each band owns a declared percentile window and publishes what share of the corpus
 lands in it (`ardósia · p38–57 · 17% do acervo`). The depth axis and the rarity axis are the same
@@ -42,9 +42,9 @@ Two consequences the engineer must preserve:
 - **A published scale, measured once.** The plate's percentile windows are measured from where
   answers actually land in simulated 7-answer dives over the shipped corpus — not assumed from a
   formula. Those windows are build outputs (§9.2), and the method page reprints them with the date
-  they were computed. The formula below is the *scale bar*, not the authority: it states what a
+  they were computed. The formula below is the _scale bar_, not the authority: it states what a
   percentile is worth in metres, so a reader can check the axis by hand.
-- **Every answer digs.** Minimum 8 m even for a useless guess (you always move *some* dirt). A
+- **Every answer digs.** Minimum 8 m even for a useless guess (you always move _some_ dirt). A
   shaft that does not move is a dead screen.
 
 ---
@@ -53,20 +53,20 @@ Two consequences the engineer must preserve:
 
 Nine tokens. Proportions are of painted surface across the five screens, not of code.
 
-| Token | Hex | Role | Surface share |
-| --- | --- | --- | --- |
-| `--void` | `#0E0B09` | Frame, plate keylines, the space behind a gem, the 700 m floor | 6% |
-| `--rock-0` | `#171210` | Default ground: page, prompt area, ledger | 40% |
-| `--rock-1` | `#221A14` | Raised surface: input strip, ledger cell, reveal eyebrow | 8% |
-| `--rock-2` | `#2F241B` | Lamp pool, hover, pressed, selected filter | 5% |
-| `--rock-3` | `#423325` | 1px rules, timber props, dividers, disabled borders — **never text** | 3% |
-| `--lamp` | `#F2B65A` | The light: primary action, depth numerals, timer wick, stratum tag | 6% |
-| `--lamp-low` | `#B0752E` | Secondary accent: pressed state, spent lamp, dust, tier chip border | 2% |
-| `--paper` | `#EADFC6` | Body + display text; and the *surface* of reveal sheet, result sheet, method page | 27% |
-| `--iron` | `#7B6E5E` | 1px hairlines, ticks, rules — **never text** (fails 4.5:1) | 3% |
+| Token        | Hex       | Role                                                                              | Surface share |
+| ------------ | --------- | --------------------------------------------------------------------------------- | ------------- |
+| `--void`     | `#0E0B09` | Frame, plate keylines, the space behind a gem, the 700 m floor                    | 6%            |
+| `--rock-0`   | `#171210` | Default ground: page, prompt area, ledger                                         | 40%           |
+| `--rock-1`   | `#221A14` | Raised surface: input strip, ledger cell, reveal eyebrow                          | 8%            |
+| `--rock-2`   | `#2F241B` | Lamp pool, hover, pressed, selected filter                                        | 5%            |
+| `--rock-3`   | `#423325` | 1px rules, timber props, dividers, disabled borders — **never text**              | 3%            |
+| `--lamp`     | `#F2B65A` | The light: primary action, depth numerals, timer wick, stratum tag                | 6%            |
+| `--lamp-low` | `#B0752E` | Secondary accent: pressed state, spent lamp, dust, tier chip border               | 2%            |
+| `--paper`    | `#EADFC6` | Body + display text; and the _surface_ of reveal sheet, result sheet, method page | 27%           |
+| `--iron`     | `#7B6E5E` | 1px hairlines, ticks, rules — **never text** (fails 4.5:1)                        | 3%            |
 
 Derived, documented, not a tenth token: **`--ink-2: #B7A98F`** — secondary text. It is exactly
-`--paper` at 78% over `--rock-0`, but as a *solid* hex so it has one measurable contrast value.
+`--paper` at 78% over `--rock-0`, but as a _solid_ hex so it has one measurable contrast value.
 Never reduce text contrast with `opacity`; use this token.
 
 Gem colours are **data ink**, not UI tokens — see §6. They never appear on buttons, links, or chrome.
@@ -75,14 +75,14 @@ Gem colours are **data ink**, not UI tokens — see §6. They never appear on bu
 
 Body text = `--paper` and `--ink-2`. Both must clear 4.5:1 on every ground they sit on.
 
-| Foreground | on `--rock-0` | on `--rock-1` | on `--rock-2` | on `--rock-3` |
-| --- | --- | --- | --- | --- |
-| `--paper` `#EADFC6` | **14.04** | **12.95** | **11.42** | **9.16** |
-| `--ink-2` `#B7A98F` | **8.04** | **7.41** | **6.54** | **5.25** |
-| `--lamp` `#F2B65A` | **10.27** | **9.47** | **8.36** | **6.71** |
-| `--lamp-low` `#B0752E` | 4.80 | 4.43 | 3.91 | 3.14 |
-| `--iron` `#7B6E5E` | 3.75 | 3.45 | 3.05 | 2.44 |
-| `--rock-3` `#423325` | 1.79 | 1.65 | 1.46 | 1.00 |
+| Foreground             | on `--rock-0` | on `--rock-1` | on `--rock-2` | on `--rock-3` |
+| ---------------------- | ------------- | ------------- | ------------- | ------------- |
+| `--paper` `#EADFC6`    | **14.04**     | **12.95**     | **11.42**     | **9.16**      |
+| `--ink-2` `#B7A98F`    | **8.04**      | **7.41**      | **6.54**      | **5.25**      |
+| `--lamp` `#F2B65A`     | **10.27**     | **9.47**      | **8.36**      | **6.71**      |
+| `--lamp-low` `#B0752E` | 4.80          | 4.43          | 3.91          | 3.14          |
+| `--iron` `#7B6E5E`     | 3.75          | 3.45          | 3.05          | 2.44          |
+| `--rock-3` `#423325`   | 1.79          | 1.65          | 1.46          | 1.00          |
 
 Rules that fall out of the numbers:
 
@@ -110,11 +110,11 @@ and never exceeds 22% alpha). No `box-shadow` blur above 8px anywhere in the app
 Three families, all Google Fonts, all with full Portuguese coverage (`ã ç õ á â é ê í ó ô ú à`).
 Verify before shipping by rendering `SÃO PAULO · ARDÓSIA · CLIVAGEM · 700 m` in every face.
 
-| Role | Family | Weights | Notes |
-| --- | --- | --- | --- |
-| Display | **Fraunces** | variable `400..900`, `opsz 9..144` | Headlines, prompt text, tier names, the result number's label. Set `font-optical-sizing: auto` — never hand-set `opsz`. Ink-trap / wonky forms appear at large optical sizes, which is the woodcut feel we want. |
-| Text | **IBM Plex Sans** | 400, 500, 600 | UI, body, labels. Humanist, slightly industrial: reads as equipment lettering, not SaaS. |
-| Mono | **IBM Plex Mono** | 400, 500 | All numbers: metres, percentiles, timers, ledger rows, axis ticks. `font-variant-numeric: tabular-nums slashed-zero`. |
+| Role    | Family            | Weights                            | Notes                                                                                                                                                                                                            |
+| ------- | ----------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Display | **Fraunces**      | variable `400..900`, `opsz 9..144` | Headlines, prompt text, tier names, the result number's label. Set `font-optical-sizing: auto` — never hand-set `opsz`. Ink-trap / wonky forms appear at large optical sizes, which is the woodcut feel we want. |
+| Text    | **IBM Plex Sans** | 400, 500, 600                      | UI, body, labels. Humanist, slightly industrial: reads as equipment lettering, not SaaS.                                                                                                                         |
+| Mono    | **IBM Plex Mono** | 400, 500                           | All numbers: metres, percentiles, timers, ledger rows, axis ticks. `font-variant-numeric: tabular-nums slashed-zero`.                                                                                            |
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -137,17 +137,17 @@ large is uglier than a system serif). Fallback stack is declared per token below
 Fluid between the two breakpoints with an exact linear interpolation, clamped at both ends:
 `clamp(mobile, <slope>vw + <intercept>px, desktop)`.
 
-| Token | 390 px | 1280 px | Value | Line-height | Tracking |
-| --- | --- | --- | --- | --- | --- |
-| `--fs-hero` | 52 | 88 | `clamp(52px, 4.05vw + 36.2px, 88px)` | 0.94 | −1.3px |
-| `--fs-meter` | 56 | 96 | `clamp(56px, 4.49vw + 38.5px, 96px)` | 1.00 | −2.0px |
-| `--fs-h1` | 34 | 56 | `clamp(34px, 2.47vw + 24.4px, 56px)` | 1.00 | −1.1px |
-| `--fs-prompt` | 24 | 30 | `clamp(24px, 0.67vw + 21.4px, 30px)` | 1.28 | −0.2px |
-| `--fs-h3` | 18 | 22 | `clamp(18px, 0.45vw + 16.3px, 22px)` | 1.20 | 0 |
-| `--fs-body` | 16 | 17 | `clamp(16px, 0.11vw + 15.6px, 17px)` | 1.55 | 0 |
-| `--fs-ui` | 14 | 15 | `clamp(14px, 0.11vw + 13.6px, 15px)` | 1.35 | 0.1px |
-| `--fs-label` | 11 | 12 | `clamp(11px, 0.11vw + 10.6px, 12px)` | 1.15 | 1.5px, UPPERCASE |
-| `--fs-mono-s` | 9.5 | 10.5 | `clamp(9.5px, 0.11vw + 9.1px, 10.5px)` | 1.30 | 0.2px |
+| Token         | 390 px | 1280 px | Value                                  | Line-height | Tracking         |
+| ------------- | ------ | ------- | -------------------------------------- | ----------- | ---------------- |
+| `--fs-hero`   | 52     | 88      | `clamp(52px, 4.05vw + 36.2px, 88px)`   | 0.94        | −1.3px           |
+| `--fs-meter`  | 56     | 96      | `clamp(56px, 4.49vw + 38.5px, 96px)`   | 1.00        | −2.0px           |
+| `--fs-h1`     | 34     | 56      | `clamp(34px, 2.47vw + 24.4px, 56px)`   | 1.00        | −1.1px           |
+| `--fs-prompt` | 24     | 30      | `clamp(24px, 0.67vw + 21.4px, 30px)`   | 1.28        | −0.2px           |
+| `--fs-h3`     | 18     | 22      | `clamp(18px, 0.45vw + 16.3px, 22px)`   | 1.20        | 0                |
+| `--fs-body`   | 16     | 17      | `clamp(16px, 0.11vw + 15.6px, 17px)`   | 1.55        | 0                |
+| `--fs-ui`     | 14     | 15      | `clamp(14px, 0.11vw + 13.6px, 15px)`   | 1.35        | 0.1px            |
+| `--fs-label`  | 11     | 12      | `clamp(11px, 0.11vw + 10.6px, 12px)`   | 1.15        | 1.5px, UPPERCASE |
+| `--fs-mono-s` | 9.5    | 10.5    | `clamp(9.5px, 0.11vw + 9.1px, 10.5px)` | 1.30        | 0.2px            |
 
 Family assignment:
 
@@ -162,13 +162,13 @@ Family assignment:
 
 The display face exists to carry 2–4 words. It is not for paragraphs.
 
-| Screen | Headline | Size | Treatment |
-| --- | --- | --- | --- |
-| Home | `Sete respostas.` ⏎ `Uma mina.` | `--fs-hero` | Hard line break. All `--paper`. No accent-coloured word, no gradient, no outline. |
-| Result | `442 metros.` (or `Fundo do poço.`) | `--fs-hero` | All `--paper`. |
-| Log (empty) | `Nenhum poço` ⏎ `aberto.` | `--fs-h1` | `--paper`. |
-| Reveal | tier name, e.g. `Esmeralda` | `--fs-h3` | `--ink` on paper. |
-| Method | `Como medimos` | `--fs-h1` | `--ink` on paper. |
+| Screen      | Headline                            | Size        | Treatment                                                                         |
+| ----------- | ----------------------------------- | ----------- | --------------------------------------------------------------------------------- |
+| Home        | `Sete respostas.` ⏎ `Uma mina.`     | `--fs-hero` | Hard line break. All `--paper`. No accent-coloured word, no gradient, no outline. |
+| Result      | `442 metros.` (or `Fundo do poço.`) | `--fs-hero` | All `--paper`.                                                                    |
+| Log (empty) | `Nenhum poço` ⏎ `aberto.`           | `--fs-h1`   | `--paper`.                                                                        |
+| Reveal      | tier name, e.g. `Esmeralda`         | `--fs-h3`   | `--ink` on paper.                                                                 |
+| Method      | `Como medimos`                      | `--fs-h1`   | `--ink` on paper.                                                                 |
 
 Prompts are set in Fraunces at `--fs-prompt` / 550 — the one place the display face does long-form.
 Add `text-wrap: balance` on the prompt and `hyphens: none` (Portuguese hyphenation on 3-line
@@ -195,7 +195,9 @@ exactly 700 m tall and always fully visible. Never scroll it. Never crop it belo
 
 ```css
 .stratum {
-  position: absolute; left: 0; right: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
   top: calc(var(--px-per-m) * var(--from));
   height: calc(var(--px-per-m) * var(--thick));
   background-color: var(--fill);
@@ -204,25 +206,25 @@ exactly 700 m tall and always fully visible. Never scroll it. Never crop it belo
 }
 ```
 
-**Texture scale rule.** Hatch tiles are sized in *px* (22–48 px), never in `%`. Mine rock is a
+**Texture scale rule.** Hatch tiles are sized in _px_ (22–48 px), never in `%`. Mine rock is a
 constant texture; the plate is a printed drawing at a fixed scale. This also means hatch never
 stretches when the plate widens between screens.
 
 **Tiling rule.** A pattern tile may only contain: full-width horizontal lines, closed periodic
-curves that return to their start y with matching slope, and geometry that starts *and* ends inside
+curves that return to their start y with matching slope, and geometry that starts _and_ ends inside
 the tile. Any other shape produces a visible seam every tile width. Every recipe below obeys this.
 
 ### 4.2 The seven strata
 
-| # | Depth | Name (pt) | Fill | Pattern family | p window | Share | Plate label |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0–20 m | Solo | `#3A2C20` | rounded pebbles + grit dots | p00–23 | 9% | `argila com seixos · 9% do acervo` |
-| 2 | 20–80 m | Arenito | `#2E2319` | broken horizontal bedding | p23–38 | 14% | `arenito friável · 14% do acervo` |
-| 3 | 80–180 m | Ardósia | `#26201A` | dense parallel cleavage | p38–57 | 17% | `ardósia, clivagem 76° · 17%` |
-| 4 | 180–320 m | Quartzito | `#34291C` | offset jointed blocks | p57–76 | 19% | `quartzito maciço · 19% do acervo` |
-| 5 | 320–460 m | Xisto | `#221B15` | one long wavy quartz vein | p76–88 | 16% | `xisto com veios · 16% do acervo` |
-| 6 | 460–600 m | Gnaisse | `#1D1712` | folded foliation + stipple | p88–94 | 15% | `gnaisse dobrado · 15% do acervo` |
-| 7 | 600–700 m | Kimberlito | `#16110D` | 4 sparse indicator crystals | p94–100 | 10% | `kimberlito, mineral indicador` |
+| #   | Depth     | Name (pt)  | Fill      | Pattern family              | p window | Share | Plate label                        |
+| --- | --------- | ---------- | --------- | --------------------------- | -------- | ----- | ---------------------------------- |
+| 1   | 0–20 m    | Solo       | `#3A2C20` | rounded pebbles + grit dots | p00–23   | 9%    | `argila com seixos · 9% do acervo` |
+| 2   | 20–80 m   | Arenito    | `#2E2319` | broken horizontal bedding   | p23–38   | 14%   | `arenito friável · 14% do acervo`  |
+| 3   | 80–180 m  | Ardósia    | `#26201A` | dense parallel cleavage     | p38–57   | 17%   | `ardósia, clivagem 76° · 17%`      |
+| 4   | 180–320 m | Quartzito  | `#34291C` | offset jointed blocks       | p57–76   | 19%   | `quartzito maciço · 19% do acervo` |
+| 5   | 320–460 m | Xisto      | `#221B15` | one long wavy quartz vein   | p76–88   | 16%   | `xisto com veios · 16% do acervo`  |
+| 6   | 460–600 m | Gnaisse    | `#1D1712` | folded foliation + stipple  | p88–94   | 15%   | `gnaisse dobrado · 15% do acervo`  |
+| 7   | 600–700 m | Kimberlito | `#16110D` | 4 sparse indicator crystals | p94–100  | 10%   | `kimberlito, mineral indicador`    |
 
 `p window` is the p25–p75 of the answers that land in the band; `Share` is the proportion of
 answer-segments landing there across the shipped corpus. **Both are build outputs.** The numbers
@@ -232,7 +234,7 @@ hand and they are not rounded to look nice. If the build says ardósia holds 11%
 
 Two deliberate reversals make this read as a drawing rather than a gradient:
 
-- **The fill ramp is not monotonic.** Quartzito (`#34291C`, 180–320 m) is *lighter* than the
+- **The fill ramp is not monotonic.** Quartzito (`#34291C`, 180–320 m) is _lighter_ than the
   ardósia above it and the xisto below it. A hard, resistant bed drawn pale is the single most
   recognisable convention of a geological section. Keep it.
 - **The bottom band is the quietest.** Kimberlito is nearly empty — four specks on `#16110D`, the
@@ -249,13 +251,16 @@ does not move. Do not invent a share that the build did not compute.
 ```ts
 // scale bar: what one answer's rarity is worth in metres, printed on /metodo
 // (the plate's printed percentile windows are measured from landing depth, not from this formula)
-const refDepth = (p: number) => 700 * Math.pow(p, 1.5);          // p ∈ [0,1], 1 = rarest
+const refDepth = (p: number) => 700 * Math.pow(p, 1.5); // p ∈ [0,1], 1 = rarest
 
 // live dive — one answer's contribution; seven of these fill 700 m
-const dig = (p: number) => Math.max(8, Math.round(refDepth(p) / 4));   // 8..175 m
+const dig = (p: number) => Math.max(8, Math.round(refDepth(p) / 4)); // 8..175 m
 
 // dive
-const depth = Math.min(700, answers.reduce((m, a) => m + dig(a.p), 0));
+const depth = Math.min(
+  700,
+  answers.reduce((m, a) => m + dig(a.p), 0),
+);
 ```
 
 Sanity check of the resulting feel (keep these in the result copy):
@@ -306,7 +311,7 @@ give it 1.3 stroke weight and the brightest hatch colour.
 ```
 
 **6 · Gnaisse — folded foliation.** Tile 20×32. Two near-vertical periodic curves, each returning to
-its start x at y=32 with matching slope, plus stipple. This is the only *vertical* rhythm in the
+its start x at y=32 with matching slope, plus stipple. This is the only _vertical_ rhythm in the
 plate — it reads as the rock being folded before it was cut.
 
 ```css
@@ -373,11 +378,11 @@ Shared anatomy: `--plate` (left edge, full height) · top bar 44px · content co
  88px plate, all seven strata, no channel, hatched at 100%
 ```
 
-- **Where the shaft is:** the plate is *un-dug*. All seven strata at full opacity, no channel, no
+- **Where the shaft is:** the plate is _un-dug_. All seven strata at full opacity, no channel, no
   pin. The unopened section is the hero image; the collar (a 120×104 woodcut) sits at the 0 m line
   and overlaps the plate's right edge by 20px, so the plate reads as something the object stands on.
 - Desktop: plate widens to 296 and gains its full label column (labels were clipped on mobile — the
-  widening *reveals* them, it does not reflow them). Content 576 wide, ledger strip 232 at right.
+  widening _reveals_ them, it does not reflow them). Content 576 wide, ledger strip 232 at right.
 - The home plate is the only place all seven bands are at 100% opacity. Do not add a "preview strip"
   anywhere; the plate already is the preview.
 - **The gem at 700 m is present but unlit** (8px, `--rock-3` outline, `--lamp` 20%). It is a promise,
@@ -485,7 +490,7 @@ Shared anatomy: `--plate` (left edge, full height) · top bar 44px · content co
   the far left, so the shaft never disappears from the screen.
 - **The rarity proof is three engraved bars, not a score.** Each row: an 11px `--fs-label` signal
   name, an 8px-tall bar (fill `--ink` at 88%, track `--ink` at 10%), the value in mono 13px. Bars
-  normalise *within the prompt's answer universe* — say so on the method page. The percentile `p 71`
+  normalise _within the prompt's answer universe_ — say so on the method page. The percentile `p 71`
   is the number that matters and is set in mono, right-aligned.
 - Order on the sheet is fixed: **your answer → the canonical name → tier gem + p → the three
   signals → button.** Never lead with the tier; the tier is a consequence.
@@ -576,18 +581,18 @@ Shared anatomy: `--plate` (left edge, full height) · top bar 44px · content co
 The plate is **one persistent element**, hoisted above the router (`position: fixed; left: 0;
 top: 0; height: 100dvh`). Its inner drawing is a fixed 390px (mobile) / 296px (desktop) wide layer;
 its visible column is a wrapper with `width: var(--rail-w); overflow: hidden`. Animating the wrapper
-width therefore *reveals* label columns from under the edge instead of reflowing them, and the hatch
+width therefore _reveals_ label columns from under the edge instead of reflowing them, and the hatch
 never stretches.
 
-| Screen | `--rail-w` (390) | `--rail-w` (1280) | Channel | Labels |
-| --- | --- | --- | --- | --- |
-| Home | 88 | 296 | none | clipped on mobile, visible on desktop |
-| Round | 44 | 296 | 10px at x 14–24 | clipped / visible |
-| Reveal | 44 | 296 | same as round | same |
-| Result | 390 (full-bleed) | 560 | 24px centred | revealed + right column |
-| Log | 0 (rows carry their own mini-plates) | 0 | — | — |
-| Log detail | 390 | 560 | as result | as result |
-| Method | 0 (paper page) | 0 | — | — |
+| Screen     | `--rail-w` (390)                     | `--rail-w` (1280) | Channel         | Labels                                |
+| ---------- | ------------------------------------ | ----------------- | --------------- | ------------------------------------- |
+| Home       | 88                                   | 296               | none            | clipped on mobile, visible on desktop |
+| Round      | 44                                   | 296               | 10px at x 14–24 | clipped / visible                     |
+| Reveal     | 44                                   | 296               | same as round   | same                                  |
+| Result     | 390 (full-bleed)                     | 560               | 24px centred    | revealed + right column               |
+| Log        | 0 (rows carry their own mini-plates) | 0                 | —               | —                                     |
+| Log detail | 390                                  | 560               | as result       | as result                             |
+| Method     | 0 (paper page)                       | 0                 | —               | —                                     |
 
 Transitions: `width` 420 ms `cubic-bezier(.22,.68,.12,1)` on the wrapper, and a matching
 `translateX` on the content column so text does not jump under a moving plate. On the log, the plate
@@ -602,13 +607,13 @@ Five tiers. Each is a **silhouette** first, a colour second, a label third. All 
 64×64 user space with 1.25px strokes (`vector-effect: non-scaling-stroke`), flat fill, one facet
 highlight, zero gradients, zero filters.
 
-| Tier | Mineral | Cut | Fill | Depth | Percentile | Tick marks | Stroke |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| I | Quartzo leitoso | **brutes** (raw fragment) | `#CFC6B4` | 0–180 m | p 0–40 | 1 | 1.0 |
-| II | Granada | **cabochon** (dome) | `#C0503A` | 180–380 m | p 40–65 | 2 | 1.2 |
-| III | Esmeralda | **emerald cut** (step) | `#35996B` | 380–520 m | p 65–82 | 3 | 1.4 |
-| IV | Ametista | **octagon** | `#8A6ABE` | 520–640 m | p 82–95 | 4 | 1.6 |
-| V | Diamante | **brilliant** | `#C9E6EA` | 640–700 m | p 95–100 | 5 | 1.8 |
+| Tier | Mineral         | Cut                       | Fill      | Depth     | Percentile | Tick marks | Stroke |
+| ---- | --------------- | ------------------------- | --------- | --------- | ---------- | ---------- | ------ |
+| I    | Quartzo leitoso | **brutes** (raw fragment) | `#CFC6B4` | 0–180 m   | p 0–40     | 1          | 1.0    |
+| II   | Granada         | **cabochon** (dome)       | `#C0503A` | 180–380 m | p 40–65    | 2          | 1.2    |
+| III  | Esmeralda       | **emerald cut** (step)    | `#35996B` | 380–520 m | p 65–82    | 3          | 1.4    |
+| IV   | Ametista        | **octagon**               | `#8A6ABE` | 520–640 m | p 82–95    | 4          | 1.6    |
+| V    | Diamante        | **brilliant**             | `#C9E6EA` | 640–700 m | p 95–100   | 5          | 1.8    |
 
 Contrast of each fill on `--rock-0`: 10.96 / 3.94 / 5.24 / 4.32 / 14.15 — all clear 3:1 for a
 graphic object. On paper they all sit between 1.01 and 4.14, so **every gem drawn on a paper surface
@@ -619,27 +624,61 @@ keyline on rock, or they dissolve into the highlight.
 
 ```html
 <!-- I · brutes: 8-vertex irregular fragment, two internal fracture lines -->
-<path d="M14 40 L10 24 L22 11 L39 8 L52 18 L56 34 L44 52 L26 55 Z M22 11 L24 33 L44 52 M10 24 L24 33 L56 34"
-      fill="#CFC6B4" stroke="#0E0B09" stroke-width="1" />
+<path
+  d="M14 40 L10 24 L22 11 L39 8 L52 18 L56 34 L44 52 L26 55 Z M22 11 L24 33 L44 52 M10 24 L24 33 L56 34"
+  fill="#CFC6B4"
+  stroke="#0E0B09"
+  stroke-width="1"
+/>
 
 <!-- II · cabochon: dome on a flat base, one off-centre highlight arc -->
 <path d="M6 44 H58 A26 26 0 0 0 6 44 Z" fill="#C0503A" stroke="#0E0B09" stroke-width="1.2" />
 <path d="M18 32 A14 14 0 0 1 32 20" fill="none" stroke="#EADFC6" stroke-width="1.6" opacity=".55" />
 
 <!-- III · emerald cut: chamfered rectangle + two step lines -->
-<path d="M20 8 H44 L52 16 V48 L44 56 H20 L12 48 V16 Z" fill="#35996B" stroke="#0E0B09" stroke-width="1.4" />
-<path d="M24 16 H40 L44 20 V44 L40 48 H24 L20 44 V20 Z M28 24 H36 L36 40 H28 Z"
-      fill="none" stroke="#0E0B09" stroke-width="1" opacity=".7" />
+<path
+  d="M20 8 H44 L52 16 V48 L44 56 H20 L12 48 V16 Z"
+  fill="#35996B"
+  stroke="#0E0B09"
+  stroke-width="1.4"
+/>
+<path
+  d="M24 16 H40 L44 20 V44 L40 48 H24 L20 44 V20 Z M28 24 H36 L36 40 H28 Z"
+  fill="none"
+  stroke="#0E0B09"
+  stroke-width="1"
+  opacity=".7"
+/>
 
 <!-- IV · octagon: regular 8-gon + girdle cross -->
-<path d="M22 6 H42 L58 22 V42 L42 58 H22 L6 42 V22 Z" fill="#8A6ABE" stroke="#0E0B09" stroke-width="1.6" />
+<path
+  d="M22 6 H42 L58 22 V42 L42 58 H22 L6 42 V22 Z"
+  fill="#8A6ABE"
+  stroke="#0E0B09"
+  stroke-width="1.6"
+/>
 <path d="M32 6 V58 M6 32 H58" fill="none" stroke="#0E0B09" stroke-width="1" opacity=".6" />
 
 <!-- V · brilliant: girdle octagon, table octagon, 8 crown facets -->
-<path d="M32 6 L52 14 L58 32 L52 50 L32 58 L12 50 L6 32 L12 14 Z" fill="#C9E6EA" stroke="#0E0B09" stroke-width="1.8" />
-<path d="M24 20 H40 L44 24 V40 L40 44 H24 L20 40 V24 Z" fill="none" stroke="#0E0B09" stroke-width="1.2" />
-<path d="M32 6 L24 20 M52 14 L40 20 M58 32 L44 24 M52 50 L40 40 M32 58 L24 44 M12 50 L20 40 M6 32 L20 24 M12 14 L24 20"
-      fill="none" stroke="#0E0B09" stroke-width="1" opacity=".75" />
+<path
+  d="M32 6 L52 14 L58 32 L52 50 L32 58 L12 50 L6 32 L12 14 Z"
+  fill="#C9E6EA"
+  stroke="#0E0B09"
+  stroke-width="1.8"
+/>
+<path
+  d="M24 20 H40 L44 24 V40 L40 44 H24 L20 40 V24 Z"
+  fill="none"
+  stroke="#0E0B09"
+  stroke-width="1.2"
+/>
+<path
+  d="M32 6 L24 20 M52 14 L40 20 M58 32 L44 24 M52 50 L40 40 M32 58 L24 44 M12 50 L20 40 M6 32 L20 24 M12 14 L24 20"
+  fill="none"
+  stroke="#0E0B09"
+  stroke-width="1"
+  opacity=".75"
+/>
 ```
 
 Facet lines are `--void` (`#0E0B09`) on rock and `--ink` (`#1A1108`) on paper. One highlight only,
@@ -678,18 +717,18 @@ the pin settles. That snap is the "struck the rock" beat and it is the move peop
 
 ### 7.2 Reveal timing (from `submit`)
 
-| t (ms) | Event | Property | Easing |
-| --- | --- | --- | --- |
-| 0 | input locks; answer text stays, caret removed | — | — |
-| 0 → 640 | channel carves `scaleY` to new depth | transform | `cubic-bezier(.22,.68,.12,1)` |
-| 60 → 880 | 3 dust particles | transform + opacity | `cubic-bezier(.3,.5,.5,1)` |
-| 640 → 860 | depth hairline snaps on | opacity | `linear` |
-| 680 → 800 | pin settles (lamp ellipse) | opacity, scale .92→1 | `cubic-bezier(.16,1,.3,1)` |
-| 760 → 1060 | reveal sheet rises (`translateY 100% → 0`) | transform | `cubic-bezier(.16,1,.3,1)` |
-| 860 → 1280 | three signal bars grow (`scaleX`, origin left, 60/120/180 ms stagger, 420 ms each) | transform | `cubic-bezier(.22,.68,.12,1)` |
-| 980 → 1360 | gem draws (`stroke-dashoffset`) then fill fades 200 ms | stroke-dashoffset, opacity | `linear` |
-| 1120 → 1420 | metres count up (12 steps, tabular) | text content | — |
-| 1240 | "próxima" enabled (not before) | — | — |
+| t (ms)      | Event                                                                              | Property                   | Easing                        |
+| ----------- | ---------------------------------------------------------------------------------- | -------------------------- | ----------------------------- |
+| 0           | input locks; answer text stays, caret removed                                      | —                          | —                             |
+| 0 → 640     | channel carves `scaleY` to new depth                                               | transform                  | `cubic-bezier(.22,.68,.12,1)` |
+| 60 → 880    | 3 dust particles                                                                   | transform + opacity        | `cubic-bezier(.3,.5,.5,1)`    |
+| 640 → 860   | depth hairline snaps on                                                            | opacity                    | `linear`                      |
+| 680 → 800   | pin settles (lamp ellipse)                                                         | opacity, scale .92→1       | `cubic-bezier(.16,1,.3,1)`    |
+| 760 → 1060  | reveal sheet rises (`translateY 100% → 0`)                                         | transform                  | `cubic-bezier(.16,1,.3,1)`    |
+| 860 → 1280  | three signal bars grow (`scaleX`, origin left, 60/120/180 ms stagger, 420 ms each) | transform                  | `cubic-bezier(.22,.68,.12,1)` |
+| 980 → 1360  | gem draws (`stroke-dashoffset`) then fill fades 200 ms                             | stroke-dashoffset, opacity | `linear`                      |
+| 1120 → 1420 | metres count up (12 steps, tabular)                                                | text content               | —                             |
+| 1240        | "próxima" enabled (not before)                                                     | —                          | —                             |
 
 Hard cap: **1.42 s** from submit to interactive. If a tween overruns, shorten the count-up first,
 never the carve.
@@ -697,7 +736,7 @@ never the carve.
 ### 7.3 Everywhere else
 
 - Result: the plate reprises the carve — seven notches stamp in at 70 ms stagger from the top, and
-  the un-dug rock fades from 100% → 45% over 400 ms *after* the last notch. `scale` 0.6 → 1 +
+  the un-dug rock fades from 100% → 45% over 400 ms _after_ the last notch. `scale` 0.6 → 1 +
   opacity, transform only.
 - Screen changes: one move only — the plate wrapper's width (§5.6). Content columns move with
   `translateX` by the same delta so nothing jumps under a moving plate. 420 ms.
@@ -790,7 +829,9 @@ furniture or a measured section.
   }
 }
 
-.tnum { font-variant-numeric: tabular-nums slashed-zero; }
+.tnum {
+  font-variant-numeric: tabular-nums slashed-zero;
+}
 .label-caps {
   font-family: var(--f-text);
   font-size: var(--fs-label);
@@ -805,14 +846,14 @@ furniture or a measured section.
 
 ```ts
 type Stratum = {
-  id: 'solo' | 'arenito' | 'ardosia' | 'quartzito' | 'xisto' | 'gnaisse' | 'kimberlito';
-  from: number;        // metres
-  to: number;          // metres
-  fill: string;        // hex from the table in §4.2
-  hatch: string;       // `var(--hatch-*)` key, resolved in CSS
-  label: string;       // rail label, ≤3 words
-  fact: number;        // share of the corpus that lands in this band, 0..1 — COMPUTED, not authored
-  pFrom: number;       // percentile window, measured from landing depth — COMPUTED
+  id: "solo" | "arenito" | "ardosia" | "quartzito" | "xisto" | "gnaisse" | "kimberlito";
+  from: number; // metres
+  to: number; // metres
+  fill: string; // hex from the table in §4.2
+  hatch: string; // `var(--hatch-*)` key, resolved in CSS
+  label: string; // rail label, ≤3 words
+  fact: number; // share of the corpus that lands in this band, 0..1 — COMPUTED, not authored
+  pFrom: number; // percentile window, measured from landing depth — COMPUTED
   pTo: number;
 };
 ```

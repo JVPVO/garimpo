@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PixelSprite } from "../art/PixelSprite.tsx";
 import { MINERALS } from "../art/sprites.ts";
-import { TIERS, dig, tierForDepth } from "../game/score.ts";
+import { TIERS, dig, tierForDepth, tierForRarity } from "../game/score.ts";
 import { STRATA, stratumForDepth } from "../game/strata.ts";
 import type { Answer, Dataset, Dive } from "../game/types.ts";
 
@@ -110,6 +110,13 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
   const tier = tierForDepth(dive.depth);
   // A gem is what the shaft is cutting through at that depth, not a separate scale.
   const gems = marks.filter((mark) => stratumForDepth(Math.min(699, mark.at)).from >= 440).length;
+  // What each answer turned up (the tier's mineral), counted for the summary.
+  const finds = TIERS.map((item) => ({
+    item,
+    count: marks.filter(
+      (mark) => mark.name && mark.p !== null && tierForRarity(mark.p).id === item.id,
+    ).length,
+  })).filter((entry) => entry.count > 0);
   const stratum = stratumForDepth(dive.depth);
   const obvious = marks.map((mark) => obviousFor(dataset, mark.promptId, mark.prompt));
   const obviousTotal = Math.min(
@@ -149,7 +156,7 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
           <div
             className="tier-ticks"
             role="img"
-            aria-label={`${stratum.label}, nível ${tier.id} de 5`}
+            aria-label={`${stratum.label}, nível ${tier.id} de ${TIERS.length}`}
           >
             {TIERS.map((item) => (
               <i key={item.id} data-on={item.id <= tier.id} />
@@ -164,6 +171,17 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
               ? `${gems} ${gems === 1 ? "camada nobre" : "camadas nobres"} no caminho. Você parou na camada de ${lower(stratum.label)}: ${stratum.fact}.`
               : `Nenhuma camada nobre no caminho. Você parou na camada de ${lower(stratum.label)}: ${stratum.fact}. As respostas óbvias descem pouco.`}
           </p>
+
+          {finds.length ? (
+            <ul className="result-finds" aria-label="o que você encontrou">
+              {finds.map(({ item, count }) => (
+                <li key={item.id} data-tier={item.id}>
+                  <PixelSprite sprite={MINERALS[item.find].sprite} scale={2} />
+                  <b>{count}×</b> {MINERALS[item.find].name.toLowerCase()}
+                </li>
+              ))}
+            </ul>
+          ) : null}
 
           <div className="result-actions">
             <button type="button" className="btn" onClick={onAgain}>
@@ -226,10 +244,13 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
                   </span>
                   <span className="meters">
                     {round.meters} m{" "}
-                    <PixelSprite
-                      sprite={MINERALS[stratumForDepth(Math.min(699, round.at)).id].sprite}
-                      scale={1}
-                    />
+                    {round.name && round.p !== null ? (
+                      <PixelSprite
+                        sprite={MINERALS[tierForRarity(round.p).find].sprite}
+                        scale={1}
+                        title={tierForRarity(round.p).findName}
+                      />
+                    ) : null}
                     {baseM !== null && !same ? (
                       <small data-up={round.meters > baseM}>
                         {round.meters - baseM > 0 ? "+" : ""}

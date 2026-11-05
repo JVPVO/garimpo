@@ -36,6 +36,21 @@ UF_ALIASES = {
 }
 
 GLOBAL_ALIASES: dict[tuple[str, str], list[str]] = {
+    # v3: forms players really type (probes_g.json)
+    ("cidade", "rio de janeiro"): ["Rio"],
+    ("cidade", "sao paulo"): ["Sampa"],
+    ("cidade", "belo horizonte"): ["BH", "Beagá"],
+    ("cidade", "florianopolis"): ["Floripa"],
+    ("cidade", "porto alegre"): ["POA"],
+    ("pratos_tipicos", "cuscuz nordestino"): ["Cuscuz"],
+    ("humorista", "renato aragao"): ["Didi"],
+    ("presidente", "luiz inacio lula da silva"): ["Lula"],
+    ("politico", "luiz inacio lula da silva"): ["Lula"],
+    ("presidente", "fernando henrique cardoso"): ["FHC", "Fernando Henrique"],
+    ("politico", "fernando henrique cardoso"): ["FHC", "Fernando Henrique"],
+    ("presidente", "juscelino kubitschek"): ["JK", "Juscelino"],
+    ("jogador", "edson arantes do nascimento"): ["Pelé"],
+
     ("pais", "estados unidos"): ["EUA", "USA", "Estados Unidos da América"],
     ("pais", "reino unido"): ["UK", "Grã-Bretanha"],
     ("pais", "emirados arabes unidos"): ["EAU"],

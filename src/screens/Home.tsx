@@ -1,8 +1,8 @@
 import { PixelSprite } from "../art/PixelSprite.tsx";
-import { LOGO, TOOLS } from "../art/sprites.ts";
+import { LOGO, MINERALS, TOOLS } from "../art/sprites.ts";
 import type { Dataset } from "../game/types.ts";
 import { prettyDate, todayKey } from "../game/rng.ts";
-import { TIERS, dig } from "../game/score.ts";
+import { MAX_DEPTH, TIERS } from "../game/score.ts";
 import type { Store } from "../game/storage.ts";
 
 type Props = {
@@ -13,9 +13,6 @@ type Props = {
   onLog: () => void;
   onMethod: () => void;
 };
-
-/** Lower rarity bound of each tier, same cut points as tierForRarity. */
-const CUTS = [0, 0.4, 0.65, 0.82, 0.95, 1];
 
 const STEPS = [
   {
@@ -31,7 +28,7 @@ const STEPS = [
   {
     n: "3",
     title: "Quanto mais rara, mais fundo",
-    body: "Resposta óbvia cava com pá. Resposta rara chama a broca. O poço vai até 700 m.",
+    body: "Cada raridade tem uma ferramenta e uma profundidade fixa: a resposta óbvia cava 10\u00a0m com a pá, a mais rara explode 100\u00a0m com dinamite. Sete respostas perfeitas chegam a 700\u00a0m.",
   },
 ];
 
@@ -40,12 +37,6 @@ export function Home({ dataset, store, onDaily, onSeed, onLog, onMethod }: Props
   const done = store.dailyDone[today];
   const record = store.dives.reduce((best, dive) => Math.max(best, dive.depth), 0);
   const streak = store.streak.count;
-
-  const ranges = TIERS.map((tier, index) => {
-    const lo = dig(CUTS[index]);
-    const hi = index === TIERS.length - 1 ? dig(1) : Math.max(lo, dig(CUTS[index + 1]) - 1);
-    return { tier, text: lo === hi ? `${lo} m` : `${lo}–${hi} m` };
-  });
 
   return (
     <div className="home">
@@ -104,19 +95,26 @@ export function Home({ dataset, store, onDaily, onSeed, onLog, onMethod }: Props
           ))}
         </ol>
 
-        <p className="howto-kicker">Cada raridade, uma ferramenta</p>
-        <ol className="tool-row">
-          {ranges.map(({ tier, text }) => (
+        <p className="howto-kicker">Cada raridade, uma ferramenta, uma distância fixa</p>
+        <ol className="tool-row" aria-label="Ferramentas, da resposta mais óbvia à mais rara">
+          {TIERS.map((tier) => (
             <li key={tier.id} data-tier={tier.id}>
               <span className="tool-art">
                 <PixelSprite sprite={TOOLS[tier.tool].frames[0]} scale={2} />
               </span>
               <b>{tier.toolName}</b>
               <span className="tool-label">{tier.label}</span>
-              <span className="tool-m">{text}</span>
+              <span className="tool-m">{tier.meters} m</span>
+              <span className="tool-find">
+                <PixelSprite sprite={MINERALS[tier.find].sprite} scale={1} /> {tier.findName}
+              </span>
             </li>
           ))}
         </ol>
+        <p className="tool-rule">
+          Sem curva, sem sorteio: cada resposta cava exatamente os metros da sua faixa. Teto:{" "}
+          {MAX_DEPTH} m.
+        </p>
       </section>
 
       <section className="entry-grid" aria-label="modos de jogo">

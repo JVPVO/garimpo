@@ -161,10 +161,10 @@ export default function App() {
       setDigging(after > before);
       setAnnounce(
         match
-          ? `${tier.toolName}, resposta ${tier.label}: ${match.answer.n}, mais ${meters} metros. Profundidade: ${after} metros.`
+          ? `Você encontrou ${tier.findName}. ${tier.toolName}, resposta ${tier.label}: ${match.answer.n}, mais ${meters} metros. Profundidade: ${after} metros.`
           : timedOut
-            ? `O tempo acabou. Profundidade: ${after} metros.`
-            : `Fora do acervo. Profundidade: ${after} metros.`,
+            ? `Nada encontrado: o tempo acabou. Profundidade: ${after} metros.`
+            : `Nada encontrado: fora do acervo. Profundidade: ${after} metros.`,
       );
       setRounds(nextRounds);
       setRevealed(true);

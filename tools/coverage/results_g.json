@@ -1,0 +1,549 @@
+{
+  "summary": {
+    "matcher": "v3 (exact + suggestions)",
+    "probeSet": "probes_g.json",
+    "probes": 624,
+    "acceptedRate": 0.9903846153846154,
+    "recall": 0.9919871794871795,
+    "accepted": 618,
+    "suggested": 1,
+    "promptsTested": 52,
+    "promptsBelow90": [],
+    "negativesTested": 415,
+    "falseAccepts": 1,
+    "falseAcceptRate": 0.0024096385542168677,
+    "falseSuggestions": 29,
+    "promptsWithoutProbes": []
+  },
+  "prompts": [
+    {
+      "id": "uf-todos",
+      "text": "Cite um estado do Brasil",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "capital-br",
+      "text": "Cite uma capital de estado brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "cidade-sp",
+      "text": "Cite uma cidade do estado de São Paulo",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "cidade-mg",
+      "text": "Cite uma cidade de Minas Gerais",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Vitória -> Santa Vitória?"]
+    },
+    {
+      "id": "presidente-todos",
+      "text": "Cite um presidente do Brasil",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "cientista",
+      "text": "Cite um cientista ou inventor brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Newton -> Newton da Costa?"]
+    },
+    {
+      "id": "politico-todos",
+      "text": "Cite um político brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "jogador-todos",
+      "text": "Cite um jogador da Seleção Brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Marta -> Cauê Santos da Mata?"]
+    },
+    {
+      "id": "jogador-goleiro",
+      "text": "Cite um goleiro da Seleção Brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "jogadora-todas",
+      "text": "Cite uma jogadora da Seleção Brasileira feminina",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Daiane dos Santos -> Adriane dos Santos?"]
+    },
+    {
+      "id": "time-todos",
+      "text": "Cite um time de futebol brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": [
+        "Barcelona -> Barcelona de Ilhéus?",
+        "Boca Juniors -> Boca Júnior-SE?",
+        "Porto -> Palmeiras?"
+      ]
+    },
+    {
+      "id": "time-sp",
+      "text": "Cite um time de futebol paulista",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Internacional -> Inter de Limeira?"]
+    },
+    {
+      "id": "time-rj",
+      "text": "Cite um time de futebol do estado do Rio de Janeiro",
+      "probes": 12,
+      "accepted": 11,
+      "suggested": ["america -> America-RJ"],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "time-nordeste",
+      "text": "Cite um time de futebol do Nordeste",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Flamengo -> Flamengo-PI?", "Cruzeiro -> Cruzeiro de Arapiraca?"]
+    },
+    {
+      "id": "time-pt",
+      "text": "Cite um clube de futebol de Portugal",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "estadio-todos",
+      "text": "Cite um estádio de futebol no Brasil",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Monumental -> Olímpico Monumental?"]
+    },
+    {
+      "id": "f1-br",
+      "text": "Cite um piloto brasileiro de Fórmula 1",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "rio-todos",
+      "text": "Cite um rio brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "ave-todas",
+      "text": "Cite uma ave brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "mamifero-todos",
+      "text": "Cite um mamífero da fauna brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": [
+        "sucuri -> Gambá-de-orelha-branca?",
+        "elefante -> Elefante-marinho?",
+        "canguru -> Onça-pintada?",
+        "piranha -> Ariranha?"
+      ]
+    },
+    {
+      "id": "prato-todos",
+      "text": "Cite um prato típico brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "prato-nordeste",
+      "text": "Cite um prato típico do Nordeste",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["tacacá -> Acaçá?"]
+    },
+    {
+      "id": "prato-minas",
+      "text": "Cite um prato típico de Minas Gerais",
+      "probes": 12,
+      "accepted": 11,
+      "suggested": [],
+      "missed": ["doce de leite"],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "doce-todos",
+      "text": "Cite um doce brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["pastel -> Pão de mel?"]
+    },
+    {
+      "id": "salgado-festa",
+      "text": "Cite um salgadinho de festa",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "bebida-todas",
+      "text": "Cite uma bebida brasileira",
+      "probes": 12,
+      "accepted": 11,
+      "suggested": [],
+      "missed": ["cafezinho"],
+      "falseAccepts": [],
+      "falseSuggestions": ["tequila -> Tiquira?"]
+    },
+    {
+      "id": "refrigerante-br",
+      "text": "Cite um refrigerante de marca brasileira",
+      "probes": 12,
+      "accepted": 11,
+      "suggested": [],
+      "missed": ["kuat"],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "cerveja-br",
+      "text": "Cite uma marca de cerveja brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "novela-globo",
+      "text": "Cite uma novela da Globo",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Rebelde -> Rosa Rebelde?"]
+    },
+    {
+      "id": "filme-todos",
+      "text": "Cite um filme brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "apresentador",
+      "text": "Cite um apresentador ou uma apresentadora da TV brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "humorista",
+      "text": "Cite um humorista brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "bbb-campeao",
+      "text": "Cite um campeão do Big Brother Brasil",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "desenho-todos",
+      "text": "Cite um desenho animado que marcou a sua infância",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "turma-monica",
+      "text": "Cite um personagem da Turma da Mônica",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "cantor-todos",
+      "text": "Cite um cantor ou uma cantora brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Neymar -> Ceumar?"]
+    },
+    {
+      "id": "cantora",
+      "text": "Cite uma cantora brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": ["Ana Maria Braga -> Ana Maria Braga"],
+      "falseSuggestions": ["Roberto Carlos -> Roberta Campos?", "Beyoncé -> Ludmilla?"]
+    },
+    {
+      "id": "cantor-sertanejo",
+      "text": "Cite um cantor, cantora ou dupla sertaneja",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "banda-br",
+      "text": "Cite uma banda ou grupo musical brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "escritor-todos",
+      "text": "Cite um escritor ou uma escritora brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "ator-todos",
+      "text": "Cite um ator ou uma atriz brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "marca-todas",
+      "text": "Cite uma marca brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "banco-br",
+      "text": "Cite um banco brasileiro",
+      "probes": 12,
+      "accepted": 11,
+      "suggested": [],
+      "missed": ["Santander Brasil"],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "folclore-todos",
+      "text": "Cite uma criatura ou lenda do folclore brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "festa-todas",
+      "text": "Cite uma festa popular brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "instrumento-todos",
+      "text": "Cite um instrumento musical brasileiro",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "giria-todas",
+      "text": "Cite uma gíria brasileira",
+      "probes": 12,
+      "accepted": 11,
+      "suggested": [],
+      "missed": ["cara"],
+      "falseAccepts": [],
+      "falseSuggestions": ["fixe -> vixe?", "porreiro -> parceiro?", "gajo -> gato?"]
+    },
+    {
+      "id": "praia-todas",
+      "text": "Cite uma praia brasileira",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Nazaré -> Lázaro?"]
+    },
+    {
+      "id": "ponto-turistico",
+      "text": "Cite um ponto turístico do Brasil",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": []
+    },
+    {
+      "id": "pais-todos",
+      "text": "Cite um país do mundo",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["África -> Estados Unidos?"]
+    },
+    {
+      "id": "capital-todas",
+      "text": "Cite a capital de algum país",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["Xangai -> Bangui?"]
+    },
+    {
+      "id": "elemento-todos",
+      "text": "Cite um elemento químico",
+      "probes": 12,
+      "accepted": 12,
+      "suggested": [],
+      "missed": [],
+      "falseAccepts": [],
+      "falseSuggestions": ["ozônio -> Neônio?"]
+    }
+  ]
+}

@@ -4,40 +4,148 @@
   "source": "https://pt.wikipedia.org/wiki/Categoria:Instrumentos_musicais_do_Brasil",
   "notes": "Instrumentos com verbete próprio na pt.wikipedia e presença documentada na música brasileira. O campo 'article' traz o título canônico: 'Sanfona' aponta para Acordeão (verbete que registra o nome brasileiro) e 'Surdo' para Timbalão de chão. Excluídos instrumentos sem relação com o Brasil.",
   "items": [
-    {"name": "Berimbau", "article": "Berimbau", "tags": {"origem": "africana", "tipo": "corda"}},
-    {"name": "Cuíca", "article": "Cuíca", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Zabumba", "article": "Zabumba", "tags": {"tipo": "percussão"}},
-    {"name": "Pandeiro", "article": "Pandeiro", "tags": {"tipo": "percussão"}},
-    {"name": "Atabaque", "article": "Atabaque", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Agogô", "article": "Agogô", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Cavaquinho", "article": "Cavaquinho", "tags": {"origem": "europeia", "tipo": "corda"}},
-    {"name": "Viola caipira", "article": "Viola caipira", "tags": {"origem": "europeia", "tipo": "corda"}},
-    {"name": "Viola de cocho", "article": "Viola de cocho", "tags": {"origem": "brasileira", "tipo": "corda"}},
-    {"name": "Rabeca", "article": "Rabeca (Brasil)", "tags": {"origem": "europeia", "tipo": "corda"}},
-    {"name": "Pife", "article": "Pife brasileiro", "tags": {"origem": "brasileira", "tipo": "sopro"}},
-    {"name": "Triângulo", "article": "Triângulo (instrumento musical)", "tags": {"origem": "europeia", "tipo": "percussão"}},
-    {"name": "Tamborim", "article": "Tamborim", "tags": {"origem": "brasileira", "tipo": "percussão"}},
-    {"name": "Repinique", "article": "Repinique", "tags": {"origem": "brasileira", "tipo": "percussão"}},
-    {"name": "Reco-reco", "article": "Reco-reco", "tags": {"tipo": "percussão"}},
-    {"name": "Maracá", "article": "Maracá", "tags": {"origem": "indígena", "tipo": "percussão"}},
-    {"name": "Caxixi", "article": "Caxixi", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Berrante", "article": "Berrante", "tags": {"origem": "europeia", "tipo": "sopro"}},
-    {"name": "Sanfona", "article": "Acordeão", "tags": {"origem": "europeia", "tipo": "sopro"}},
-    {"name": "Ganzá", "article": "Ganzá", "tags": {"tipo": "percussão"}},
-    {"name": "Xequerê", "article": "Xequerê", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Afoxé", "article": "Afoxé (instrumento)", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Ajá", "article": "Ajá", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Gonguê", "article": "Gonguê", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Caixa", "article": "Caixa (instrumento musical)", "tags": {"origem": "europeia", "tipo": "percussão"}},
-    {"name": "Tantã", "article": "Tantã", "tags": {"origem": "brasileira", "tipo": "percussão"}},
-    {"name": "Timbal", "article": "Timbal", "tags": {"origem": "brasileira", "tipo": "percussão"}},
-    {"name": "Repique de mão", "article": "Repique de mão", "tags": {"origem": "brasileira", "tipo": "percussão"}},
-    {"name": "Guitarra baiana", "article": "Guitarra baiana", "tags": {"origem": "brasileira", "tipo": "corda"}},
-    {"name": "Caxirola", "article": "Caxirola", "tags": {"origem": "brasileira", "tipo": "percussão"}},
-    {"name": "Piano de Cuia", "article": "Piano de Cuia", "tags": {"origem": "africana", "tipo": "percussão"}},
-    {"name": "Viola brasileira", "article": "Viola brasileira", "tags": {"origem": "europeia", "tipo": "corda"}},
-    {"name": "Violão de sete cordas", "article": "Violão de sete cordas", "tags": {"origem": "brasileira", "tipo": "corda"}},
-    {"name": "Matraca", "article": "Matraca", "tags": {"origem": "europeia", "tipo": "percussão"}},
-    {"name": "Surdo", "article": "Timbalão de chão", "tags": {"origem": "brasileira", "tipo": "percussão"}}
+    {
+      "name": "Berimbau",
+      "article": "Berimbau",
+      "tags": { "origem": "africana", "tipo": "corda" }
+    },
+    { "name": "Cuíca", "article": "Cuíca", "tags": { "origem": "africana", "tipo": "percussão" } },
+    { "name": "Zabumba", "article": "Zabumba", "tags": { "tipo": "percussão" } },
+    { "name": "Pandeiro", "article": "Pandeiro", "tags": { "tipo": "percussão" } },
+    {
+      "name": "Atabaque",
+      "article": "Atabaque",
+      "tags": { "origem": "africana", "tipo": "percussão" }
+    },
+    { "name": "Agogô", "article": "Agogô", "tags": { "origem": "africana", "tipo": "percussão" } },
+    {
+      "name": "Cavaquinho",
+      "article": "Cavaquinho",
+      "tags": { "origem": "europeia", "tipo": "corda" }
+    },
+    {
+      "name": "Viola caipira",
+      "article": "Viola caipira",
+      "tags": { "origem": "europeia", "tipo": "corda" }
+    },
+    {
+      "name": "Viola de cocho",
+      "article": "Viola de cocho",
+      "tags": { "origem": "brasileira", "tipo": "corda" }
+    },
+    {
+      "name": "Rabeca",
+      "article": "Rabeca (Brasil)",
+      "tags": { "origem": "europeia", "tipo": "corda" }
+    },
+    {
+      "name": "Pife",
+      "article": "Pife brasileiro",
+      "tags": { "origem": "brasileira", "tipo": "sopro" }
+    },
+    {
+      "name": "Triângulo",
+      "article": "Triângulo (instrumento musical)",
+      "tags": { "origem": "europeia", "tipo": "percussão" }
+    },
+    {
+      "name": "Tamborim",
+      "article": "Tamborim",
+      "tags": { "origem": "brasileira", "tipo": "percussão" }
+    },
+    {
+      "name": "Repinique",
+      "article": "Repinique",
+      "tags": { "origem": "brasileira", "tipo": "percussão" }
+    },
+    { "name": "Reco-reco", "article": "Reco-reco", "tags": { "tipo": "percussão" } },
+    {
+      "name": "Maracá",
+      "article": "Maracá",
+      "tags": { "origem": "indígena", "tipo": "percussão" }
+    },
+    {
+      "name": "Caxixi",
+      "article": "Caxixi",
+      "tags": { "origem": "africana", "tipo": "percussão" }
+    },
+    {
+      "name": "Berrante",
+      "article": "Berrante",
+      "tags": { "origem": "europeia", "tipo": "sopro" }
+    },
+    { "name": "Sanfona", "article": "Acordeão", "tags": { "origem": "europeia", "tipo": "sopro" } },
+    { "name": "Ganzá", "article": "Ganzá", "tags": { "tipo": "percussão" } },
+    {
+      "name": "Xequerê",
+      "article": "Xequerê",
+      "tags": { "origem": "africana", "tipo": "percussão" }
+    },
+    {
+      "name": "Afoxé",
+      "article": "Afoxé (instrumento)",
+      "tags": { "origem": "africana", "tipo": "percussão" }
+    },
+    { "name": "Ajá", "article": "Ajá", "tags": { "origem": "africana", "tipo": "percussão" } },
+    {
+      "name": "Gonguê",
+      "article": "Gonguê",
+      "tags": { "origem": "africana", "tipo": "percussão" }
+    },
+    {
+      "name": "Caixa",
+      "article": "Caixa (instrumento musical)",
+      "tags": { "origem": "europeia", "tipo": "percussão" }
+    },
+    {
+      "name": "Tantã",
+      "article": "Tantã",
+      "tags": { "origem": "brasileira", "tipo": "percussão" }
+    },
+    {
+      "name": "Timbal",
+      "article": "Timbal",
+      "tags": { "origem": "brasileira", "tipo": "percussão" }
+    },
+    {
+      "name": "Repique de mão",
+      "article": "Repique de mão",
+      "tags": { "origem": "brasileira", "tipo": "percussão" }
+    },
+    {
+      "name": "Guitarra baiana",
+      "article": "Guitarra baiana",
+      "tags": { "origem": "brasileira", "tipo": "corda" }
+    },
+    {
+      "name": "Caxirola",
+      "article": "Caxirola",
+      "tags": { "origem": "brasileira", "tipo": "percussão" }
+    },
+    {
+      "name": "Piano de Cuia",
+      "article": "Piano de Cuia",
+      "tags": { "origem": "africana", "tipo": "percussão" }
+    },
+    {
+      "name": "Viola brasileira",
+      "article": "Viola brasileira",
+      "tags": { "origem": "europeia", "tipo": "corda" }
+    },
+    {
+      "name": "Violão de sete cordas",
+      "article": "Violão de sete cordas",
+      "tags": { "origem": "brasileira", "tipo": "corda" }
+    },
+    {
+      "name": "Matraca",
+      "article": "Matraca",
+      "tags": { "origem": "europeia", "tipo": "percussão" }
+    },
+    {
+      "name": "Surdo",
+      "article": "Timbalão de chão",
+      "tags": { "origem": "brasileira", "tipo": "percussão" }
+    }
   ]
 }

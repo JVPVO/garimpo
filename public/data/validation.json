@@ -1,280 +1,281 @@
 {
- "source": "krillion.io · /api/submit (crowd percentile of real players)",
- "prompt": "Name any Pokémon",
- "date": "2026-11-03",
- "n": 45,
- "spearman": 0.609,
- "builtAt": "2026-11-04T02:29:40+00:00",
- "rows": [
-  {
-   "answer": "Pikachu",
-   "ourRarity": 0.0,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Charizard",
-   "ourRarity": 0.0886,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Bulbasaur",
-   "ourRarity": 0.3585,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Squirtle",
-   "ourRarity": 0.3175,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Mewtwo",
-   "ourRarity": 0.3365,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Mew",
-   "ourRarity": 0.575,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Eevee",
-   "ourRarity": 0.2903,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Gengar",
-   "ourRarity": 0.4329,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Snorlax",
-   "ourRarity": 0.3956,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Dragonite",
-   "ourRarity": 0.3752,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Lucario",
-   "ourRarity": 0.8537,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Greninja",
-   "ourRarity": 0.9022,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Gardevoir",
-   "ourRarity": 0.8939,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Gyarados",
-   "ourRarity": 0.3854,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Machamp",
-   "ourRarity": 0.3333,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Alakazam",
-   "ourRarity": 0.3514,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Arcanine",
-   "ourRarity": 0.3333,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Lapras",
-   "ourRarity": 0.4737,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Onix",
-   "ourRarity": 0.3493,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Psyduck",
-   "ourRarity": 0.3956,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Jigglypuff",
-   "ourRarity": 0.402,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Magikarp",
-   "ourRarity": 0.4431,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Ditto",
-   "ourRarity": 0.0639,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Vaporeon",
-   "ourRarity": 0.4669,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Umbreon",
-   "ourRarity": 0.7601,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Blastoise",
-   "ourRarity": 0.4126,
-   "crowdScore": 10,
-   "tier": "plankton"
-  },
-  {
-   "answer": "Venusaur",
-   "ourRarity": 0.4261,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Raichu",
-   "ourRarity": 0.365,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Cubone",
-   "ourRarity": 0.3333,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Scyther",
-   "ourRarity": 0.3333,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Aerodactyl",
-   "ourRarity": 0.4533,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Articuno",
-   "ourRarity": 0.3379,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Zapdos",
-   "ourRarity": 0.3447,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Lugia",
-   "ourRarity": 0.6752,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Rayquaza",
-   "ourRarity": 0.7737,
-   "crowdScore": 30,
-   "tier": "schooler"
-  },
-  {
-   "answer": "Tyranitar",
-   "ourRarity": 0.7363,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Heracross",
-   "ourRarity": 0.7771,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Skarmory",
-   "ourRarity": 0.7348,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Houndoom",
-   "ourRarity": 0.7348,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Donphan",
-   "ourRarity": 0.7348,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Qwilfish",
-   "ourRarity": 0.7348,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Dunsparce",
-   "ourRarity": 0.7348,
-   "crowdScore": 60,
-   "tier": "rare"
-  },
-  {
-   "answer": "Luvdisc",
-   "ourRarity": 0.8939,
-   "crowdScore": 85,
-   "tier": "deepcut"
-  },
-  {
-   "answer": "Finneon",
-   "ourRarity": 0.9394,
-   "crowdScore": 85,
-   "tier": "deepcut"
-  },
-  {
-   "answer": "Spinda",
-   "ourRarity": 0.8939,
-   "crowdScore": 60,
-   "tier": "rare"
-  }
- ]
+  "source": "krillion.io · /api/submit (crowd percentile of real players)",
+  "prompt": "Name any Pokémon",
+  "date": "2026-11-03",
+  "n": 45,
+  "spearman": 0.609,
+  "builtAt": "2026-11-04T02:29:40+00:00",
+  "rows": [
+    {
+      "answer": "Pikachu",
+      "ourRarity": 0.0,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Charizard",
+      "ourRarity": 0.0886,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Bulbasaur",
+      "ourRarity": 0.3585,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Squirtle",
+      "ourRarity": 0.3175,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Mewtwo",
+      "ourRarity": 0.3365,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Mew",
+      "ourRarity": 0.575,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Eevee",
+      "ourRarity": 0.2903,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Gengar",
+      "ourRarity": 0.4329,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Snorlax",
+      "ourRarity": 0.3956,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Dragonite",
+      "ourRarity": 0.3752,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Lucario",
+      "ourRarity": 0.8537,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Greninja",
+      "ourRarity": 0.9022,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Gardevoir",
+      "ourRarity": 0.8939,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Gyarados",
+      "ourRarity": 0.3854,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Machamp",
+      "ourRarity": 0.3333,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Alakazam",
+      "ourRarity": 0.3514,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Arcanine",
+      "ourRarity": 0.3333,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Lapras",
+      "ourRarity": 0.4737,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Onix",
+      "ourRarity": 0.3493,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Psyduck",
+      "ourRarity": 0.3956,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Jigglypuff",
+      "ourRarity": 0.402,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Magikarp",
+      "ourRarity": 0.4431,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Ditto",
+      "ourRarity": 0.0639,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Vaporeon",
+      "ourRarity": 0.4669,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Umbreon",
+      "ourRarity": 0.7601,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Blastoise",
+      "ourRarity": 0.4126,
+      "crowdScore": 10,
+      "tier": "plankton"
+    },
+    {
+      "answer": "Venusaur",
+      "ourRarity": 0.4261,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Raichu",
+      "ourRarity": 0.365,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Cubone",
+      "ourRarity": 0.3333,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Scyther",
+      "ourRarity": 0.3333,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Aerodactyl",
+      "ourRarity": 0.4533,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Articuno",
+      "ourRarity": 0.3379,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Zapdos",
+      "ourRarity": 0.3447,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Lugia",
+      "ourRarity": 0.6752,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Rayquaza",
+      "ourRarity": 0.7737,
+      "crowdScore": 30,
+      "tier": "schooler"
+    },
+    {
+      "answer": "Tyranitar",
+      "ourRarity": 0.7363,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Heracross",
+      "ourRarity": 0.7771,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Skarmory",
+      "ourRarity": 0.7348,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Houndoom",
+      "ourRarity": 0.7348,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Donphan",
+      "ourRarity": 0.7348,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Qwilfish",
+      "ourRarity": 0.7348,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Dunsparce",
+      "ourRarity": 0.7348,
+      "crowdScore": 60,
+      "tier": "rare"
+    },
+    {
+      "answer": "Luvdisc",
+      "ourRarity": 0.8939,
+      "crowdScore": 85,
+      "tier": "deepcut"
+    },
+    {
+      "answer": "Finneon",
+      "ourRarity": 0.9394,
+      "crowdScore": 85,
+      "tier": "deepcut"
+    },
+    {
+      "answer": "Spinda",
+      "ourRarity": 0.8939,
+      "crowdScore": 60,
+      "tier": "rare"
+    }
+  ],
+  "note": "Validação metodológica da régua de raridade contra o percentil da multidão no Krillion (pergunta do dia 2026-11-03, fora do acervo). Não foi refeita para uma pergunta brasileira: o Krillion não tem prompts equivalentes ao Garimpo."
 }

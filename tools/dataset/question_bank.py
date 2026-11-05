@@ -99,6 +99,7 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
     # ---- política, ciência
     add("presidente-todos", "Cite um presidente do Brasil", "presidente")
     add("cientista", "Cite um cientista ou inventor brasileiro", "cientista")
+    add("politico-todos", "Cite um político brasileiro", "politico")
 
     # ---- futebol
     add("jogador-todos", "Cite um jogador da Seleção Brasileira", "jogador")

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { MineAudio } from "../audio/engine.ts";
-import { findAnswer, findSuggestion, key as matchKey } from "../game/match.ts";
+import { findAnswer, findSuggestion } from "../game/match.ts";
 import { stratumForDepth } from "../game/strata.ts";
 import type { Prompt } from "../game/types.ts";
 
@@ -83,16 +83,14 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
   };
 
   /**
-   * First press on a fuzzy/alias answer corrects the field and asks for a second
-   * press; an exact answer goes straight through.
+   * Krillion-style correction: the field keeps what the player typed and an
+   * inline line offers the catalogue name. Enter again with the text unchanged
+   * accepts the correction; any edit drops it.
    */
   const suggest = (name: string, raw: string) => {
     setSuggestion({ raw, name });
-    setValue(name);
-    latest.current = name;
     audio.tick();
     input.current?.focus();
-    input.current?.select();
   };
 
   const submit = () => {
@@ -100,18 +98,14 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
     const typed = value.trim();
     if (!typed) return;
 
-    // Uma correção pendente: o segundo envio confirma.
-    if (suggestion) {
-      commit(typed);
+    // Correção pendente e texto intacto: o segundo Enter aceita a sugestão.
+    if (suggestion && typed === suggestion.raw) {
+      commit(suggestion.name);
       return;
     }
 
-    const match = findAnswer(typed, prompt.answers);
-    if (match) {
-      if (matchKey(typed) !== matchKey(match.answer.n)) {
-        suggest(match.answer.n, typed);
-        return;
-      }
+    // Nome ou apelido do acervo (normalizado): aceita direto.
+    if (findAnswer(typed, prompt.answers)) {
       commit(typed);
       return;
     }
@@ -123,6 +117,7 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
     }
 
     // Fora do acervo não encerra a pergunta: avisa e deixa tentar de novo.
+    setSuggestion(null);
     setRejected({ text: typed, count: (rejected?.count ?? 0) + 1 });
     setValue("");
     latest.current = "";
@@ -133,12 +128,11 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
   const change = (next: string) => {
     setValue(next);
     latest.current = next;
-    if (suggestion) setSuggestion(null);
+    if (suggestion && next.trim() !== suggestion.raw) setSuggestion(null);
     if (rejected) setRejected(null);
   };
 
   const stratum = stratumForDepth(depth);
-  const band = `${stratum.label} · ${depth} m`;
 
   return (
     <div className="round panel panel-round">
@@ -168,7 +162,9 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
         ))}
       </div>
 
-      <p className="stratum-tag">{band}</p>
+      <p className="stratum-tag">
+        {stratum.label} · <span className="unit">{depth} m</span>
+      </p>
       <h1 className="prompt">{prompt.text}</h1>
 
       <label className="field-label" htmlFor="answer" hidden>
@@ -199,16 +195,16 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
 
       {suggestion ? (
         <div className="correction" id="field-hint" role="status" aria-live="polite">
-          <span className="correction-label">você quis dizer</span>
-          <b>
-            {suggestion.raw.toLowerCase() !== suggestion.name.toLowerCase()
-              ? `“${suggestion.raw}” → ${suggestion.name}`
-              : suggestion.name}
-          </b>
-          <span className="correction-note">envie de novo para confirmar · ou edite</span>
-          <button type="button" className="correction-go" onClick={() => commit(value.trim())}>
-            enviar
-          </button>
+          <p className="correction-line">
+            <span className="correction-raw">“{suggestion.raw}”</span>
+            <span className="correction-arrow" aria-hidden="true">
+              →
+            </span>
+            <span className="correction-label">corrige para</span> <b>“{suggestion.name}”</b>
+          </p>
+          <span className="correction-note">
+            aperte <kbd>enter</kbd> de novo para confirmar · ou edite
+          </span>
         </div>
       ) : rejected ? (
         <div className="rejected" id="field-hint" role="status" aria-live="polite">
@@ -233,8 +229,10 @@ export function Round({ prompt, index, total, depth, done, audio, onAnswer }: Pr
         data-corrected={Boolean(suggestion)}
         style={{ marginTop: 20 }}
       >
-        {suggestion ? "Enviar" : "Cravar"}
-        <span className="btn-meta">{suggestion ? "resposta corrigida" : "desce o poço"}</span>
+        {suggestion ? "Confirmar" : "Cravar"}
+        <span className="btn-meta">
+          {suggestion ? `como “${suggestion.name}”` : "desce o poço"}
+        </span>
       </button>
     </div>
   );

@@ -47,25 +47,28 @@ acessa o projeto. Para fechar, encerre o processo na porta 5173.
 Cada resposta do acervo carrega três medições públicas, coletadas uma vez e
 congeladas no JSON:
 
-| sinal | o que mede | peso |
-|---|---|---|
-| `pageviews` | média de acessos mensais ao verbete da pt.wikipedia nos últimos 12 meses | 50% |
-| `sitelinks` | em quantas línguas existe um verbete (Wikidata) | 25% |
-| `corpus` | frequência da palavra em português (wordfreq, zipf) | 20% |
-| `gravidade` | população, quando a resposta é um lugar (Wikidata) | 5% |
+| sinal       | o que mede                                                               | peso |
+| ----------- | ------------------------------------------------------------------------ | ---- |
+| `pageviews` | média de acessos mensais ao verbete da pt.wikipedia nos últimos 12 meses | 50%  |
+| `sitelinks` | em quantas línguas existe um verbete (Wikidata)                          | 25%  |
+| `corpus`    | frequência da palavra em português (wordfreq, zipf)                      | 20%  |
+| `gravidade` | população, quando a resposta é um lugar (Wikidata)                       | 5%   |
 
 Dentro do acervo de cada pergunta, cada sinal vira um posto percentual; a
-raridade é `1 − média ponderada dos postos`. Depois:
+raridade é `1 − média ponderada dos postos`. Depois a raridade escolhe uma de
+seis faixas fixas (cortes em `src/game/score.ts`, calibrados por `tools/dataset`):
 
-```
-pontos = 1 + 9 · raridade^0,32      (1 a 10)
-metros = round(pontos × 10)         (10 a 100 m por resposta)
-poço   = min(700, soma das 7)
-```
+| Faixa            | Ferramenta  | Metros | Encontra    |
+| ---------------- | ----------- | ------ | ----------- |
+| Óbvia            | Pá          | 10     | carvão      |
+| Comum            | Aspirador   | 15     | ferro       |
+| Boa              | Escavadeira | 30     | cobre       |
+| Rara             | Broca       | 60     | ouro        |
+| Raríssima        | Broca ultra | 85     | um rubi     |
+| Uma em um milhão | Dinamite    | 100    | um diamante |
 
-A curva foi calibrada em 6 000 descidas simuladas sobre este acervo
-(<code>tools/sim/app_curve.py</code>): mediana ≈ 346 m, p90 ≈ 426 m. O fundo de 700 m exige
-seis ou sete respostas entre as mais raras de cada pergunta.
+`poço = min(700, soma das 7)`: o fundo de 700 m exige sete respostas na faixa
+mais rara.
 
 Uma resposta válida que não está no acervo é **recusada**, e a tela diz isso. O
 jogo não inventa raridade para o que não mediu.

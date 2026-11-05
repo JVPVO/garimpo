@@ -171,6 +171,9 @@ def load_all() -> dict[str, list[dict]]:
     pools["cidades_historicas"] = curated("cidades_historicas")
     pools["presidente"] = merge(curated("presidentes"), [e for e in _clean(sparql(PRESIDENTS_QUERY))
                                                         if not e["name"].startswith("Junta")])
+    # Políticos: Wikidata, ocupação político (ou subclasse), cidadania brasileira,
+    # ordenados por sitelinks (piso natural de notoriedade).
+    pools["politico"] = merge(curated("presidentes"), _people("wd:Q82955", limit=900))
     pools["rio"] = merge(curated("rios"), query(
         "?item wdt:P31/wdt:P279* wd:Q4022 ; wdt:P17 wd:Q155 .", limit=320))
     pools["parque"] = merge(curated("parques"), query(
@@ -185,7 +188,7 @@ def load_all() -> dict[str, list[dict]]:
 
     # ---------------------------------------------------------------- futebol e esporte
     pools["jogador"] = merge(curated("jogadores"), query(
-        "?item wdt:P54 wd:Q83459 .", limit=650))
+        "?item wdt:P54 wd:Q83459 .", limit=900))
     pools["jogadora"] = merge(curated("jogadoras"), query("?item wdt:P54 wd:Q757014 .", limit=300))
     pools["time"] = curated("times")
     pools["time_pt"] = curated("times_pt")
@@ -237,7 +240,7 @@ def load_all() -> dict[str, list[dict]]:
     pools["filmes"] = merge(curated("filmes_br"), curated("filmes"), query(
         "?item wdt:P31/wdt:P279? wd:Q11424 ; wdt:P495 wd:Q155 .", limit=450, year_prop="P577"))
     singers = "wd:Q177220 wd:Q488205 wd:Q2252262"
-    pools["cantores"] = merge(curated("cantores_br"), curated("cantores"), _people(singers, limit=700))
+    pools["cantores"] = merge(curated("cantores_br"), curated("cantores"), _people(singers, limit=1100))
     for entry in pools["cantores"]:
         if " & " in entry["name"] or entry["name"].startswith("Trio "):
             entry["attrs"]["dupla"] = True
@@ -266,10 +269,10 @@ def load_all() -> dict[str, list[dict]]:
     pools["musica"] = merge(_copy(pools["cantores"]), _copy(pools["bandas"]), extra)
     retag(pools["musica"], "cantores_br", "genero_musical")
     pools["cantor_pt"] = merge(curated("cantores_pt"), _people(singers, PT, limit=260))
-    pools["escritores"] = merge(curated("escritores_br"), curated("escritores"), _people("wd:Q36180 wd:Q49757 wd:Q6625963", limit=600))
+    pools["escritores"] = merge(curated("escritores_br"), curated("escritores"), _people("wd:Q36180 wd:Q49757 wd:Q6625963", limit=800))
     pools["escritor_pt"] = merge(curated("escritores_pt"), _people("wd:Q36180 wd:Q49757 wd:Q6625963", PT, limit=300))
-    pools["atores"] = merge(curated("atores_br"), curated("atores"), _people("wd:Q33999 wd:Q10800557", limit=900))
-    pools["apresentador"] = merge(curated("apresentadores"), _people("wd:Q947873", limit=400))
+    pools["atores"] = merge(curated("atores_br"), curated("atores"), _people("wd:Q33999 wd:Q10800557", limit=1200))
+    pools["apresentador"] = merge(curated("apresentadores"), _people("wd:Q947873", limit=500))
     pools["humorista"] = merge(curated("humoristas"), _people("wd:Q245068 wd:Q12406482", limit=250))
     pools["youtuber"] = merge(curated("youtubers"), _people("wd:Q17125263", limit=260))
     pools["programas_tv"] = curated("programas_tv")

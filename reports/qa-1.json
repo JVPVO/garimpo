@@ -17,7 +17,15 @@
       "name": "obvious daily",
       "mode": "daily",
       "label": "04 nov",
-      "answers": ["Páginas da Vida", "Tijuca", "Londrina", "Roberto Carlos", "As Tartarugas Ninja", "Morumbi", "Curupira"],
+      "answers": [
+        "Páginas da Vida",
+        "Tijuca",
+        "Londrina",
+        "Roberto Carlos",
+        "As Tartarugas Ninja",
+        "Morumbi",
+        "Curupira"
+      ],
       "depth": 325,
       "tier": "Granada · xisto",
       "quote": "325 metros. / Granada · xisto / Nenhuma gema no caminho."
@@ -26,7 +34,15 @@
       "name": "deliberately rare",
       "mode": "unlimited",
       "label": "semente 283",
-      "answers": ["Vespasiano", "Gilka Machado", "Efó", "Roraima", "Bananada", "Corinthians Alagoano", "Cainamé"],
+      "answers": [
+        "Vespasiano",
+        "Gilka Machado",
+        "Efó",
+        "Roraima",
+        "Bananada",
+        "Corinthians Alagoano",
+        "Cainamé"
+      ],
       "depth": 691,
       "tier": "Diamante · kimberlito",
       "quote": "691 metros. / Diamante · kimberlito / 7 gemas no caminho."

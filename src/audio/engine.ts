@@ -150,7 +150,7 @@ export class MineAudio {
     const ctx = this.ensure();
     if (!ctx) return;
     const at = ctx.currentTime + 0.02;
-    const base = [523.25, 587.33, 659.25, 783.99, 880][Math.min(4, Math.max(0, tier - 1))];
+    const base = [523.25, 587.33, 659.25, 783.99, 880, 1046.5][Math.min(5, Math.max(0, tier - 1))];
     this.tone(at, 0.9, 0.05, base, "sine");
     this.tone(at + 0.01, 0.75, 0.035, base * 1.5, "sine");
     this.tone(at + 0.02, 0.5, 0.02, base * 2.02, "triangle");

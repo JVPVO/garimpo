@@ -83,15 +83,15 @@ def query(body: str, *, limit: int = 300, order: str = "DESC(?sl)", gender: bool
 ALIAS_TMPL = Template("""
 SELECT ?item ?alt WHERE {
   VALUES ?item { $values }
-  { ?item skos:altLabel ?alt . FILTER(LANG(?alt) IN ("pt", "pt-br")) }
+  { ?item skos:altLabel ?alt . FILTER(LANG(?alt) IN ("pt", "pt-br", "en")) }
   UNION
-  { ?item rdfs:label ?alt . FILTER(LANG(?alt) IN ("pt", "pt-br")) }
+  { ?item rdfs:label ?alt . FILTER(LANG(?alt) IN ("pt", "pt-br", "en")) }
 }
 """)
 
 
 def aliases_for_qids(qids: list[str]) -> dict[str, list[str]]:
-    """pt / pt-br labels and alt labels per QID (Wikidata), deduplicated."""
+    """pt / pt-br / en labels and alt labels per QID (Wikidata), deduplicated."""
     out: dict[str, list[str]] = {}
     unique = [q for q in dict.fromkeys(qids) if q]
     for batch in chunks(unique, 150):

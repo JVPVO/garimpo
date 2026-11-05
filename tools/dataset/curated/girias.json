@@ -4,65 +4,213 @@
   "source": "https://pt.wiktionary.org/wiki/Categoria:G%C3%ADria_(Portugu%C3%AAs)",
   "notes": "Gírias e expressões correntes no português brasileiro com verbete no Wikcionário (dicionário), de onde saiu o 'sentido'. Gíria é item lexical e não tem verbete enciclopédico na pt.wikipedia; por isso 'article' repete o termo verificado no dicionário, e não um título da Wikipédia. Excluídas gírias datadas e termos cujo sentido não está dicionarizado.",
   "items": [
-    {"name": "mó", "article": "mó", "tags": {"sentido": "muito, bastante; grande (intensificador)"}},
-    {"name": "mano", "article": "mano", "tags": {"sentido": "irmão; amigo, parceiro"}},
-    {"name": "treta", "article": "treta", "tags": {"sentido": "briga, confusão"}},
-    {"name": "massa", "article": "massa", "tags": {"sentido": "bom, legal, agradável"}},
-    {"name": "firmeza", "article": "firmeza", "tags": {"sentido": "cumprimento; tudo certo, combinado"}},
-    {"name": "bagulho", "article": "bagulho", "tags": {"sentido": "coisa, objeto ou assunto qualquer"}},
-    {"name": "rolê", "article": "rolê", "tags": {"sentido": "passeio, saída"}},
-    {"name": "rolezinho", "article": "rolezinho", "tags": {"sentido": "encontro marcado por redes sociais; passeio curto"}},
-    {"name": "zoeira", "article": "zoeira", "tags": {"sentido": "gozação, brincadeira, bagunça"}},
-    {"name": "zoar", "article": "zoar", "tags": {"sentido": "zombar, tirar sarro"}},
-    {"name": "migué", "article": "migué", "tags": {"sentido": "conversa fiada, desculpa esfarrapada"}},
-    {"name": "vacilar", "article": "vacilar", "tags": {"sentido": "falhar, decepcionar, bobear"}},
-    {"name": "moscar", "article": "moscar", "tags": {"sentido": "distrair-se, deixar-se enganar"}},
-    {"name": "mancada", "article": "mancada", "tags": {"sentido": "erro, gafe, atitude inoportuna"}},
-    {"name": "parada", "article": "parada", "tags": {"sentido": "coisa, situação, acontecimento qualquer"}},
-    {"name": "troço", "article": "troço", "tags": {"sentido": "coisa cujo nome não se sabe ou não se quer dizer"}},
-    {"name": "bizu", "article": "bizu", "tags": {"sentido": "dica, informação privilegiada"}},
-    {"name": "resenha", "article": "resenha", "tags": {"sentido": "conversa descontraída; reunião social informal"}},
-    {"name": "sextou", "article": "sextou", "tags": {"sentido": "chegou a sexta-feira; alegria pelo fim de semana"}},
-    {"name": "crush", "article": "crush", "tags": {"sentido": "paquera, pessoa por quem se tem interesse"}},
-    {"name": "stalkear", "article": "stalkear", "tags": {"sentido": "vasculhar a vida de alguém nas redes sociais"}},
-    {"name": "shippar", "article": "shippar", "tags": {"sentido": "torcer por um casal, real ou fictício"}},
-    {"name": "lacrar", "article": "lacrar", "tags": {"sentido": "arrasar, sair-se bem numa discussão"}},
-    {"name": "intankável", "article": "intankável", "tags": {"sentido": "insuportável, inaceitável"}},
-    {"name": "papo reto", "article": "papo reto", "tags": {"sentido": "conversa franca, sem rodeios"}},
-    {"name": "sussa", "article": "sussa", "tags": {"sentido": "tranquilo, sossegado"}},
-    {"name": "tenso", "article": "tenso", "tags": {"sentido": "complicado, difícil, desagradável"}},
-    {"name": "bolado", "article": "bolado", "tags": {"sentido": "preocupado, chateado"}},
-    {"name": "chapado", "article": "chapado", "tags": {"sentido": "muito embriagado ou drogado"}},
-    {"name": "brisa", "article": "brisa", "tags": {"sentido": "viagem de ideias; efeito de psicotrópico"}},
-    {"name": "larica", "article": "larica", "tags": {"sentido": "fome intensa, típica de quem fumou maconha"}},
-    {"name": "rango", "article": "rango", "tags": {"sentido": "comida, refeição"}},
-    {"name": "trampo", "article": "trampo", "tags": {"sentido": "trabalho remunerado"}},
-    {"name": "bufunfa", "article": "bufunfa", "tags": {"sentido": "dinheiro"}},
-    {"name": "pivete", "article": "pivete", "tags": {"sentido": "criança; menor que pratica furtos"}},
-    {"name": "trombadinha", "article": "trombadinha", "tags": {"sentido": "menor que furta nas ruas"}},
-    {"name": "X9", "article": "X9", "tags": {"sentido": "delator, dedo-duro"}},
-    {"name": "pé-de-chinelo", "article": "pé-de-chinelo", "tags": {"sentido": "pessoa pobre, humilde"}},
-    {"name": "mina", "article": "mina", "tags": {"sentido": "garota, mulher"}},
-    {"name": "gata", "article": "gata", "tags": {"sentido": "mulher muito bonita"}},
-    {"name": "bofe", "article": "bofe", "tags": {"sentido": "homem bonito (gíria também usada no meio gay)"}},
-    {"name": "bróder", "article": "bróder", "tags": {"sentido": "amigo, irmão"}},
-    {"name": "miga", "article": "miga", "tags": {"sentido": "amiga; forma de chamar alguém"}},
-    {"name": "veio", "article": "veio", "tags": {"sentido": "velho, pessoa mais velha"}},
-    {"name": "coroa", "article": "coroa", "tags": {"sentido": "pessoa de meia-idade"}},
-    {"name": "caô", "article": "caô", "tags": {"sentido": "mentira, conversa fiada"}},
-    {"name": "sangue no olho", "article": "sangue no olho", "tags": {"sentido": "coragem, determinação, valentia"}},
-    {"name": "se é loco", "article": "se é loco", "tags": {"sentido": "expressão de espanto ou de recusa"}},
-    {"name": "estar nem aí", "article": "estar nem aí", "tags": {"sentido": "não se importar com nada"}},
-    {"name": "ir de base", "article": "ir de base", "tags": {"sentido": "morrer"}},
-    {"name": "ir de arrasta pra cima", "article": "ir de arrasta pra cima", "tags": {"sentido": "morrer (uso recente)"}},
-    {"name": "meter o loco", "article": "meter o loco", "tags": {"sentido": "mentir, enganar, exagerar"}},
-    {"name": "de boa", "article": "de boa", "tags": {"sentido": "tranquilo, sem problema"}},
-    {"name": "suave", "article": "suave", "tags": {"sentido": "tranquilo, sem dificuldade"}},
-    {"name": "salve", "article": "salve", "tags": {"sentido": "saudação, cumprimento"}},
-    {"name": "tchê", "article": "tchê", "tags": {"sentido": "vocativo gaúcho; expressão de surpresa"}},
-    {"name": "bah", "article": "bah", "tags": {"sentido": "espanto ou admiração (Rio Grande do Sul)"}},
-    {"name": "oxente", "article": "oxente", "tags": {"sentido": "espanto, surpresa ou indagação (Nordeste)"}},
-    {"name": "uai", "article": "uai", "tags": {"sentido": "surpresa ou confirmação (Minas Gerais)"}},
-    {"name": "arretado", "article": "arretado", "tags": {"sentido": "muito bom, de boa qualidade (Nordeste)"}}
+    {
+      "name": "mó",
+      "article": "mó",
+      "tags": { "sentido": "muito, bastante; grande (intensificador)" }
+    },
+    { "name": "mano", "article": "mano", "tags": { "sentido": "irmão; amigo, parceiro" } },
+    { "name": "treta", "article": "treta", "tags": { "sentido": "briga, confusão" } },
+    { "name": "massa", "article": "massa", "tags": { "sentido": "bom, legal, agradável" } },
+    {
+      "name": "firmeza",
+      "article": "firmeza",
+      "tags": { "sentido": "cumprimento; tudo certo, combinado" }
+    },
+    {
+      "name": "bagulho",
+      "article": "bagulho",
+      "tags": { "sentido": "coisa, objeto ou assunto qualquer" }
+    },
+    { "name": "rolê", "article": "rolê", "tags": { "sentido": "passeio, saída" } },
+    {
+      "name": "rolezinho",
+      "article": "rolezinho",
+      "tags": { "sentido": "encontro marcado por redes sociais; passeio curto" }
+    },
+    {
+      "name": "zoeira",
+      "article": "zoeira",
+      "tags": { "sentido": "gozação, brincadeira, bagunça" }
+    },
+    { "name": "zoar", "article": "zoar", "tags": { "sentido": "zombar, tirar sarro" } },
+    {
+      "name": "migué",
+      "article": "migué",
+      "tags": { "sentido": "conversa fiada, desculpa esfarrapada" }
+    },
+    {
+      "name": "vacilar",
+      "article": "vacilar",
+      "tags": { "sentido": "falhar, decepcionar, bobear" }
+    },
+    {
+      "name": "moscar",
+      "article": "moscar",
+      "tags": { "sentido": "distrair-se, deixar-se enganar" }
+    },
+    {
+      "name": "mancada",
+      "article": "mancada",
+      "tags": { "sentido": "erro, gafe, atitude inoportuna" }
+    },
+    {
+      "name": "parada",
+      "article": "parada",
+      "tags": { "sentido": "coisa, situação, acontecimento qualquer" }
+    },
+    {
+      "name": "troço",
+      "article": "troço",
+      "tags": { "sentido": "coisa cujo nome não se sabe ou não se quer dizer" }
+    },
+    { "name": "bizu", "article": "bizu", "tags": { "sentido": "dica, informação privilegiada" } },
+    {
+      "name": "resenha",
+      "article": "resenha",
+      "tags": { "sentido": "conversa descontraída; reunião social informal" }
+    },
+    {
+      "name": "sextou",
+      "article": "sextou",
+      "tags": { "sentido": "chegou a sexta-feira; alegria pelo fim de semana" }
+    },
+    {
+      "name": "crush",
+      "article": "crush",
+      "tags": { "sentido": "paquera, pessoa por quem se tem interesse" }
+    },
+    {
+      "name": "stalkear",
+      "article": "stalkear",
+      "tags": { "sentido": "vasculhar a vida de alguém nas redes sociais" }
+    },
+    {
+      "name": "shippar",
+      "article": "shippar",
+      "tags": { "sentido": "torcer por um casal, real ou fictício" }
+    },
+    {
+      "name": "lacrar",
+      "article": "lacrar",
+      "tags": { "sentido": "arrasar, sair-se bem numa discussão" }
+    },
+    {
+      "name": "intankável",
+      "article": "intankável",
+      "tags": { "sentido": "insuportável, inaceitável" }
+    },
+    {
+      "name": "papo reto",
+      "article": "papo reto",
+      "tags": { "sentido": "conversa franca, sem rodeios" }
+    },
+    { "name": "sussa", "article": "sussa", "tags": { "sentido": "tranquilo, sossegado" } },
+    {
+      "name": "tenso",
+      "article": "tenso",
+      "tags": { "sentido": "complicado, difícil, desagradável" }
+    },
+    { "name": "bolado", "article": "bolado", "tags": { "sentido": "preocupado, chateado" } },
+    {
+      "name": "chapado",
+      "article": "chapado",
+      "tags": { "sentido": "muito embriagado ou drogado" }
+    },
+    {
+      "name": "brisa",
+      "article": "brisa",
+      "tags": { "sentido": "viagem de ideias; efeito de psicotrópico" }
+    },
+    {
+      "name": "larica",
+      "article": "larica",
+      "tags": { "sentido": "fome intensa, típica de quem fumou maconha" }
+    },
+    { "name": "rango", "article": "rango", "tags": { "sentido": "comida, refeição" } },
+    { "name": "trampo", "article": "trampo", "tags": { "sentido": "trabalho remunerado" } },
+    { "name": "bufunfa", "article": "bufunfa", "tags": { "sentido": "dinheiro" } },
+    {
+      "name": "pivete",
+      "article": "pivete",
+      "tags": { "sentido": "criança; menor que pratica furtos" }
+    },
+    {
+      "name": "trombadinha",
+      "article": "trombadinha",
+      "tags": { "sentido": "menor que furta nas ruas" }
+    },
+    { "name": "X9", "article": "X9", "tags": { "sentido": "delator, dedo-duro" } },
+    {
+      "name": "pé-de-chinelo",
+      "article": "pé-de-chinelo",
+      "tags": { "sentido": "pessoa pobre, humilde" }
+    },
+    { "name": "mina", "article": "mina", "tags": { "sentido": "garota, mulher" } },
+    { "name": "gata", "article": "gata", "tags": { "sentido": "mulher muito bonita" } },
+    {
+      "name": "bofe",
+      "article": "bofe",
+      "tags": { "sentido": "homem bonito (gíria também usada no meio gay)" }
+    },
+    { "name": "bróder", "article": "bróder", "tags": { "sentido": "amigo, irmão" } },
+    { "name": "miga", "article": "miga", "tags": { "sentido": "amiga; forma de chamar alguém" } },
+    { "name": "veio", "article": "veio", "tags": { "sentido": "velho, pessoa mais velha" } },
+    { "name": "coroa", "article": "coroa", "tags": { "sentido": "pessoa de meia-idade" } },
+    { "name": "caô", "article": "caô", "tags": { "sentido": "mentira, conversa fiada" } },
+    {
+      "name": "sangue no olho",
+      "article": "sangue no olho",
+      "tags": { "sentido": "coragem, determinação, valentia" }
+    },
+    {
+      "name": "se é loco",
+      "article": "se é loco",
+      "tags": { "sentido": "expressão de espanto ou de recusa" }
+    },
+    {
+      "name": "estar nem aí",
+      "article": "estar nem aí",
+      "tags": { "sentido": "não se importar com nada" }
+    },
+    { "name": "ir de base", "article": "ir de base", "tags": { "sentido": "morrer" } },
+    {
+      "name": "ir de arrasta pra cima",
+      "article": "ir de arrasta pra cima",
+      "tags": { "sentido": "morrer (uso recente)" }
+    },
+    {
+      "name": "meter o loco",
+      "article": "meter o loco",
+      "tags": { "sentido": "mentir, enganar, exagerar" }
+    },
+    { "name": "de boa", "article": "de boa", "tags": { "sentido": "tranquilo, sem problema" } },
+    { "name": "suave", "article": "suave", "tags": { "sentido": "tranquilo, sem dificuldade" } },
+    { "name": "salve", "article": "salve", "tags": { "sentido": "saudação, cumprimento" } },
+    {
+      "name": "tchê",
+      "article": "tchê",
+      "tags": { "sentido": "vocativo gaúcho; expressão de surpresa" }
+    },
+    {
+      "name": "bah",
+      "article": "bah",
+      "tags": { "sentido": "espanto ou admiração (Rio Grande do Sul)" }
+    },
+    {
+      "name": "oxente",
+      "article": "oxente",
+      "tags": { "sentido": "espanto, surpresa ou indagação (Nordeste)" }
+    },
+    {
+      "name": "uai",
+      "article": "uai",
+      "tags": { "sentido": "surpresa ou confirmação (Minas Gerais)" }
+    },
+    {
+      "name": "arretado",
+      "article": "arretado",
+      "tags": { "sentido": "muito bom, de boa qualidade (Nordeste)" }
+    }
   ]
 }

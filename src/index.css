@@ -22,7 +22,12 @@
   --gem-4: #8a6abe;
   --gem-5: #c9e6ea;
 
-  --f-display: "Pixelify Sans", "IBM Plex Mono", ui-monospace, monospace;
+  /* Pixel caps with clearly different B, G, C, 8 and 6, full Portuguese accents.
+     Silkscreen (caps only): the GARIMPO brand, step numbers and the
+     "Você encontrou" line. Handjet: headings, prompts, numbers with units
+     (keeps a lowercase "m") and every other display text. */
+  --f-pixel: "Silkscreen", "IBM Plex Mono", ui-monospace, monospace;
+  --f-display: "Handjet", "IBM Plex Sans", system-ui, sans-serif;
   --f-text: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
@@ -149,7 +154,7 @@ p {
 }
 
 .topbar .brand {
-  font-family: var(--f-display);
+  font-family: var(--f-pixel);
   font-weight: 800;
   font-size: 15px;
   letter-spacing: 2.4px;
@@ -1672,7 +1677,7 @@ p {
   display: block;
   filter: drop-shadow(0 0 16px rgba(242, 182, 90, 0.3));
 }
-.digcard[data-tier="5"] .digcard-tool svg {
+.digcard[data-tier="6"] .digcard-tool svg {
   filter: drop-shadow(0 0 18px rgba(47, 212, 200, 0.55));
 }
 .digcard-verb {
@@ -1689,7 +1694,7 @@ p {
   color: var(--lamp);
   margin-right: 6px;
 }
-.digcard[data-tier="5"] .digcard-verb b {
+.digcard[data-tier="6"] .digcard-verb b {
   color: var(--cyan);
 }
 .digcard-answer {
@@ -1726,7 +1731,7 @@ p {
 .digcard-ladder i[data-on="true"] {
   background: var(--lamp);
 }
-.digcard[data-tier="5"] .digcard-ladder i[data-on="true"] {
+.digcard[data-tier="6"] .digcard-ladder i[data-on="true"] {
   background: var(--cyan);
 }
 .digcard-skip {
@@ -1818,7 +1823,7 @@ p {
   box-shadow: inset 0 0 0 2px var(--lamp);
   background: var(--rock-2);
 }
-.digcard[data-tier="5"] .digcard-ladder li[data-on="true"] {
+.digcard[data-tier="6"] .digcard-ladder li[data-on="true"] {
   box-shadow: inset 0 0 0 2px var(--cyan);
 }
 .digcard-ladder span {
@@ -2462,12 +2467,12 @@ body {
 .w-mark[data-tier="4"] b {
   background: var(--lamp);
 }
-.w-mark[data-tier="5"] {
+.w-mark[data-tier="6"] {
   box-shadow:
     inset 0 0 0 2px var(--cyan),
     3px 3px 0 0 #000;
 }
-.w-mark[data-tier="5"] b {
+.w-mark[data-tier="6"] b {
   background: var(--cyan);
 }
 
@@ -2753,7 +2758,7 @@ body {
 }
 .hero-title {
   margin-top: 8px;
-  font: 700 clamp(52px, 5vw + 22px, 100px) / 0.95 var(--f-display);
+  font: 700 clamp(52px, 5vw + 22px, 100px) / 0.95 var(--f-pixel);
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--paper);
@@ -2857,7 +2862,7 @@ body {
   height: 36px;
   background: var(--lamp);
   color: var(--ink);
-  font: 700 20px/1 var(--f-display);
+  font: 700 20px/1 var(--f-pixel);
   box-shadow: 3px 3px 0 0 var(--void);
 }
 .howto-steps b {
@@ -2895,7 +2900,7 @@ body {
   background: rgba(0, 0, 0, 0.36);
   box-shadow: inset 0 0 0 2px var(--rock-3);
 }
-.tool-row li[data-tier="5"] {
+.tool-row li[data-tier="6"] {
   box-shadow: inset 0 0 0 2px var(--cyan);
 }
 .tool-art svg {
@@ -2903,7 +2908,7 @@ body {
   width: 64px;
   height: 64px;
 }
-.tool-row li[data-tier="5"] .tool-art svg {
+.tool-row li[data-tier="6"] .tool-art svg {
   filter: drop-shadow(0 0 10px rgba(47, 212, 200, 0.5));
 }
 .tool-row b {
@@ -2927,7 +2932,7 @@ body {
 .tool-row li[data-tier="4"] .tool-label {
   background: #e2733b;
 }
-.tool-row li[data-tier="5"] .tool-label {
+.tool-row li[data-tier="6"] .tool-label {
   background: var(--cyan);
 }
 .tool-m {
@@ -3354,6 +3359,16 @@ body {
   .btn-big .btn-meta {
     display: none;
   }
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-cta .btn {
+    width: 100%;
+    flex: none;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3377,4 +3392,413 @@ body {
   .w-miner .f1 {
     visibility: hidden;
   }
+}
+
+/* ==========================================================================
+   v3 · Seis faixas fixas, dinamite e "você encontrou"
+   ========================================================================== */
+:root {
+  --ruby: #e0485f;
+}
+
+/* Fonts: Silkscreen is already wide, so no extra tracking; Handjet is narrow,
+   so it gets a touch of air and never negative tracking. */
+.display,
+.page-head h1,
+.method h1 {
+  letter-spacing: 0;
+}
+.topbar .brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hero-title {
+  letter-spacing: 1px;
+}
+.round .prompt {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+/* Tier 5 (broca ultra, rubi): ruby accent; tier 6 (dinamite, diamante) keeps cyan. */
+.w-mark[data-tier="5"] {
+  box-shadow:
+    inset 0 0 0 2px var(--ruby),
+    3px 3px 0 0 #000;
+}
+.w-mark[data-tier="5"] b {
+  background: var(--ruby);
+}
+.digcard[data-tier="5"] .digcard-verb b {
+  color: var(--ruby);
+}
+.digcard[data-tier="5"] .digcard-ladder li[data-on="true"] {
+  box-shadow: inset 0 0 0 2px var(--ruby);
+}
+.digcard[data-tier="6"] .digcard-tool svg {
+  filter: drop-shadow(0 0 18px rgba(255, 120, 60, 0.55));
+}
+
+/* How-to ladder on Home: six tools, fixed metres, arrows between steps. */
+.tool-row {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+.tool-row li {
+  position: relative;
+}
+.tool-row li + li::before {
+  content: "→";
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font: 500 13px/1 var(--f-mono);
+  color: var(--lamp-low);
+}
+.tool-m {
+  font: 700 18px/1 var(--f-display);
+}
+.tool-find {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font: 400 11px/1.1 var(--f-mono);
+  color: var(--ink-2);
+}
+.tool-row li[data-tier="5"] {
+  box-shadow: inset 0 0 0 2px var(--ruby);
+}
+.tool-row li[data-tier="5"] .tool-label {
+  background: var(--ruby);
+}
+.tool-rule {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+@media (max-width: 1000px) {
+  .tool-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .tool-row li + li::before {
+    content: none;
+  }
+}
+@media (max-width: 700px) {
+  .tool-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .tool-row li:last-child {
+    grid-column: auto;
+  }
+}
+
+/* DigCard ladder: six steps, metres always visible. */
+.digcard-ladder {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.digcard-ladder em {
+  font: 700 11px/1 var(--f-display);
+  letter-spacing: 0;
+  color: var(--ink-2);
+}
+.digcard-ladder li[data-on="true"] em {
+  color: var(--lamp);
+}
+@media (max-width: 700px) {
+  .digcard-ladder em {
+    display: block;
+    font-size: 10px;
+  }
+}
+
+/* Method ladder */
+.method .ladder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 4px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.method .ladder li {
+  padding: 4px 8px;
+  background: rgba(26, 17, 8, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(26, 17, 8, 0.35);
+  color: var(--ink);
+}
+.method .ladder li + li::before {
+  content: "→ ";
+  color: #7a4c26;
+}
+.method .ladder span {
+  font-family: var(--f-mono);
+  font-weight: 600;
+  color: #6b3d16;
+}
+
+/* Dinamite in the world: warm glow and a short camera shake on the boom. */
+.world:has(.w-digger[data-tool="dinamite"]) .w-glow {
+  background: radial-gradient(
+    circle,
+    rgba(255, 120, 60, 0.28),
+    rgba(255, 120, 60, 0.07) 42%,
+    transparent 68%
+  );
+}
+.world[data-active="true"]:has(.w-digger[data-tool="dinamite"]) {
+  animation: blast-shake 560ms steps(10, end) 1050ms 1 both;
+}
+@keyframes blast-shake {
+  0% {
+    translate: 0 0;
+  }
+  10% {
+    translate: -7px 4px;
+  }
+  20% {
+    translate: 6px -5px;
+  }
+  30% {
+    translate: -5px 3px;
+  }
+  45% {
+    translate: 4px -2px;
+  }
+  60% {
+    translate: -3px 2px;
+  }
+  80% {
+    translate: 1px -1px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+/* "Você encontrou …" */
+.find {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 14px 0 4px;
+}
+.find-art {
+  position: relative;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+}
+.find-art svg {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+.find-line {
+  font: 600 clamp(24px, 1.2vw + 19px, 32px) / 1.05 var(--f-display);
+  color: var(--paper);
+}
+.find-line b {
+  display: block;
+  margin-top: 4px;
+  font: 700 clamp(22px, 1.4vw + 16px, 30px) / 1.1 var(--f-pixel);
+  color: var(--lamp);
+}
+.find[data-tier="1"] .find-line b {
+  color: #b8ada0;
+}
+.find[data-tier="2"] .find-line b {
+  color: #e4ddd0;
+}
+.find[data-tier="3"] .find-line b {
+  color: #e9925a;
+}
+.find[data-tier="5"] .find-line b {
+  color: var(--ruby);
+}
+.find[data-tier="6"] .find-line b {
+  color: var(--cyan);
+}
+.find[data-tier="0"] .find-line {
+  color: var(--ink-2);
+}
+.find-meta {
+  margin-top: 6px;
+  font: 400 12px/1.2 var(--f-mono);
+  letter-spacing: 0.6px;
+  color: var(--ink-2);
+}
+.find[data-tier="4"] .find-art svg {
+  filter: drop-shadow(0 0 8px rgba(242, 182, 90, 0.55));
+}
+.find[data-tier="5"] .find-art svg {
+  filter: drop-shadow(0 0 12px rgba(224, 72, 95, 0.65));
+}
+.find[data-tier="6"] .find-art svg {
+  filter: drop-shadow(0 0 16px rgba(47, 212, 200, 0.8));
+  animation: find-pop 420ms steps(4, end) both;
+}
+.find[data-tier="5"] .find-art svg {
+  animation: find-pop 360ms steps(3, end) both;
+}
+@keyframes find-pop {
+  0% {
+    transform: scale(0.6);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.find-art i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  background: #fff4b8;
+  box-shadow: 0 0 0 1px rgba(11, 7, 5, 0.6);
+  animation: sparkle 900ms steps(3, end) infinite;
+}
+.find-art i[data-big="true"] {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+}
+.find[data-tier="5"] .find-art i {
+  background: #ffc2cb;
+}
+.find[data-tier="6"] .find-art i {
+  background: #e6fffb;
+}
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+.reveal .sheet .tier p.tier-layer,
+.digcard-ladder em,
+.unit {
+  text-transform: none;
+}
+
+/* Result: what the dive turned up */
+.result-finds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  font: 400 13px/1 var(--f-mono);
+  color: var(--ink-2);
+}
+.result-finds li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.result-finds b {
+  color: var(--paper);
+  font-weight: 600;
+}
+.result-finds svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Correction line: “guess” → corrige para “Canonical” */
+.correction {
+  align-items: center;
+}
+.correction-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  width: 100%;
+  margin: 0;
+}
+.correction-raw {
+  color: var(--ink-2);
+  text-decoration: line-through;
+  text-decoration-color: rgba(183, 169, 143, 0.5);
+}
+.correction-arrow {
+  color: var(--lamp);
+}
+.correction-label {
+  font: 400 11px/1 var(--f-mono);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--iron);
+}
+.correction b {
+  color: var(--lamp);
+  font-weight: 600;
+  font-size: 16px;
+}
+.correction-note kbd {
+  padding: 1px 4px;
+  font: inherit;
+  box-shadow: inset 0 0 0 1px var(--rock-3);
+  color: var(--paper);
+}
+.correction-go {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .world[data-active="true"]:has(.w-digger[data-tool="dinamite"]),
+  .find-art svg,
+  .find-art i {
+    animation: none !important;
+  }
+  .find-art i {
+    opacity: 0.85;
+  }
+}
+
+/* Long tier names ("Uma em um milhão") wrap instead of covering the answer. */
+.digcard-tier {
+  max-width: 8.5em;
+  line-height: 1.25;
+  text-align: right;
+}
+
+/* Method: tools table stays legible on a phone. */
+.table-scroll {
+  overflow-x: auto;
+}
+.method .tools-table {
+  table-layout: auto;
+}
+.method .tools-table td,
+.method .tools-table th {
+  white-space: nowrap;
+  word-break: normal;
+  vertical-align: middle;
+}
+.tools-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.tools-name small {
+  display: block;
+  font-size: 11px;
+  opacity: 0.75;
 }

@@ -1,147 +1,517 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8" />
-<title>Garimpo · raio-x do acervo</title>
-<style>
-  :root { color-scheme: light dark; }
-  * { box-sizing: border-box; }
-  body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-         color: var(--foreground); background: transparent; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 4px 0 8px; }
-  h1 { font-size: 26px; line-height: 1.1; margin: 0 0 4px; letter-spacing: -0.6px; }
-  .sub { color: var(--muted-foreground); font-size: 13px; margin: 0 0 20px; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
-  .card { border: 1px solid var(--border); border-radius: var(--radius, 8px); padding: 14px 16px;
-           background: var(--card); }
-  .card h2 { font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
-              color: var(--muted-foreground); margin: 0 0 2px; font-weight: 600; }
-  .card p { font-size: 12px; color: var(--muted-foreground); margin: 0 0 12px; line-height: 1.45; }
-  .row { display: grid; grid-template-columns: 84px 1fr 34px; gap: 8px; align-items: center;
-          font-size: 12px; margin-bottom: 6px; }
-  .row .k { color: var(--foreground); opacity: .85; white-space: nowrap; overflow: hidden;
-             text-overflow: ellipsis; }
-  .row .track { height: 9px; background: var(--muted); border-radius: 2px; overflow: hidden; }
-  .row .track i { display: block; height: 100%; background: var(--chart-1); }
-  .row .v { text-align: right; font-variant-numeric: tabular-nums; color: var(--foreground); }
-  .hist { display: flex; align-items: flex-end; gap: 3px; height: 120px; margin-top: 6px; }
-  .hist .col { flex: 1; height: 100%; display: flex; align-items: flex-end; }
-  .hist .col i { display: block; width: 100%; background: var(--chart-3); border-radius: 1px 1px 0 0; }
-  .axis { display: flex; justify-content: space-between; font-size: 10px;
-           color: var(--muted-foreground); margin-top: 4px; font-variant-numeric: tabular-nums; }
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
-  .stats div { border: 1px solid var(--border); border-radius: var(--radius, 8px); padding: 9px 11px; }
-  .stats b { display: block; font-size: 20px; letter-spacing: -0.5px; font-variant-numeric: tabular-nums; }
-  .stats span { font-size: 10px; letter-spacing: .8px; text-transform: uppercase;
-                 color: var(--muted-foreground); }
-  svg text { font-size: 10px; fill: var(--muted-foreground); }
-  svg line { stroke: var(--border); stroke-width: 1; }
-  svg circle { fill: var(--chart-2); opacity: .82; }
-  .rho { font-variant-numeric: tabular-nums; font-weight: 650; color: var(--foreground); }
-  .note { font-size: 11px; color: var(--muted-foreground); margin-top: 10px; line-height: 1.5; }
-  .wide { grid-column: 1 / -1; }
-</style>
-</head>
-<body>
-<div class="wrap">
-  <h1>Garimpo — raio-x do acervo</h1>
-  <p class="sub">Tudo abaixo é medido no arquivo que o jogo carrega: 154 perguntas,
-     8.206 respostas catalogadas, 4.877 únicas.
-     Coleta de pageviews: 8.106 respostas.</p>
+  <head>
+    <meta charset="utf-8" />
+    <title>Garimpo · raio-x do acervo</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        color: var(--foreground);
+        background: transparent;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 4px 0 8px;
+      }
+      h1 {
+        font-size: 26px;
+        line-height: 1.1;
+        margin: 0 0 4px;
+        letter-spacing: -0.6px;
+      }
+      .sub {
+        color: var(--muted-foreground);
+        font-size: 13px;
+        margin: 0 0 20px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      @media (max-width: 720px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius, 8px);
+        padding: 14px 16px;
+        background: var(--card);
+      }
+      .card h2 {
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--muted-foreground);
+        margin: 0 0 2px;
+        font-weight: 600;
+      }
+      .card p {
+        font-size: 12px;
+        color: var(--muted-foreground);
+        margin: 0 0 12px;
+        line-height: 1.45;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 84px 1fr 34px;
+        gap: 8px;
+        align-items: center;
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+      .row .k {
+        color: var(--foreground);
+        opacity: 0.85;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .row .track {
+        height: 9px;
+        background: var(--muted);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .row .track i {
+        display: block;
+        height: 100%;
+        background: var(--chart-1);
+      }
+      .row .v {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+        color: var(--foreground);
+      }
+      .hist {
+        display: flex;
+        align-items: flex-end;
+        gap: 3px;
+        height: 120px;
+        margin-top: 6px;
+      }
+      .hist .col {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      .hist .col i {
+        display: block;
+        width: 100%;
+        background: var(--chart-3);
+        border-radius: 1px 1px 0 0;
+      }
+      .axis {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        color: var(--muted-foreground);
+        margin-top: 4px;
+        font-variant-numeric: tabular-nums;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .stats div {
+        border: 1px solid var(--border);
+        border-radius: var(--radius, 8px);
+        padding: 9px 11px;
+      }
+      .stats b {
+        display: block;
+        font-size: 20px;
+        letter-spacing: -0.5px;
+        font-variant-numeric: tabular-nums;
+      }
+      .stats span {
+        font-size: 10px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: var(--muted-foreground);
+      }
+      svg text {
+        font-size: 10px;
+        fill: var(--muted-foreground);
+      }
+      svg line {
+        stroke: var(--border);
+        stroke-width: 1;
+      }
+      svg circle {
+        fill: var(--chart-2);
+        opacity: 0.82;
+      }
+      .rho {
+        font-variant-numeric: tabular-nums;
+        font-weight: 650;
+        color: var(--foreground);
+      }
+      .note {
+        font-size: 11px;
+        color: var(--muted-foreground);
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+      .wide {
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Garimpo — raio-x do acervo</h1>
+      <p class="sub">
+        Tudo abaixo é medido no arquivo que o jogo carrega: 154 perguntas, 8.206 respostas
+        catalogadas, 4.877 únicas. Coleta de pageviews: 8.106 respostas.
+      </p>
 
-  <div class="stats">
-    <div><b>154</b><span>perguntas</span></div>
-    <div><b>8.206</b><span>respostas</span></div>
-    <div><b>345 m</b><span>mergulho mediano</span></div>
-    <div><b class="rho">ρ 0.61</b><span>vs. multidão real</span></div>
-  </div>
+      <div class="stats">
+        <div><b>154</b><span>perguntas</span></div>
+        <div><b>8.206</b><span>respostas</span></div>
+        <div><b>345 m</b><span>mergulho mediano</span></div>
+        <div><b class="rho">ρ 0.61</b><span>vs. multidão real</span></div>
+      </div>
 
-  <div class="grid">
-    <div class="card">
-      <h2>Perguntas por acervo</h2>
-      <p>Cada barra é um pool de respostas verificadas contra a pt.wikipedia.</p>
-      <div class="row"><span class="k">aves</span><span class="track"><i style="width:100.0%"></i></span><span class="v">16</span></div>
-<div class="row"><span class="k">cidades</span><span class="track"><i style="width:87.5%"></i></span><span class="v">14</span></div>
-<div class="row"><span class="k">seleção</span><span class="track"><i style="width:56.2%"></i></span><span class="v">9</span></div>
-<div class="row"><span class="k">pais</span><span class="track"><i style="width:56.2%"></i></span><span class="v">9</span></div>
-<div class="row"><span class="k">capital_mundo</span><span class="track"><i style="width:56.2%"></i></span><span class="v">9</span></div>
-<div class="row"><span class="k">novelas</span><span class="track"><i style="width:50.0%"></i></span><span class="v">8</span></div>
-<div class="row"><span class="k">frutas</span><span class="track"><i style="width:37.5%"></i></span><span class="v">6</span></div>
-<div class="row"><span class="k">times</span><span class="track"><i style="width:31.2%"></i></span><span class="v">5</span></div>
-<div class="row"><span class="k">rios</span><span class="track"><i style="width:31.2%"></i></span><span class="v">5</span></div>
-<div class="row"><span class="k">mamíferos</span><span class="track"><i style="width:31.2%"></i></span><span class="v">5</span></div>
-<div class="row"><span class="k">pokemon</span><span class="track"><i style="width:31.2%"></i></span><span class="v">5</span></div>
-<div class="row"><span class="k">videogame</span><span class="track"><i style="width:31.2%"></i></span><span class="v">5</span></div>
-<div class="row"><span class="k">cidade_mundo</span><span class="track"><i style="width:31.2%"></i></span><span class="v">5</span></div>
-<div class="row"><span class="k">pratos</span><span class="track"><i style="width:25.0%"></i></span><span class="v">4</span></div>
-<div class="row"><span class="k">filmes</span><span class="track"><i style="width:25.0%"></i></span><span class="v">4</span></div>
-<div class="row"><span class="k">cantores</span><span class="track"><i style="width:25.0%"></i></span><span class="v">4</span></div>
-<div class="row"><span class="k">atores</span><span class="track"><i style="width:25.0%"></i></span><span class="v">4</span></div>
-<div class="row"><span class="k">banda</span><span class="track"><i style="width:25.0%"></i></span><span class="v">4</span></div>
-<div class="row"><span class="k">estádios</span><span class="track"><i style="width:18.8%"></i></span><span class="v">3</span></div>
-<div class="row"><span class="k">escritores</span><span class="track"><i style="width:18.8%"></i></span><span class="v">3</span></div>
-<div class="row"><span class="k">anime</span><span class="track"><i style="width:18.8%"></i></span><span class="v">3</span></div>
-<div class="row"><span class="k">parques</span><span class="track"><i style="width:12.5%"></i></span><span class="v">2</span></div>
-<div class="row"><span class="k">folclore</span><span class="track"><i style="width:12.5%"></i></span><span class="v">2</span></div>
-<div class="row"><span class="k">festas</span><span class="track"><i style="width:12.5%"></i></span><span class="v">2</span></div>
-<div class="row"><span class="k">danças</span><span class="track"><i style="width:12.5%"></i></span><span class="v">2</span></div>
-<div class="row"><span class="k">instrumentos</span><span class="track"><i style="width:12.5%"></i></span><span class="v">2</span></div>
-<div class="row"><span class="k">elemento</span><span class="track"><i style="width:12.5%"></i></span><span class="v">2</span></div>
-<div class="row"><span class="k">estados</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">presidentes</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">doces</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">marcas</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">tupi</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">BBB</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">BBB</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">TV Globinho</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">desenhos</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">heroi</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">comida_mundo</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
-<div class="row"><span class="k">marca_global</span><span class="track"><i style="width:6.2%"></i></span><span class="v">1</span></div>
+      <div class="grid">
+        <div class="card">
+          <h2>Perguntas por acervo</h2>
+          <p>Cada barra é um pool de respostas verificadas contra a pt.wikipedia.</p>
+          <div class="row">
+            <span class="k">aves</span><span class="track"><i style="width: 100%"></i></span
+            ><span class="v">16</span>
+          </div>
+          <div class="row">
+            <span class="k">cidades</span><span class="track"><i style="width: 87.5%"></i></span
+            ><span class="v">14</span>
+          </div>
+          <div class="row">
+            <span class="k">seleção</span><span class="track"><i style="width: 56.2%"></i></span
+            ><span class="v">9</span>
+          </div>
+          <div class="row">
+            <span class="k">pais</span><span class="track"><i style="width: 56.2%"></i></span
+            ><span class="v">9</span>
+          </div>
+          <div class="row">
+            <span class="k">capital_mundo</span
+            ><span class="track"><i style="width: 56.2%"></i></span><span class="v">9</span>
+          </div>
+          <div class="row">
+            <span class="k">novelas</span><span class="track"><i style="width: 50%"></i></span
+            ><span class="v">8</span>
+          </div>
+          <div class="row">
+            <span class="k">frutas</span><span class="track"><i style="width: 37.5%"></i></span
+            ><span class="v">6</span>
+          </div>
+          <div class="row">
+            <span class="k">times</span><span class="track"><i style="width: 31.2%"></i></span
+            ><span class="v">5</span>
+          </div>
+          <div class="row">
+            <span class="k">rios</span><span class="track"><i style="width: 31.2%"></i></span
+            ><span class="v">5</span>
+          </div>
+          <div class="row">
+            <span class="k">mamíferos</span><span class="track"><i style="width: 31.2%"></i></span
+            ><span class="v">5</span>
+          </div>
+          <div class="row">
+            <span class="k">pokemon</span><span class="track"><i style="width: 31.2%"></i></span
+            ><span class="v">5</span>
+          </div>
+          <div class="row">
+            <span class="k">videogame</span><span class="track"><i style="width: 31.2%"></i></span
+            ><span class="v">5</span>
+          </div>
+          <div class="row">
+            <span class="k">cidade_mundo</span
+            ><span class="track"><i style="width: 31.2%"></i></span><span class="v">5</span>
+          </div>
+          <div class="row">
+            <span class="k">pratos</span><span class="track"><i style="width: 25%"></i></span
+            ><span class="v">4</span>
+          </div>
+          <div class="row">
+            <span class="k">filmes</span><span class="track"><i style="width: 25%"></i></span
+            ><span class="v">4</span>
+          </div>
+          <div class="row">
+            <span class="k">cantores</span><span class="track"><i style="width: 25%"></i></span
+            ><span class="v">4</span>
+          </div>
+          <div class="row">
+            <span class="k">atores</span><span class="track"><i style="width: 25%"></i></span
+            ><span class="v">4</span>
+          </div>
+          <div class="row">
+            <span class="k">banda</span><span class="track"><i style="width: 25%"></i></span
+            ><span class="v">4</span>
+          </div>
+          <div class="row">
+            <span class="k">estádios</span><span class="track"><i style="width: 18.8%"></i></span
+            ><span class="v">3</span>
+          </div>
+          <div class="row">
+            <span class="k">escritores</span><span class="track"><i style="width: 18.8%"></i></span
+            ><span class="v">3</span>
+          </div>
+          <div class="row">
+            <span class="k">anime</span><span class="track"><i style="width: 18.8%"></i></span
+            ><span class="v">3</span>
+          </div>
+          <div class="row">
+            <span class="k">parques</span><span class="track"><i style="width: 12.5%"></i></span
+            ><span class="v">2</span>
+          </div>
+          <div class="row">
+            <span class="k">folclore</span><span class="track"><i style="width: 12.5%"></i></span
+            ><span class="v">2</span>
+          </div>
+          <div class="row">
+            <span class="k">festas</span><span class="track"><i style="width: 12.5%"></i></span
+            ><span class="v">2</span>
+          </div>
+          <div class="row">
+            <span class="k">danças</span><span class="track"><i style="width: 12.5%"></i></span
+            ><span class="v">2</span>
+          </div>
+          <div class="row">
+            <span class="k">instrumentos</span
+            ><span class="track"><i style="width: 12.5%"></i></span><span class="v">2</span>
+          </div>
+          <div class="row">
+            <span class="k">elemento</span><span class="track"><i style="width: 12.5%"></i></span
+            ><span class="v">2</span>
+          </div>
+          <div class="row">
+            <span class="k">estados</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">presidentes</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">doces</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">marcas</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">tupi</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">BBB</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">BBB</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">TV Globinho</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">desenhos</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">heroi</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">comida_mundo</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+          <div class="row">
+            <span class="k">marca_global</span><span class="track"><i style="width: 6.2%"></i></span
+            ><span class="v">1</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Tamanho dos acervos</h2>
+          <p>Respostas por pergunta. Piso de 10 para um percentil honesto; máximo 728.</p>
+          <div class="hist">
+            <div class="col" title="0–9 respostas: 0"><i style="height: 0%"></i></div>
+            <div class="col" title="10–19 respostas: 58"><i style="height: 100%"></i></div>
+            <div class="col" title="20–29 respostas: 30"><i style="height: 51.7%"></i></div>
+            <div class="col" title="30–39 respostas: 7"><i style="height: 12.1%"></i></div>
+            <div class="col" title="40–49 respostas: 13"><i style="height: 22.4%"></i></div>
+            <div class="col" title="50–59 respostas: 9"><i style="height: 15.5%"></i></div>
+            <div class="col" title="60–69 respostas: 5"><i style="height: 8.6%"></i></div>
+            <div class="col" title="70–79 respostas: 5"><i style="height: 8.6%"></i></div>
+            <div class="col" title="80–89 respostas: 3"><i style="height: 5.2%"></i></div>
+            <div class="col" title="90–99 respostas: 24"><i style="height: 41.4%"></i></div>
+          </div>
+          <div class="axis"><span>10</span><span>60</span><span>100+</span></div>
+          <p class="note">Mediana 25 respostas por pergunta.</p>
+        </div>
+
+        <div class="card">
+          <h2>Onde as respostas caem</h2>
+          <p>Distribuição real das 8.206 respostas pelas sete camadas da placa.</p>
+          <div class="row">
+            <span class="k">Solo</span><span class="track"><i style="width: 15.2%"></i></span
+            ><span class="v">15%</span>
+          </div>
+          <div class="row">
+            <span class="k">Arenito</span><span class="track"><i style="width: 17.2%"></i></span
+            ><span class="v">17%</span>
+          </div>
+          <div class="row">
+            <span class="k">Ardósia</span><span class="track"><i style="width: 25.7%"></i></span
+            ><span class="v">26%</span>
+          </div>
+          <div class="row">
+            <span class="k">Quartzito</span><span class="track"><i style="width: 25.4%"></i></span
+            ><span class="v">25%</span>
+          </div>
+          <div class="row">
+            <span class="k">Xisto</span><span class="track"><i style="width: 11.2%"></i></span
+            ><span class="v">11%</span>
+          </div>
+          <div class="row">
+            <span class="k">Gnaisse</span><span class="track"><i style="width: 3.5%"></i></span
+            ><span class="v">4%</span>
+          </div>
+          <div class="row">
+            <span class="k">Kimberlito</span><span class="track"><i style="width: 1.7%"></i></span
+            ><span class="v">2%</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Profundidade simulada</h2>
+          <p>6 000 mergulhos de 7 perguntas com um modelo de jogador por posição no acervo.</p>
+          <div class="hist">
+            <div class="col" title="0–49 m: 0"><i style="height: 0%"></i></div>
+            <div class="col" title="50–99 m: 1"><i style="height: 0.1%"></i></div>
+            <div class="col" title="100–149 m: 12"><i style="height: 0.7%"></i></div>
+            <div class="col" title="150–199 m: 97"><i style="height: 5.9%"></i></div>
+            <div class="col" title="200–249 m: 393"><i style="height: 23.7%"></i></div>
+            <div class="col" title="250–299 m: 1001"><i style="height: 60.5%"></i></div>
+            <div class="col" title="300–349 m: 1640"><i style="height: 99.1%"></i></div>
+            <div class="col" title="350–399 m: 1655"><i style="height: 100%"></i></div>
+            <div class="col" title="400–449 m: 920"><i style="height: 55.6%"></i></div>
+            <div class="col" title="450–499 m: 249"><i style="height: 15%"></i></div>
+            <div class="col" title="500–549 m: 32"><i style="height: 1.9%"></i></div>
+            <div class="col" title="550–599 m: 0"><i style="height: 0%"></i></div>
+            <div class="col" title="600–649 m: 0"><i style="height: 0%"></i></div>
+            <div class="col" title="650–699 m: 0"><i style="height: 0%"></i></div>
+          </div>
+          <div class="axis">
+            <span>0</span><span>100</span><span>200</span><span>300</span><span>400</span
+            ><span>500</span><span>600</span><span>700</span>
+          </div>
+          <p class="note">
+            p10 256 m · mediana 345 m · p90 426 m · 700 m exige seis respostas entre as mais raras
+            de cada acervo.
+          </p>
+        </div>
+
+        <div class="card wide">
+          <h2>Validação: nossa raridade × raridade da multidão</h2>
+          <p>
+            Pergunta “Name any Pokémon”, 45 respostas, percentil real de jogadores do Krillion (eixo
+            y) contra a raridade medida aqui (eixo x).
+          </p>
+          <svg
+            viewBox="0 0 520 240"
+            width="100%"
+            height="240"
+            role="img"
+            aria-label="dispersão raridade medida contra score da multidão"
+          >
+            <line x1="28" y1="212.0" x2="492" y2="212.0" />
+            <line x1="28" y1="166.0" x2="492" y2="166.0" />
+            <line x1="28" y1="120.0" x2="492" y2="120.0" />
+            <line x1="28" y1="74.0" x2="492" y2="74.0" />
+            <line x1="28" y1="28.0" x2="492" y2="28.0" />
+            <text x="22" y="216.0" text-anchor="end">0</text>
+            <text x="22" y="170.0" text-anchor="end">25</text>
+            <text x="22" y="124.0" text-anchor="end">50</text>
+            <text x="22" y="78.0" text-anchor="end">75</text>
+            <text x="22" y="32.0" text-anchor="end">100</text>
+            <text x="28" y="234">0 · óbvia</text>
+            <text x="492" y="234" text-anchor="end">1 · rara</text>
+            <circle cx="28.0" cy="193.6" r="4" />
+            <circle cx="69.1" cy="193.6" r="4" />
+            <circle cx="194.3" cy="193.6" r="4" />
+            <circle cx="175.3" cy="193.6" r="4" />
+            <circle cx="184.1" cy="193.6" r="4" />
+            <circle cx="294.8" cy="156.8" r="4" />
+            <circle cx="162.7" cy="193.6" r="4" />
+            <circle cx="228.9" cy="156.8" r="4" />
+            <circle cx="211.6" cy="156.8" r="4" />
+            <circle cx="202.1" cy="156.8" r="4" />
+            <circle cx="424.1" cy="156.8" r="4" />
+            <circle cx="446.6" cy="156.8" r="4" />
+            <circle cx="442.8" cy="156.8" r="4" />
+            <circle cx="206.8" cy="156.8" r="4" />
+            <circle cx="182.7" cy="156.8" r="4" />
+            <circle cx="191.0" cy="156.8" r="4" />
+            <circle cx="182.7" cy="156.8" r="4" />
+            <circle cx="247.8" cy="156.8" r="4" />
+            <circle cx="190.1" cy="156.8" r="4" />
+            <circle cx="211.6" cy="156.8" r="4" />
+            <circle cx="214.5" cy="193.6" r="4" />
+            <circle cx="233.6" cy="156.8" r="4" />
+            <circle cx="57.6" cy="156.8" r="4" />
+            <circle cx="244.6" cy="156.8" r="4" />
+            <circle cx="380.7" cy="156.8" r="4" />
+            <circle cx="219.4" cy="193.6" r="4" />
+            <circle cx="225.7" cy="156.8" r="4" />
+            <circle cx="197.4" cy="156.8" r="4" />
+            <circle cx="182.7" cy="156.8" r="4" />
+            <circle cx="182.7" cy="101.6" r="4" />
+            <circle cx="238.3" cy="101.6" r="4" />
+            <circle cx="184.8" cy="156.8" r="4" />
+            <circle cx="187.9" cy="156.8" r="4" />
+            <circle cx="341.3" cy="156.8" r="4" />
+            <circle cx="387.0" cy="156.8" r="4" />
+            <circle cx="369.6" cy="101.6" r="4" />
+            <circle cx="388.6" cy="101.6" r="4" />
+            <circle cx="368.9" cy="101.6" r="4" />
+            <circle cx="368.9" cy="101.6" r="4" />
+            <circle cx="368.9" cy="101.6" r="4" />
+            <circle cx="368.9" cy="101.6" r="4" />
+            <circle cx="368.9" cy="101.6" r="4" />
+            <circle cx="442.8" cy="55.6" r="4" />
+            <circle cx="463.9" cy="55.6" r="4" />
+            <circle cx="442.8" cy="101.6" r="4" />
+          </svg>
+          <p class="note">
+            Correlação de Spearman <span class="rho">ρ = 0.609</span> (n = 45), medida em
+            2026-11-03. A multidão do Krillion é anglófona; num acervo brasileiro os sinais tendem a
+            separar melhor.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class="card">
-      <h2>Tamanho dos acervos</h2>
-      <p>Respostas por pergunta. Piso de 10 para um percentil honesto; máximo 728.</p>
-      <div class="hist"><div class="col" title="0–9 respostas: 0"><i style="height:0.0%"></i></div><div class="col" title="10–19 respostas: 58"><i style="height:100.0%"></i></div><div class="col" title="20–29 respostas: 30"><i style="height:51.7%"></i></div><div class="col" title="30–39 respostas: 7"><i style="height:12.1%"></i></div><div class="col" title="40–49 respostas: 13"><i style="height:22.4%"></i></div><div class="col" title="50–59 respostas: 9"><i style="height:15.5%"></i></div><div class="col" title="60–69 respostas: 5"><i style="height:8.6%"></i></div><div class="col" title="70–79 respostas: 5"><i style="height:8.6%"></i></div><div class="col" title="80–89 respostas: 3"><i style="height:5.2%"></i></div><div class="col" title="90–99 respostas: 24"><i style="height:41.4%"></i></div></div>
-      <div class="axis"><span>10</span><span>60</span><span>100+</span></div>
-      <p class="note">Mediana 25 respostas por pergunta.</p>
-    </div>
-
-    <div class="card">
-      <h2>Onde as respostas caem</h2>
-      <p>Distribuição real das 8.206 respostas pelas sete camadas da placa.</p>
-      <div class="row"><span class="k">Solo</span><span class="track"><i style="width:15.2%"></i></span><span class="v">15%</span></div><div class="row"><span class="k">Arenito</span><span class="track"><i style="width:17.2%"></i></span><span class="v">17%</span></div><div class="row"><span class="k">Ardósia</span><span class="track"><i style="width:25.7%"></i></span><span class="v">26%</span></div><div class="row"><span class="k">Quartzito</span><span class="track"><i style="width:25.4%"></i></span><span class="v">25%</span></div><div class="row"><span class="k">Xisto</span><span class="track"><i style="width:11.2%"></i></span><span class="v">11%</span></div><div class="row"><span class="k">Gnaisse</span><span class="track"><i style="width:3.5%"></i></span><span class="v">4%</span></div><div class="row"><span class="k">Kimberlito</span><span class="track"><i style="width:1.7%"></i></span><span class="v">2%</span></div>
-    </div>
-
-    <div class="card">
-      <h2>Profundidade simulada</h2>
-      <p>6 000 mergulhos de 7 perguntas com um modelo de jogador por posição no acervo.</p>
-      <div class="hist"><div class="col" title="0–49 m: 0"><i style="height:0.0%"></i></div><div class="col" title="50–99 m: 1"><i style="height:0.1%"></i></div><div class="col" title="100–149 m: 12"><i style="height:0.7%"></i></div><div class="col" title="150–199 m: 97"><i style="height:5.9%"></i></div><div class="col" title="200–249 m: 393"><i style="height:23.7%"></i></div><div class="col" title="250–299 m: 1001"><i style="height:60.5%"></i></div><div class="col" title="300–349 m: 1640"><i style="height:99.1%"></i></div><div class="col" title="350–399 m: 1655"><i style="height:100.0%"></i></div><div class="col" title="400–449 m: 920"><i style="height:55.6%"></i></div><div class="col" title="450–499 m: 249"><i style="height:15.0%"></i></div><div class="col" title="500–549 m: 32"><i style="height:1.9%"></i></div><div class="col" title="550–599 m: 0"><i style="height:0.0%"></i></div><div class="col" title="600–649 m: 0"><i style="height:0.0%"></i></div><div class="col" title="650–699 m: 0"><i style="height:0.0%"></i></div></div>
-      <div class="axis"><span>0</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span><span>700</span></div>
-      <p class="note">p10 256 m · mediana 345 m · p90 426 m · 700 m exige seis respostas
-         entre as mais raras de cada acervo.</p>
-    </div>
-
-    <div class="card wide">
-      <h2>Validação: nossa raridade × raridade da multidão</h2>
-      <p>Pergunta “Name any Pokémon”, 45 respostas, percentil real de
-         jogadores do Krillion (eixo y) contra a raridade medida aqui (eixo x).</p>
-      <svg viewBox="0 0 520 240" width="100%" height="240" role="img"
-           aria-label="dispersão raridade medida contra score da multidão">
-        <line x1="28" y1="212.0" x2="492" y2="212.0" /><line x1="28" y1="166.0" x2="492" y2="166.0" /><line x1="28" y1="120.0" x2="492" y2="120.0" /><line x1="28" y1="74.0" x2="492" y2="74.0" /><line x1="28" y1="28.0" x2="492" y2="28.0" />
-        <text x="22" y="216.0" text-anchor="end">0</text><text x="22" y="170.0" text-anchor="end">25</text><text x="22" y="124.0" text-anchor="end">50</text><text x="22" y="78.0" text-anchor="end">75</text><text x="22" y="32.0" text-anchor="end">100</text>
-        <text x="28" y="234">0 · óbvia</text>
-        <text x="492" y="234" text-anchor="end">1 · rara</text>
-        <circle cx="28.0" cy="193.6" r="4" /><circle cx="69.1" cy="193.6" r="4" /><circle cx="194.3" cy="193.6" r="4" /><circle cx="175.3" cy="193.6" r="4" /><circle cx="184.1" cy="193.6" r="4" /><circle cx="294.8" cy="156.8" r="4" /><circle cx="162.7" cy="193.6" r="4" /><circle cx="228.9" cy="156.8" r="4" /><circle cx="211.6" cy="156.8" r="4" /><circle cx="202.1" cy="156.8" r="4" /><circle cx="424.1" cy="156.8" r="4" /><circle cx="446.6" cy="156.8" r="4" /><circle cx="442.8" cy="156.8" r="4" /><circle cx="206.8" cy="156.8" r="4" /><circle cx="182.7" cy="156.8" r="4" /><circle cx="191.0" cy="156.8" r="4" /><circle cx="182.7" cy="156.8" r="4" /><circle cx="247.8" cy="156.8" r="4" /><circle cx="190.1" cy="156.8" r="4" /><circle cx="211.6" cy="156.8" r="4" /><circle cx="214.5" cy="193.6" r="4" /><circle cx="233.6" cy="156.8" r="4" /><circle cx="57.6" cy="156.8" r="4" /><circle cx="244.6" cy="156.8" r="4" /><circle cx="380.7" cy="156.8" r="4" /><circle cx="219.4" cy="193.6" r="4" /><circle cx="225.7" cy="156.8" r="4" /><circle cx="197.4" cy="156.8" r="4" /><circle cx="182.7" cy="156.8" r="4" /><circle cx="182.7" cy="101.6" r="4" /><circle cx="238.3" cy="101.6" r="4" /><circle cx="184.8" cy="156.8" r="4" /><circle cx="187.9" cy="156.8" r="4" /><circle cx="341.3" cy="156.8" r="4" /><circle cx="387.0" cy="156.8" r="4" /><circle cx="369.6" cy="101.6" r="4" /><circle cx="388.6" cy="101.6" r="4" /><circle cx="368.9" cy="101.6" r="4" /><circle cx="368.9" cy="101.6" r="4" /><circle cx="368.9" cy="101.6" r="4" /><circle cx="368.9" cy="101.6" r="4" /><circle cx="368.9" cy="101.6" r="4" /><circle cx="442.8" cy="55.6" r="4" /><circle cx="463.9" cy="55.6" r="4" /><circle cx="442.8" cy="101.6" r="4" />
-      </svg>
-      <p class="note">Correlação de Spearman <span class="rho">ρ = 0.609</span>
-         (n = 45), medida em 2026-11-03. A multidão do Krillion é
-         anglófona; num acervo brasileiro os sinais tendem a separar melhor.</p>
-    </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>

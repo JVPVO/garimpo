@@ -4,60 +4,168 @@
   "source": "https://pt.wikipedia.org/wiki/Folclore_brasileiro",
   "notes": "Criaturas, assombrações e entidades do folclore brasileiro com verbete próprio na pt.wikipedia (títulos canônicos conferidos via API, redirects resolvidos). Base de referência: Luís da Câmara Cascudo, Dicionário do Folclore Brasileiro. Excluídos orixás, divindades criadoras, figuras históricas e páginas de desambiguação.",
   "items": [
-    {"name": "Saci", "article": "Saci", "tags": {"origem": "indígena", "difusao": "nacional"}},
-    {"name": "Curupira", "article": "Curupira", "tags": {"origem": "indígena", "difusao": "nacional"}},
-    {"name": "Iara", "article": "Iara", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Boitatá", "article": "Boitatá", "tags": {"origem": "indígena", "difusao": "nacional"}},
-    {"name": "Mula sem cabeça", "article": "Mula sem cabeça", "tags": {"tipo": "assombração", "difusao": "nacional"}},
-    {"name": "Cuca", "article": "Cuca", "tags": {"tipo": "criatura", "difusao": "nacional"}},
-    {"name": "Caipora", "article": "Caipora", "tags": {"origem": "indígena"}},
-    {"name": "Boto", "article": "Lenda do boto", "tags": {"origem": "mista", "regiao": "Norte"}},
-    {"name": "Negrinho do Pastoreio", "article": "Negrinho do Pastoreio", "tags": {"origem": "africana", "regiao": "Sul"}},
-    {"name": "Lobisomem", "article": "Lobisomem", "tags": {"origem": "europeia", "difusao": "nacional"}},
-    {"name": "Mãe do ouro", "article": "Mãe do ouro", "tags": {"tipo": "aparição"}},
-    {"name": "Anhangá", "article": "Anhangá", "tags": {"origem": "indígena"}},
-    {"name": "Mapinguari", "article": "Mapinguari", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Corpo-seco", "article": "Corpo-seco", "tags": {"origem": "europeia"}},
-    {"name": "Pisadeira", "article": "Pisadeira (folclore)", "tags": {"regiao": "Sudeste"}},
-    {"name": "Papa-figo", "article": "Papa-figo", "tags": {"regiao": "Nordeste"}},
-    {"name": "Romãozinho", "article": "Romãozinho", "tags": {"tipo": "criatura"}},
-    {"name": "Comadre Fulozinha", "article": "Comadre Fulozinha", "tags": {"tipo": "entidade"}},
-    {"name": "Cabeça de Cuia", "article": "Cabeça de Cuia", "tags": {"regiao": "Nordeste"}},
-    {"name": "Caboclo-d'Água", "article": "Caboclo-d'Água", "tags": {"regiao": "Vale do São Francisco"}},
-    {"name": "Cabra Cabriola", "article": "Cabra Cabriola", "tags": {"origem": "europeia"}},
-    {"name": "Cavalo-d'água", "article": "Cavalo-d'água", "tags": {"regiao": "Vale do São Francisco"}},
-    {"name": "Cobra Norato", "article": "Cobra Norato (folclore)", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Encantado", "article": "Encantado (entidade)", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Homem dos Pés de Louça", "article": "Homem dos Pés de Louça", "tags": {"tipo": "criatura"}},
-    {"name": "Icamiabas", "article": "Icamiabas", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Loira do Bonfim", "article": "Loira do Bonfim", "tags": {"regiao": "Sudeste", "tipo": "assombração"}},
-    {"name": "Matinta-Pereira", "article": "Matinta-Pereira", "tags": {"regiao": "Norte"}},
-    {"name": "Negro-d'Água", "article": "Negro-d'Água", "tags": {"tipo": "entidade"}},
-    {"name": "Perna cabeluda", "article": "Perna cabeluda", "tags": {"regiao": "Nordeste", "tipo": "lenda urbana"}},
-    {"name": "Besta-fera", "article": "Besta-fera", "tags": {"origem": "europeia"}},
-    {"name": "Bicho-papão", "article": "Bicho-papão", "tags": {"origem": "europeia"}},
-    {"name": "Avantesma da Lagoinha", "article": "Avantesma da Lagoinha", "tags": {"regiao": "Sudeste"}},
-    {"name": "Boiuna", "article": "Boiuna", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Teiniaguá", "article": "Teiniaguá", "tags": {"regiao": "Sul", "origem": "europeia"}},
-    {"name": "Minhocão", "article": "Lenda do Minhocão", "tags": {"tipo": "criatura"}},
-    {"name": "Lobisomem do Acre", "article": "Lobisomem do Acre", "tags": {"regiao": "Norte"}},
-    {"name": "Mão Pelada", "article": "Mão Pelada", "tags": {"regiao": "Vale do São Francisco"}},
-    {"name": "Monstro Labatut", "article": "Monstro Labatut", "tags": {"regiao": "Nordeste"}},
-    {"name": "Onça Maneta", "article": "Onça Maneta", "tags": {"tipo": "criatura"}},
-    {"name": "Uirapuru", "article": "Uirapuru (mito)", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Sukuyu'wera", "article": "Sukuyu'wera", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Luzerna", "article": "Luzerna (lenda)", "tags": {"regiao": "Nordeste", "tipo": "aparição"}},
-    {"name": "Coca", "article": "Coca (folclore)", "tags": {"origem": "europeia"}},
-    {"name": "Cumacanga", "article": "Cumacanga", "tags": {"origem": "indígena"}},
-    {"name": "Anaconda gigante", "article": "Anaconda gigante", "tags": {"regiao": "Norte"}},
-    {"name": "Velho do saco", "article": "Velho do saco", "tags": {"origem": "europeia"}},
-    {"name": "Capelobo", "article": "Capelobo", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "João Galafuz", "article": "João Galafuz", "tags": {"tipo": "duende"}},
-    {"name": "Ataíde", "article": "Ataíde (mitologia)", "tags": {"regiao": "Norte", "tipo": "encantado"}},
-    {"name": "Cainamé", "article": "Cainamé", "tags": {"origem": "indígena", "regiao": "Norte"}},
-    {"name": "Ururau da Lapa", "article": "Ururau da Lapa (lenda)", "tags": {"regiao": "Sudeste"}},
-    {"name": "Tau", "article": "Tau (mitologia)", "tags": {"origem": "indígena"}},
-    {"name": "Yaguareté-abá", "article": "Yaguareté-abá", "tags": {"origem": "indígena", "regiao": "Sul"}},
-    {"name": "Bruxa Silvina", "article": "Bruxa Silvina", "tags": {"regiao": "Sudeste", "tipo": "bruxa"}}
+    { "name": "Saci", "article": "Saci", "tags": { "origem": "indígena", "difusao": "nacional" } },
+    {
+      "name": "Curupira",
+      "article": "Curupira",
+      "tags": { "origem": "indígena", "difusao": "nacional" }
+    },
+    { "name": "Iara", "article": "Iara", "tags": { "origem": "indígena", "regiao": "Norte" } },
+    {
+      "name": "Boitatá",
+      "article": "Boitatá",
+      "tags": { "origem": "indígena", "difusao": "nacional" }
+    },
+    {
+      "name": "Mula sem cabeça",
+      "article": "Mula sem cabeça",
+      "tags": { "tipo": "assombração", "difusao": "nacional" }
+    },
+    { "name": "Cuca", "article": "Cuca", "tags": { "tipo": "criatura", "difusao": "nacional" } },
+    { "name": "Caipora", "article": "Caipora", "tags": { "origem": "indígena" } },
+    {
+      "name": "Boto",
+      "article": "Lenda do boto",
+      "tags": { "origem": "mista", "regiao": "Norte" }
+    },
+    {
+      "name": "Negrinho do Pastoreio",
+      "article": "Negrinho do Pastoreio",
+      "tags": { "origem": "africana", "regiao": "Sul" }
+    },
+    {
+      "name": "Lobisomem",
+      "article": "Lobisomem",
+      "tags": { "origem": "europeia", "difusao": "nacional" }
+    },
+    { "name": "Mãe do ouro", "article": "Mãe do ouro", "tags": { "tipo": "aparição" } },
+    { "name": "Anhangá", "article": "Anhangá", "tags": { "origem": "indígena" } },
+    {
+      "name": "Mapinguari",
+      "article": "Mapinguari",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    { "name": "Corpo-seco", "article": "Corpo-seco", "tags": { "origem": "europeia" } },
+    { "name": "Pisadeira", "article": "Pisadeira (folclore)", "tags": { "regiao": "Sudeste" } },
+    { "name": "Papa-figo", "article": "Papa-figo", "tags": { "regiao": "Nordeste" } },
+    { "name": "Romãozinho", "article": "Romãozinho", "tags": { "tipo": "criatura" } },
+    { "name": "Comadre Fulozinha", "article": "Comadre Fulozinha", "tags": { "tipo": "entidade" } },
+    { "name": "Cabeça de Cuia", "article": "Cabeça de Cuia", "tags": { "regiao": "Nordeste" } },
+    {
+      "name": "Caboclo-d'Água",
+      "article": "Caboclo-d'Água",
+      "tags": { "regiao": "Vale do São Francisco" }
+    },
+    { "name": "Cabra Cabriola", "article": "Cabra Cabriola", "tags": { "origem": "europeia" } },
+    {
+      "name": "Cavalo-d'água",
+      "article": "Cavalo-d'água",
+      "tags": { "regiao": "Vale do São Francisco" }
+    },
+    {
+      "name": "Cobra Norato",
+      "article": "Cobra Norato (folclore)",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    {
+      "name": "Encantado",
+      "article": "Encantado (entidade)",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    {
+      "name": "Homem dos Pés de Louça",
+      "article": "Homem dos Pés de Louça",
+      "tags": { "tipo": "criatura" }
+    },
+    {
+      "name": "Icamiabas",
+      "article": "Icamiabas",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    {
+      "name": "Loira do Bonfim",
+      "article": "Loira do Bonfim",
+      "tags": { "regiao": "Sudeste", "tipo": "assombração" }
+    },
+    { "name": "Matinta-Pereira", "article": "Matinta-Pereira", "tags": { "regiao": "Norte" } },
+    { "name": "Negro-d'Água", "article": "Negro-d'Água", "tags": { "tipo": "entidade" } },
+    {
+      "name": "Perna cabeluda",
+      "article": "Perna cabeluda",
+      "tags": { "regiao": "Nordeste", "tipo": "lenda urbana" }
+    },
+    { "name": "Besta-fera", "article": "Besta-fera", "tags": { "origem": "europeia" } },
+    { "name": "Bicho-papão", "article": "Bicho-papão", "tags": { "origem": "europeia" } },
+    {
+      "name": "Avantesma da Lagoinha",
+      "article": "Avantesma da Lagoinha",
+      "tags": { "regiao": "Sudeste" }
+    },
+    { "name": "Boiuna", "article": "Boiuna", "tags": { "origem": "indígena", "regiao": "Norte" } },
+    {
+      "name": "Teiniaguá",
+      "article": "Teiniaguá",
+      "tags": { "regiao": "Sul", "origem": "europeia" }
+    },
+    { "name": "Minhocão", "article": "Lenda do Minhocão", "tags": { "tipo": "criatura" } },
+    { "name": "Lobisomem do Acre", "article": "Lobisomem do Acre", "tags": { "regiao": "Norte" } },
+    {
+      "name": "Mão Pelada",
+      "article": "Mão Pelada",
+      "tags": { "regiao": "Vale do São Francisco" }
+    },
+    { "name": "Monstro Labatut", "article": "Monstro Labatut", "tags": { "regiao": "Nordeste" } },
+    { "name": "Onça Maneta", "article": "Onça Maneta", "tags": { "tipo": "criatura" } },
+    {
+      "name": "Uirapuru",
+      "article": "Uirapuru (mito)",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    {
+      "name": "Sukuyu'wera",
+      "article": "Sukuyu'wera",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    {
+      "name": "Luzerna",
+      "article": "Luzerna (lenda)",
+      "tags": { "regiao": "Nordeste", "tipo": "aparição" }
+    },
+    { "name": "Coca", "article": "Coca (folclore)", "tags": { "origem": "europeia" } },
+    { "name": "Cumacanga", "article": "Cumacanga", "tags": { "origem": "indígena" } },
+    { "name": "Anaconda gigante", "article": "Anaconda gigante", "tags": { "regiao": "Norte" } },
+    { "name": "Velho do saco", "article": "Velho do saco", "tags": { "origem": "europeia" } },
+    {
+      "name": "Capelobo",
+      "article": "Capelobo",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    { "name": "João Galafuz", "article": "João Galafuz", "tags": { "tipo": "duende" } },
+    {
+      "name": "Ataíde",
+      "article": "Ataíde (mitologia)",
+      "tags": { "regiao": "Norte", "tipo": "encantado" }
+    },
+    {
+      "name": "Cainamé",
+      "article": "Cainamé",
+      "tags": { "origem": "indígena", "regiao": "Norte" }
+    },
+    {
+      "name": "Ururau da Lapa",
+      "article": "Ururau da Lapa (lenda)",
+      "tags": { "regiao": "Sudeste" }
+    },
+    { "name": "Tau", "article": "Tau (mitologia)", "tags": { "origem": "indígena" } },
+    {
+      "name": "Yaguareté-abá",
+      "article": "Yaguareté-abá",
+      "tags": { "origem": "indígena", "regiao": "Sul" }
+    },
+    {
+      "name": "Bruxa Silvina",
+      "article": "Bruxa Silvina",
+      "tags": { "regiao": "Sudeste", "tipo": "bruxa" }
+    }
   ]
 }

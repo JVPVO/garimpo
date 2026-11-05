@@ -5,6 +5,7 @@
     "fruta-todas: Cacau-do-mato -> 0.75",
     "fruta-todas: Mari -> 0.75",
     "fruta-todas: Camapu -> 0.75",
+    "fruta-todas: Cacauí -> 0.75",
     "fruta-todas: Envira -> 0.75",
     "fruta-todas: Pinhão -> 0.75",
     "fruta-amazonia: Caju -> 0.30",
@@ -19,7 +20,6 @@
     "fruta-mata: Pinhão -> 0.75",
     "fruta-caatinga: Umbu -> 0.30",
     "fruta-caatinga: Mangaba -> 0.30",
-    "prato-todos: Acarajé -> 0.30",
     "prato-todos: Farofa -> 0.30",
     "prato-todos: Arroz e feijão -> 0.30",
     "prato-todos: Escondidinho -> 0.30",
@@ -28,6 +28,7 @@
     "prato-todos: Tacacá -> 0.30",
     "prato-todos: Pato no tucupi -> 0.30",
     "prato-todos: Barreado -> 0.30",
+    "prato-todos: Bobó de camarão -> 0.30",
     "prato-todos: Galinhada -> 0.30",
     "prato-todos: Arroz carreteiro -> 0.30",
     "prato-todos: Bolo de carne -> 0.70",
@@ -38,14 +39,13 @@
     "prato-todos: Lombo de porco -> 0.70",
     "prato-todos: Linguiça -> 0.70",
     "prato-todos: Chouriço -> 0.70",
-    "prato-nordeste: Acarajé -> 0.30",
     "prato-nordeste: Escondidinho -> 0.30",
     "prato-nordeste: Carne de sol -> 0.30",
+    "prato-nordeste: Pamonha -> 0.30",
     "prato-nordeste: Arroz de leite -> 0.70",
     "prato-nordeste: Mão de vaca -> 0.70",
     "prato-nordeste: Peixe ao leite de coco -> 0.70",
     "prato-nordeste: Chouriço -> 0.70",
-    "prato-bahia: Acarajé -> 0.30",
     "prato-bahia: Carne de sol -> 0.30",
     "prato-bahia: Bobó de camarão -> 0.30",
     "prato-minas: Feijão tropeiro -> 0.30",
@@ -118,7 +118,6 @@
     "desenho-todos: Super Mario -> 0.55",
     "desenho-todos: Homem-Aranha -> 0.55",
     "marca-todas: Sadia -> 0.30",
-    "marca-todas: Brahma -> 0.30",
     "marca-todas: Perdigão -> 0.30",
     "marca-todas: Seara -> 0.30",
     "marca-todas: Riachuelo -> 0.30",
@@ -145,7 +144,6 @@
     "marca-moda: Lojas Avenida -> 0.55",
     "marca-moda: Via Marte -> 0.55",
     "marca-moda: Beira Rio -> 0.55",
-    "marca-lb: Brahma -> 0.30",
     "marca-lb: Beira Rio -> 0.55",
     "marca-lc: Café Bom Dia -> 0.55",
     "marca-lc: Café do Ponto -> 0.55",
@@ -184,13 +182,13 @@
       "text": "Cite um estado do Brasil",
       "n": 27,
       "obvious": ["São Paulo", "Rio de Janeiro", "Rio Grande do Sul", "Minas Gerais", "Bahia"],
-      "rarest": ["Amapá", "Acre", "Alagoas", "Roraima", "Sergipe"]
+      "rarest": ["Acre", "Alagoas", "Amapá", "Roraima", "Sergipe"]
     },
     "uf-litoral": {
       "text": "Cite um estado brasileiro com litoral",
       "n": 18,
       "obvious": ["São Paulo", "Rio de Janeiro", "Rio Grande do Sul", "Bahia", "Pará"],
-      "rarest": ["Piauí", "Amapá", "Alagoas", "Roraima", "Sergipe"]
+      "rarest": ["Piauí", "Alagoas", "Amapá", "Roraima", "Sergipe"]
     },
     "capital-br": {
       "text": "Cite uma capital de estado brasileiro",
@@ -232,7 +230,7 @@
       "text": "Cite uma cidade de Minas Gerais",
       "n": 204,
       "obvious": ["Juiz de Fora", "Belo Horizonte", "Ouro Preto", "São João del-Rei", "Contagem"],
-      "rarest": ["Buritizeiro", "Turmalina", "Cambuquira", "São João Nepomuceno", "Prados"]
+      "rarest": ["Buritizeiro", "Turmalina", "São João Nepomuceno", "Prados", "Cambuquira"]
     },
     "cidade-rj": {
       "text": "Cite uma cidade do estado do Rio de Janeiro",
@@ -250,7 +248,7 @@
       "text": "Cite uma cidade do Paraná",
       "n": 97,
       "obvious": ["Curitiba", "Londrina", "Maringá", "Foz do Iguaçu", "Ponta Grossa"],
-      "rarest": ["Arapoti", "Mandaguaçu", "Ortigueira", "Imbituva", "Itaperuçu"]
+      "rarest": ["Arapoti", "Ortigueira", "Cambará", "Imbituva", "Itaperuçu"]
     },
     "cidade-sc": {
       "text": "Cite uma cidade de Santa Catarina",
@@ -282,8 +280,8 @@
       "obvious": ["Manaus", "Porto Velho", "Boa Vista", "Belém", "Rio Branco"],
       "rarest": [
         "Nova Esperança do Piriá",
-        "Limoeiro do Ajuru",
         "Marapanim",
+        "Limoeiro do Ajuru",
         "Tracuateua",
         "São João de Pirabas"
       ]
@@ -292,25 +290,25 @@
       "text": "Cite uma cidade do Centro-Oeste",
       "n": 141,
       "obvious": ["Brasília", "Campo Grande", "Goiânia", "Cuiabá", "Rio Verde"],
-      "rarest": ["Itaquiraí", "Alexânia", "Matupá", "Itapuranga", "Itapaci"]
+      "rarest": ["Terenos", "Itaquiraí", "Matupá", "Itapuranga", "Itapaci"]
     },
     "cidade-la": {
       "text": "Cite uma cidade brasileira que começa com A",
       "n": 137,
       "obvious": ["Americana", "Aracaju", "Anápolis", "Araraquara", "Araçatuba"],
-      "rarest": ["Altinho", "Acreúna", "Alagoa Nova", "Alexânia", "Aquidabã"]
+      "rarest": ["Agrestina", "Anajás", "Anajatuba", "Altinho", "Aquidabã"]
     },
     "cidade-lb": {
       "text": "Cite uma cidade brasileira que começa com B",
       "n": 130,
       "obvious": ["Brasília", "Belo Horizonte", "Boa Vista", "Belém", "Blumenau"],
-      "rarest": ["Buriti", "Buritis (RO)", "Boquim", "Bodoquena", "Bequimão"]
+      "rarest": ["Bambuí", "Boquim", "Bananeiras", "Bodoquena", "Bequimão"]
     },
     "cidade-lc": {
       "text": "Cite uma cidade brasileira que começa com C",
       "n": 248,
       "obvious": ["Campo Grande", "Curitiba", "Campinas", "Caxias do Sul", "Contagem"],
-      "rarest": ["Caririaçu", "Capoeiras", "Chorozinho", "Cupira", "Caaporã"]
+      "rarest": ["Capoeiras", "Cambuquira", "Chorozinho", "Cupira", "Caaporã"]
     },
     "cidade-lm": {
       "text": "Cite uma cidade brasileira que começa com M",
@@ -346,7 +344,13 @@
       "text": "Cite uma cidade histórica brasileira",
       "n": 81,
       "obvious": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador", "Recife"],
-      "rarest": ["Icó", "Vila Bela da Santíssima Trindade", "Laranjeiras", "Natividade", "Prados"]
+      "rarest": [
+        "Vila Bela da Santíssima Trindade",
+        "Bananal",
+        "Laranjeiras",
+        "Natividade",
+        "Prados"
+      ]
     },
     "presidente-todos": {
       "text": "Cite um presidente do Brasil",
@@ -360,8 +364,8 @@
       ],
       "rarest": [
         "Hermes da Fonseca",
-        "Epitácio Pessoa",
         "Nereu Ramos",
+        "Epitácio Pessoa",
         "Delfim Moreira",
         "José Linhares"
       ]
@@ -377,80 +381,98 @@
         "Milton Santos"
       ],
       "rarest": [
-        "Adolpho Ducke",
+        "Crodowaldo Pavan",
         "Rodolpho von Ihering",
         "Luiz Hildebrando Pereira da Silva",
         "Leopoldo de Meis",
         "Thereza Imanishi-Kari"
       ]
     },
+    "politico-todos": {
+      "text": "Cite um político brasileiro",
+      "n": 865,
+      "obvious": [
+        "Dilma Rousseff",
+        "Jair Bolsonaro",
+        "Fernando Henrique Cardoso",
+        "Luiz Inácio Lula da Silva",
+        "Marina Silva"
+      ],
+      "rarest": [
+        "Euclides Scalco",
+        "Cabo Almi",
+        "Affonso Arinos de Mello Franco",
+        "Irondi Mantoan Pugliesi",
+        "Caio Koch-Weser"
+      ]
+    },
     "jogador-todos": {
       "text": "Cite um jogador da Seleção Brasileira",
-      "n": 720,
+      "n": 899,
       "obvious": ["Ronaldo", "Gabriel Jesus", "Roberto Carlos", "Thiago Silva", "David Luiz"],
       "rarest": [
-        "Germano Boettcher Sobrinho",
-        "Ministrinho",
-        "Matheus Vidotto",
-        "Elson Iazegi Beyruth",
-        "Almir Pernambuquinho"
+        "Pedro Rizzetti",
+        "Leiz",
+        "Araty Viana",
+        "Goliardo Gelardi",
+        "Enzio Henrique Serafini"
       ]
     },
     "jogador-atacante": {
       "text": "Cite um atacante da Seleção Brasileira",
-      "n": 219,
+      "n": 273,
       "obvious": ["Ronaldo", "Neymar", "Gabriel Jesus", "Fred", "Pelé"],
       "rarest": [
-        "Teóphilo Bettencourt Pereira",
-        "Julinho",
-        "Áttila de Carvalho",
-        "Elson Iazegi Beyruth",
-        "Almir Pernambuquinho"
+        "José Mario Donizeti Baroni",
+        "Aírton Batista dos Santos",
+        "Petronilho de Brito",
+        "Edmur Ribeiro",
+        "Claudionor Gonçalves da Silva"
       ]
     },
     "jogador-goleiro": {
       "text": "Cite um goleiro da Seleção Brasileira",
-      "n": 63,
-      "obvious": ["Leão", "Marcos", "Fábio", "Rogério Ceni", "Dida"],
+      "n": 75,
+      "obvious": ["Leão", "Marcos", "Fábio", "Rogério Ceni", "Alisson"],
       "rarest": [
-        "Walter de Sousa Goulart",
-        "Oswaldo Barros Velloso",
-        "Oberdan Cattani",
+        "Casemiro do Amaral",
+        "Matheus Vidotto",
+        "Osvaldo Alfredo da Silva",
         "Germano Boettcher Sobrinho",
-        "Matheus Vidotto"
+        "Luiz de Matos Luchesi"
       ]
     },
     "jogador-zagueiro": {
       "text": "Cite um zagueiro da Seleção Brasileira",
-      "n": 179,
+      "n": 228,
       "obvious": ["David Luiz", "Daniel Alves", "Thiago Silva", "Danilo", "Gil"],
       "rarest": [
-        "Gláuber Leandro Honorato Berti",
-        "Oscarino Costa Silva",
-        "César Augusto Belli Michelon",
-        "Octacílio Pinheiro Guerra",
-        "Sylvio Hoffman Mazzi"
+        "Modesto Malachias",
+        "Enzio Henrique Serafini",
+        "Pedro Rizzetti",
+        "Leiz",
+        "Araty Viana"
       ]
     },
     "jogador-meia": {
       "text": "Cite um meio-campista da Seleção Brasileira",
-      "n": 235,
+      "n": 299,
       "obvious": ["Arthur", "Fred", "Luiz Gustavo", "Pelé", "Hulk"],
       "rarest": [
-        "Hermógenes Valente Fonseca",
-        "Argemiro Pinheiro da Silva",
-        "Estanislau de Figueiredo Pamplona",
-        "Fernando Giudicelli",
-        "Ministrinho"
+        "Edgar Aldrighi Júnior",
+        "Ênio Rodrigues",
+        "Danival",
+        "Augusto Maria Sisson",
+        "Goliardo Gelardi"
       ]
     },
     "jogador-lateral": {
       "text": "Cite um lateral da Seleção Brasileira",
-      "n": 63,
+      "n": 66,
       "obvious": ["Roberto Carlos", "Marcelo", "Daniel Alves", "Filipe Luís", "Zé Maria"],
       "rarest": [
         "Dyego Rocha Coelho",
-        "Evanílson",
+        "Josimar",
         "Geferson Cerqueira Teles",
         "Armando Del Debbio",
         "Vanderson"
@@ -458,14 +480,14 @@
     },
     "jogador-lr": {
       "text": "Cite um jogador da Seleção Brasileira cujo nome começa com R",
-      "n": 67,
+      "n": 82,
       "obvious": ["Ronaldo", "Roberto Carlos", "Ricardo Rocha", "Rogério", "Romário"],
       "rarest": [
-        "Romeu Pellicciari",
-        "Rubens Josué da Costa",
-        "Ricardo Soares Florêncio",
-        "Rafael Felipe Scheidt",
-        "Rodolfo Barteczko"
+        "Roberto Fernando Frojuelo",
+        "Rinaldo Luís Dias Amorim",
+        "Ronaldo Gonçalves Drummond",
+        "Reginaldo Paes Leme",
+        "Roberto Belangero"
       ]
     },
     "jogadora-todas": {
@@ -484,53 +506,53 @@
       "text": "Cite um time de futebol brasileiro",
       "n": 342,
       "obvious": ["São Paulo", "Santos", "Internacional", "Corinthians", "Flamengo"],
-      "rarest": ["Penedense", "IAPE", "Socorrense", "Itupiranga", "Juventude Samas"]
+      "rarest": ["Tuntum", "IAPE", "Socorrense", "Itupiranga", "Juventude Samas"]
     },
     "time-campeao": {
       "text": "Cite um time que já foi campeão brasileiro",
       "n": 17,
-      "obvious": ["Corinthians", "Flamengo", "São Paulo", "Santos", "Palmeiras"],
-      "rarest": ["Sport", "Atlético Mineiro", "Guarani", "Vasco da Gama", "Athletico Paranaense"]
+      "obvious": ["Corinthians", "Flamengo", "São Paulo", "Palmeiras", "Santos"],
+      "rarest": ["Coritiba", "Bahia", "Athletico Paranaense", "Sport", "Guarani"]
     },
     "time-sp": {
       "text": "Cite um time de futebol paulista",
       "n": 45,
       "obvious": ["São Paulo", "Santos", "Corinthians", "Palmeiras", "Portuguesa"],
-      "rarest": ["Penapolense", "Capivariano", "Linense", "Sertãozinho", "Velo Clube"]
+      "rarest": ["Linense", "Taubaté", "Capivariano", "Velo Clube", "Sertãozinho"]
     },
     "time-rj": {
       "text": "Cite um time de futebol do estado do Rio de Janeiro",
       "n": 26,
-      "obvious": ["Flamengo", "Fluminense", "Botafogo", "America-RJ", "Americano"],
+      "obvious": ["Flamengo", "Fluminense", "Vasco da Gama", "Botafogo", "America-RJ"],
       "rarest": ["Sampaio Corrêa-RJ", "Serrano-RJ", "Resende", "Audax Rio", "Tigres do Brasil"]
     },
     "time-mg": {
       "text": "Cite um time de futebol mineiro",
       "n": 20,
-      "obvious": ["Cruzeiro", "América Mineiro", "Boa Esporte", "Villa Nova", "Uberlândia"],
+      "obvious": ["Atlético Mineiro", "Cruzeiro", "América Mineiro", "Boa Esporte", "Villa Nova"],
       "rarest": ["URT", "Mamoré", "Itabirito", "Valeriodoce", "Patrocinense"]
     },
     "time-sul": {
       "text": "Cite um time de futebol do Sul do Brasil",
       "n": 49,
       "obvious": ["Internacional", "Grêmio", "Glória", "Coritiba", "Juventude"],
-      "rarest": ["Camboriú", "Ypiranga-RS", "Concórdia", "J. Malucelli", "Prudentópolis"]
+      "rarest": ["Ypiranga-RS", "Concórdia", "Camboriú", "J. Malucelli", "Prudentópolis"]
     },
     "time-nordeste": {
       "text": "Cite um time de futebol do Nordeste",
       "n": 98,
       "obvious": ["Vitória", "Bahia", "Santa Cruz", "Fortaleza", "Sport"],
-      "rarest": ["Tuntum", "Penedense", "IAPE", "Socorrense", "Juventude Samas"]
+      "rarest": ["Jaciobá", "Tuntum", "IAPE", "Socorrense", "Juventude Samas"]
     },
     "time-la": {
       "text": "Cite um time de futebol brasileiro que começa com A",
       "n": 38,
-      "obvious": ["América Mineiro", "Avaí", "ABC", "America-RJ", "Americano"],
+      "obvious": ["Atlético Mineiro", "América Mineiro", "Avaí", "ABC", "America-RJ"],
       "rarest": [
-        "Amazônia Independente",
         "Athletic Club",
-        "Atlético Cajazeirense",
         "Afogados",
+        "Amazônia Independente",
+        "Atlético Cajazeirense",
         "Aquidauanense"
       ]
     },
@@ -538,7 +560,7 @@
       "text": "Cite um time de futebol brasileiro que começa com C",
       "n": 39,
       "obvious": ["Corinthians", "Cruzeiro", "Coritiba", "Ceará", "Chapecoense"],
-      "rarest": ["Camaçari", "Cametá", "Caucaia", "CSP", "Cordino"]
+      "rarest": ["Caucaia", "Camboriú", "CSP", "Cametá", "Cordino"]
     },
     "time-ls": {
       "text": "Cite um time de futebol brasileiro que começa com S",
@@ -593,9 +615,9 @@
         "Gabi"
       ],
       "rarest": [
-        "Evelyn Cristina Lourenco Delogú",
         "Marcelo Fronkowiack",
         "Idner Faustino Lima Martins",
+        "Fernanda Gritzbach",
         "Natinha",
         "Maique"
       ]
@@ -623,7 +645,7 @@
       "n": 462,
       "obvious": ["Ronaldo", "Ricardo Santos", "Gabriel Jesus", "Roberto Carlos", "Thiago Silva"],
       "rarest": [
-        "Alexandre Welter",
+        "Fernando Brobró",
         "Zaine",
         "Clinio de Freitas",
         "Ronaldo Senfft",
@@ -658,13 +680,13 @@
       "text": "Cite uma fruta nativa do Brasil",
       "n": 139,
       "obvious": ["Açaí", "Abacaxi", "Cereja-do-mato", "Cacau", "Cereja-do-cerrado"],
-      "rarest": ["Bapeba", "Cutite", "Curriola", "Cataia", "Puçá"]
+      "rarest": ["Guamirim", "Bapeba", "Curriola", "Cataia", "Puçá"]
     },
     "fruta-amazonia": {
       "text": "Cite uma fruta da Amazônia",
       "n": 45,
       "obvious": ["Abacaxi", "Açaí", "Cacau", "Guaraná", "Cupuaçu"],
-      "rarest": ["Uxi", "Mapati", "Cupuí", "Pajurá", "Cutite"]
+      "rarest": ["Uxi", "Mapati", "Cutite", "Cupuí", "Pajurá"]
     },
     "fruta-cerrado": {
       "text": "Cite uma fruta do Cerrado",
@@ -676,13 +698,13 @@
         "Pera-do-cerrado",
         "Maracujá-do-cerrado"
       ],
-      "rarest": ["Araçá-do-cerrado", "Guapeva", "Guamirim", "Curriola", "Puçá"]
+      "rarest": ["Araticum", "Guapeva", "Guamirim", "Curriola", "Puçá"]
     },
     "fruta-mata": {
       "text": "Cite uma fruta da Mata Atlântica",
       "n": 42,
       "obvious": ["Cereja-do-mato", "Pitanga", "Jabuticaba", "Cacau", "Guaraná"],
-      "rarest": ["Pitangatuba", "Cabeludinha", "Araçá-piranga", "Bapeba", "Cataia"]
+      "rarest": ["Cambuí", "Araçá-piranga", "Bapeba", "Cabeludinha", "Cataia"]
     },
     "fruta-caatinga": {
       "text": "Cite uma fruta da Caatinga",
@@ -705,9 +727,9 @@
     "ave-la": {
       "text": "Cite uma ave brasileira que começa com A",
       "n": 100,
-      "obvious": ["Arara-azul-grande", "Arara-vermelha", "Arara-canindé", "Andorinha", "Anhuma"],
+      "obvious": ["Arara-azul-grande", "Arara-vermelha", "Arara-canindé", "Andorinha", "Arara"],
       "rarest": [
-        "Andorinhão-da-amazônia",
+        "Arapaçu-de-lafresnaye",
         "Arapaçu-de-bico-vermelho",
         "Arapaçu-meio-barrado",
         "Arapaçu-de-barriga-pintada",
@@ -764,11 +786,11 @@
         "Feijão verde",
         "Carne de panela",
         "Sopa de feijão",
-        "Pão de queijo"
+        "Feijão gordo"
       ],
       "rarest": [
-        "Aberém",
         "Costelinha com ora-pro-nóbis",
+        "Peixe moqueado",
         "Arroz com suã",
         "Caranguejada",
         "Chambaril"
@@ -777,14 +799,14 @@
     "prato-nordeste": {
       "text": "Cite um prato típico do Nordeste",
       "n": 80,
-      "obvious": ["Feijão verde", "Tapioca", "Feijão de corda", "Sopa de feijão", "Feijoada"],
-      "rarest": ["Efó", "Aberém", "Xinxim de galinha", "Caranguejada", "Chambaril"]
+      "obvious": ["Feijão verde", "Acarajé", "Tapioca", "Sopa de feijão", "Feijão de corda"],
+      "rarest": ["Efó", "Xinxim de galinha", "Aberém", "Caranguejada", "Chambaril"]
     },
     "prato-bahia": {
       "text": "Cite um prato típico da Bahia",
       "n": 29,
-      "obvious": ["Feijão de corda", "Feijoada", "Frigideira de siri", "Vatapá", "Acarajé"],
-      "rarest": ["Escaldado", "Efó", "Acaçá", "Aberém", "Xinxim de galinha"]
+      "obvious": ["Acarajé", "Feijão de corda", "Feijoada", "Frigideira de siri", "Vatapá"],
+      "rarest": ["Arroz de hauçá", "Maturi", "Efó", "Aberém", "Xinxim de galinha"]
     },
     "prato-minas": {
       "text": "Cite um prato típico de Minas Gerais",
@@ -934,19 +956,19 @@
       "text": "Cite uma novela da Globo",
       "n": 350,
       "obvious": ["Amor à Vida", "Por Amor", "América", "Avenida Brasil", "Páginas da Vida"],
-      "rarest": [
-        "A Ponte dos Suspiros",
-        "O Sheik de Agadir",
-        "Sinhazinha Flô",
-        "A Patota",
-        "A Gata de Vison"
-      ]
+      "rarest": ["O Sheik de Agadir", "Sinhazinha Flô", "A Patota", "Cambalacho", "A Gata de Vison"]
     },
     "novela-todas": {
       "text": "Cite uma novela brasileira",
       "n": 706,
       "obvious": ["Amor à Vida", "Por Amor", "América", "Vale Tudo", "Avenida Brasil"],
-      "rarest": ["Ilsa", "Acorrentados", "A Estranha Clementine", "Acorrentada", "A Gata de Vison"]
+      "rarest": [
+        "A Ponte de Waterloo",
+        "Prelúdio, A Vida de Chopin",
+        "Ilsa",
+        "A Estranha Clementine",
+        "A Gata de Vison"
+      ]
     },
     "novela-70": {
       "text": "Cite uma novela dos anos 1970",
@@ -959,8 +981,8 @@
       "n": 91,
       "obvious": ["Vale Tudo", "Corpo a Corpo", "Água Viva", "Roda de Fogo", "Que Rei Sou Eu?"],
       "rarest": [
-        "Drácula, uma História de Amor",
         "Maçã do Amor",
+        "Cambalacho",
         "Dulcinéa Vai à Guerra",
         "A Gata Comeu",
         "Acorrentada"
@@ -1043,11 +1065,11 @@
         "A Viagem"
       ],
       "rarest": [
-        "O Santo Mestiço",
         "Nossa Filha Gabriela",
         "Padre Tião",
         "Rosinha do Sobrado",
-        "Supermanoela"
+        "Supermanoela",
+        "Cambalacho"
       ]
     },
     "novela-nove": {
@@ -1079,11 +1101,11 @@
       "n": 87,
       "obvious": ["Jesus", "Rebelde", "Vidas em Jogo", "Prova de Amor", "Caminhos do Coração"],
       "rarest": [
+        "A Morta sem Espelho",
         "As Professorinhas",
         "Os Fidalgos da Casa Mourisca",
         "A Muralha",
-        "Turbilhão",
-        "Acorrentados"
+        "Turbilhão"
       ]
     },
     "novela-la": {
@@ -1091,10 +1113,10 @@
       "n": 125,
       "obvious": ["Amor à Vida", "América", "Avenida Brasil", "Além do Tempo", "A Vida da Gente"],
       "rarest": [
+        "A Moça do Sobrado Grande",
+        "A Pequena Órfã",
         "A Ponte de Waterloo",
-        "Acorrentados",
         "A Estranha Clementine",
-        "Acorrentada",
         "A Gata de Vison"
       ]
     },
@@ -1151,8 +1173,8 @@
         "Deus e o Diabo na Terra do Sol"
       ],
       "rarest": [
+        "Cinderelas, Lobos e um Príncipe Encantado",
         "Maria Bethânia, música é perfume",
-        "Aitaré da Praia",
         "Samba Riachão",
         "Convém Martelar",
         "Ainda Orangotangos"
@@ -1206,8 +1228,8 @@
       ],
       "rarest": [
         "Historias que só existem quando lembradas",
-        "Rio Sex Comedy",
         "Os Parças 2",
+        "Rio Sex Comedy",
         "Quando as Luzes das Marquises se Apagam - a História da Cinelândia Paulistana",
         "Indianara"
       ]
@@ -1238,10 +1260,10 @@
         "Amor Estranho Amor",
         "A Hora da Estrela",
         "A Idade da Terra",
-        "As Boas Maneiras"
+        "Arca de Noé"
       ],
       "rarest": [
-        "Aitaré da Praia",
+        "A Dama do Lotação",
         "Abismo Prateado",
         "A Ostra e o Vento",
         "A Partilha",
@@ -1271,17 +1293,17 @@
       "n": 195,
       "obvious": ["3%", "Hoje em Dia", "Jornal Nacional", "Bem Amigos!", "A Grande Família"],
       "rarest": [
-        "Buzina do Chacrinha",
         "Programa Amaury Jr.",
         "Discoteca do Chacrinha",
         "Metrópolis",
-        "Hell's Kitchen: Cozinha Sob Pressão"
+        "Hell's Kitchen: Cozinha Sob Pressão",
+        "Bambalalão"
       ]
     },
     "apresentador": {
       "text": "Cite um apresentador ou uma apresentadora da TV brasileira",
-      "n": 444,
-      "obvious": ["Neto", "Xuxa", "Silvio Santos", "Sandy", "Preta Gil"],
+      "n": 433,
+      "obvious": ["Neto", "Xuxa", "Silvio Santos", "Paulo Gustavo", "Ana Maria Braga"],
       "rarest": [
         "Sandro Ivanowski",
         "Rufis Junior",
@@ -1292,20 +1314,20 @@
     },
     "humorista": {
       "text": "Cite um humorista brasileiro",
-      "n": 194,
+      "n": 187,
       "obvious": [
-        "Alexandre Frota",
         "Luís Gustavo",
         "Rodrigo Marques",
         "Ingrid Guimarães",
-        "Paulo Gustavo"
+        "Paulo Gustavo",
+        "Renato Aragão"
       ],
       "rarest": [
         "Epaminondas Gustavo",
         "Gordox",
         "Carol Zoccoli",
-        "Gino Cortopassi",
-        "Alberto Baruque"
+        "Alberto Baruque",
+        "Gino Cortopassi"
       ]
     },
     "youtuber": {
@@ -1316,7 +1338,7 @@
     },
     "bbb-todos": {
       "text": "Cite um participante do Big Brother Brasil",
-      "n": 219,
+      "n": 223,
       "obvious": [
         "Max Porto",
         "Fernando Fernandes",
@@ -1342,31 +1364,55 @@
       "text": "Cite um desenho animado que marcou a sua infância",
       "n": 190,
       "obvious": ["Naruto", "Madagascar", "Mickey Mouse", "X-Men", "Dragon Ball"],
-      "rarest": ["Bluey", "Jambo e Ruivão", "Tiny Toons", "Recess", "Os Snorkels"]
+      "rarest": [
+        "Jayce e os Guerreiros do Espaço",
+        "Jambo e Ruivão",
+        "Tiny Toons",
+        "Recess",
+        "Os Snorkels"
+      ]
     },
     "turma-monica": {
       "text": "Cite um personagem da Turma da Mônica",
       "n": 59,
       "obvious": ["Frank", "Seu Sousa", "Ronaldinho Gaúcho", "Mônica", "Do Contra"],
-      "rarest": ["Lorde Coelhão", "Tikara", "Zé Vampir", "Alfredinho", "Lobi"]
+      "rarest": ["Bugu", "Lorde Coelhão", "Tikara", "Zé Vampir", "Lobi"]
     },
     "cantor-todos": {
       "text": "Cite um cantor ou uma cantora brasileira",
-      "n": 958,
-      "obvious": ["Roberto Carlos", "Gilberto Gil", "Xuxa", "Renato Russo", "Rita Lee"],
-      "rarest": ["Bryan Behr", "Djonga", "MC Ingryd", "MC Rodolfinho", "MC Teteu"]
+      "n": 1278,
+      "obvious": ["Roberto Carlos", "Gilberto Gil", "Renato Russo", "Xuxa", "Rita Lee"],
+      "rarest": [
+        "Antônio Carlos dos Reis Rayol",
+        "Fernando Portari",
+        "MC Ingryd",
+        "MC Rodolfinho",
+        "MC Teteu"
+      ]
     },
     "cantora": {
       "text": "Cite uma cantora brasileira",
-      "n": 363,
+      "n": 506,
       "obvious": ["Xuxa", "Rita Lee", "Carmen Miranda", "Marília Mendonça", "Sandy"],
-      "rarest": ["Stellinha Egg", "Deize Tigrona", "Luísa Maita", "Kismara Pessatti", "MC Ingryd"]
+      "rarest": [
+        "Bê Ignacio",
+        "Lurdez da Luz",
+        "Adriènne Ferreira",
+        "Inaicyra Falcão dos Santos",
+        "MC Ingryd"
+      ]
     },
     "cantor-masc": {
       "text": "Cite um cantor brasileiro",
-      "n": 502,
-      "obvious": ["Roberto Carlos", "Renato Russo", "Gilberto Gil", "Tim Maia", "Chico Buarque"],
-      "rarest": ["Cadão Volpato", "Almir Guineto", "Eric Ehrmann", "Rennan da Penha", "Djonga"]
+      "n": 681,
+      "obvious": ["Roberto Carlos", "Renato Russo", "Gilberto Gil", "Tim Maia", "Seu Jorge"],
+      "rarest": [
+        "Ewandro Stenzowski",
+        "Eliezer Setton",
+        "Saulo Roston",
+        "Antônio Carlos dos Reis Rayol",
+        "Fernando Portari"
+      ]
     },
     "cantor-mpb": {
       "text": "Cite um cantor ou cantora de MPB",
@@ -1399,8 +1445,8 @@
         "Grupo Menos é Mais",
         "Luiz Grande",
         "Seu Jorge",
-        "Luiz Carlos",
-        "Carmen Miranda"
+        "Carmen Miranda",
+        "Clara Nunes"
       ],
       "rarest": ["Batatinha", "Noca da Portela", "Kiloucura", "Suel", "Délcio Carvalho"]
     },
@@ -1408,18 +1454,18 @@
       "text": "Cite um cantor ou banda de axé",
       "n": 61,
       "obvious": ["Ivete Sangalo", "Tomate", "Bell", "Carlinhos Brown", "Daniela Mercury"],
-      "rarest": ["Alinne Rosa", "Sarajane", "Vina Calmon", "Jau", "Tatau"]
+      "rarest": ["Banda Reflexu's", "Sarajane", "Vina Calmon", "Jau", "Tatau"]
     },
     "cantor-rap": {
       "text": "Cite um rapper ou grupo de rap brasileiro",
       "n": 89,
       "obvious": ["Primeira Função", "Bob do Contra", "Gustavo Pereira", "Marina Sena", "Borges"],
-      "rarest": ["Sidoka", "Mano Teko", "Coruja BC1", "Shawlin", "Djonga"]
+      "rarest": ["Slim Rimografia", "Mano Teko", "Sidoka", "Coruja BC1", "Shawlin"]
     },
     "cantor-gospel": {
       "text": "Cite um cantor, cantora ou banda gospel brasileira",
       "n": 91,
-      "obvious": ["Preto no Branco", "Banda Dom", "Fernanda", "Sérgio Lopes", "Diante do Trono"],
+      "obvious": ["Preto no Branco", "Banda Dom", "Fernanda", "Diante do Trono", "Aline Barros"],
       "rarest": ["Kemuel", "Ziza Fernandes", "Elizeu Gomes", "Asaph Borba", "Midian Lima"]
     },
     "cantor-rock": {
@@ -1454,51 +1500,51 @@
     },
     "cantor-la": {
       "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com A",
-      "n": 76,
+      "n": 99,
       "obvious": ["Ana Carolina", "Anitta", "Andre Matos", "Ana Maria Braga", "Angélica"],
-      "rarest": ["Adão Dãxalebaradã", "Aggro Santos", "Asaph Borba", "Alinne Rosa", "Almir Guineto"]
+      "rarest": [
+        "Aggro Santos",
+        "Almira Castilho",
+        "Anescarzinho do Salgueiro",
+        "Adriènne Ferreira",
+        "Antônio Carlos dos Reis Rayol"
+      ]
     },
     "cantor-lc": {
       "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com C",
-      "n": 62,
-      "obvious": ["Christian", "Carmen Miranda", "Chico Buarque", "Caetano Veloso", "Clara Nunes"],
-      "rarest": ["Carmélia Alves", "Celina Borges", "Clemilda", "Carol Saboya", "Cadão Volpato"]
+      "n": 88,
+      "obvious": ["Carmen Miranda", "Christian", "Chico Buarque", "Caetano Veloso", "Clara Nunes"],
+      "rarest": ["Clemilda", "Casquinha da Portela", "C4bal", "Carlos Toshiki", "Ceumar"]
     },
     "cantor-lm": {
       "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com M",
-      "n": 125,
+      "n": 162,
       "obvious": [
-        "Marília Mendonça",
         "Milton Nascimento",
+        "Marília Mendonça",
         "Maria Rita",
         "Marisa Monte",
         "Manoel Gomes"
       ],
-      "rarest": ["Midian Lima", "MC Marcelly", "MC Ingryd", "MC Rodolfinho", "MC Teteu"]
+      "rarest": ["MC Marcelly", "Maria d'Apparecida", "MC Ingryd", "MC Rodolfinho", "MC Teteu"]
     },
     "cantor-lr": {
       "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com R",
-      "n": 54,
-      "obvious": ["Roberto Carlos", "Renato Russo", "Rita Lee", "Renato Aragão", "Rick"],
-      "rarest": [
-        "Rosalia de Souza",
-        "Rincon Sapiência",
-        "Rubel",
-        "Renato Mismetti",
-        "Rennan da Penha"
-      ]
+      "n": 73,
+      "obvious": ["Roberto Carlos", "Renato Russo", "Rita Lee", "Rick", "Renato Aragão"],
+      "rarest": ["Rico Dalasam", "Renato Mismetti", "Rubel", "Roney Giah", "Rennan da Penha"]
     },
     "cantor-ll": {
       "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com L",
-      "n": 78,
-      "obvious": [
-        "Luiz Gonzaga",
-        "Lua Blanco",
-        "Lucas & Orelha",
-        "Luan Santana",
-        "Larissa Manoela"
-      ],
-      "rarest": ["Lanna Rodrigues", "Leo Kret", "Léo Magalhães", "Loubet", "Luísa Maita"]
+      "n": 113,
+      "obvious": ["Luiz Gonzaga", "Lua Blanco", "Luan Santana", "Leonardo", "Lucas & Orelha"],
+      "rarest": [
+        "Leny Eversong",
+        "Luciano Calazans",
+        "Liriel Domiciano",
+        "Luísa Maita",
+        "Lurdez da Luz"
+      ]
     },
     "banda-br": {
       "text": "Cite uma banda ou grupo musical brasileiro",
@@ -1526,92 +1572,86 @@
     },
     "escritor-todos": {
       "text": "Cite um escritor ou uma escritora brasileira",
-      "n": 655,
-      "obvious": [
-        "Michel Temer",
-        "Fernando Henrique Cardoso",
-        "José Serra",
-        "Machado de Assis",
-        "Paulo Freire"
-      ],
+      "n": 722,
+      "obvious": ["Paulo Freire", "Machado de Assis", "Rita Lee", "Jorge Amado", "Renato Russo"],
       "rarest": [
-        "Aureliano Lessa",
-        "Afonso Arinos de Melo Franco",
-        "Moysés Baumstein",
-        "Philipp von Luetzelburg",
-        "Paulo Aquarone"
+        "Hermes Carleial",
+        "Yde Schloenbach Blumenschein",
+        "Nilto Maciel",
+        "Anajá Caetano",
+        "Paul Le Cointe"
       ]
     },
     "escritora": {
       "text": "Cite uma escritora brasileira",
-      "n": 174,
+      "n": 217,
       "obvious": [
         "Rita Lee",
         "Carolina Maria de Jesus",
         "Fernanda Torres",
-        "Lua Blanco",
-        "Marina Ruy Barbosa"
-      ],
-      "rarest": [
-        "Alessandra Silvestri-Levy",
-        "Simone Saback",
-        "Márcia Denser",
-        "Malvina Tavares",
-        "Violante Bivar e Velasco"
-      ]
-    },
-    "escritor-lc": {
-      "text": "Cite um escritor brasileiro cujo nome começa com C",
-      "n": 47,
-      "obvious": [
-        "Chico Buarque",
-        "Caetano Veloso",
-        "Clarice Lispector",
-        "Carolina Maria de Jesus",
-        "Chico Xavier"
-      ],
-      "rarest": [
-        "Carlos María Ramírez",
-        "Carlos Magalhães de Azeredo",
-        "Cristovão Tezza",
-        "Cícero Sandroni",
-        "Carola Saavedra"
-      ]
-    },
-    "escritor-lm": {
-      "text": "Cite um escritor brasileiro cujo nome começa com M",
-      "n": 89,
-      "obvious": [
-        "Michel Temer",
-        "Machado de Assis",
-        "Marcos Pontes",
         "Maria Ribeiro",
         "Marina Ruy Barbosa"
       ],
       "rarest": [
-        "Manuel Inácio da Silva Alvarenga",
-        "Michel Laub",
+        "Amália dos Passos Figueiroa",
+        "Claudia Wallin",
+        "Ana Eurídice Eufrosina de Barandas",
+        "Yde Schloenbach Blumenschein",
+        "Anajá Caetano"
+      ]
+    },
+    "escritor-lc": {
+      "text": "Cite um escritor brasileiro cujo nome começa com C",
+      "n": 52,
+      "obvious": [
+        "Chico Buarque",
+        "Carolina Maria de Jesus",
+        "Clarice Lispector",
+        "Chico Xavier",
+        "Cazuza"
+      ],
+      "rarest": [
+        "Clèmerson Merlin Clève",
+        "Claudio Willer",
+        "Carol Bensimon",
+        "Carlos José Boaventura Kloppenburg",
+        "Claudia Wallin"
+      ]
+    },
+    "escritor-lm": {
+      "text": "Cite um escritor brasileiro cujo nome começa com M",
+      "n": 87,
+      "obvious": [
+        "Machado de Assis",
+        "Maria Ribeiro",
+        "Marina Ruy Barbosa",
+        "Mário de Andrade",
+        "Monteiro Lobato"
+      ],
+      "rarest": [
         "Márcia Denser",
         "Malvina Tavares",
+        "Marcelo Mirisola",
+        "Moema Libera Viezzer",
         "Moysés Baumstein"
       ]
     },
     "escritor-lj": {
       "text": "Cite um escritor brasileiro cujo nome começa com J",
-      "n": 72,
+      "n": 77,
       "obvious": [
-        "José Serra",
-        "José Sarney",
         "Jorge Amado",
         "João Guimarães Rosa",
-        "José de Alencar"
+        "José de Alencar",
+        "João Cabral de Melo Neto",
+        "Jô Soares"
       ],
       "rarest": [
-        "Junqueira Freire",
-        "Joel Rufino dos Santos",
-        "João Guilherme Fischer",
-        "José Comblin",
-        "Jean-Claude Bernardet"
+        "João Gilberto Noll",
+        "José Joaquim da Cunha Azeredo Coutinho",
+        "Joyce Cavalcante",
+        "Jô Bilac",
+        "Jacó Guinsburg"
       ]
     },
     "escritor-pt": {
@@ -1625,8 +1665,8 @@
         "José Rodrigues dos Santos"
       ],
       "rarest": [
-        "Sebastião Rodolfo Dalgado",
         "Albertina Paraíso",
+        "Sebastião Rodolfo Dalgado",
         "Adeodato Barreto",
         "João Cleofas Martins",
         "Laxmanrao Sardessai"
@@ -1634,92 +1674,128 @@
     },
     "ator-todos": {
       "text": "Cite um ator ou uma atriz brasileira",
-      "n": 937,
-      "obvious": ["Roberto Carlos", "Pelé", "Xuxa", "Luis Gustavo", "Rita Lee"],
-      "rarest": ["Sérgio Hingst", "Mariah Buzolin", "Aldine Müller", "Mesquitinha", "Marina Glezer"]
+      "n": 921,
+      "obvious": ["Luis Gustavo", "Tony Ramos", "Regina Duarte", "Alice Braga", "Wagner Moura"],
+      "rarest": [
+        "Alberto Guzik",
+        "Anilda Leão",
+        "Simone Zucato",
+        "Irene Brietzke",
+        "Clara Ricciolini"
+      ]
     },
     "atriz": {
       "text": "Cite uma atriz brasileira",
-      "n": 534,
-      "obvious": ["Xuxa", "Rita Lee", "Carmen Miranda", "Regina Duarte", "Fernanda Montenegro"],
-      "rarest": ["Daúde", "Danielle Foxxx", "Mariah Buzolin", "Aldine Müller", "Marina Glezer"]
+      "n": 514,
+      "obvious": [
+        "Alice Braga",
+        "Regina Duarte",
+        "Fernanda Montenegro",
+        "Fernanda Torres",
+        "Glória Pires"
+      ],
+      "rarest": [
+        "Cibele-Dorsa",
+        "Anilda Leão",
+        "Simone Zucato",
+        "Irene Brietzke",
+        "Clara Ricciolini"
+      ]
     },
     "ator-masc": {
       "text": "Cite um ator brasileiro",
-      "n": 397,
-      "obvious": ["Roberto Carlos", "Pelé", "Silvio Santos", "Tony Ramos", "Chico Buarque"],
-      "rarest": ["Vittorio Capellaro", "Átila Iório", "Paulo Szot", "Sérgio Hingst", "Mesquitinha"]
+      "n": 402,
+      "obvious": [
+        "Tony Ramos",
+        "Wagner Moura",
+        "Lima Duarte",
+        "Alexandre Borges",
+        "Thiago Lacerda"
+      ],
+      "rarest": [
+        "Phellipe Haagensen",
+        "Mario Brasini",
+        "Benki Piyãko",
+        "Charles Möeller",
+        "Alberto Guzik"
+      ]
     },
     "ator-lm": {
       "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com M",
-      "n": 113,
+      "n": 98,
       "obvious": [
-        "Mariana Ximenes",
         "Marina Ruy Barbosa",
-        "Maria Ribeiro",
+        "Mariana Ximenes",
         "Murilo Benício",
-        "Mel Maia"
+        "Mel Maia",
+        "Marjorie Estiano"
       ],
-      "rarest": [
-        "Mariana Weickert",
-        "Maximira Figueiredo",
-        "Mariah Buzolin",
-        "Mesquitinha",
-        "Marina Glezer"
-      ]
+      "rarest": ["Mesquitinha", "Marina Glezer", "Marcio Reolon", "Mario Brasini", "Maria Brechane"]
     },
     "ator-lc": {
       "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com C",
-      "n": 77,
+      "n": 83,
       "obvious": [
-        "Carmen Miranda",
-        "Chico Buarque",
-        "Camila Alves",
         "Camila Pitanga",
-        "Claudia Raia"
+        "Claudia Raia",
+        "Cláudia Abreu",
+        "Carolina Dieckmann",
+        "Cauã Reymond"
       ],
-      "rarest": ["Cármen Santos", "Clara Tiezzi", "Carequinha", "Cristiana Lôbo", "Carine Quadros"]
+      "rarest": [
+        "Cléo de Verberena",
+        "Cláudia Cepeda",
+        "Charles Möeller",
+        "Cibele-Dorsa",
+        "Clara Ricciolini"
+      ]
     },
     "ator-lf": {
       "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com F",
-      "n": 42,
+      "n": 34,
       "obvious": [
         "Fernanda Torres",
         "Fernanda Montenegro",
-        "Fred",
+        "Fernanda Lima",
         "Flávia Alessandra",
-        "Fernanda Lima"
+        "Fernanda Souza"
       ],
       "rarest": [
+        "Francisca Queiroz",
+        "Fábio Audi",
         "Fada Santoro",
-        "Felipe Dylon",
         "Fael Luna",
-        "Fernanda Lessa",
         "Fabrício Boliveira"
       ]
     },
     "ator-lr": {
       "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com R",
-      "n": 56,
+      "n": 58,
       "obvious": [
-        "Roberto Carlos",
-        "Rita Lee",
         "Regina Duarte",
         "Rodrigo Santoro",
-        "Renato Aragão"
+        "Renato Aragão",
+        "Rafael Cardoso",
+        "Reginaldo Faria"
       ],
-      "rarest": ["Renata Fronzi", "Ricardo Macchi", "Riachão", "Rappin' Hood", "Raul Roulien"]
+      "rarest": ["Rodolfo Mayer", "Roberto Pirillo", "Ronny Kriwat", "Ricardo Macchi", "Rita Cléos"]
     },
     "ator-la": {
       "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com A",
-      "n": 94,
-      "obvious": ["Anitta", "Alice Braga", "Alexandre Borges", "Antônio Fagundes", "Angélica"],
+      "n": 87,
+      "obvious": [
+        "Alice Braga",
+        "Adriana Esteves",
+        "Alexandre Borges",
+        "Antônio Fagundes",
+        "Alinne Moraes"
+      ],
       "rarest": [
-        "Adriana Prieto",
-        "Alanis Guillen",
-        "Adriana Birolli",
-        "Alessandra Maestrini",
-        "Aldine Müller"
+        "Antônio Pompêo",
+        "Alda Garrido",
+        "Adriana Ferreyr",
+        "Alberto Guzik",
+        "Anilda Leão"
       ]
     },
     "marca-todas": {
@@ -1732,7 +1808,7 @@
       "text": "Cite um banco brasileiro",
       "n": 41,
       "obvious": ["Banco do Brasil", "Caixa", "Itaú", "Bradesco", "Nubank"],
-      "rarest": ["XP", "Banpará", "Neon", "Banerj", "Banese"]
+      "rarest": ["Banco BMG", "Banerj", "Daycoval", "Banese", "Bamerindus"]
     },
     "marca-moda": {
       "text": "Cite uma marca brasileira de roupa ou calçado",
@@ -1743,8 +1819,8 @@
     "marca-lb": {
       "text": "Cite uma marca brasileira que começa com B",
       "n": 56,
-      "obvious": ["Banco do Brasil", "Band", "Bradesco", "BNDES", "Banco Nacional"],
-      "rarest": ["Bamba", "Banese", "Bozzano", "Brasilata", "Bottero"]
+      "obvious": ["Banco do Brasil", "Band", "Bradesco", "Banco do Nordeste", "Braskem"],
+      "rarest": ["Bamba", "Bozzano", "Brasilata", "Bamerindus", "Bottero"]
     },
     "marca-lc": {
       "text": "Cite uma marca brasileira que começa com C",
@@ -1761,7 +1837,7 @@
     "marca-ls": {
       "text": "Cite uma marca brasileira que começa com S",
       "n": 49,
-      "obvious": ["SBT", "Safra", "São Lourenço", "Sabesp", "Submarino"],
+      "obvious": ["SBT", "Sabesp", "São Lourenço", "Submarino", "Santa Clara"],
       "rarest": ["Skala", "Simple Organic", "Sodiê Doces", "Sucos Superbom", "Santher"]
     },
     "marca-lm": {
@@ -1774,7 +1850,7 @@
       "text": "Cite uma criatura ou lenda do folclore brasileiro",
       "n": 86,
       "obvious": ["Mão de cabelo", "Mãe-da-Lua", "Pai do Mato", "Sereia", "Lobisomem"],
-      "rarest": ["Sukuyu'wera", "Avantesma da Lagoinha", "Labatut", "Jurupari", "Alamoa"]
+      "rarest": ["Onça Maneta", "Sukuyu'wera", "Labatut", "Avantesma da Lagoinha", "Jurupari"]
     },
     "festa-todas": {
       "text": "Cite uma festa popular brasileira",
@@ -1797,7 +1873,7 @@
     "instrumento-todos": {
       "text": "Cite um instrumento musical brasileiro",
       "n": 57,
-      "obvious": ["Pau de chuva", "Mineiro", "Prato e faca", "Cavaquinho", "Berimbau"],
+      "obvious": ["Pau de chuva", "Mineiro", "Prato e faca", "Sanfona", "Berimbau"],
       "rarest": ["Tarol", "Gonguê", "Agbê", "Ajá", "Rocar"]
     },
     "instrumento-perc": {
@@ -1811,11 +1887,11 @@
       "n": 173,
       "obvious": ["Em Cima da Hora", "Vai-Vai", "Mangueira", "União da Ilha", "Portela"],
       "rarest": [
-        "Acadêmicos do Jaraguá",
+        "Bohêmios da Cinelândia",
+        "Locomotiva Piritubana",
         "Ermelinense",
         "Paineira de Sapopemba",
-        "Falcão do Morro Itaquerense",
-        "Cubango"
+        "Falcão do Morro Itaquerense"
       ]
     },
     "tupi-todas": {
@@ -1923,7 +1999,7 @@
     "pais-todos": {
       "text": "Cite um país do mundo",
       "n": 204,
-      "obvious": ["Estados Unidos", "França", "Brasil", "China", "Japão"],
+      "obvious": ["Estados Unidos", "França", "Brasil", "Alemanha", "China"],
       "rarest": [
         "São Cristóvão e Névis",
         "Vanuatu",
@@ -1947,7 +2023,7 @@
     "pais-europa": {
       "text": "Cite um país da Europa",
       "n": 49,
-      "obvious": ["França", "Rússia", "Espanha", "Portugal", "Reino Unido"],
+      "obvious": ["França", "Alemanha", "Rússia", "Portugal", "Espanha"],
       "rarest": ["Estônia", "Bósnia e Herzegovina", "San Marino", "Letônia", "Eslovênia"]
     },
     "pais-africa": {
@@ -2002,7 +2078,7 @@
       "text": "Cite uma cidade do mundo (fora do Brasil)",
       "n": 467,
       "obvious": ["Nova York", "Roma", "Paris", "Londres", "Lisboa"],
-      "rarest": ["Abeokuta", "Akure", "Mira-Bhayandar", "Taoyuan County", "Bandar Lampung"]
+      "rarest": ["Moradabad", "Akure", "Taoyuan County", "Mira-Bhayandar", "Bandar Lampung"]
     },
     "cidade-mundo-lb": {
       "text": "Cite uma cidade do mundo que começa com B",

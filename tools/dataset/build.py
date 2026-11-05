@@ -20,7 +20,7 @@ from .http import normalize, sparql, chunks
 from .measure import composite, crawl_pageviews, zipf_map
 from .question_bank import build as build_prompts
 from .sources import CURATED, DROPPED_POOLS, city_key, load_all, merge
-from .tagging import aliases_for, apply_tags, positions_from_labels
+from .tagging import GLOBAL_ALIASES, aliases_for, apply_tags, positions_from_labels
 from .wdpools import aliases_for_qids
 
 UTC = timezone.utc
@@ -40,7 +40,7 @@ PAREN = re.compile(r"\s*\([^)]*\)\s*$")
 
 # Pools whose Wikidata pt/pt-br labels are safe extra aliases.
 WD_ALIAS_POOLS = {
-    "uf", "cidade", "cidades_historicas", "presidente", "rio", "parque", "estadio", "praias",
+    "uf", "cidade", "cidades_historicas", "presidente", "politico", "rio", "parque", "estadio", "praias",
     "pontos_turisticos", "bairro_rio", "bairro_sp", "jogador", "jogadora", "time", "time_pt",
     "jogador_pt", "volei", "f1", "medalhista", "frutas_nativas", "pratos_tipicos", "doces",
     "bebidas", "cervejas", "prato_pt", "novelas", "filmes", "cantores", "bandas", "cantor_pt",
@@ -125,6 +125,34 @@ def attach_features(pools: dict[str, list[dict]]) -> None:
             entry["attrs"]["posicao"] = tagged
 
 
+# A person pulled from Wikidata by a secondary occupation ("ator": Pelé, Roberto
+# Carlos, Silvio Santos) is not what a player means. Non-curated entries of these
+# pools are dropped when the same QID belongs to a pool of their main fame.
+PRIMARY_FAME = {
+    "atores": ("jogador", "cantores", "bandas", "politico", "apresentador", "youtuber"),
+    "apresentador": ("jogador", "cantores", "politico"),
+    "humorista": ("jogador", "cantores", "politico"),
+    "politico": ("jogador", "cantores"),
+    "escritores": ("politico",),
+}  # acyclic on purpose: an entry is never dropped from both sides
+
+
+def drop_secondary_fame(pools: dict[str, list[dict]]) -> dict[str, int]:
+    qids = {pool: {e["qid"] for e in pools.get(pool, []) if e.get("qid")} for pool in
+            {p for others in PRIMARY_FAME.values() for p in others}}
+    dropped: dict[str, int] = {}
+    for pool, others in PRIMARY_FAME.items():
+        keep = []
+        for entry in pools.get(pool, []):
+            q = entry.get("qid")
+            if not entry.get("curated") and q and any(q in qids[o] for o in others):
+                dropped[pool] = dropped.get(pool, 0) + 1
+                continue
+            keep.append(entry)
+        pools[pool] = keep
+    return dropped
+
+
 def attach_wd_aliases(pools: dict[str, list[dict]]) -> None:
     qids = [e["qid"] for pool in WD_ALIAS_POOLS for e in pools.get(pool, []) if e.get("qid")]
     labels = aliases_for_qids(qids)
@@ -135,14 +163,50 @@ def attach_wd_aliases(pools: dict[str, list[dict]]) -> None:
                                    if len(key(a).split()) <= 4][:12]
 
 
-def clean_aliases(prompt: dict) -> None:
+PEOPLE_POOLS = {
+    "presidente", "politico", "cientista", "jogador", "jogadora", "jogador_pt", "volei", "f1",
+    "medalhista", "cantores", "cantor_pt", "escritores", "escritor_pt", "atores",
+    "apresentador", "humorista", "youtuber", "bbb", "bbb_campeoes",
+}
+SHORT_MIN_SL = 12
+TOP_OBVIOUS = 0.12  # "well-known": enough Wikidata sitelinks to be typed by surname
+
+
+def short_form_owners(pools: dict[str, list[dict]]) -> dict[str, dict[str, set[str]]]:
+    """Per people pool: surname key -> names that carry it (to keep only unambiguous ones)."""
+    out: dict[str, dict[str, set[str]]] = {}
+    for pool in PEOPLE_POOLS:
+        owners: dict[str, set[str]] = {}
+        for entry in pools.get(pool, []):
+            toks = key(entry["name"]).split()
+            if len(toks) >= 2:
+                owners.setdefault(toks[-1], set()).add(entry["name"])
+            for alias in [*(entry.get("aliases") or []), *(entry.get("wd_aliases") or [])]:
+                k = key(alias)
+                if k and len(k.split()) == 1:
+                    owners.setdefault(k, set()).add(entry["name"])
+        out[pool] = owners
+    return out
+
+
+def clean_aliases(prompt: dict, *, global_names: dict[str, set[str]] | None = None,
+                  surnames: dict[str, set[str]] | None = None) -> None:
     """Keep aliases that point to one answer only and do not equal another
-    answer's name; drop junk."""
+    answer's name; drop junk. Adds unambiguous surnames for well-known people."""
+    global_names = global_names or {}
     owners: dict[str, set[int]] = {}
     names = {key(a["name"]): i for i, a in enumerate(prompt["answers"])}
     candidates: list[list[str]] = []
+    trusted: list[set[str]] = []
     for i, answer in enumerate(prompt["answers"]):
         raw = aliases_for(answer, prompt["cat"])
+        trusted.append({key(a) for a in (answer.get("aliases") or [])}
+                       | {key(a) for a in GLOBAL_ALIASES.get((prompt["cat"], normalize(answer["name"])), [])})
+        toks = key(answer["name"]).split()
+        if (surnames is not None and len(toks) >= 2 and (answer.get("sl") or 0) >= SHORT_MIN_SL
+                and len(toks[-1]) >= 4 and len(surnames.get(toks[-1], ())) == 1
+                and not (global_names.get(toks[-1], set()) - {answer["name"]})):
+            raw = [*raw, answer["name"].split()[-1]]
         mine: list[str] = []
         seen = {key(answer["name"])}
         for alias in raw:
@@ -150,7 +214,7 @@ def clean_aliases(prompt: dict) -> None:
             k = key(alias)
             if not k or k in seen or len(alias) > 60 or BAD_ALIAS.match(k):
                 continue
-            if len(k) < 2:
+            if len(k) < 2 or any(ord(c) > 0x24F and c.isalpha() for c in alias):
                 continue
             seen.add(k)
             mine.append(alias)
@@ -164,8 +228,13 @@ def clean_aliases(prompt: dict) -> None:
                 continue
             if k in names and names[k] != i:
                 continue
+            # A one-word alias that is the full name of something else in the
+            # catalogue ("Barcelona", "Grêmio", "Ronaldo") is not safe.
+            if (len(k.split()) == 1 and k not in trusted[i]
+                    and global_names.get(k, set()) - {answer["name"]}):
+                continue
             keep.append(alias)
-        answer["clean_aliases"] = keep[:10]
+        answer["clean_aliases"] = keep[:14]
 
 
 def load_overrides() -> list[dict]:
@@ -208,6 +277,7 @@ def main() -> int:
     pools = load_all()
     tidy(pools)
     apply_tags(pools)
+    print("secondary-fame dropped:", drop_secondary_fame(pools))
     attach_features(pools)
     attach_wd_aliases(pools)
     prompts = build_prompts(pools)
@@ -240,8 +310,14 @@ def main() -> int:
     total_answers = 0
     unique_answers: set[str] = set()
     audit: dict[str, dict] = {}
+    global_names: dict[str, set[str]] = {}
     for prompt in prompts:
-        clean_aliases(prompt)
+        for answer in prompt["answers"]:
+            global_names.setdefault(key(answer["name"]), set()).add(answer["name"])
+    surname_index = short_form_owners(pools)
+    for prompt in prompts:
+        clean_aliases(prompt, global_names=global_names,
+                      surnames=surname_index.get(prompt["cat"]) if prompt["cat"] in PEOPLE_POOLS else None)
         prepared = []
         for answer in prompt["answers"]:
             article = answer.get("article")
@@ -258,6 +334,13 @@ def main() -> int:
         ranked = composite(prepared)
         applied_overrides += apply_overrides(prompt, ranked, overrides)
         ranked.sort(key=lambda a: a["popPercentile"], reverse=True)
+        # The handful of most famous answers of every pool is always "Óbvia":
+        # rank 1-3 never measure above TOP_OBVIOUS (small pools otherwise put
+        # the 3rd most famous answer at ~0.3).
+        for answer in ranked[:3]:
+            if answer["rarity"] > TOP_OBVIOUS:
+                answer["rarity"] = TOP_OBVIOUS
+                answer["popPercentile"] = round(1 - TOP_OBVIOUS, 4)
         for rank, answer in enumerate(ranked, start=1):
             answer["rank"] = rank
             if answer.get("an") is None:

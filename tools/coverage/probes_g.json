@@ -1,0 +1,1309 @@
+{
+  "_about": "Conjunto de precisão (v3, 2026-11-05): por pergunta, ~12 respostas certas do jeito que um brasileiro digita (apelido, sem acento, plural, erro leve) e ~8 erradas TENTADORAS (vizinhas de categoria, estrangeiras, pedaço de nome que colide). Escrito antes de olhar o acervo.",
+  "uf-todos": {
+    "pos": [
+      "sp",
+      "minas gerais",
+      "bahia",
+      "pernambuco",
+      "ceará",
+      "rio grande do sul",
+      "santa catarina",
+      "parana",
+      "amazonas",
+      "goiás",
+      "espirito santo",
+      "mato grosso do sul"
+    ],
+    "neg": [
+      "Brasília",
+      "São Luís",
+      "Belém",
+      "Paraguai",
+      "Triângulo Mineiro",
+      "Nordeste",
+      "Guanabara",
+      "Rio"
+    ]
+  },
+  "capital-br": {
+    "pos": [
+      "São Paulo",
+      "rio",
+      "BH",
+      "salvador",
+      "recife",
+      "fortaleza",
+      "brasilia",
+      "curitiba",
+      "porto alegre",
+      "manaus",
+      "belem",
+      "florianopolis"
+    ],
+    "neg": [
+      "Campinas",
+      "Santos",
+      "Niterói",
+      "Feira de Santana",
+      "Juiz de Fora",
+      "Buenos Aires",
+      "Lisboa",
+      "Joinville"
+    ]
+  },
+  "cidade-sp": {
+    "pos": [
+      "campinas",
+      "santos",
+      "guarulhos",
+      "sao bernardo do campo",
+      "ribeirao preto",
+      "sorocaba",
+      "osasco",
+      "santo andre",
+      "jundiai",
+      "piracicaba",
+      "bauru",
+      "são josé dos campos"
+    ],
+    "neg": [
+      "Niterói",
+      "Petrópolis",
+      "Uberlândia",
+      "Curitiba",
+      "Londrina",
+      "Paraty",
+      "Juiz de Fora",
+      "Joinville"
+    ]
+  },
+  "cidade-mg": {
+    "pos": [
+      "belo horizonte",
+      "BH",
+      "uberlandia",
+      "juiz de fora",
+      "contagem",
+      "montes claros",
+      "ouro preto",
+      "uberaba",
+      "betim",
+      "ipatinga",
+      "diamantina",
+      "pocos de caldas"
+    ],
+    "neg": [
+      "Campinas",
+      "Vitória",
+      "Goiânia",
+      "Paraty",
+      "Ribeirão Preto",
+      "Franca",
+      "Anápolis",
+      "Petrópolis"
+    ]
+  },
+  "presidente-todos": {
+    "pos": [
+      "Lula",
+      "Bolsonaro",
+      "Dilma",
+      "FHC",
+      "Fernando Henrique",
+      "Getúlio Vargas",
+      "JK",
+      "Juscelino Kubitschek",
+      "Collor",
+      "Temer",
+      "Itamar Franco",
+      "Sarney"
+    ],
+    "neg": [
+      "Tiradentes",
+      "Dom Pedro II",
+      "Carlos Lacerda",
+      "Brizola",
+      "Ulysses Guimarães",
+      "Ciro Gomes",
+      "Aécio Neves",
+      "Marina Silva"
+    ]
+  },
+  "politico-todos": {
+    "pos": [
+      "Lula",
+      "Bolsonaro",
+      "Dilma Rousseff",
+      "Fernando Haddad",
+      "Ciro Gomes",
+      "Marina Silva",
+      "Geraldo Alckmin",
+      "Aécio Neves",
+      "Tarcísio de Freitas",
+      "Simone Tebet",
+      "Eduardo Paes",
+      "Flávio Dino"
+    ],
+    "neg": [
+      "Sergio Moro Filho",
+      "Neymar",
+      "Silvio Santos",
+      "Xuxa",
+      "Barack Obama",
+      "Donald Trump",
+      "Faustão",
+      "Anitta"
+    ]
+  },
+  "cientista": {
+    "pos": [
+      "Santos Dumont",
+      "Oswaldo Cruz",
+      "Carlos Chagas",
+      "César Lattes",
+      "Vital Brazil",
+      "Adolpho Lutz",
+      "Miguel Nicolelis",
+      "Bartolomeu de Gusmão",
+      "Landell de Moura",
+      "Johanna Döbereiner",
+      "Marcelo Gleiser",
+      "Artur Avila"
+    ],
+    "neg": [
+      "Einstein",
+      "Darwin",
+      "Pasteur",
+      "Thomas Edison",
+      "Newton",
+      "Marie Curie",
+      "Tesla",
+      "Paulo Freire"
+    ]
+  },
+  "jogador-todos": {
+    "pos": [
+      "Pelé",
+      "Neymar",
+      "Ronaldo",
+      "Ronaldinho",
+      "Romário",
+      "Kaká",
+      "Zico",
+      "Garrincha",
+      "Rivaldo",
+      "Cafu",
+      "Roberto Carlos",
+      "Vinicius Junior"
+    ],
+    "neg": [
+      "Messi",
+      "Cristiano Ronaldo",
+      "Maradona",
+      "Mbappé",
+      "Marta",
+      "Ayrton Senna",
+      "Guga",
+      "Oscar Schmidt"
+    ]
+  },
+  "jogador-goleiro": {
+    "pos": [
+      "Taffarel",
+      "Dida",
+      "Júlio César",
+      "Alisson",
+      "Ederson",
+      "Marcos",
+      "Rogério Ceni",
+      "Gilmar",
+      "Leão",
+      "Zetti",
+      "Weverton",
+      "Gomes"
+    ],
+    "neg": [
+      "Buffon",
+      "Neuer",
+      "Casillas",
+      "Cássio Ramos Silva Filho",
+      "Neymar",
+      "Cafu",
+      "Pelé",
+      "Zico"
+    ]
+  },
+  "jogadora-todas": {
+    "pos": [
+      "Marta",
+      "Formiga",
+      "Cristiane",
+      "Debinha",
+      "Andressa Alves",
+      "Bia Zaneratto",
+      "Tamires",
+      "Kerolin",
+      "Sissi",
+      "Pretinha",
+      "Ludmila",
+      "Rafaelle"
+    ],
+    "neg": [
+      "Neymar",
+      "Megan Rapinoe",
+      "Alex Morgan",
+      "Fabiana Murer",
+      "Rebeca Andrade",
+      "Daiane dos Santos",
+      "Hortência",
+      "Rayssa Leal"
+    ]
+  },
+  "time-todos": {
+    "pos": [
+      "Flamengo",
+      "Corinthians",
+      "Palmeiras",
+      "São Paulo",
+      "Vasco",
+      "Fluminense",
+      "Botafogo",
+      "Grêmio",
+      "Internacional",
+      "Inter",
+      "Cruzeiro",
+      "Atlético Mineiro"
+    ],
+    "neg": [
+      "Barcelona",
+      "Real Madrid",
+      "Boca Juniors",
+      "River Plate",
+      "Benfica",
+      "Porto",
+      "Bayern de Munique",
+      "Manchester United"
+    ]
+  },
+  "time-sp": {
+    "pos": [
+      "corinthians",
+      "palmeiras",
+      "sao paulo",
+      "santos",
+      "ponte preta",
+      "guarani",
+      "bragantino",
+      "red bull bragantino",
+      "portuguesa",
+      "juventus da mooca",
+      "xv de piracicaba",
+      "novorizontino"
+    ],
+    "neg": [
+      "Grêmio",
+      "Flamengo",
+      "Cruzeiro",
+      "Atlético",
+      "Internacional",
+      "Bahia",
+      "Vasco",
+      "Paraná"
+    ]
+  },
+  "time-rj": {
+    "pos": [
+      "flamengo",
+      "fluminense",
+      "vasco",
+      "vasco da gama",
+      "botafogo",
+      "bangu",
+      "america",
+      "madureira",
+      "olaria",
+      "nova iguacu",
+      "volta redonda",
+      "fla"
+    ],
+    "neg": [
+      "Corinthians",
+      "Palmeiras",
+      "Santos",
+      "Grêmio",
+      "Bahia",
+      "Sport",
+      "Paysandu",
+      "Cruzeiro"
+    ]
+  },
+  "time-nordeste": {
+    "pos": [
+      "bahia",
+      "vitoria",
+      "sport",
+      "santa cruz",
+      "nautico",
+      "fortaleza",
+      "ceara",
+      "abc",
+      "america de natal",
+      "csa",
+      "crb",
+      "sampaio correa"
+    ],
+    "neg": [
+      "Flamengo",
+      "Corinthians",
+      "Grêmio",
+      "Paysandu",
+      "Remo",
+      "Goiás",
+      "Cruzeiro",
+      "Coritiba"
+    ]
+  },
+  "time-pt": {
+    "pos": [
+      "Benfica",
+      "Porto",
+      "Sporting",
+      "Braga",
+      "Vitória de Guimarães",
+      "Boavista",
+      "Belenenses",
+      "Marítimo",
+      "Rio Ave",
+      "Estoril",
+      "Famalicão",
+      "Académica"
+    ],
+    "neg": [
+      "Real Madrid",
+      "Barcelona",
+      "Flamengo",
+      "Vasco",
+      "Sevilla",
+      "Celta de Vigo",
+      "Juventus",
+      "Porto Alegre"
+    ]
+  },
+  "estadio-todos": {
+    "pos": [
+      "Maracanã",
+      "Morumbi",
+      "Mineirão",
+      "Pacaembu",
+      "Arena Corinthians",
+      "Allianz Parque",
+      "Beira-Rio",
+      "Arena da Baixada",
+      "Fonte Nova",
+      "Castelão",
+      "Vila Belmiro",
+      "São Januário"
+    ],
+    "neg": [
+      "Camp Nou",
+      "Wembley",
+      "Bernabéu",
+      "La Bombonera",
+      "Monumental",
+      "Anfield",
+      "Old Trafford",
+      "Allianz Arena"
+    ]
+  },
+  "f1-br": {
+    "pos": [
+      "Ayrton Senna",
+      "Senna",
+      "Nelson Piquet",
+      "Piquet",
+      "Emerson Fittipaldi",
+      "Rubens Barrichello",
+      "Rubinho",
+      "Felipe Massa",
+      "Massa",
+      "Bruno Senna",
+      "Felipe Nasr",
+      "Gabriel Bortoleto"
+    ],
+    "neg": [
+      "Lewis Hamilton",
+      "Schumacher",
+      "Alain Prost",
+      "Max Verstappen",
+      "Tony Kanaan",
+      "Hélio Castroneves",
+      "Guga",
+      "Neymar"
+    ]
+  },
+  "rio-todos": {
+    "pos": [
+      "amazonas",
+      "rio amazonas",
+      "sao francisco",
+      "velho chico",
+      "parana",
+      "tiete",
+      "rio negro",
+      "tocantins",
+      "araguaia",
+      "xingu",
+      "tapajos",
+      "madeira"
+    ],
+    "neg": [
+      "Nilo",
+      "Mississippi",
+      "Tâmisa",
+      "Sena",
+      "Danúbio",
+      "Lagoa dos Patos",
+      "Baía de Guanabara",
+      "Rio de Janeiro"
+    ]
+  },
+  "ave-todas": {
+    "pos": [
+      "sabia",
+      "bem-te-vi",
+      "beija-flor",
+      "tucano",
+      "arara",
+      "arara-azul",
+      "papagaio",
+      "joao-de-barro",
+      "pica-pau",
+      "quero-quero",
+      "canario",
+      "urubu"
+    ],
+    "neg": [
+      "morcego",
+      "pinguim imperador",
+      "avestruz",
+      "águia-careca",
+      "borboleta",
+      "galinha d'angola selvagem africana",
+      "abelha",
+      "pato donald"
+    ]
+  },
+  "mamifero-todos": {
+    "pos": [
+      "onça",
+      "onca-pintada",
+      "capivara",
+      "mico-leão-dourado",
+      "tamanduá",
+      "preguiça",
+      "boto-cor-de-rosa",
+      "anta",
+      "tatu",
+      "lobo-guará",
+      "macaco-prego",
+      "quati"
+    ],
+    "neg": ["jacaré", "sucuri", "tucano", "leão", "girafa", "elefante", "canguru", "piranha"]
+  },
+  "prato-todos": {
+    "pos": [
+      "feijoada",
+      "moqueca",
+      "acaraje",
+      "baiao de dois",
+      "pão de queijo",
+      "virado à paulista",
+      "tutu de feijao",
+      "vatapa",
+      "galinhada",
+      "arroz carreteiro",
+      "tacacá",
+      "escondidinho"
+    ],
+    "neg": [
+      "pizza",
+      "lasanha",
+      "sushi",
+      "hambúrguer",
+      "paella",
+      "bacalhau à brás",
+      "ceviche",
+      "taco"
+    ]
+  },
+  "prato-nordeste": {
+    "pos": [
+      "acaraje",
+      "baiao de dois",
+      "carne de sol",
+      "buchada",
+      "sarapatel",
+      "moqueca baiana",
+      "vatapá",
+      "caruru",
+      "tapioca",
+      "cuscuz",
+      "paçoca de carne seca",
+      "arrumadinho"
+    ],
+    "neg": [
+      "pão de queijo",
+      "chimarrão",
+      "churrasco gaúcho",
+      "tacacá",
+      "pato no tucupi",
+      "virado à paulista",
+      "barreado",
+      "feijão tropeiro"
+    ]
+  },
+  "prato-minas": {
+    "pos": [
+      "pão de queijo",
+      "feijão tropeiro",
+      "tutu de feijão",
+      "frango com quiabo",
+      "torresmo",
+      "leitão à pururuca",
+      "vaca atolada",
+      "frango ao molho pardo",
+      "angu",
+      "couve à mineira",
+      "canjiquinha",
+      "doce de leite"
+    ],
+    "neg": [
+      "acarajé",
+      "moqueca capixaba",
+      "tacacá",
+      "barreado",
+      "chimarrão",
+      "vatapá",
+      "pizza",
+      "arroz carreteiro"
+    ]
+  },
+  "doce-todos": {
+    "pos": [
+      "brigadeiro",
+      "beijinho",
+      "pudim",
+      "quindim",
+      "paçoca",
+      "pe de moleque",
+      "cocada",
+      "goiabada",
+      "romeu e julieta",
+      "bolo de rolo",
+      "brigadeiros",
+      "doce de leite"
+    ],
+    "neg": [
+      "tiramisu",
+      "macaron",
+      "cheesecake",
+      "croissant",
+      "coxinha",
+      "pastel",
+      "churros espanhol",
+      "pão de queijo"
+    ]
+  },
+  "salgado-festa": {
+    "pos": [
+      "coxinha",
+      "coxinhas",
+      "kibe",
+      "quibe",
+      "esfiha",
+      "empadinha",
+      "rissole",
+      "bolinha de queijo",
+      "enroladinho de salsicha",
+      "pastel",
+      "pasteis",
+      "croquete"
+    ],
+    "neg": [
+      "brigadeiro",
+      "beijinho",
+      "feijoada",
+      "pizza",
+      "sushi",
+      "cachorro-quente gourmet",
+      "pudim",
+      "acarajé"
+    ]
+  },
+  "bebida-todas": {
+    "pos": [
+      "caipirinha",
+      "guarana",
+      "cachaça",
+      "pinga",
+      "chimarrão",
+      "terere",
+      "cafezinho",
+      "caldo de cana",
+      "garapa",
+      "mate",
+      "suco de caju",
+      "quentão"
+    ],
+    "neg": [
+      "vodka russa",
+      "sakê",
+      "tequila",
+      "whisky",
+      "margarita",
+      "mojito",
+      "sangria",
+      "coca cola zero açúcar lata"
+    ]
+  },
+  "refrigerante-br": {
+    "pos": [
+      "guarana antarctica",
+      "guaraná",
+      "kuat",
+      "dolly",
+      "tubaina",
+      "itubaina",
+      "mineirinho",
+      "guarana jesus",
+      "soda limonada",
+      "sukita",
+      "guaraná brahma",
+      "guaraná dolly"
+    ],
+    "neg": ["Pepsi", "Sprite", "Red Bull", "Monster", "Gatorade", "Schweppes", "7up", "Dr Pepper"]
+  },
+  "cerveja-br": {
+    "pos": [
+      "brahma",
+      "skol",
+      "antarctica",
+      "itaipava",
+      "kaiser",
+      "bohemia",
+      "original",
+      "colorado",
+      "eisenbahn",
+      "devassa",
+      "schin",
+      "serramalte"
+    ],
+    "neg": [
+      "Heineken",
+      "Budweiser",
+      "Stella Artois",
+      "Corona",
+      "Guinness",
+      "Sagres",
+      "Super Bock",
+      "Quilmes"
+    ]
+  },
+  "novela-globo": {
+    "pos": [
+      "Avenida Brasil",
+      "O Clone",
+      "Roque Santeiro",
+      "Vale Tudo",
+      "Mulheres Apaixonadas",
+      "Senhora do Destino",
+      "Laços de Família",
+      "Pantanal",
+      "Terra Nostra",
+      "Caminho das Índias",
+      "A Favorita",
+      "Fina Estampa"
+    ],
+    "neg": [
+      "Carrossel",
+      "Chiquititas",
+      "Os Dez Mandamentos",
+      "Cúmplices de um Resgate",
+      "Rebelde",
+      "Maria do Bairro",
+      "A Usurpadora",
+      "Malhação Sonhos de Verão Especial"
+    ]
+  },
+  "filme-todos": {
+    "pos": [
+      "Cidade de Deus",
+      "Central do Brasil",
+      "Tropa de Elite",
+      "O Auto da Compadecida",
+      "Ainda Estou Aqui",
+      "Carandiru",
+      "Bacurau",
+      "Que Horas Ela Volta",
+      "Minha Mãe é uma Peça",
+      "Dois Filhos de Francisco",
+      "O Pagador de Promessas",
+      "Se Eu Fosse Você"
+    ],
+    "neg": [
+      "Titanic",
+      "Avatar",
+      "O Poderoso Chefão",
+      "Rio",
+      "Tropa",
+      "Cidade",
+      "Central",
+      "Parasita"
+    ]
+  },
+  "apresentador": {
+    "pos": [
+      "Faustão",
+      "Fausto Silva",
+      "Silvio Santos",
+      "Xuxa",
+      "Luciano Huck",
+      "Ana Maria Braga",
+      "Gugu",
+      "Serginho Groisman",
+      "Pedro Bial",
+      "Hebe Camargo",
+      "Ratinho",
+      "Angélica"
+    ],
+    "neg": [
+      "Neymar",
+      "Lula",
+      "Oprah",
+      "Jimmy Fallon",
+      "Pelé",
+      "Gilberto Gil",
+      "Ronaldinho",
+      "Bolsonaro"
+    ]
+  },
+  "humorista": {
+    "pos": [
+      "Chico Anysio",
+      "Renato Aragão",
+      "Didi",
+      "Jô Soares",
+      "Tom Cavalcante",
+      "Paulo Gustavo",
+      "Marcelo Adnet",
+      "Fábio Porchat",
+      "Danilo Gentili",
+      "Tatá Werneck",
+      "Whindersson Nunes",
+      "Mussum"
+    ],
+    "neg": [
+      "Charlie Chaplin",
+      "Jim Carrey",
+      "Mr. Bean",
+      "Chaves",
+      "Faustão",
+      "Silvio Santos",
+      "Neymar",
+      "Xuxa"
+    ]
+  },
+  "bbb-campeao": {
+    "pos": [
+      "Kleber Bambam",
+      "Bambam",
+      "Juliette",
+      "Jean Wyllys",
+      "Arthur Aguiar",
+      "Thelma Assis",
+      "Gleici Damasceno",
+      "Paula von Sperling",
+      "Dourado",
+      "Rodrigo Leonel",
+      "Max Porto",
+      "Cida"
+    ],
+    "neg": [
+      "Boninho",
+      "Tiago Leifert",
+      "Pedro Bial",
+      "Karol Conká",
+      "Viih Tube",
+      "Anitta",
+      "Babu Santana",
+      "Davi Brito Filho Junior",
+      "Grazi Massafera",
+      "Gil do Vigor"
+    ]
+  },
+  "desenho-todos": {
+    "pos": [
+      "Turma da Mônica",
+      "Bob Esponja",
+      "Pica-Pau",
+      "Os Simpsons",
+      "Tom e Jerry",
+      "Dragon Ball",
+      "Cavaleiros do Zodíaco",
+      "Pokémon",
+      "Scooby-Doo",
+      "Os Flintstones",
+      "Peixonauta",
+      "Show da Luna"
+    ],
+    "neg": [
+      "Chaves",
+      "Friends",
+      "Malhação",
+      "Power Rangers",
+      "Carrossel",
+      "Castelo Rá-Tim-Bum",
+      "Xuxa",
+      "Harry Potter"
+    ]
+  },
+  "turma-monica": {
+    "pos": [
+      "Monica",
+      "Cebolinha",
+      "Cascão",
+      "Magali",
+      "Chico Bento",
+      "Franjinha",
+      "Anjinho",
+      "Bidu",
+      "Penadinho",
+      "Horácio",
+      "Piteco",
+      "Sansão"
+    ],
+    "neg": [
+      "Emília",
+      "Narizinho",
+      "Pedrinho",
+      "Visconde de Sabugosa",
+      "Saci",
+      "Zé Carioca",
+      "Menino Maluquinho",
+      "Garfield"
+    ]
+  },
+  "cantor-todos": {
+    "pos": [
+      "Roberto Carlos",
+      "Caetano Veloso",
+      "Gilberto Gil",
+      "Chico Buarque",
+      "Anitta",
+      "Ivete Sangalo",
+      "Elis Regina",
+      "Tim Maia",
+      "Gusttavo Lima",
+      "Marília Mendonça",
+      "Djavan",
+      "Zeca Pagodinho"
+    ],
+    "neg": [
+      "Michael Jackson",
+      "Madonna",
+      "Shakira",
+      "Bad Bunny",
+      "Taylor Swift",
+      "Amália Rodrigues",
+      "Neymar",
+      "Faustão"
+    ]
+  },
+  "cantora": {
+    "pos": [
+      "Elis Regina",
+      "Ivete Sangalo",
+      "Anitta",
+      "Marisa Monte",
+      "Gal Costa",
+      "Maria Bethânia",
+      "Rita Lee",
+      "Marília Mendonça",
+      "Ludmilla",
+      "Iza",
+      "Cássia Eller",
+      "Clara Nunes"
+    ],
+    "neg": [
+      "Caetano Veloso",
+      "Roberto Carlos",
+      "Shakira",
+      "Beyoncé",
+      "Adele",
+      "Ana Maria Braga",
+      "Fátima Bernardes",
+      "Gilberto Gil"
+    ]
+  },
+  "cantor-sertanejo": {
+    "pos": [
+      "Gusttavo Lima",
+      "Marília Mendonça",
+      "Zezé Di Camargo e Luciano",
+      "Chitãozinho e Xororó",
+      "Leonardo",
+      "Luan Santana",
+      "Jorge e Mateus",
+      "Henrique e Juliano",
+      "Michel Teló",
+      "Sérgio Reis",
+      "Daniel",
+      "Paula Fernandes"
+    ],
+    "neg": [
+      "Anitta",
+      "Ivete Sangalo",
+      "Caetano Veloso",
+      "Ludmilla",
+      "Wesley Safadão Filho",
+      "Johnny Cash",
+      "Tim Maia",
+      "Alok"
+    ]
+  },
+  "banda-br": {
+    "pos": [
+      "Legião Urbana",
+      "Titãs",
+      "Paralamas do Sucesso",
+      "Os Paralamas",
+      "Skank",
+      "Jota Quest",
+      "Capital Inicial",
+      "Sepultura",
+      "Mamonas Assassinas",
+      "Charlie Brown Jr",
+      "Barão Vermelho",
+      "Os Mutantes"
+    ],
+    "neg": [
+      "Beatles",
+      "Queen",
+      "Coldplay",
+      "U2",
+      "Metallica",
+      "Xutos & Pontapés",
+      "Os Mutantes do Rock Antigo"
+    ]
+  },
+  "escritor-todos": {
+    "pos": [
+      "Machado de Assis",
+      "Clarice Lispector",
+      "Jorge Amado",
+      "Carlos Drummond de Andrade",
+      "Drummond",
+      "Graciliano Ramos",
+      "Guimarães Rosa",
+      "Monteiro Lobato",
+      "Paulo Coelho",
+      "Cecília Meireles",
+      "José de Alencar",
+      "Rachel de Queiroz"
+    ],
+    "neg": [
+      "Fernando Pessoa",
+      "José Saramago",
+      "Shakespeare",
+      "Gabriel García Márquez",
+      "Camões",
+      "Eça de Queirós",
+      "Platão"
+    ]
+  },
+  "ator-todos": {
+    "pos": [
+      "Tony Ramos",
+      "Fernanda Montenegro",
+      "Wagner Moura",
+      "Lázaro Ramos",
+      "Rodrigo Santoro",
+      "Selton Mello",
+      "Regina Casé",
+      "Glória Pires",
+      "Antônio Fagundes",
+      "Cauã Reymond",
+      "Fernanda Torres",
+      "Paulo Gustavo"
+    ],
+    "neg": [
+      "Brad Pitt",
+      "Leonardo DiCaprio",
+      "Tom Cruise",
+      "Meryl Streep",
+      "Neymar",
+      "Pelé",
+      "Silvio Santos",
+      "Roberto Carlos"
+    ]
+  },
+  "marca-todas": {
+    "pos": [
+      "Havaianas",
+      "Natura",
+      "O Boticário",
+      "Boticário",
+      "Guaraná Antarctica",
+      "Itaú",
+      "Bradesco",
+      "Petrobras",
+      "Embraer",
+      "Sadia",
+      "Perdigão",
+      "Nubank"
+    ],
+    "neg": ["Nike", "Adidas", "Coca-Cola", "Apple", "McDonald's", "Samsung", "Zara", "Toyota"]
+  },
+  "banco-br": {
+    "pos": [
+      "Itaú",
+      "Bradesco",
+      "Banco do Brasil",
+      "Caixa",
+      "Caixa Econômica Federal",
+      "Santander Brasil",
+      "Nubank",
+      "Inter",
+      "Banco Inter",
+      "BTG Pactual",
+      "Banrisul",
+      "Sicredi"
+    ],
+    "neg": [
+      "JPMorgan",
+      "HSBC Holdings",
+      "Goldman Sachs",
+      "Citibank",
+      "Bank of America",
+      "Petrobras",
+      "Natura",
+      "Mercado Pago"
+    ]
+  },
+  "folclore-todos": {
+    "pos": [
+      "Saci",
+      "Saci-Pererê",
+      "Curupira",
+      "Mula sem cabeça",
+      "Boitatá",
+      "Iara",
+      "Boto cor-de-rosa",
+      "Cuca",
+      "Lobisomem",
+      "Negrinho do Pastoreio",
+      "Caipora",
+      "Mapinguari"
+    ],
+    "neg": [
+      "Papai Noel",
+      "Coelhinho da Páscoa",
+      "Drácula",
+      "Zeus",
+      "Thor",
+      "Pé Grande",
+      "Chupa-cabra mexicano",
+      "Fada do Dente"
+    ]
+  },
+  "festa-todas": {
+    "pos": [
+      "Carnaval",
+      "Festa Junina",
+      "São João",
+      "Parintins",
+      "Festival de Parintins",
+      "Círio de Nazaré",
+      "Oktoberfest",
+      "Bumba meu boi",
+      "Réveillon",
+      "Festa do Peão de Barretos",
+      "Lavagem do Bonfim",
+      "Festa de Iemanjá"
+    ],
+    "neg": [
+      "Halloween",
+      "Thanksgiving",
+      "Ação de Graças",
+      "Dia de los Muertos",
+      "Ano Novo Chinês",
+      "Hanukkah",
+      "Natal Ortodoxo",
+      "Tomatina"
+    ]
+  },
+  "instrumento-todos": {
+    "pos": [
+      "berimbau",
+      "pandeiro",
+      "cuíca",
+      "viola caipira",
+      "cavaquinho",
+      "zabumba",
+      "atabaque",
+      "agogô",
+      "surdo",
+      "tamborim",
+      "sanfona",
+      "triângulo"
+    ],
+    "neg": [
+      "gaita de foles",
+      "sitar",
+      "didgeridoo",
+      "banjo",
+      "ukulele",
+      "balalaica",
+      "harpa celta",
+      "theremin"
+    ]
+  },
+  "giria-todas": {
+    "pos": [
+      "mano",
+      "cara",
+      "massa",
+      "bacana",
+      "show de bola",
+      "trem",
+      "uai",
+      "oxe",
+      "oxente",
+      "bah",
+      "tchê",
+      "mermão"
+    ],
+    "neg": ["dude", "bro", "cool", "fixe", "porreiro", "gajo", "bué", "tipo assim gigantesco"]
+  },
+  "praia-todas": {
+    "pos": [
+      "Copacabana",
+      "Ipanema",
+      "Leblon",
+      "Porto de Galinhas",
+      "Jericoacoara",
+      "Praia do Forte",
+      "Barra da Tijuca",
+      "Fernando de Noronha",
+      "Baía do Sancho",
+      "Praia do Rosa",
+      "Canoa Quebrada",
+      "Pipa"
+    ],
+    "neg": [
+      "Cancún",
+      "Miami Beach",
+      "Nazaré",
+      "Algarve",
+      "Bali",
+      "Maldivas",
+      "Copacabana Palace",
+      "Lagoa Rodrigo de Freitas"
+    ]
+  },
+  "ponto-turistico": {
+    "pos": [
+      "Cristo Redentor",
+      "Pão de Açúcar",
+      "Cataratas do Iguaçu",
+      "Pelourinho",
+      "Elevador Lacerda",
+      "Avenida Paulista",
+      "Masp",
+      "Lençóis Maranhenses",
+      "Teatro Amazonas",
+      "Escadaria Selarón",
+      "Maracanã",
+      "Bonito"
+    ],
+    "neg": [
+      "Torre Eiffel",
+      "Estátua da Liberdade",
+      "Coliseu",
+      "Machu Picchu",
+      "Big Ben",
+      "Torre de Belém",
+      "Cristo Rei"
+    ]
+  },
+  "pais-todos": {
+    "pos": [
+      "Argentina",
+      "EUA",
+      "Estados Unidos",
+      "Alemanha",
+      "França",
+      "Japão",
+      "China",
+      "Portugal",
+      "Inglaterra",
+      "Reino Unido",
+      "Itália",
+      "Mexico"
+    ],
+    "neg": [
+      "Europa",
+      "África",
+      "Texas",
+      "Califórnia",
+      "Escandinávia",
+      "Bahia",
+      "Amazônia",
+      "Buenos Aires"
+    ]
+  },
+  "capital-todas": {
+    "pos": [
+      "Buenos Aires",
+      "Lisboa",
+      "Paris",
+      "Londres",
+      "Tóquio",
+      "Toquio",
+      "Washington",
+      "Madri",
+      "Roma",
+      "Berlim",
+      "Pequim",
+      "Brasília"
+    ],
+    "neg": [
+      "Nova York",
+      "Sydney",
+      "Barcelona",
+      "Rio de Janeiro",
+      "Xangai",
+      "Los Angeles",
+      "Toronto",
+      "Istambul"
+    ]
+  },
+  "elemento-todos": {
+    "pos": [
+      "oxigênio",
+      "hidrogenio",
+      "carbono",
+      "ouro",
+      "ferro",
+      "prata",
+      "cobre",
+      "nitrogênio",
+      "sodio",
+      "cálcio",
+      "potássio",
+      "urânio"
+    ],
+    "neg": ["água", "aço", "bronze", "latão", "sal", "ozônio", "plástico", "diamante"]
+  }
+}

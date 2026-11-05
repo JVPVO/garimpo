@@ -70,6 +70,7 @@ const ACCENT: Record<MineralId, string> = {
   ouro: "#f2b65a",
   esmeralda: "#3fae78",
   turmalina: "#2fd4c8",
+  rubi: "#d8344f",
   diamante: "#d3eef2",
 };
 

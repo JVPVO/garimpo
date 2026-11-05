@@ -79,3 +79,7 @@ A distribuição por faixa (Óbvia, Comum, Boa, Rara, Raríssima) de cada pool e
 - `public/data/validation.json` não mudou: é a validação da régua contra o Krillion e continua sendo sobre Pokémon.
 - O BBB 26 ficou fora: não conferi o campeão.
 - Alguns municípios grandes faltavam no Wikidata (Osasco, por exemplo). Entraram pela curadoria, mas sem população, então não aparecem na pergunta "mais de 500 mil habitantes".
+
+## v3 (2026-11-05)
+
+O casamento agora é exato e mostra sugestões. Os pools de pessoas foram ampliados pelo Wikidata, entrou a pergunta de político e as faixas foram recalibradas. Os detalhes estão em `reports/dataset.md`, nas seções "Casamento de respostas" e "Faixas de raridade".
