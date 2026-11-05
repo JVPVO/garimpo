@@ -1,0 +1,1187 @@
+{
+  "about": "Ajustes manuais e documentados da raridade medida. max_rarity = teto (resposta óbvia que o sinal mediu mal); min_rarity = piso (título que casou com artigo genérico). Aplicado em build.py depois do cálculo.",
+  "overrides": [
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Feijoada",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Coxinha",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Pão de queijo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Acarajé",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Baião de dois",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Tapioca",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Moqueca",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Churrasco",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Pastel",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Farofa",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Arroz e feijão",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Feijão tropeiro",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Cuscuz",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Vatapá",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Escondidinho",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Carne de sol",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Pamonha",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Tacacá",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Pato no tucupi",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Barreado",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Bobó de camarão",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Galinhada",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Arroz carreteiro",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Tutu de feijão",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Virado à paulista",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Bolo de carne",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Arroz de leite",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Mão de vaca",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Galinha d'angola",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Peixe ao leite de coco",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Lombo de porco",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Linguiça",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["pratos_tipicos"],
+      "name": "Chouriço",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.7
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Açaí",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Caju",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Jabuticaba",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Goiaba",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Maracujá",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Cupuaçu",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Pitanga",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Guaraná",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Pequi",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Graviola",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Umbu",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Cajá",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Buriti",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Mangaba",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Cacau-do-mato",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.75
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Mari",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.75
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Camapu",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.75
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Cacauí",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.75
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Envira",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.75
+    },
+    {
+      "pools": ["frutas_nativas"],
+      "name": "Pinhão",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.75
+    },
+    {
+      "pools": ["doces"],
+      "name": "Brigadeiro",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Beijinho",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Pudim",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Paçoca",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Pé de moleque",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Quindim",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Cocada",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Doce de leite",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Goiabada",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Romeu e Julieta",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Bolo de rolo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Canjica",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Curau",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Cajuzinho",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Bem-casado",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Pavê",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Mousse de maracujá",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["doces"],
+      "name": "Talento",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.5
+    },
+    {
+      "pools": ["doces"],
+      "name": "Pé de moça",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.5
+    },
+    {
+      "pools": ["doces"],
+      "name": "Ouro Branco",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.5
+    },
+    {
+      "pools": ["doces"],
+      "name": "Lollo",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.5
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Coxinha",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Quibe",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Esfirra",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Pastel",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Empada",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Pão de queijo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Bolinha de queijo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Enroladinho de salsicha",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Rissole",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Torresmo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Bolinho de bacalhau",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Batata frita",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Frango a passarinho",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Mandioca frita",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Calabresa acebolada",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Croquete",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Caldinho de feijão",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Sanduíche de metro",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Mini-hambúrguer",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Pé de porco",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Joelho de porco",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Porção de frango",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Coração de frango",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Mini pizza",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["salgados"],
+      "name": "Bolinho de carne",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Caipirinha",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Guaraná Antarctica",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Caldo de cana",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Cajuína",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Tereré",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Quentão",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Guaraná Jesus",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "Vinho Sangue de Boi",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.5
+    },
+    {
+      "pools": ["bebidas"],
+      "name": "51",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.5
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Havaianas",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Natura",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Petrobras",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Itaú",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Bradesco",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Nubank",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Sadia",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "O Boticário",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Embraer",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Magazine Luiza",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Casas Bahia",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Americanas",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Brahma",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Skol",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Guaraná Antarctica",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Banco do Brasil",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Caixa",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Perdigão",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Seara",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Renner",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Riachuelo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Havan",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Globo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Quero",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Café Bom Dia",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Paris 6",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Sergio K",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Mr. Cat",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Prato Fino",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Salada",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Morena Rosa",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Moura",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Café do Ponto",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Colorado",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "John John",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Lojas Avenida",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Via Marte",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Beira Rio",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["marcas"],
+      "name": "Vivo",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Cristo Redentor",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Pão de Açúcar",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Cataratas do Iguaçu",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Pelourinho",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Avenida Paulista",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Fernando de Noronha",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Lençóis Maranhenses",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "MASP",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Elevador Lacerda",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Parque Ibirapuera",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Maracanã",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Praia de Copacabana",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Teatro Amazonas",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Beto Carrero World",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Casa da Cultura",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.6
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Rua do Bom Jesus",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.6
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Sete Cidades",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.6
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Cidade das Pedras",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.6
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Lagoa Azul",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.6
+    },
+    {
+      "pools": ["pontos_turisticos"],
+      "name": "Poço Azul",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.6
+    },
+    {
+      "pools": ["praias"],
+      "name": "Copacabana",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Ipanema",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Leblon",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Jericoacoara",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Porto de Galinhas",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Baía do Sancho",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Praia do Futuro",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Barra da Tijuca",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Boa Viagem",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["praias"],
+      "name": "Praia Central",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["praias"],
+      "name": "José Menino",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["praias"],
+      "name": "Barra Grande",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["praias"],
+      "name": "Enseada",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["praias"],
+      "name": "Praia Grande",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Pica-Pau",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Tom e Jerry",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Os Simpsons",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Bob Esponja",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Scooby-Doo",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Turma da Mônica",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Caverna do Dragão",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Dragon Ball Z",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Pokémon",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Os Cavaleiros do Zodíaco",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Os Flintstones",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Pernalonga",
+      "reason": "óbvia para qualquer brasileiro; o artigo da Wikipédia mede mal a atenção (título genérico, redirecionamento ou pouca edição)",
+      "max_rarity": 0.3
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Rio",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Carros",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Super Mario",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    },
+    {
+      "pools": ["desenhos"],
+      "name": "Homem-Aranha",
+      "reason": "o título casou com um artigo genérico/homônimo muito visitado (ou é marca de nicho) e inflou a atenção medida",
+      "min_rarity": 0.55
+    }
+  ]
+}

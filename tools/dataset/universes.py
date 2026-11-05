@@ -181,6 +181,10 @@ def from_curated(items: list, *, source: str, tags: dict | None = None,
     by_name: dict[str, dict] = {}
     for key, values in (tags or {}).items():
         for value, names in values.items():
+            if value in ("true", "True"):
+                value = True
+            elif value in ("false", "False"):
+                value = False
             for raw in names:
                 bucket = by_name.setdefault(normalize(raw.split("|")[0].split("@")[0]), {})
                 current = bucket.get(key)

@@ -1,0 +1,82 @@
+{
+  "category": "novelas",
+  "prompt": "Cite uma novela brasileira",
+  "source": "pt.wikipedia — telenovelas de streaming e da Record",
+  "notes": "Novelas recentes fora das categorias da TV aberta da Globo.",
+  "items": [
+    {
+      "name": "Todas as Flores",
+      "tags": {
+        "ano": 2022,
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Verdades Secretas II",
+      "aliases": ["Verdades Secretas 2"],
+      "tags": {
+        "ano": 2021,
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Beleza Fatal",
+      "tags": {
+        "ano": 2025
+      }
+    },
+    {
+      "name": "Reis",
+      "article": "Reis (telenovela)",
+      "tags": {
+        "ano": 2022,
+        "emissora": "Record"
+      }
+    },
+    {
+      "name": "Guerreiros do Sol",
+      "tags": {
+        "ano": 2025,
+        "emissora": "Globo"
+      }
+    },
+    {
+      "name": "Carrossel",
+      "article": "Carrossel (telenovela)",
+      "tags": {
+        "ano": 2012,
+        "emissora": "SBT"
+      }
+    },
+    {
+      "name": "Pantanal",
+      "article": "Pantanal (telenovela de 1990)",
+      "tags": {
+        "ano": [1990, 2022],
+        "emissora": ["Manchete", "Globo"]
+      }
+    },
+    {
+      "name": "Patrulha Salvadora",
+      "tags": {
+        "ano": 2014,
+        "emissora": "SBT"
+      }
+    },
+    {
+      "name": "Cúmplices de um Resgate",
+      "tags": {
+        "ano": 2015,
+        "emissora": "SBT"
+      }
+    },
+    {
+      "name": "Rebelde",
+      "article": "Rebelde (telenovela brasileira)",
+      "tags": {
+        "ano": 2011,
+        "emissora": "Record"
+      }
+    }
+  ]
+}

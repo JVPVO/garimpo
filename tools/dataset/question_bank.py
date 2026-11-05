@@ -60,10 +60,10 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
     dropped: list[tuple[str, int]] = []
 
     def add(pid: str, text: str, pool: str, where=None, *, is_letter: bool = False,
-            cat: str | None = None):
+            cat: str | None = None, floor: int | None = None):
         items = pools.get(pool, [])
         selected = [a for a in items if where is None or where(a)]
-        need = LETTER_MIN if is_letter else FLOOR
+        need = LETTER_MIN if is_letter else (floor or FLOOR)
         if len(selected) < need or text in texts:
             dropped.append((pid, len(selected)))
             return
@@ -93,7 +93,7 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
     add("cidade-nordeste", "Cite uma cidade do Nordeste", "cidade", has("regiao", "Nordeste"))
     add("cidade-norte", "Cite uma cidade da Região Norte", "cidade", has("regiao", "Norte"))
     add("cidade-co", "Cite uma cidade do Centro-Oeste", "cidade", has("regiao", "Centro-Oeste"))
-    letters("cidade", "Cite uma cidade brasileira que começa com {L}", "abcmpsrjt", "cidade")
+    letters("cidade", "Cite uma cidade brasileira que começa com {L}", "abcmpsj", "cidade")
     add("cidade-historica", "Cite uma cidade histórica brasileira", "cidades_historicas")
 
     # ---- política, ciência
@@ -107,12 +107,12 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
     add("jogador-zagueiro", "Cite um zagueiro da Seleção Brasileira", "jogador", has("posicao", "zagueiro"))
     add("jogador-meia", "Cite um meio-campista da Seleção Brasileira", "jogador", has("posicao", "meia"))
     add("jogador-lateral", "Cite um lateral da Seleção Brasileira", "jogador", has("posicao", "lateral"))
-    letters("jogador", "Cite um jogador da Seleção cujo nome começa com {L}", "rmagdf", "jogador")
+    letters("jogador", "Cite um jogador da Seleção Brasileira cujo nome começa com {L}", "r", "jogador")
     add("jogadora-todas", "Cite uma jogadora da Seleção Brasileira feminina", "jogadora")
     add("time-todos", "Cite um time de futebol brasileiro", "time")
     add("time-campeao", "Cite um time que já foi campeão brasileiro", "time", has("campeao", "sim"))
     add("time-sp", "Cite um time de futebol paulista", "time", has("uf", "SP"))
-    add("time-rj", "Cite um time de futebol carioca ou fluminense", "time", has("uf", "RJ"))
+    add("time-rj", "Cite um time de futebol do estado do Rio de Janeiro", "time", has("uf", "RJ"))
     add("time-mg", "Cite um time de futebol mineiro", "time", has("uf", "MG"))
     add("time-sul", "Cite um time de futebol do Sul do Brasil", "time", has("uf", "RS", "PR", "SC"))
     add("time-nordeste", "Cite um time de futebol do Nordeste", "time",
@@ -127,18 +127,18 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
 
     # ---- natureza
     add("rio-todos", "Cite um rio brasileiro", "rio")
-    letters("rio", "Cite um rio brasileiro que começa com {L}", "pas", "rio")
+    letters("rio", "Cite um rio brasileiro que começa com {L}", "", "rio")
     add("parque-todos", "Cite um parque nacional brasileiro", "parque")
     add("fruta-todas", "Cite uma fruta nativa do Brasil", "frutas_nativas")
     add("fruta-amazonia", "Cite uma fruta da Amazônia", "frutas_nativas", has("bioma", "Amazônia"))
     add("fruta-cerrado", "Cite uma fruta do Cerrado", "frutas_nativas", has("bioma", "Cerrado"))
     add("fruta-mata", "Cite uma fruta da Mata Atlântica", "frutas_nativas", has("bioma", "Mata Atlântica"))
     add("fruta-caatinga", "Cite uma fruta da Caatinga", "frutas_nativas", has("bioma", "Caatinga"))
-    letters("frutas_nativas", "Cite uma fruta nativa do Brasil que começa com {L}", "cpabmg", "fruta")
+    letters("frutas_nativas", "Cite uma fruta nativa do Brasil que começa com {L}", "", "fruta")
     add("ave-todas", "Cite uma ave brasileira", "aves")
-    letters("aves", "Cite uma ave brasileira que começa com {L}", "abcgjpst", "ave")
+    letters("aves", "Cite uma ave brasileira que começa com {L}", "ast", "ave")
     add("mamifero-todos", "Cite um mamífero da fauna brasileira", "mamiferos")
-    letters("mamiferos", "Cite um mamífero da fauna brasileira que começa com {L}", "cmp", "mamifero")
+    letters("mamiferos", "Cite um mamífero da fauna brasileira que começa com {L}", "", "mamifero")
 
     # ---- comida e bebida
     add("prato-todos", "Cite um prato típico brasileiro", "pratos_tipicos")
@@ -150,9 +150,9 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
                               ("Sudeste", "prato-sudeste", "Cite um prato típico do Sudeste"),
                               ("Centro-Oeste", "prato-co", "Cite um prato típico do Centro-Oeste")):
         add(pid, text, "pratos_tipicos", has("regiao", region))
-    letters("pratos_tipicos", "Cite um prato brasileiro que começa com {L}", "cbpmf", "prato")
+    letters("pratos_tipicos", "Cite um prato brasileiro que começa com {L}", "", "prato")
     add("doce-todos", "Cite um doce brasileiro", "doces")
-    letters("doces", "Cite um doce brasileiro que começa com {L}", "bcpm", "doce")
+    letters("doces", "Cite um doce brasileiro que começa com {L}", "", "doce")
     add("salgado-festa", "Cite um salgadinho de festa", "salgados", has("tipo", "festa"))
     add("petisco-boteco", "Cite um petisco de boteco", "salgados", has("tipo", "boteco"))
     add("bebida-todas", "Cite uma bebida brasileira", "bebidas")
@@ -186,54 +186,52 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
     add("filme-2010", "Cite um filme brasileiro dos anos 2010", "filmes", year_between(2010, 2019))
     letters("filmes", "Cite um filme brasileiro que começa com {L}", "oac", "filme")
     add("programa-tv", "Cite um programa da TV brasileira", "programas_tv")
-    add("apresentador", "Cite um apresentador ou apresentadora de TV brasileiro", "apresentador")
+    add("apresentador", "Cite um apresentador ou uma apresentadora da TV brasileira", "apresentador")
     add("humorista", "Cite um humorista brasileiro", "humorista")
     add("youtuber", "Cite um youtuber ou influenciador brasileiro", "youtuber")
     add("bbb-todos", "Cite um participante do Big Brother Brasil", "bbb")
     add("bbb-campeao", "Cite um campeão do Big Brother Brasil", "bbb_campeoes")
-    add("globinho-todos", "Cite um desenho que passou na TV Globinho", "tv_globinho")
     add("desenho-todos", "Cite um desenho animado que marcou a sua infância", "desenhos")
-    letters("desenhos", "Cite um desenho animado que começa com {L}", "abp", "desenho")
+    letters("desenhos", "Cite um desenho animado que começa com {L}", "", "desenho")
     add("turma-monica", "Cite um personagem da Turma da Mônica", "turma_monica")
 
     # ---- música
-    add("cantor-todos", "Cite um cantor ou cantora brasileira", "cantores")
+    add("cantor-todos", "Cite um cantor ou uma cantora brasileira", "cantores")
     add("cantora", "Cite uma cantora brasileira", "cantores", has("genero", "feminino"))
-    add("cantor-masc", "Cite um cantor brasileiro (homem)", "cantores", has("genero", "masculino"))
+    add("cantor-masc", "Cite um cantor brasileiro", "cantores", has("genero", "masculino"))
     for genre, pid, text in (("mpb", "cantor-mpb", "Cite um cantor ou cantora de MPB"),
                              ("sertanejo", "cantor-sertanejo", "Cite um cantor, cantora ou dupla sertaneja"),
-                             ("funk", "cantor-funk", "Cite um MC ou cantor de funk"),
-                             ("forro", "cantor-forro", "Cite um artista de forró"),
-                             ("samba", "cantor-samba", "Cite um artista de samba ou pagode"),
-                             ("axe", "cantor-axe", "Cite um artista de axé"),
+                             ("funk", "cantor-funk", "Cite um MC, cantor ou grupo de funk"),
+                             ("forro", "cantor-forro", "Cite um cantor ou banda de forró"),
+                             ("samba", "cantor-samba", "Cite um cantor ou grupo de samba ou pagode"),
+                             ("axe", "cantor-axe", "Cite um cantor ou banda de axé"),
                              ("rap", "cantor-rap", "Cite um rapper ou grupo de rap brasileiro"),
-                             ("gospel", "cantor-gospel", "Cite um cantor ou cantora gospel brasileira"),
-                             ("rock", "cantor-rock", "Cite um nome do rock brasileiro")):
-        add(pid, text, "cantores", has("genero_musical", genre))
+                             ("gospel", "cantor-gospel", "Cite um cantor, cantora ou banda gospel brasileira"),
+                             ("rock", "cantor-rock", "Cite um cantor ou banda do rock brasileiro")):
+        add(pid, text, "musica", has("genero_musical", genre), cat="cantores")
     add("dupla-sertaneja", "Cite uma dupla sertaneja", "cantores",
         both(has("dupla", True), has("genero_musical", "sertanejo")))
-    letters("cantores", "Cite um cantor ou cantora brasileira que começa com {L}", "abcdgjlmrt", "cantor")
+    letters("cantores", "Cite um cantor ou uma cantora do Brasil cujo nome começa com {L}", "acmrl", "cantor")
     add("banda-br", "Cite uma banda ou grupo musical brasileiro", "bandas")
-    add("banda-rock", "Cite uma banda de rock brasileira", "bandas", has("genero_musical", "rock"))
     add("cantor-pt", "Cite um cantor, cantora ou banda de Portugal", "cantor_pt")
 
     # ---- letras
-    add("escritor-todos", "Cite um escritor ou escritora brasileira", "escritores")
+    add("escritor-todos", "Cite um escritor ou uma escritora brasileira", "escritores")
     add("escritora", "Cite uma escritora brasileira", "escritores", has("genero", "feminino"))
-    letters("escritores", "Cite um escritor brasileiro cujo nome começa com {L}", "cmjaglr", "escritor")
+    letters("escritores", "Cite um escritor brasileiro cujo nome começa com {L}", "cmj", "escritor")
     add("escritor-pt", "Cite um escritor ou poeta português", "escritor_pt")
 
     # ---- atores
-    add("ator-todos", "Cite um ator ou atriz brasileira", "atores")
+    add("ator-todos", "Cite um ator ou uma atriz brasileira", "atores")
     add("atriz", "Cite uma atriz brasileira", "atores", has("genero", "feminino"))
-    add("ator-masc", "Cite um ator brasileiro (homem)", "atores", has("genero", "masculino"))
-    letters("atores", "Cite um ator ou atriz brasileira cujo nome começa com {L}", "mcfrjlast", "ator")
+    add("ator-masc", "Cite um ator brasileiro", "atores", has("genero", "masculino"))
+    letters("atores", "Cite um ator ou uma atriz do Brasil cujo nome começa com {L}", "mcfra", "ator")
 
     # ---- marcas
     add("marca-todas", "Cite uma marca brasileira", "marcas")
     add("banco-br", "Cite um banco brasileiro", "marcas", has("setor", "banco"))
     add("marca-moda", "Cite uma marca brasileira de roupa ou calçado", "marcas", has("setor", "moda"))
-    letters("marcas", "Cite uma marca brasileira que começa com {L}", "bcpsmatd", "marca")
+    letters("marcas", "Cite uma marca brasileira que começa com {L}", "bcpsm", "marca")
 
     # ---- cultura popular
     add("folclore-todos", "Cite uma criatura ou lenda do folclore brasileiro", "folclore")
@@ -242,15 +240,15 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
     add("instrumento-todos", "Cite um instrumento musical brasileiro", "instrumentos")
     add("instrumento-perc", "Cite um instrumento de percussão brasileiro", "instrumentos",
         has("tipo", "percussão"))
-    add("escola-samba", "Cite uma escola de samba", "escola_samba")
+    add("escola-samba", "Cite uma escola de samba do Rio ou de São Paulo", "escola_samba")
     add("tupi-todas", "Cite uma palavra de origem indígena que usamos no português", "palavras_tupi")
-    letters("palavras_tupi", "Cite uma palavra de origem tupi que começa com {L}", "pcmaij", "tupi")
+    letters("palavras_tupi", "Cite uma palavra de origem tupi que começa com {L}", "", "tupi")
     add("giria-todas", "Cite uma gíria brasileira", "girias")
     add("giria-nordeste", "Cite uma gíria ou expressão nordestina", "girias", has("regiao", "Nordeste"))
     add("giria-sul", "Cite uma gíria ou expressão gaúcha", "girias", has("regiao", "Sul"))
     add("giria-rio", "Cite uma gíria carioca", "girias", has("regiao", "Rio"))
-    add("giria-minas", "Cite uma expressão mineira", "girias", has("regiao", "Minas"))
-    add("palavra-pt", "Cite uma palavra que em Portugal é diferente do Brasil (ex.: autocarro)",
+    add("giria-minas", "Cite uma expressão típica de Minas Gerais", "girias", has("regiao", "Minas"))
+    add("palavra-pt", "Cite uma palavra do português de Portugal que é diferente no Brasil (como “autocarro”)",
         "palavras_pt")
 
     # ---- lugares
@@ -262,21 +260,22 @@ def build(pools: dict[str, list[dict]]) -> list[dict]:
 
     # ---- mundo
     add("pais-todos", "Cite um país do mundo", "pais")
-    add("pais-lusofono", "Cite um país onde se fala português", "pais", has("lusofono", True))
+    add("pais-lusofono", "Cite um país onde o português é língua oficial", "pais",
+        has("lusofono", True), floor=9)
     for cont, pid, text in (("Europa", "pais-europa", "Cite um país da Europa"),
                             ("África", "pais-africa", "Cite um país da África"),
                             ("Ásia", "pais-asia", "Cite um país da Ásia"),
                             ("América do Sul", "pais-america-sul", "Cite um país da América do Sul")):
         add(pid, text, "pais", lambda e, c=cont: c in str(e["attrs"].get("continente") or ""))
-    letters("pais", "Cite um país que começa com {L}", "abcegimst", "pais")
-    add("capital-todas", "Cite uma capital de país", "capital_mundo")
+    letters("pais", "Cite um país que começa com {L}", "", "pais")
+    add("capital-todas", "Cite a capital de algum país", "capital_mundo")
     for cont, pid, text in (("Europa", "capital-europa", "Cite uma capital da Europa"),
                             ("África", "capital-africa", "Cite uma capital da África"),
                             ("Ásia", "capital-asia", "Cite uma capital da Ásia"),
                             ("América", "capital-america", "Cite uma capital das Américas")):
         add(pid, text, "capital_mundo", lambda e, c=cont: c in str(e["attrs"].get("continente") or ""))
     add("cidade-mundo-todas", "Cite uma cidade do mundo (fora do Brasil)", "cidade_mundo")
-    letters("cidade_mundo", "Cite uma cidade do mundo que começa com {L}", "bclmps", "cidade-mundo")
+    letters("cidade_mundo", "Cite uma cidade do mundo que começa com {L}", "bclmp", "cidade-mundo")
     add("elemento-todos", "Cite um elemento químico", "elemento")
 
     build.dropped = dropped  # type: ignore[attr-defined]

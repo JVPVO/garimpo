@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 CACHE = ROOT / ".cache" / "dataset"
 CACHE.mkdir(parents=True, exist_ok=True)
 
-UA = "GarimpoDatasetBot/1.0 (educational trivia game)"
+UA = "GarimpoDatasetBot/1.0 (educational trivia game; https://github.com/arthurafaria/garimpo)"
 
 _session = requests.Session()
 _session.headers.update({"User-Agent": UA})

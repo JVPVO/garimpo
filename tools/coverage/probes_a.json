@@ -179,14 +179,10 @@
       "juiz de fora",
       "londrina",
       "aparecida de goiania",
-      "ananindeua",
       "porto velho",
       "serra",
-      "niteroi",
       "caxias do sul",
-      "macapa",
-      "florianopolis",
-      "vila velha"
+      "florianopolis"
     ],
     "neg": ["gramado", "paraty", "ouro preto", "olinda", "petropolis"]
   },
@@ -1318,7 +1314,6 @@
   },
   "jogador-lm": {
     "pos": [
-      "marta",
       "marcelo",
       "marquinhos",
       "marcos",
@@ -2456,7 +2451,6 @@
       "entrevero",
       "pinhao",
       "marreco recheado",
-      "cuca",
       "sopa de capeletti",
       "polenta",
       "costela fogo de chao",
@@ -2467,8 +2461,6 @@
       "tainha",
       "carne de onca",
       "fortaia",
-      "apfelstrudel",
-      "strudel",
       "espeto corrido"
     ],
     "neg": ["acaraje", "pao de queijo", "tacaca"]
@@ -2506,10 +2498,8 @@
       "carne de sol",
       "caruru",
       "churrasco",
-      "canjica",
       "cabidela",
       "caldeirada",
-      "cuca",
       "carreteiro",
       "camarao na moranga",
       "caranguejada",

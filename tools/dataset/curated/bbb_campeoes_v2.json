@@ -1,0 +1,33 @@
+{
+  "category": "bbb_campeoes",
+  "prompt": "Cite um campeão do Big Brother Brasil",
+  "source": "https://pt.wikipedia.org/wiki/Big_Brother_Brasil",
+  "notes": "Campeões das edições 1 a 25 (BBB 26 não conferido, fica fora até confirmação).",
+  "items": [
+    "Kleber Bambam|Bambam",
+    "Rodrigo Leonel@Rodrigo Cowboy|Rodrigo Cowboy|Cowboy",
+    "Dhomini@Dhomini Ferreira|Dhomini Ferreira",
+    "Cida@Cida dos Santos|Cida dos Santos",
+    "Jean Wyllys|Jean",
+    "Mara Viana|Mara",
+    "Diego Alemão|Alemão|Diego Gasques",
+    "Rafinha@Rafael Ribeiro|Rafael Ribeiro",
+    "Max Porto|Max",
+    "Marcelo Dourado|Dourado",
+    "Maria Melilo|Maria",
+    "Fael@Fael Cordeiro|Fael Cordeiro",
+    "Fernanda Keulla|Keulla",
+    "Vanessa Mesquita|Vanessa",
+    "Cézar Lima|Cezar Lima|Cézar",
+    "Munik Nunes|Munik",
+    "Emilly Araújo|Emilly",
+    "Gleici Damasceno|Gleici",
+    "Paula von Sperling|Paula Sperling|Paula",
+    "Thelma Assis|Thelma|Thelminha",
+    "Juliette@Juliette Freire|Juliette Freire",
+    "Arthur Aguiar",
+    "Amanda Meirelles|Amanda",
+    "Davi Brito|Davi",
+    "Renata Saldanha|Renata"
+  ]
+}

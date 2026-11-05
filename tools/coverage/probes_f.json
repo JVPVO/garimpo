@@ -1,0 +1,1208 @@
+{
+  "_about": "Probes das perguntas por letra e das novas perguntas temáticas, escritos antes da checagem.",
+  "fruta-la": {
+    "pos": ["acai", "abiu", "araca", "araticum", "abacaxi", "araca boi", "ananas"],
+    "neg": ["amora", "abacate"]
+  },
+  "fruta-lb": {
+    "pos": [
+      "bacuri",
+      "buriti",
+      "baru",
+      "bacaba",
+      "biriba",
+      "butia",
+      "bacupari",
+      "babacu",
+      "bocaiuva",
+      "bacurizinho"
+    ],
+    "neg": ["banana"]
+  },
+  "fruta-lm": {
+    "pos": [
+      "maracuja",
+      "mangaba",
+      "murici",
+      "mandacaru",
+      "macauba",
+      "mapati",
+      "murumuru",
+      "marolo",
+      "mama cadela",
+      "mutamba"
+    ],
+    "neg": ["manga", "melancia"]
+  },
+  "fruta-lg": {
+    "pos": [
+      "goiaba",
+      "guarana",
+      "gabiroba",
+      "grumixama",
+      "guabiroba",
+      "guabiju",
+      "guariroba",
+      "graviola",
+      "gravata",
+      "guajiru"
+    ],
+    "neg": ["goji"]
+  },
+  "fruta-caatinga": {
+    "pos": [
+      "umbu",
+      "caja",
+      "licuri",
+      "jua",
+      "mandacaru",
+      "xique xique",
+      "quixaba",
+      "caju",
+      "pitomba",
+      "umbu caja",
+      "facheiro",
+      "maracuja do mato",
+      "araticum",
+      "murici",
+      "cajarana"
+    ],
+    "neg": ["acai", "cupuacu", "jabuticaba"]
+  },
+  "ave-lb": {
+    "pos": [
+      "bem te vi",
+      "beija flor",
+      "bigua",
+      "bico de lacre",
+      "bacurau",
+      "biguatinga",
+      "bico de brasa",
+      "batuira",
+      "bentevi"
+    ],
+    "neg": []
+  },
+  "ave-lc": {
+    "pos": [
+      "canario",
+      "coruja",
+      "curio",
+      "carcara",
+      "colhereiro",
+      "cardeal",
+      "coleirinha",
+      "corrupiao",
+      "codorna",
+      "cambacica",
+      "chupim",
+      "caburé",
+      "cegonha",
+      "corruira",
+      "cancão",
+      "cuitelao"
+    ],
+    "neg": ["cisne negro"]
+  },
+  "ave-lg": {
+    "pos": [
+      "gaviao",
+      "garca",
+      "gralha azul",
+      "gaviao real",
+      "galo da serra",
+      "graúna",
+      "gaturamo",
+      "guara",
+      "gaivota",
+      "gralha",
+      "garibaldi",
+      "garrinchao"
+    ],
+    "neg": []
+  },
+  "ave-lj": {
+    "pos": [
+      "joao de barro",
+      "jacu",
+      "jandaia",
+      "jacana",
+      "juriti",
+      "jabiru",
+      "jaó",
+      "joao bobo",
+      "jacutinga",
+      "japu"
+    ],
+    "neg": []
+  },
+  "ave-ls": {
+    "pos": [
+      "sabia",
+      "seriema",
+      "saira",
+      "sanhaco",
+      "soco",
+      "saracura",
+      "sabia laranjeira",
+      "suiriri",
+      "sete cores",
+      "sabiá poca",
+      "sanhaçu"
+    ],
+    "neg": []
+  },
+  "ave-lt": {
+    "pos": [
+      "tucano",
+      "tuiuiu",
+      "tico tico",
+      "trinca ferro",
+      "tiziu",
+      "tesourinha",
+      "tie sangue",
+      "tangara",
+      "tucano toco",
+      "tapicuru",
+      "tachã"
+    ],
+    "neg": []
+  },
+  "mamifero-lp": {
+    "pos": [
+      "preguica",
+      "paca",
+      "peixe boi",
+      "preá",
+      "porco espinho",
+      "puma",
+      "porco do mato",
+      "parauacu",
+      "preguiça de tres dedos"
+    ],
+    "neg": ["panda", "pinguim"]
+  },
+  "prato-lf": {
+    "pos": [
+      "feijoada",
+      "farofa",
+      "feijao tropeiro",
+      "frango com quiabo",
+      "fava",
+      "feijao verde",
+      "frango a passarinho",
+      "fricasse",
+      "feijao de corda",
+      "frigideira de siri"
+    ],
+    "neg": ["fondue"]
+  },
+  "doce-lm": {
+    "pos": [
+      "maria mole",
+      "manjar",
+      "mousse de maracuja",
+      "mae benta",
+      "marmelada",
+      "mungunza",
+      "mane pelado",
+      "mariola",
+      "melado"
+    ],
+    "neg": ["macaron"]
+  },
+  "novela-lt": {
+    "pos": [
+      "tieta",
+      "terra nostra",
+      "torre de babel",
+      "top model",
+      "travessia",
+      "terra e paixao",
+      "ti ti ti",
+      "totalmente demais",
+      "tempo de amar",
+      "todas as flores",
+      "transas e caretas",
+      "tititi"
+    ],
+    "neg": []
+  },
+  "filme-la": {
+    "pos": [
+      "aquarius",
+      "abril despedacado",
+      "amarelo manga",
+      "ainda estou aqui",
+      "a hora da estrela",
+      "a vida invisivel",
+      "assalto ao banco central",
+      "ate que a sorte nos separe",
+      "a mulher invisivel",
+      "auto da compadecida"
+    ],
+    "neg": ["avatar"]
+  },
+  "filme-lc": {
+    "pos": [
+      "cidade de deus",
+      "central do brasil",
+      "carandiru",
+      "cazuza",
+      "cine holliudy",
+      "chico xavier",
+      "carlota joaquina",
+      "cidade baixa",
+      "cilada com",
+      "caramuru",
+      "casa de areia"
+    ],
+    "neg": ["coringa"]
+  },
+  "filme-90": {
+    "pos": [
+      "central do brasil",
+      "o quatrilho",
+      "carlota joaquina",
+      "o que e isso companheiro",
+      "orfeu",
+      "baile perfumado",
+      "guerra de canudos",
+      "tieta do agreste",
+      "for all",
+      "o primeiro dia",
+      "xuxa requebra",
+      "castelo ra tim bum o filme",
+      "ed mort",
+      "o menino maluquinho",
+      "terra estrangeira"
+    ],
+    "neg": ["cidade de deus", "tropa de elite"]
+  },
+  "desenho-la": {
+    "pos": [
+      "as meninas superpoderosas",
+      "a vaca e o frango",
+      "apenas um show",
+      "avatar",
+      "animaniacs",
+      "a pantera cor de rosa",
+      "aladdin",
+      "as tartarugas ninja",
+      "a corrida maluca",
+      "a era do gelo"
+    ],
+    "neg": []
+  },
+  "desenho-lb": {
+    "pos": [
+      "bob esponja",
+      "ben 10",
+      "beyblade",
+      "bakugan",
+      "batman",
+      "bananas de pijamas",
+      "backyardigans",
+      "bleach",
+      "bluey",
+      "bambi"
+    ],
+    "neg": []
+  },
+  "desenho-lp": {
+    "pos": [
+      "pica pau",
+      "pokemon",
+      "peppa pig",
+      "patrulha canina",
+      "peixonauta",
+      "pernalonga",
+      "popeye",
+      "phineas e ferb",
+      "pinky e o cerebro",
+      "padrinhos magicos",
+      "pocoyo",
+      "pato donald"
+    ],
+    "neg": []
+  },
+  "cantor-la": {
+    "pos": [
+      "anitta",
+      "alcione",
+      "ana carolina",
+      "alceu valenca",
+      "amado batista",
+      "ana castela",
+      "adoniran barbosa",
+      "adriana calcanhotto",
+      "alexandre pires",
+      "arlindo cruz",
+      "aline barros",
+      "almir sater",
+      "angela maria"
+    ],
+    "neg": ["adele"]
+  },
+  "cantor-lb": {
+    "pos": [
+      "belchior",
+      "beth carvalho",
+      "belo",
+      "bruno e marrone",
+      "bezerra da silva",
+      "baby do brasil",
+      "bell marques",
+      "buchecha",
+      "baden powell",
+      "beto guedes",
+      "bk"
+    ],
+    "neg": ["beyonce"]
+  },
+  "cantor-lc": {
+    "pos": [
+      "caetano veloso",
+      "cazuza",
+      "chico buarque",
+      "cassia eller",
+      "claudia leitte",
+      "clara nunes",
+      "cartola",
+      "chitaozinho e xororo",
+      "carmen miranda",
+      "criolo",
+      "cauby peixoto",
+      "carlinhos brown"
+    ],
+    "neg": ["celine dion"]
+  },
+  "cantor-ld": {
+    "pos": [
+      "djavan",
+      "daniela mercury",
+      "dominguinhos",
+      "daniel",
+      "dilsinho",
+      "djonga",
+      "dona ivone lara",
+      "diogo nogueira",
+      "dorival caymmi",
+      "dalva de oliveira"
+    ],
+    "neg": ["drake"]
+  },
+  "cantor-lg": {
+    "pos": [
+      "gilberto gil",
+      "gal costa",
+      "gusttavo lima",
+      "gloria groove",
+      "gonzaguinha",
+      "gretchen",
+      "gaby amarantos",
+      "gabriel o pensador",
+      "guilherme arantes",
+      "geraldo azevedo"
+    ],
+    "neg": []
+  },
+  "cantor-lj": {
+    "pos": [
+      "jorge ben jor",
+      "joao gilberto",
+      "jorge e mateus",
+      "jorge aragao",
+      "jackson do pandeiro",
+      "jair rodrigues",
+      "joelma",
+      "joao gomes",
+      "jamelao",
+      "jao",
+      "jota quest"
+    ],
+    "neg": ["justin bieber"]
+  },
+  "cantor-ll": {
+    "pos": [
+      "lulu santos",
+      "luan santana",
+      "luiz gonzaga",
+      "ludmilla",
+      "leonardo",
+      "lenine",
+      "luisa sonza",
+      "leandro e leonardo",
+      "lo borges",
+      "leci brandao",
+      "luiz melodia"
+    ],
+    "neg": ["lady gaga"]
+  },
+  "cantor-lm": {
+    "pos": [
+      "marilia mendonca",
+      "milton nascimento",
+      "maria bethania",
+      "marisa monte",
+      "michel telo",
+      "martinho da vila",
+      "mc kevinho",
+      "maiara e maraisa",
+      "marina lima",
+      "mano brown",
+      "maria gadu",
+      "mumuzinho"
+    ],
+    "neg": ["madonna"]
+  },
+  "cantor-lr": {
+    "pos": [
+      "roberto carlos",
+      "rita lee",
+      "raul seixas",
+      "renato russo",
+      "reginaldo rossi",
+      "roberta miranda",
+      "racionais",
+      "raimundo fagner",
+      "rionegro e solimoes",
+      "renato teixeira"
+    ],
+    "neg": ["rihanna"]
+  },
+  "cantor-lt": {
+    "pos": [
+      "tim maia",
+      "tom jobim",
+      "thiaguinho",
+      "tiago iorc",
+      "toquinho",
+      "tom ze",
+      "tonico e tinoco",
+      "tiao carreiro e pardinho",
+      "tati quebra barraco",
+      "teodoro e sampaio"
+    ],
+    "neg": ["taylor swift"]
+  },
+  "cantor-masc": {
+    "pos": [
+      "roberto carlos",
+      "caetano veloso",
+      "gilberto gil",
+      "chico buarque",
+      "milton nascimento",
+      "djavan",
+      "tim maia",
+      "luan santana",
+      "gusttavo lima",
+      "lulu santos",
+      "zeca pagodinho",
+      "seu jorge",
+      "michel telo",
+      "leonardo",
+      "cazuza",
+      "renato russo",
+      "raul seixas",
+      "ney matogrosso",
+      "fabio jr",
+      "belchior",
+      "luiz gonzaga",
+      "thiaguinho",
+      "wesley safadao",
+      "emicida",
+      "joao gomes"
+    ],
+    "neg": ["ivete sangalo", "anitta", "elis regina"]
+  },
+  "escritor-la": {
+    "pos": [
+      "ariano suassuna",
+      "aluisio azevedo",
+      "alvares de azevedo",
+      "adelia prado",
+      "ana maria machado",
+      "augusto cury",
+      "augusto dos anjos",
+      "autran dourado",
+      "antonio callado",
+      "affonso romano de sant anna"
+    ],
+    "neg": []
+  },
+  "escritor-lg": {
+    "pos": [
+      "graciliano ramos",
+      "guimaraes rosa",
+      "goncalves dias",
+      "gregorio de matos",
+      "gilberto freyre",
+      "gonçalves de magalhaes",
+      "geovani martins"
+    ],
+    "neg": []
+  },
+  "escritor-ll": {
+    "pos": [
+      "lima barreto",
+      "lygia fagundes telles",
+      "luis fernando verissimo",
+      "lya luft",
+      "ledo ivo",
+      "lygia bojunga",
+      "laurentino gomes",
+      "leandro karnal",
+      "luiz ruffato",
+      "lucia machado de almeida"
+    ],
+    "neg": []
+  },
+  "escritor-lr": {
+    "pos": [
+      "rachel de queiroz",
+      "rubem fonseca",
+      "rubem braga",
+      "ruth rocha",
+      "raul pompeia",
+      "raduan nassar",
+      "rubem alves",
+      "ruy castro",
+      "raphael montes",
+      "ricardo azevedo"
+    ],
+    "neg": []
+  },
+  "ator-lj": {
+    "pos": [
+      "juliana paes",
+      "jose wilker",
+      "jose mayer",
+      "juca de oliveira",
+      "jesuita barbosa",
+      "jose loreto",
+      "julia lemmertz",
+      "joana fomm",
+      "juliano cazarre",
+      "jayme matarazzo"
+    ],
+    "neg": []
+  },
+  "ator-ll": {
+    "pos": [
+      "lima duarte",
+      "lazaro ramos",
+      "lilia cabral",
+      "leandro hassum",
+      "leticia sabatella",
+      "lucelia santos",
+      "larissa manoela",
+      "luana piovani",
+      "laura cardoso",
+      "leticia spiller",
+      "luis melo"
+    ],
+    "neg": []
+  },
+  "ator-la": {
+    "pos": [
+      "antonio fagundes",
+      "adriana esteves",
+      "alexandre nero",
+      "ary fontoura",
+      "alessandra negrini",
+      "andrea beltrao",
+      "ana paula arosio",
+      "antonio pitanga",
+      "alinne moraes",
+      "agatha moreira",
+      "arlete salles"
+    ],
+    "neg": []
+  },
+  "ator-ls": {
+    "pos": [
+      "selton mello",
+      "susana vieira",
+      "stenio garcia",
+      "sonia braga",
+      "sheron menezzes",
+      "sergio guize",
+      "sophie charlotte",
+      "sandra bréa",
+      "silvia pfeifer",
+      "sergio marone"
+    ],
+    "neg": []
+  },
+  "ator-lt": {
+    "pos": [
+      "tony ramos",
+      "tarcisio meira",
+      "tais araujo",
+      "tata werneck",
+      "thiago lacerda",
+      "thiago fragoso",
+      "tuca andrada",
+      "tainá muller",
+      "tarcisio filho",
+      "thaila ayala"
+    ],
+    "neg": []
+  },
+  "marca-la": {
+    "pos": [
+      "ambev",
+      "americanas",
+      "arezzo",
+      "azul",
+      "assai",
+      "atacadao",
+      "aurora",
+      "arisco",
+      "antarctica",
+      "azaleia",
+      "animale",
+      "arno",
+      "aramis",
+      "adria"
+    ],
+    "neg": ["adidas", "apple"]
+  },
+  "marca-lt": {
+    "pos": [
+      "tramontina",
+      "tok stok",
+      "tigre",
+      "tirol",
+      "tio joao",
+      "tam",
+      "totvs",
+      "trakinas",
+      "tubaina",
+      "tng",
+      "taco",
+      "tilibra"
+    ],
+    "neg": ["toyota"]
+  },
+  "marca-ld": {
+    "pos": [
+      "dolly",
+      "dudalina",
+      "drogasil",
+      "duloren",
+      "dafiti",
+      "dona benta",
+      "dori",
+      "doril",
+      "dakota",
+      "duratex",
+      "deca",
+      "docol"
+    ],
+    "neg": ["dell", "disney"]
+  },
+  "tupi-lp": {
+    "pos": [
+      "pipoca",
+      "peteca",
+      "piranha",
+      "pitanga",
+      "pereba",
+      "perereca",
+      "pindaiba",
+      "pororoca",
+      "peroba",
+      "pindorama",
+      "piracicaba",
+      "pamonha",
+      "paca",
+      "pacu",
+      "pernambuco"
+    ],
+    "neg": []
+  },
+  "tupi-lc": {
+    "pos": [
+      "caju",
+      "capivara",
+      "catapora",
+      "cutucar",
+      "cuia",
+      "cumbuca",
+      "caja",
+      "cupuacu",
+      "carioca",
+      "capim",
+      "caatinga",
+      "cipo",
+      "curitiba",
+      "cuiaba",
+      "caipira",
+      "capoeira"
+    ],
+    "neg": []
+  },
+  "tupi-lm": {
+    "pos": [
+      "mandioca",
+      "maracana",
+      "mingau",
+      "maracuja",
+      "mandacaru",
+      "mirim",
+      "mutirao",
+      "morumbi",
+      "mooca",
+      "muçum"
+    ],
+    "neg": []
+  },
+  "tupi-la": {
+    "pos": [
+      "abacaxi",
+      "arara",
+      "aracaju",
+      "acai",
+      "aipim",
+      "anhangabau",
+      "araraquara",
+      "amendoim",
+      "ananas",
+      "araponga"
+    ],
+    "neg": []
+  },
+  "tupi-li": {
+    "pos": [
+      "ipanema",
+      "itau",
+      "igarape",
+      "ipe",
+      "imbuia",
+      "iracema",
+      "ibirapuera",
+      "itaquaquecetuba",
+      "iara",
+      "iguacu",
+      "itu",
+      "itaquera"
+    ],
+    "neg": []
+  },
+  "tupi-lj": {
+    "pos": [
+      "jacare",
+      "jabuti",
+      "jiboia",
+      "jundiai",
+      "jacu",
+      "jabuticaba",
+      "jururu",
+      "jacaranda",
+      "jequitiba",
+      "jerimum",
+      "jaguar",
+      "jaguatirica"
+    ],
+    "neg": []
+  },
+  "pais-la": {
+    "pos": [
+      "argentina",
+      "alemanha",
+      "angola",
+      "australia",
+      "austria",
+      "africa do sul",
+      "argelia",
+      "arabia saudita",
+      "afeganistao",
+      "albania",
+      "armenia",
+      "andorra"
+    ],
+    "neg": ["amazonas"]
+  },
+  "pais-lb": {
+    "pos": [
+      "brasil",
+      "bolivia",
+      "belgica",
+      "bulgaria",
+      "bangladesh",
+      "bahamas",
+      "barbados",
+      "belize",
+      "benin",
+      "botsuana",
+      "burkina faso",
+      "burundi",
+      "butao",
+      "bosnia"
+    ],
+    "neg": ["bahia"]
+  },
+  "pais-lc": {
+    "pos": [
+      "china",
+      "canada",
+      "chile",
+      "colombia",
+      "cuba",
+      "croacia",
+      "costa rica",
+      "cabo verde",
+      "camaroes",
+      "catar",
+      "coreia do sul",
+      "camboja",
+      "chipre",
+      "chade"
+    ],
+    "neg": ["california"]
+  },
+  "pais-le": {
+    "pos": [
+      "espanha",
+      "estados unidos",
+      "egito",
+      "equador",
+      "eua",
+      "etiopia",
+      "escocia",
+      "eslovaquia",
+      "eslovenia",
+      "estonia",
+      "emirados arabes unidos",
+      "eritreia",
+      "el salvador"
+    ],
+    "neg": ["europa"]
+  },
+  "pais-lg": {
+    "pos": [
+      "grecia",
+      "guatemala",
+      "gana",
+      "georgia",
+      "guine bissau",
+      "guiana",
+      "guine",
+      "gabao",
+      "gambia",
+      "granada",
+      "guine equatorial"
+    ],
+    "neg": ["groenlandia"]
+  },
+  "pais-li": {
+    "pos": [
+      "italia",
+      "india",
+      "inglaterra",
+      "irlanda",
+      "ira",
+      "iraque",
+      "israel",
+      "indonesia",
+      "islandia",
+      "iemen"
+    ],
+    "neg": []
+  },
+  "pais-lm": {
+    "pos": [
+      "mexico",
+      "mocambique",
+      "marrocos",
+      "monaco",
+      "malasia",
+      "mali",
+      "malta",
+      "mongolia",
+      "moldavia",
+      "montenegro",
+      "madagascar",
+      "mauritania",
+      "mianmar"
+    ],
+    "neg": []
+  },
+  "pais-ls": {
+    "pos": [
+      "suica",
+      "suecia",
+      "senegal",
+      "servia",
+      "singapura",
+      "siria",
+      "somalia",
+      "sudao",
+      "suriname",
+      "sao tome e principe",
+      "sri lanka",
+      "serra leoa"
+    ],
+    "neg": ["sao paulo"]
+  },
+  "pais-lt": {
+    "pos": [
+      "turquia",
+      "tailandia",
+      "tunisia",
+      "tanzania",
+      "togo",
+      "timor leste",
+      "tchequia",
+      "taiwan",
+      "tajiquistao",
+      "trinidad e tobago"
+    ],
+    "neg": []
+  },
+  "pais-lusofono": {
+    "pos": [
+      "brasil",
+      "portugal",
+      "angola",
+      "mocambique",
+      "cabo verde",
+      "guine bissau",
+      "sao tome e principe",
+      "timor leste",
+      "guine equatorial"
+    ],
+    "neg": ["espanha", "argentina", "macau"]
+  },
+  "pais-america-sul": {
+    "pos": [
+      "brasil",
+      "argentina",
+      "chile",
+      "uruguai",
+      "paraguai",
+      "bolivia",
+      "peru",
+      "colombia",
+      "venezuela",
+      "equador",
+      "guiana",
+      "suriname"
+    ],
+    "neg": ["mexico", "cuba", "panama", "guiana francesa", "espanha"]
+  },
+  "capital-africa": {
+    "pos": [
+      "luanda",
+      "maputo",
+      "cairo",
+      "pretoria",
+      "nairobi",
+      "rabat",
+      "argel",
+      "tunis",
+      "dakar",
+      "abuja",
+      "acra",
+      "adis abeba",
+      "praia",
+      "bissau",
+      "kinshasa",
+      "kampala",
+      "harare",
+      "trípoli",
+      "cartum",
+      "sao tome"
+    ],
+    "neg": ["joanesburgo", "casablanca", "cidade do cabo"]
+  },
+  "capital-asia": {
+    "pos": [
+      "toquio",
+      "pequim",
+      "seul",
+      "bangcoc",
+      "nova delhi",
+      "hanoi",
+      "jacarta",
+      "manila",
+      "teera",
+      "bagda",
+      "riad",
+      "doha",
+      "abu dhabi",
+      "cabul",
+      "islamabad",
+      "kuala lumpur",
+      "singapura",
+      "taipe",
+      "dili",
+      "jerusalem",
+      "damasco",
+      "beirute",
+      "ancara",
+      "catmandu",
+      "pyongyang"
+    ],
+    "neg": ["xangai", "dubai", "mumbai", "istambul"]
+  },
+  "cidade-mundo-lb": {
+    "pos": [
+      "barcelona",
+      "buenos aires",
+      "berlim",
+      "bogota",
+      "boston",
+      "bangcoc",
+      "bruxelas",
+      "budapeste",
+      "bariloche",
+      "beirute",
+      "bordeus",
+      "bilbau",
+      "bali",
+      "braga",
+      "bruges"
+    ],
+    "neg": ["brasilia"]
+  },
+  "cidade-mundo-lc": {
+    "pos": [
+      "chicago",
+      "cancun",
+      "cairo",
+      "cidade do mexico",
+      "cusco",
+      "copenhague",
+      "casablanca",
+      "cracovia",
+      "coimbra",
+      "cascais",
+      "caracas",
+      "cartagena",
+      "cidade do cabo",
+      "cordoba"
+    ],
+    "neg": ["curitiba"]
+  },
+  "cidade-mundo-ll": {
+    "pos": [
+      "londres",
+      "lisboa",
+      "los angeles",
+      "las vegas",
+      "lima",
+      "liverpool",
+      "lyon",
+      "luanda",
+      "la paz",
+      "lagos"
+    ],
+    "neg": ["londrina"]
+  },
+  "cidade-mundo-lm": {
+    "pos": [
+      "madri",
+      "miami",
+      "milao",
+      "moscou",
+      "montevideu",
+      "mumbai",
+      "munique",
+      "manchester",
+      "marselha",
+      "montreal",
+      "melbourne",
+      "medellin",
+      "maputo",
+      "marrakech",
+      "meca"
+    ],
+    "neg": ["manaus"]
+  },
+  "cidade-mundo-lp": {
+    "pos": [
+      "paris",
+      "porto",
+      "praga",
+      "pequim",
+      "punta del este",
+      "punta cana",
+      "pisa",
+      "palermo",
+      "petra",
+      "phuket",
+      "perth",
+      "pyongyang",
+      "praia"
+    ],
+    "neg": ["porto alegre"]
+  },
+  "cidade-mundo-ls": {
+    "pos": [
+      "sydney",
+      "seul",
+      "santiago",
+      "sao francisco",
+      "singapura",
+      "sevilha",
+      "sao petersburgo",
+      "salzburgo",
+      "seattle",
+      "siena",
+      "sintra",
+      "shenzhen"
+    ],
+    "neg": ["salvador", "sao paulo"]
+  },
+  "prato-sudeste": {
+    "pos": [
+      "virado a paulista",
+      "cuscuz paulista",
+      "bauru",
+      "sanduiche de mortadela",
+      "pastel",
+      "coxinha",
+      "feijoada",
+      "picadinho",
+      "parmegiana",
+      "moqueca capixaba",
+      "torta capixaba",
+      "feijao tropeiro",
+      "pao de queijo",
+      "frango com quiabo",
+      "tutu",
+      "picanha",
+      "bolinho de bacalhau",
+      "rabada",
+      "virado",
+      "afogado",
+      "bife a cavalo",
+      "filé a oswaldo aranha"
+    ],
+    "neg": ["acaraje", "tacaca", "barreado"]
+  },
+  "prato-co": {
+    "pos": [
+      "arroz com pequi",
+      "empadao goiano",
+      "pamonha",
+      "galinhada",
+      "sopa paraguaia",
+      "chipa",
+      "arroz maria isabel",
+      "pacu assado",
+      "caldo de piranha",
+      "mojica de pintado",
+      "pintado na brasa",
+      "sobá",
+      "farofa de banana",
+      "arroz carreteiro",
+      "guariroba",
+      "peixe frito"
+    ],
+    "neg": ["acaraje", "pao de queijo"]
+  }
+}

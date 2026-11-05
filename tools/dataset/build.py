@@ -131,7 +131,8 @@ def attach_wd_aliases(pools: dict[str, list[dict]]) -> None:
     for pool in WD_ALIAS_POOLS:
         for entry in pools.get(pool, []):
             found = labels.get(entry.get("qid") or "") or []
-            entry["wd_aliases"] = [display_name(pool, a) for a in found][:12]
+            entry["wd_aliases"] = [display_name(pool, a) for a in found
+                                   if len(key(a).split()) <= 4][:12]
 
 
 def clean_aliases(prompt: dict) -> None:
@@ -228,7 +229,7 @@ def main() -> int:
                 continue
             usable.append(answer)
         prompt["answers"] = usable
-    prompts = [prompt for prompt in prompts if len(prompt["answers"]) >= 12]
+    prompts = [prompt for prompt in prompts if len(prompt["answers"]) >= (9 if prompt["id"] == "pais-lusofono" else 12)]
     print(f"unverified answers dropped={dropped} prompts after guard={len(prompts)}")
 
     names = list(dict.fromkeys(a["name"] for p in prompts for a in p["answers"]))
@@ -278,7 +279,7 @@ def main() -> int:
             "version": 2,
             "weights": {"pageviews_pt": 0.50, "wikidata_sitelinks": 0.25,
                         "wordfreq_zipf_pt": 0.20, "gravity": 0.05},
-            "pageviewsWindow": "12 full months, all-access, user agents only",
+            "pageviewsWindow": "last 60 days (pt.wikipedia action API prop=pageviews), scaled to a monthly mean",
             "pointsFormula": "k = clamp(round(1 + 9 * rarity^1.15), 1, 10)",
             "rarityDefinition": "1 - weighted mean of within-prompt percentile ranks "
                                 "(documented manual clamps in tools/dataset/curated/overrides.json)",

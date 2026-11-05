@@ -169,7 +169,8 @@ def load_all() -> dict[str, list[dict]]:
     pools["uf"] = _clean(sparql(STATE_DETAIL_QUERY))
     pools["cidade"] = merge(curated("cidades_extra"), municipalities(20_000), keyfn=city_key)
     pools["cidades_historicas"] = curated("cidades_historicas")
-    pools["presidente"] = merge(curated("presidentes"), _clean(sparql(PRESIDENTS_QUERY)))
+    pools["presidente"] = merge(curated("presidentes"), [e for e in _clean(sparql(PRESIDENTS_QUERY))
+                                                        if not e["name"].startswith("Junta")])
     pools["rio"] = merge(curated("rios"), query(
         "?item wdt:P31/wdt:P279* wd:Q4022 ; wdt:P17 wd:Q155 .", limit=320))
     pools["parque"] = merge(curated("parques"), query(
@@ -213,8 +214,8 @@ def load_all() -> dict[str, list[dict]]:
             f"Telenovelas da TV Globo da década de {decade}", depth=0,
             attrs={"emissora": "Globo", "decada": decade}))
     for cat, network in (("Telenovelas do SBT", "SBT"), ("Telenovelas da RecordTV", "Record"),
-                         ("Telenovelas da Record", "Record"), ("Telenovelas da Rede Manchete", "Manchete"),
-                         ("Telenovelas da Rede Bandeirantes", "Band"), ("Telenovelas da Rede Tupi", "Tupi"),
+                         ("Telenovelas da Record (rede de televisão)", "Record"), ("Telenovelas da Rede Manchete", "Manchete"),
+                         ("Telenovelas da Band", "Band"), ("Telenovelas da Rede Tupi", "Tupi"), ("Telenovelas da TV Tupi", "Tupi"),
                          ("Telenovelas da TV Excelsior", "Excelsior")):
         novelas = merge(novelas, from_category(cat, depth=0, attrs={"emissora": network},
                                                skip=(r"trilha sonora", r"^Elenco", r"\(desenho",
@@ -240,13 +241,30 @@ def load_all() -> dict[str, list[dict]]:
     for entry in pools["cantores"]:
         if " & " in entry["name"] or entry["name"].startswith("Trio "):
             entry["attrs"]["dupla"] = True
-        legacy = entry["attrs"].pop("genero", None) if entry["attrs"].get("genero") not in (
-            None, "feminino", "masculino") else None
-        if legacy and "genero_musical" not in entry["attrs"]:
-            entry["attrs"]["genero_musical"] = LEGACY_GENRE.get(legacy, legacy)
+        raw = entry["attrs"].get("genero")
+        values = raw if isinstance(raw, list) else [raw]
+        sexes = [v for v in values if v in ("feminino", "masculino")]
+        legacy = [v for v in values if v and v not in ("feminino", "masculino")]
+        if legacy:
+            if sexes:
+                entry["attrs"]["genero"] = sexes[0]
+            else:
+                entry["attrs"].pop("genero", None)
+            if "genero_musical" not in entry["attrs"]:
+                mapped = list(dict.fromkeys(LEGACY_GENRE.get(v, v) for v in legacy))
+                entry["attrs"]["genero_musical"] = mapped if len(mapped) > 1 else mapped[0]
     pools["bandas"] = merge(curated("bandas_br"), query(
         "?item wdt:P31 wd:Q215380 ; wdt:P495 wd:Q155 .", limit=300))
     retag(pools["bandas"], "cantores_br", "genero_musical")
+    # Genre questions accept solo artists, duos and groups alike.
+    def _copy(entries):
+        return [dict(e, aliases=list(e.get("aliases") or []), attrs=dict(e["attrs"])) for e in entries]
+    tagged = json.loads((CURATED / "cantores_br.json").read_text(encoding="utf-8"))["tags"]["genero_musical"]
+    extra = [{"name": n, "qid": None, "article": n, "sl": 0, "gravity": None, "aliases": [],
+              "curated": True, "attrs": {"source": "cantores_br.json (genero_musical)"}}
+             for names in tagged.values() for n in names]
+    pools["musica"] = merge(_copy(pools["cantores"]), _copy(pools["bandas"]), extra)
+    retag(pools["musica"], "cantores_br", "genero_musical")
     pools["cantor_pt"] = merge(curated("cantores_pt"), _people(singers, PT, limit=260))
     pools["escritores"] = merge(curated("escritores_br"), curated("escritores"), _people("wd:Q36180 wd:Q49757 wd:Q6625963", limit=600))
     pools["escritor_pt"] = merge(curated("escritores_pt"), _people("wd:Q36180 wd:Q49757 wd:Q6625963", PT, limit=300))
@@ -274,7 +292,7 @@ def load_all() -> dict[str, list[dict]]:
     # ---------------------------------------------------------------- cultura popular e língua
     for key in ("aves", "mamiferos", "folclore", "festas", "dancas", "instrumentos"):
         pools[key] = curated(key)
-    pools["aves"] = merge(pools["aves"], curated("aves_comuns"),
+    pools["aves"] = merge(pools["aves"], curated("aves_comuns"), curated("aves_extra"),
                           [e for e in category_members("Aves do Brasil")
                            if not BINOMIAL.match(e["name"])])
     pools["mamiferos"] = merge(pools["mamiferos"], curated("mamiferos_comuns"),
@@ -283,7 +301,7 @@ def load_all() -> dict[str, list[dict]]:
     for key in ("folclore", "festas", "dancas", "instrumentos"):
         pools[key] = merge(pools[key], curated(f"{key}_extra"))
     pools["palavras_tupi"] = merge(curated("palavras_tupi"), curated("palavras_tupi_extra"))
-    pools["girias"] = merge(curated("girias_v2"), curated("girias"))
+    pools["girias"] = curated("girias_v2")
     pools["palavras_pt"] = curated("palavras_pt")
     pools["marcas"] = curated("marcas_br")
 
@@ -297,6 +315,9 @@ def load_all() -> dict[str, list[dict]]:
                      for e in pools["capital_mundo"]]
     pools["cidade_mundo"] = merge(curated("cidades_mundo"), capitals_copy,
                                   _clean(sparql(WORLD_CITY_QUERY)))
+    brazilian = {normalize(e["name"]) for e in pools["cidade"] if (e.get("gravity") or 0) > 400_000}
+    brazilian |= {"brasilia", "sao paulo", "rio de janeiro"}
+    pools["cidade_mundo"] = [e for e in pools["cidade_mundo"] if normalize(e["name"]) not in brazilian]
 
     for key in list(pools):
         if not pools[key]:
