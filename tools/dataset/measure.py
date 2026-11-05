@@ -64,7 +64,8 @@ def _fetch_one(article: str, start: str, end: str) -> int | None:
             time.sleep(2 * (attempt + 1))
             continue
         if r.status_code == 429:
-            time.sleep(8 * (attempt + 1))
+            wait = r.headers.get("Retry-After")
+            time.sleep(min(float(wait), 60) if wait and wait.isdigit() else 8 * (attempt + 1))
             continue
         if r.status_code == 404:
             return 0
@@ -88,29 +89,40 @@ def _save(memo: dict[str, int | None]) -> None:
 
 
 def crawl_pageviews(articles: list[str], workers: int = 4) -> dict[str, int | None]:
-    """Fetch 12-month mean monthly views for each article, cached on disk."""
-    memo: dict[str, int | None] = read_json(PV_PATH, {}) or {}
-    start, end = _months()
-    todo = [a for a in dict.fromkeys(articles) if a and a not in memo]
-    if not todo:
-        return memo
-    print(f"[pageviews] {len(todo)} articles to fetch ({len(memo)} cached)")
-    t0 = time.time()
-    done = 0
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(_fetch_one, a, start, end): a for a in todo}
-        for fut in futures:
-            fut.add_done_callback(lambda f: None)
-        for fut, article in futures.items():
-            value = fut.result()
-            memo[article] = value
-            done += 1
-            if done % 250 == 0:
-                _save(memo)
-                rate = done / max(time.time() - t0, 1)
-                print(f"  {done}/{len(todo)}  {rate:.1f}/s  eta {(len(todo) - done) / max(rate, 0.1):.0f}s")
+    """Mean monthly views (last 60 days x 30) per pt.wikipedia article.
+
+    Uses the action API (prop=pageviews), 50 titles per request: ~300 polite
+    requests for the whole acervo instead of one REST call per article, which
+    Wikimedia's edge rate-limits. Cached on disk by the HTTP layer.
+    """
+    from .http import chunks, wp_api
+    memo: dict[str, int | None] = {}
+    todo = [a for a in dict.fromkeys(articles) if a]
+    print(f"[pageviews] {len(todo)} articles, {len(todo) // 50 + 1} batched requests")
+    for i, batch in enumerate(chunks(todo, 50)):
+        params = {"titles": "|".join(batch), "prop": "pageviews", "pvipdays": "60"}
+        seen: dict[str, dict] = {}
+        for _ in range(5):
+            data = wp_api(**params)
+            for page in data.get("query", {}).get("pages", []):
+                views = page.get("pageviews") or {}
+                seen.setdefault(page["title"], {}).update(views)
+            cont = data.get("continue")
+            if not cont:
+                break
+            params = {**params, **cont}
+        normalized = {n["from"]: n["to"] for n in data.get("query", {}).get("normalized", [])}
+        for title in batch:
+            views = seen.get(normalized.get(title, title))
+            if views is None:
+                memo[title] = None
+                continue
+            days = [v for v in views.values() if v is not None]
+            memo[title] = int(round(sum(days) / max(len(views), 1) * 30)) if views else 0
+        if i % 50 == 0:
+            print(f"  {i * 50}/{len(todo)}")
     _save(memo)
-    return read_json(PV_PATH, {}) or memo
+    return memo
 
 
 def zipf(name: str) -> float:
@@ -159,8 +171,9 @@ def composite(answers: list[dict]) -> list[dict]:
             out["sl"] = math.log10(1 + a["sl"])
         if a.get("wf"):
             out["wf"] = a["wf"]
-        if a.get("gravity"):
-            out["gravity"] = math.log10(1 + a["gravity"])
+        gravity = a.get("g", a.get("gravity"))
+        if gravity:
+            out["gravity"] = math.log10(1 + gravity)
         return out
 
     rows = [metric(a) for a in answers]
@@ -171,7 +184,7 @@ def composite(answers: list[dict]) -> list[dict]:
         col = [0.0] * len(rows)
         if present:
             ranks = _ranks([v for _, v in present])
-            for (i, _), rk in zip(present, ranks, strict=True):
+            for (i, _), rk in zip(present, ranks):
                 col[i] = rk
         pct[key] = col
 
@@ -198,7 +211,7 @@ def composite(answers: list[dict]) -> list[dict]:
     score = []
     for idx in range(len(rows)):
         s = 0.0
-        for key, z in zip(("pv", "sl", "wf", "gravity"), zs, strict=True):
+        for key, z in zip(("pv", "sl", "wf", "gravity"), zs):
             if key in rows[idx]:
                 s += WEIGHTS[key] * z[idx]
         score.append(s)

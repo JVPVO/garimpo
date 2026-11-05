@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Gem } from "../components/Gem.tsx";
+import { useEffect, useRef, useState } from "react";
+import { PixelSprite } from "../art/PixelSprite.tsx";
+import { MINERALS } from "../art/sprites.ts";
 import { TIERS, dig, tierForDepth } from "../game/score.ts";
 import { STRATA, stratumForDepth } from "../game/strata.ts";
 import type { Answer, Dataset, Dive } from "../game/types.ts";
@@ -13,10 +14,21 @@ type Props = {
   onMethod: () => void;
 };
 
+const lower = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
+
 type Mark = Dive["rounds"][number] & { at: number };
 
-function poolFor(dataset: Dataset, text: string): Answer[] {
-  return dataset.prompts.find((prompt) => prompt.text === text)?.answers ?? [];
+function poolFor(dataset: Dataset, id: string, text: string): Answer[] {
+  return (
+    dataset.prompts.find((prompt) => prompt.id === id)?.answers ??
+    dataset.prompts.find((prompt) => prompt.text === text)?.answers ??
+    []
+  );
+}
+
+/** The rank-1 answer of a prompt: what "the obvious one" would have dug. */
+function obviousFor(dataset: Dataset, id: string, text: string): Answer | null {
+  return poolFor(dataset, id, text).find((answer) => answer.rank === 1) ?? null;
 }
 
 function withDepths(dive: Dive): Mark[] {
@@ -90,16 +102,29 @@ function ResultPlate({ dive, marks }: { dive: Dive; marks: Mark[] }) {
 
 export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Props) {
   const [copied, setCopied] = useState(false);
+  const heading = useRef<HTMLHeadingElement | null>(null);
+  useEffect(() => {
+    heading.current?.focus({ preventScroll: true });
+  }, []);
   const marks = withDepths(dive);
   const tier = tierForDepth(dive.depth);
   // A gem is what the shaft is cutting through at that depth, not a separate scale.
-  const gems = marks.filter((mark) => tierForDepth(mark.at).id >= 3).length;
+  const gems = marks.filter((mark) => stratumForDepth(Math.min(699, mark.at)).from >= 440).length;
   const stratum = stratumForDepth(dive.depth);
+  const obvious = marks.map((mark) => obviousFor(dataset, mark.promptId, mark.prompt));
+  const obviousTotal = Math.min(
+    700,
+    obvious.reduce((sum, answer) => sum + (answer ? dig(answer.rarity) : 0), 0),
+  );
+  const gain = dive.depth - obviousTotal;
 
   const share = async () => {
     const text = [
       `Garimpo · ${dive.label} · ${dive.depth} m`,
-      ...dive.rounds.map((round, index) => `${index + 1}. ${round.prompt} — ${round.name ?? (round.guess || "—")} (${round.meters} m)`),
+      ...dive.rounds.map(
+        (round, index) =>
+          `${index + 1}. ${round.prompt} — ${round.name ?? (round.guess || "—")} (${round.meters} m)`,
+      ),
       "sete respostas, uma mina.",
     ].join("\n");
     try {
@@ -113,29 +138,31 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
 
   return (
     <div className="result">
-      <ResultPlate dive={dive} marks={marks} />
-
       <div className="result-body">
-        <div>
-          <h1 className="result-headline display">
+        <div className="panel result-main">
+          <h1 ref={heading} tabIndex={-1} className="result-headline display">
             <small>
               {dive.mode === "daily" ? "diário" : "ilimitado"} · {dive.label}
             </small>
             {dive.depth >= 700 ? "Fundo do poço." : `${dive.depth} metros.`}
           </h1>
-          <div className="tier-ticks" aria-label={`${tier.mineral}, ${tier.cut}`}>
+          <div
+            className="tier-ticks"
+            role="img"
+            aria-label={`${stratum.label}, nível ${tier.id} de 5`}
+          >
             {TIERS.map((item) => (
               <i key={item.id} data-on={item.id <= tier.id} />
             ))}
             <span className="mono" style={{ fontSize: 12, color: "var(--ink-2)", marginLeft: 6 }}>
-              {tier.mineral} · {stratum.label.toLowerCase()}
+              <PixelSprite sprite={MINERALS[stratum.id].sprite} scale={1} /> {stratum.label}
             </span>
           </div>
 
           <p style={{ color: "var(--ink-2)", marginTop: 18, maxWidth: "46ch" }}>
             {gems > 0
-              ? `${gems} ${gems === 1 ? "gema" : "gemas"} no caminho. Você parou no ${stratum.label.toLowerCase()} — ${stratum.fact}.`
-              : `Nenhuma gema no caminho. Você parou no ${stratum.label.toLowerCase()} — ${stratum.fact}. As respostas óbvias descem pouco.`}
+              ? `${gems} ${gems === 1 ? "camada nobre" : "camadas nobres"} no caminho. Você parou na camada de ${lower(stratum.label)}: ${stratum.fact}.`
+              : `Nenhuma camada nobre no caminho. Você parou na camada de ${lower(stratum.label)}: ${stratum.fact}. As respostas óbvias descem pouco.`}
           </p>
 
           <div className="result-actions">
@@ -156,27 +183,65 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
               Início
             </button>
           </div>
+
+          <p className="plate-title">o poço inteiro</p>
+          <ResultPlate dive={dive} marks={marks} />
         </div>
 
-        <ol className="rounds">
-          {marks.map((round, index) => (
-            <li key={round.promptId} data-miss={!round.name}>
-              <span className="idx">{String(index + 1).padStart(2, "0")}</span>
-              <span className="said">
-                <span style={{ display: "block", fontSize: 12, color: "var(--iron)" }}>{round.prompt}</span>
-                <b>{round.name ?? round.guess ?? "em branco"}</b>
-                {round.p !== null ? (
-                  <span className="mono" style={{ fontSize: 11, color: "var(--iron)", marginLeft: 8 }}>
-                    p {Math.round(round.p * 100)}
+        <i className="result-window" aria-hidden="true" />
+        <div className="panel result-ledger">
+          <p className="vs-summary">
+            Só com as respostas mais óbvias, o poço teria <b>{obviousTotal} m</b>.{" "}
+            {gain > 0
+              ? `Você cavou ${gain} m a mais.`
+              : gain < 0
+                ? `Você ficou ${-gain} m acima disso.`
+                : "Você empatou com o óbvio."}
+          </p>
+          <ol className="rounds">
+            {marks.map((round, index) => {
+              const base = obvious[index];
+              const baseM = base ? dig(base.rarity) : null;
+              const same = base && round.name === base.n;
+              return (
+                <li key={round.promptId} data-miss={!round.name}>
+                  <span className="idx">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="said">
+                    <span className="said-q">{round.prompt}</span>
+                    <b>{round.name ?? (round.guess || "em branco")}</b>
+                    {round.p !== null ? (
+                      <span className="said-p">p {Math.round(round.p * 100)}</span>
+                    ) : null}
+                    {base ? (
+                      <span className="vs">
+                        {same ? (
+                          "era a mais óbvia"
+                        ) : (
+                          <>
+                            mais óbvia: <b>{base.n}</b> · {baseM} m
+                          </>
+                        )}
+                      </span>
+                    ) : null}
                   </span>
-                ) : null}
-              </span>
-              <span className="meters">
-                {round.meters} m <Gem tier={tierForDepth(round.at).id} size={14} />
-              </span>
-            </li>
-          ))}
-        </ol>
+                  <span className="meters">
+                    {round.meters} m{" "}
+                    <PixelSprite
+                      sprite={MINERALS[stratumForDepth(Math.min(699, round.at)).id].sprite}
+                      scale={1}
+                    />
+                    {baseM !== null && !same ? (
+                      <small data-up={round.meters > baseM}>
+                        {round.meters - baseM > 0 ? "+" : ""}
+                        {round.meters - baseM} m
+                      </small>
+                    ) : null}
+                  </span>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </div>
 
       <section className="overview" aria-label="o acervo de cada pergunta">
@@ -190,7 +255,7 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
 
         <div className="overview-grid">
           {marks.map((mark, index) => {
-            const pool = poolFor(dataset, mark.prompt);
+            const pool = poolFor(dataset, mark.promptId, mark.prompt);
             const rarest = [...pool].sort((a, b) => b.rarity - a.rarity).slice(0, 8);
             const obvious = pool.find((answer) => answer.rank === 1);
             const position = mark.rank ? mark.count - mark.rank + 1 : null;
@@ -199,7 +264,9 @@ export function Result({ dive, dataset, onHome, onAgain, onLog, onMethod }: Prop
                 <summary>
                   <span className="ov-idx">{String(index + 1).padStart(2, "0")}</span>
                   <span className="ov-prompt">{mark.prompt}</span>
-                  <span className="ov-you">{mark.name ?? "fora do acervo"}</span>
+                  <span className="ov-you">
+                    {mark.name ?? (mark.guess ? "fora do acervo" : "sem resposta")}
+                  </span>
                   <span className="ov-meta">
                     {mark.meters} m · {mark.count} respostas
                   </span>

@@ -1,16 +1,45 @@
+import type { ToolId } from "../art/sprites.ts";
+import { buildDig, createOutputChain, MASTER_LEVEL, type DigVoice } from "./dig.ts";
+
 /**
  * Procedural audio: no files, everything synthesized at runtime.
- * Everything is quieter than -12 dBFS peak and only starts after a gesture.
+ * Everything runs through a compressor/limiter (peak ≤ -3 dBFS) and only starts after a gesture.
  */
 export class MineAudio {
   private ctx: AudioContext | null = null;
   private master: GainNode | null = null;
   private noise: AudioBuffer | null = null;
   private enabled = true;
+  private digVoice: DigVoice | null = null;
 
   setEnabled(value: boolean): void {
     this.enabled = value;
-    if (!value) this.silence();
+    if (!value) {
+      this.stopDig();
+      this.silence();
+    } else if (this.master && this.ctx) {
+      this.master.gain.cancelScheduledValues(this.ctx.currentTime);
+      this.master.gain.setTargetAtTime(MASTER_LEVEL, this.ctx.currentTime, 0.02);
+    }
+  }
+
+  /** Starts the dig sound for `tool`, lasting about `durationMs` (it fades out on its own). Calling it again replaces the previous one. */
+  dig(tool: ToolId, durationMs: number): void {
+    const ctx = this.ensure();
+    if (!ctx || !this.master) return;
+    this.digVoice?.stop(ctx.currentTime);
+    const voice = buildDig(ctx, this.master, tool, ctx.currentTime + 0.01, durationMs / 1000);
+    this.digVoice = voice;
+    const left = Math.max(0, voice.end - ctx.currentTime) * 1000 + 200;
+    setTimeout(() => {
+      if (this.digVoice === voice) this.digVoice = null;
+    }, left);
+  }
+
+  /** Stops any running dig sound quickly (≈80 ms fade), e.g. when the player skips the animation. */
+  stopDig(): void {
+    if (this.digVoice && this.ctx) this.digVoice.stop(this.ctx.currentTime);
+    this.digVoice = null;
   }
 
   private silence(): void {
@@ -28,13 +57,14 @@ export class MineAudio {
     }
     // SAFETY: Safari exposes only the prefixed constructor; both share the same
     // AudioContext interface, which is all this module uses.
-    const Ctor = window.AudioContext
-      ?? (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    const Ctor =
+      window.AudioContext ??
+      (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
     if (!Ctor) return null;
     this.ctx = new Ctor();
     this.master = this.ctx.createGain();
-    this.master.gain.value = 0.9;
-    this.master.connect(this.ctx.destination);
+    this.master.gain.value = MASTER_LEVEL;
+    this.master.connect(createOutputChain(this.ctx, this.ctx.destination));
     const frames = Math.floor(this.ctx.sampleRate * 0.4);
     const buffer = this.ctx.createBuffer(1, frames, this.ctx.sampleRate);
     const data = buffer.getChannelData(0);
@@ -59,7 +89,14 @@ export class MineAudio {
     return gain;
   }
 
-  private burst(at: number, duration: number, peak: number, type: BiquadFilterType, frequency: number, q = 1): void {
+  private burst(
+    at: number,
+    duration: number,
+    peak: number,
+    type: BiquadFilterType,
+    frequency: number,
+    q = 1,
+  ): void {
     const ctx = this.ctx;
     if (!ctx || !this.noise) return;
     const source = ctx.createBufferSource();
@@ -76,7 +113,14 @@ export class MineAudio {
     source.stop(at + duration + 0.05);
   }
 
-  private tone(at: number, duration: number, peak: number, frequency: number, type: OscillatorType = "sine", glide = 1): void {
+  private tone(
+    at: number,
+    duration: number,
+    peak: number,
+    frequency: number,
+    type: OscillatorType = "sine",
+    glide = 1,
+  ): void {
     const ctx = this.ctx;
     if (!ctx) return;
     const osc = ctx.createOscillator();

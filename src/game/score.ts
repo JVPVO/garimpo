@@ -1,20 +1,70 @@
+import type { ToolId } from "../art/sprites.ts";
+
 export type Tier = {
   id: number;
-  mineral: string;
-  cut: string;
+  /** Rarity label shown to the player. */
+  label: string;
+  /** Tool that digs for an answer of this rarity. */
+  tool: ToolId;
+  toolName: string;
   fill: string;
   from: number;
   to: number;
   ticks: number;
 };
 
-/** Five tiers. Silhouette first, colour second, name third. */
+/** Five tiers. Each rarity digs with a bigger machine. */
 export const TIERS: Tier[] = [
-  { id: 1, mineral: "Quartzo leitoso", cut: "bruto", fill: "#CFC6B4", from: 0, to: 180, ticks: 1 },
-  { id: 2, mineral: "Granada", cut: "cabochão", fill: "#C0503A", from: 180, to: 380, ticks: 2 },
-  { id: 3, mineral: "Esmeralda", cut: "corte esmeralda", fill: "#35996B", from: 380, to: 520, ticks: 3 },
-  { id: 4, mineral: "Ametista", cut: "octógono", fill: "#8A6ABE", from: 520, to: 640, ticks: 4 },
-  { id: 5, mineral: "Diamante", cut: "brilhante", fill: "#C9E6EA", from: 640, to: 700, ticks: 5 },
+  {
+    id: 1,
+    label: "Óbvia",
+    tool: "pa",
+    toolName: "Pá",
+    fill: "#8f8274",
+    from: 0,
+    to: 180,
+    ticks: 1,
+  },
+  {
+    id: 2,
+    label: "Comum",
+    tool: "aspirador",
+    toolName: "Aspirador",
+    fill: "#d9d2c3",
+    from: 180,
+    to: 380,
+    ticks: 2,
+  },
+  {
+    id: 3,
+    label: "Boa",
+    tool: "escavadeira",
+    toolName: "Escavadeira",
+    fill: "#f2b65a",
+    from: 380,
+    to: 520,
+    ticks: 3,
+  },
+  {
+    id: 4,
+    label: "Rara",
+    tool: "broca",
+    toolName: "Broca",
+    fill: "#e2733b",
+    from: 520,
+    to: 640,
+    ticks: 4,
+  },
+  {
+    id: 5,
+    label: "Raríssima",
+    tool: "broca-ultra",
+    toolName: "Broca ultra",
+    fill: "#2fd4c8",
+    from: 640,
+    to: 700,
+    ticks: 5,
+  },
 ];
 
 export const MAX_DEPTH = 700;

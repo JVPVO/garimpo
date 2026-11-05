@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import { Gem } from "../components/Gem.tsx";
+import { PixelSprite } from "../art/PixelSprite.tsx";
+import { TOOLS } from "../art/sprites.ts";
 import { TIERS } from "../game/score.ts";
 import { STRATA } from "../game/strata.ts";
 import type { Dataset } from "../game/types.ts";
+
+const RANGES = ["p 0–39", "p 40–64", "p 65–81", "p 82–94", "p 95–100"];
 
 type Validation = {
   source: string;
@@ -38,9 +41,9 @@ export function Method({ dataset, shares, onHome }: Props) {
     <div className="method">
       <h1>Como medimos</h1>
       <p style={{ maxWidth: "62ch" }}>
-        Nenhuma raridade aqui é opinião. Cada resposta carrega três medições públicas, e a posição dela
-        dentro da pergunta vira a profundidade que ela cava. O acervo inteiro foi gerado a partir das
-        fontes abaixo, e o número de cada resposta aparece no jogo.
+        Nenhuma raridade aqui é opinião. Cada resposta carrega três medições públicas, e a posição
+        dela dentro da pergunta vira a profundidade que ela cava. O acervo inteiro foi gerado a
+        partir das fontes abaixo, e o número de cada resposta aparece no jogo.
       </p>
 
       <div className="cols">
@@ -87,15 +90,15 @@ export function Method({ dataset, shares, onHome }: Props) {
 popularidade(i) = Σ peso_m · posto_m(i) / Σ peso_m
 raridade(i) = 1 - popularidade(i)`}</pre>
           <p>
-            Um raro de verdade precisa ser raro nos três sinais ao mesmo tempo. Quando falta um sinal
-            (uma resposta sem verbete, por exemplo), os pesos restantes são renormalizados — nunca se
-            inventa zero.
+            Um raro de verdade precisa ser raro nos três sinais ao mesmo tempo. Quando falta um
+            sinal (uma resposta sem verbete, por exemplo), os pesos restantes são renormalizados —
+            nunca se inventa zero.
           </p>
           <p>
-            O <b>p</b> que aparece na revelação é esse posto: 0 é a resposta mais óbvia do acervo, 100
-            a mais rara. A linha <b>≈ 1 em N</b> é outra medida: uma estimativa de quantos jogadores
-            dariam aquela resposta, a partir da distribuição de popularidade dentro do acervo. São
-            escalas diferentes e o jogo mostra as duas com nome.
+            O <b>p</b> que aparece na revelação é esse posto: 0 é a resposta mais óbvia do acervo,
+            100 a mais rara. A linha <b>≈ 1 em N</b> é outra medida: uma estimativa de quantos
+            jogadores dariam aquela resposta, a partir da distribuição de popularidade dentro do
+            acervo. São escalas diferentes e o jogo mostra as duas com nome.
           </p>
 
           <h2>3 · A descida</h2>
@@ -105,8 +108,8 @@ poço     = min(700, soma dos 7)`}</pre>
           <p>
             A curva foi calibrada contra este acervo: 6 000 descidas simuladas com um modelo de
             jogador por posição no acervo. A mediana fica em <b>≈ 346 m</b> e o décimo superior em{" "}
-            <b>≈ 426 m</b>; chegar aos 700 m exige seis respostas entre as mais raras de cada pergunta,
-            não uma sorte isolada. Uma resposta óbvia sempre rende 10 m, nunca zero.
+            <b>≈ 426 m</b>; chegar aos 700 m exige seis respostas entre as mais raras de cada
+            pergunta, não uma sorte isolada. Uma resposta óbvia sempre rende 10 m, nunca zero.
           </p>
         </div>
 
@@ -130,13 +133,14 @@ poço     = min(700, soma dos 7)`}</pre>
             ))}
           </div>
 
-          <h2>5 · As gemas</h2>
+          <h2>5 · As ferramentas</h2>
+          <p>Cada resposta cava com uma máquina que depende só da raridade dela.</p>
           <table>
             <thead>
               <tr>
-                <th>Gema</th>
-                <th>Corte</th>
-                <th>Profundidade</th>
+                <th>Ferramenta</th>
+                <th>Raridade</th>
+                <th>Posto no acervo</th>
               </tr>
             </thead>
             <tbody>
@@ -144,13 +148,11 @@ poço     = min(700, soma dos 7)`}</pre>
                 <tr key={tier.id}>
                   <td>
                     <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                      <Gem tier={tier.id} size={20} /> {tier.mineral}
+                      <PixelSprite sprite={TOOLS[tier.tool].frames[0]} scale={1} /> {tier.toolName}
                     </span>
                   </td>
-                  <td>{tier.cut}</td>
-                  <td>
-                    {tier.from}–{tier.to} m
-                  </td>
+                  <td>{tier.label}</td>
+                  <td>{RANGES[tier.id - 1]}</td>
                 </tr>
               ))}
             </tbody>
@@ -158,10 +160,10 @@ poço     = min(700, soma dos 7)`}</pre>
 
           <h2>6 · O acervo</h2>
           <p>
-            {dataset.stats.prompts} perguntas, {dataset.stats.answers.toLocaleString("pt-BR")} respostas
-            catalogadas ({dataset.stats.uniqueAnswers.toLocaleString("pt-BR")} únicas),{" "}
-            {dataset.stats.withPageviews.toLocaleString("pt-BR")} delas com medição de pageviews. Última
-            coleta: {new Date(dataset.builtAt).toLocaleDateString("pt-BR")}.
+            {dataset.stats.prompts} perguntas, {dataset.stats.answers.toLocaleString("pt-BR")}{" "}
+            respostas catalogadas ({dataset.stats.uniqueAnswers.toLocaleString("pt-BR")} únicas),{" "}
+            {dataset.stats.withPageviews.toLocaleString("pt-BR")} delas com medição de pageviews.
+            Última coleta: {new Date(dataset.builtAt).toLocaleDateString("pt-BR")}.
           </p>
           <p style={{ fontSize: 13 }}>
             Cada pergunta aceita apenas respostas do seu acervo. Uma resposta válida que não está no
@@ -173,8 +175,8 @@ poço     = min(700, soma dos 7)`}</pre>
               <h2>7 · Validação</h2>
               <p>
                 A régua foi conferida contra um conjunto independente de respostas de multidão:{" "}
-                <b>{validation.n}</b> respostas comparadas com o percentil real de jogadores. Correlação
-                de Spearman entre a nossa raridade e a da multidão:{" "}
+                <b>{validation.n}</b> respostas comparadas com o percentil real de jogadores.
+                Correlação de Spearman entre a nossa raridade e a da multidão:{" "}
                 <b className="mono">{validation.spearman.toFixed(2)}</b>.
               </p>
             </>
@@ -191,8 +193,8 @@ poço     = min(700, soma dos 7)`}</pre>
             ))}
           </ul>
           <p style={{ fontSize: 12, marginTop: 10 }}>
-            Coleta feita com identificação no cabeçalho HTTP, ~5 requisições por segundo e cache local.
-            Nada de raspagem de sites de emissoras.
+            Coleta feita com identificação no cabeçalho HTTP, ~5 requisições por segundo e cache
+            local. Nada de raspagem de sites de emissoras.
           </p>
         </div>
       </div>

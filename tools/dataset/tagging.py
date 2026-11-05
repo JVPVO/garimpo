@@ -35,12 +35,6 @@ UF_ALIASES = {
     "to": "Tocantins",
 }
 
-BRASILEIRAO_CHAMPIONS = {    "flamengo", "palmeiras", "corinthians", "sao paulo", "santos", "cruzeiro",
-    "vasco", "fluminense", "botafogo", "gremio", "internacional",
-    "atletico mineiro", "bahia", "coritiba", "athletico", "sport", "guarani",
-    "juventude",
-}
-
 GLOBAL_ALIASES: dict[tuple[str, str], list[str]] = {
     ("pais", "estados unidos"): ["EUA", "USA", "Estados Unidos da América"],
     ("pais", "reino unido"): ["UK", "Grã-Bretanha"],
@@ -74,84 +68,34 @@ GLOBAL_ALIASES: dict[tuple[str, str], list[str]] = {
     ("comida_mundo", "cachorro quente"): ["Hot dog", "Dogão"],
 }
 
-SONG_GENRE = {
-    "mpb": {"caetano veloso", "gilberto gil", "gal costa", "maria bethania",
-            "chico buarque", "milton nascimento", "elis regina", "tom jobim",
-            "vinicius de moraes", "joao gilberto", "djavan", "ivan lins",
-            "marisa monte", "nando reis", "ana carolina", "cassia eller",
-            "belchior", "ze ramalho", "alceu valenca", "lenine", "nazareno? "},
-    "sertanejo": {"chitaozinho & xororo", "leandro & leonardo", "zere di camargo & luciano",
-                  "zeze di camargo & luciano", "jorge & mateus", "michel telo",
-                  "gusttavo lima", "luan santana", "marilia mendonca",
-                  "maiara & maraisa", "henrique & juliano", "wesley safadao"},
-    "rock": {"raul seixas", "rita lee", "cazuza", "renato russo", "legiao urbana",
-             "titas", "paralamas do sucesso", "engenheiros do hawaii", "skank",
-             "jota quest", "los hermanos", "mutantes", "secos & molhados"},
-    "funk": {"emicida", "criolo", "marcelo d2", "racionais mc's", "seu jorge"},
-    "samba": {"martinho da vila", "beth carvalho", "fundo de quintal", "zeca pagodinho",
-              "clara nunes", "cartola", "paulinho da viola", "alcione"},
-    "axe": {"ivete sangalo", "claudia leitte", "daniela mercury", "carlinhos brown",
-            "chiclete com banana", "banda eva"},
-    "forro": {"luiz gonzaga", "dominguinhos", "elba ramalho", "fagner", "alceu valenca",
-              "genival lacerda"},
+STATE_CAPITALS = {
+    "rio branco", "maceio", "macapa", "manaus", "salvador", "fortaleza", "brasilia",
+    "vitoria", "goiania", "sao luis", "cuiaba", "campo grande", "belo horizonte", "belem",
+    "joao pessoa", "curitiba", "recife", "teresina", "rio de janeiro", "natal",
+    "porto alegre", "porto velho", "boa vista", "florianopolis", "sao paulo", "aracaju",
+    "palmas",
 }
 
-DISH_REGION = {
-    "acaraje": "Bahia", "vatapa": "Bahia", "caruru": "Bahia", "mocoto": "Bahia",
-    "moqueca": "Bahia", "bobo de camarao": "Bahia", "abara": "Bahia",
-    "xinxim de galinha": "Bahia", "sarapatel": "Bahia",
-    "pao de queijo": "Minas Gerais", "frango com quiabo": "Minas Gerais",
-    "tutu a mineira": "Minas Gerais", "feijao tropeiro": "Minas Gerais",
-    "angu": "Minas Gerais", "queijo minas": "Minas Gerais",
-    "baiao de dois": "Nordeste", "carne de sol": "Nordeste", "cuscuz": "Nordeste",
-    "tapioca": "Nordeste", "buchada de bode": "Nordeste", "arrumadinho": "Nordeste",
-    "galinhada": "Nordeste", "paçoca": "Nordeste",
-    "barreado": "Sul", "churrasco": "Sul", "galeto": "Sul", "cuca": "Sul",
-    "xis": "Sul", "marreco recheado": "Sul", "arroz carreteiro": "Sul",
-    "tacaca": "Norte", "manicoba": "Norte", "pato no tucupi": "Norte",
-    "pirarucu": "Norte", "tucupi": "Norte", "jambu": "Norte",
-    "virado a paulista": "Sudeste", "pastel": "Sudeste", "coxinha": "Sudeste",
-    "feijoada": "Sudeste", "pizza": "Sudeste", "empada": "Sudeste",
-}
-
-FRUIT_BIOME = {
-    "acai": "Amazônia", "cupuacu": "Amazônia", "guarana": "Amazônia",
-    "bacuri": "Amazônia", "buriti": "Amazônia", "pupunha": "Amazônia",
-    "tucuma": "Amazônia", "camu camu": "Amazônia", "graviola": "Amazônia",
-    "abiu": "Amazônia", "biriba": "Amazônia", "tapereba": "Amazônia",
-    "bacaba": "Amazônia", "mari": "Amazônia", "cubiu": "Amazônia",
-    "pequi": "Cerrado", "cagaita": "Cerrado", "baru": "Cerrado",
-    "murici": "Cerrado", "gabiroba": "Cerrado", "araticum": "Cerrado",
-    "mangaba": "Cerrado", "pitomba": "Cerrado", "umbu": "Caatinga",
-    "caja": "Caatinga", "licuri": "Caatinga", "jabuticaba": "Mata Atlântica",
-    "cambuci": "Mata Atlântica", "jucara": "Mata Atlântica",
-    "grumixama": "Mata Atlântica", "uvaia": "Mata Atlântica",
-    "cabeludinha": "Mata Atlântica", "pitanga": "Mata Atlântica",
-    "araca": "Mata Atlântica", "inga": "Mata Atlântica", "butia": "Pampa",
-}
-
-ANIMAL_BIOME = {
-    "capivara": "Pantanal", "tuiuiu": "Pantanal", "jacare do pantanal": "Pantanal",
-    "arara azul": "Pantanal", "tamandua bandeira": "Cerrado",
-    "lobo guarau": "Cerrado", "lobo guara": "Cerrado", "seriema": "Cerrado",
-    "ema": "Cerrado", "tatu canastra": "Cerrado", "veado campeiro": "Cerrado",
-    "mico leao dourado": "Mata Atlântica", "muriqui": "Mata Atlântica",
-    "sagui": "Mata Atlântica", "bugio": "Mata Atlântica",
-    "boto cor de rosa": "Amazônia", "peixe boi": "Amazônia",
-    "ariranha": "Amazônia", "onca pintada": "Amazônia",
-    "gaviao real": "Amazônia", "uirapuru": "Amazônia",
-    "onca parda": "Caatinga", "tatu peba": "Caatinga",
-}
+POSITION_WORDS = (
+    ("goleiro", ("goleiro", "guarda-redes", "goalkeeper")),
+    ("lateral", ("lateral", "ala", "full-back", "wing-back", "fullback")),
+    ("zagueiro", ("zagueiro", "defesa central", "defensor", "centre-back", "center-back",
+                  "defender", "libero", "líbero", "beque")),
+    ("meia", ("meio-campista", "meio campo", "médio", "medio", "meia", "volante",
+              "midfielder", "playmaker", "meio-campo")),
+    ("atacante", ("atacante", "avançado", "ponta", "centroavante", "forward", "striker",
+                  "winger", "ponta-de-lança", "extremo")),
+)
 
 
-def _match(table: dict[str, str], name: str) -> str | None:
-    key = normalize(name)
-    if key in table:
-        return table[key]
-    for candidate, value in table.items():
-        if candidate in key:
-            return value
-    return None
+def positions_from_labels(labels: list[str]) -> list[str]:
+    out: list[str] = []
+    for label in labels:
+        low = label.lower()
+        for position, words in POSITION_WORDS:
+            if any(w in low for w in words) and position not in out:
+                out.append(position)
+    return out
 
 
 def apply_tags(pools: dict[str, list[dict]]) -> None:
@@ -160,36 +104,28 @@ def apply_tags(pools: dict[str, list[dict]]) -> None:
         entry["attrs"]["regiao"] = REGION_BY_UF.get(key)
         entry["attrs"]["litoral"] = key not in LANDLOCKED
 
-    for entry in pools.get("time", []):
-        key = normalize(entry["name"])
-        entry["attrs"]["campeao_brasileiro"] = any(c in key for c in BRASILEIRAO_CHAMPIONS)
-
-    for entry in pools.get("cantores", []):
-        key = normalize(entry["name"])
-        for genre, names in SONG_GENRE.items():
-            if any(n in key or key in n for n in names):
-                entry["attrs"]["genero_musical"] = genre
-                break
-
-    for entry in pools.get("pratos_tipicos", []):
-        region = _match(DISH_REGION, entry["name"])
-        if region:
-            entry["attrs"].setdefault("regiao", region)
-
-    for entry in pools.get("frutas_nativas", []):
-        biome = _match(FRUIT_BIOME, entry["name"])
-        if biome:
-            entry["attrs"].setdefault("bioma", biome)
-
-    for pool in ("aves", "mamiferos"):
-        for entry in pools.get(pool, []):
-            biome = _match(ANIMAL_BIOME, entry["name"])
-            if biome:
-                entry["attrs"].setdefault("bioma", biome)
+    seen: dict[str, int] = {}
+    for entry in pools.get("cidade", []):
+        seen[normalize(entry["name"])] = seen.get(normalize(entry["name"]), 0) + 1
+    for entry in pools.get("cidade", []):
+        if seen[normalize(entry["name"])] > 1 and entry["attrs"].get("uf"):
+            entry.setdefault("aliases", []).append(entry["name"])
+            entry["name"] = f"{entry['name']} ({entry['attrs']['uf']})"
+    from .wdpools import REGION_OF_UF
+    for entry in pools.get("cidade", []):
+        uf = entry["attrs"].get("uf")
+        if isinstance(uf, str) and not entry["attrs"].get("regiao"):
+            entry["attrs"]["regiao"] = REGION_OF_UF.get(uf)
+        big = (entry.get("gravity") or 0) > 150_000 or entry["attrs"].get("uf") == "DF"
+        if normalize(entry["name"].split(" (")[0]) in STATE_CAPITALS and big:
+            entry["attrs"]["capital"] = True
 
 
 def aliases_for(entry: dict, pool: str) -> list[str]:
-    out: list[str] = []
+    """Candidate aliases: curated, Wikidata pt/pt-br labels, siglas, prefixes.
+    Collisions inside a prompt are removed later, in build."""
+    out: list[str] = list(entry.get("aliases") or [])
+    out += list(entry.get("wd_aliases") or [])
     name = entry["name"]
     if pool == "uf":
         for abbrev, full in UF_ALIASES.items():

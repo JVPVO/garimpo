@@ -152,37 +152,101 @@ def merge_pools(*groups: list[dict]) -> list[dict]:
     return out
 
 
-def from_curated(items: list[dict], *, source: str) -> list[dict]:
+def parse_curated_item(item) -> dict | None:
+    """A curated item is an object {name, article, aliases, tags} or a compact
+    string "Name@Article|alias|alias" (article and aliases optional)."""
+    if isinstance(item, str):
+        parts = [p.strip() for p in item.split("|")]
+        head, aliases = parts[0], [p for p in parts[1:] if p]
+        name, _, article = head.partition("@")
+        return {"name": name.strip(), "article": article.strip() or None,
+                "aliases": aliases, "tags": {}}
+    name = (item.get("name") or "").strip()
+    if not name:
+        return None
+    return {"name": name, "article": item.get("article"),
+            "aliases": list(item.get("aliases") or []), "tags": dict(item.get("tags") or {})}
+
+
+def from_curated(items: list, *, source: str, tags: dict | None = None,
+                 measure: str | None = None) -> list[dict]:
+    """Curated items -> pool entries.
+
+    `tags` assigns attributes by name: {"regiao": {"Nordeste": ["Acarajé", ...]}};
+    a name listed under several values gets a list. `measure="wf"` skips the
+    pt.wikipedia attention signal (e.g. slang, where an article of the same
+    title would be about something else).
+    """
+    from .http import normalize
+    by_name: dict[str, dict] = {}
+    for key, values in (tags or {}).items():
+        for value, names in values.items():
+            if value in ("true", "True"):
+                value = True
+            elif value in ("false", "False"):
+                value = False
+            for raw in names:
+                bucket = by_name.setdefault(normalize(raw.split("|")[0].split("@")[0]), {})
+                current = bucket.get(key)
+                if current is None:
+                    bucket[key] = value
+                elif isinstance(current, list):
+                    if value not in current:
+                        current.append(value)
+                elif current != value:
+                    bucket[key] = [current, value]
     out = []
-    for item in items:
-        name = (item.get("name") or "").strip()
-        if not name:
+    for raw in items:
+        item = parse_curated_item(raw)
+        if not item or not item["name"]:
             continue
+        attrs = {"source": source, **item["tags"]}
+        for label in [item["name"], *item["aliases"]]:
+            for key, value in by_name.get(normalize(label), {}).items():
+                current = attrs.get(key)
+                if current is None:
+                    attrs[key] = value
+                else:
+                    merged = current if isinstance(current, list) else [current]
+                    for v in value if isinstance(value, list) else [value]:
+                        if v not in merged:
+                            merged.append(v)
+                    attrs[key] = merged if len(merged) > 1 else merged[0]
+        article = None if measure == "wf" else (item["article"] or item["name"])
         out.append({
-            "name": name,
+            "name": item["name"],
             "qid": None,
-            "article": item.get("article") or name,
+            "article": article,
             "sl": 0,
-            "gravity": item.get("gravity"),
-            "attrs": {"source": source, **(item.get("tags") or {})},
+            "gravity": None,
+            "aliases": item["aliases"],
+            "curated": True,
+            "noarticle": measure == "wf",
+            "attrs": attrs,
         })
     return out
 
 
 def enrich(entries: list[dict]) -> list[dict]:
-    """Resolve pt.wikipedia article + QID + sitelink count for every entry."""
-    missing_article = [e for e in entries if not e.get("article")]
-    if missing_article:
-        mapping = resolve_titles([e["name"] for e in missing_article])
-        for entry in missing_article:
-            hit = mapping.get(entry["name"]) or {}
-            entry["article"] = hit.get("title") or entry["name"]
-    missing_qid = [e for e in entries if not e.get("qid")]
-    if missing_qid:
-        mapping = resolve_titles([e["article"] or e["name"] for e in missing_qid])
-        for entry in missing_qid:
-            hit = mapping.get(entry["article"] or entry["name"]) or {}
-            entry["qid"] = hit.get("qid")
+    """Resolve pt.wikipedia article + QID + sitelink count for every entry.
+
+    A title that does not exist, or lands on a disambiguation page, is cleared
+    (article=None) so it is never measured against the wrong page.
+    """
+    todo = [e for e in entries if e.get("article") and not e.get("resolved")
+            and (e.get("curated") or not e.get("qid"))]
+    if todo:
+        mapping = resolve_titles([e["article"] for e in todo])
+        for entry in todo:
+            hit = mapping.get(entry["article"]) or {}
+            entry["resolved"] = True
+            if not hit.get("title") or hit.get("disambig"):
+                entry["unresolved"] = entry["article"]
+                entry["article"] = None
+                continue
+            entry["article"] = hit["title"]
+            if not entry.get("qid"):
+                entry["qid"] = hit.get("qid")
     qids = [e["qid"] for e in entries if e.get("qid")]
     counts = sitelinks_for(qids)
     for entry in entries:

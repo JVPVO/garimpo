@@ -1,5 +1,7 @@
+import type { MineralId } from "../art/sprites.ts";
+
 export type Stratum = {
-  id: string;
+  id: MineralId;
   label: string;
   fact: string;
   from: number;
@@ -10,15 +12,96 @@ export type Stratum = {
   pTo: number;
 };
 
-/** Seven bands. Depth and rarity share the same axis. */
+/** Eight bands of Brazilian ore, from coal at the surface to diamond at the bottom. */
 export const STRATA: Stratum[] = [
-  { id: "solo", label: "Solo", fact: "argila com seixos", from: 0, to: 20, fill: "#3A2C20", hatch: "var(--hatch-solo)", pFrom: 0, pTo: 0.23 },
-  { id: "arenito", label: "Arenito", fact: "arenito friável", from: 20, to: 80, fill: "#2E2319", hatch: "var(--hatch-arenito)", pFrom: 0.23, pTo: 0.38 },
-  { id: "ardosia", label: "Ardósia", fact: "ardósia, clivagem 76°", from: 80, to: 180, fill: "#26201A", hatch: "var(--hatch-ardosia)", pFrom: 0.38, pTo: 0.57 },
-  { id: "quartzito", label: "Quartzito", fact: "quartzito maciço", from: 180, to: 320, fill: "#34291C", hatch: "var(--hatch-quartzito)", pFrom: 0.57, pTo: 0.76 },
-  { id: "xisto", label: "Xisto", fact: "xisto com veios", from: 320, to: 460, fill: "#221B15", hatch: "var(--hatch-xisto)", pFrom: 0.76, pTo: 0.88 },
-  { id: "gnaisse", label: "Gnaisse", fact: "gnaisse dobrado", from: 460, to: 600, fill: "#1D1712", hatch: "var(--hatch-gnaisse)", pFrom: 0.88, pTo: 0.94 },
-  { id: "kimberlito", label: "Kimberlito", fact: "kimberlito, mineral indicador", from: 600, to: 700, fill: "#16110D", hatch: "var(--hatch-kimberlito)", pFrom: 0.94, pTo: 1 },
+  {
+    id: "carvao",
+    label: "Carvão",
+    fact: "Santa Catarina e Rio Grande do Sul concentram o carvão mineral do país",
+    from: 0,
+    to: 40,
+    fill: "#1f1a17",
+    hatch: "var(--hatch-solo)",
+    pFrom: 0,
+    pTo: 0.2,
+  },
+  {
+    id: "ferro",
+    label: "Ferro",
+    fact: "Carajás, no Pará, é uma das maiores minas de ferro do mundo",
+    from: 40,
+    to: 120,
+    fill: "#3a2019",
+    hatch: "var(--hatch-arenito)",
+    pFrom: 0.2,
+    pTo: 0.35,
+  },
+  {
+    id: "bauxita",
+    label: "Bauxita",
+    fact: "o Pará lidera a produção de bauxita, a rocha do alumínio",
+    from: 120,
+    to: 220,
+    fill: "#4a2a17",
+    hatch: "var(--hatch-ardosia)",
+    pFrom: 0.35,
+    pTo: 0.5,
+  },
+  {
+    id: "cobre",
+    label: "Cobre",
+    fact: "Sossego e Salobo, em Carajás, são minas de cobre",
+    from: 220,
+    to: 330,
+    fill: "#2b2a1d",
+    hatch: "var(--hatch-quartzito)",
+    pFrom: 0.5,
+    pTo: 0.65,
+  },
+  {
+    id: "ouro",
+    label: "Ouro",
+    fact: "Serra Pelada, no Pará, foi o maior garimpo a céu aberto dos anos 1980",
+    from: 330,
+    to: 440,
+    fill: "#33280f",
+    hatch: "var(--hatch-xisto)",
+    pFrom: 0.65,
+    pTo: 0.78,
+  },
+  {
+    id: "esmeralda",
+    label: "Esmeralda",
+    fact: "Bahia, Goiás e Minas Gerais têm garimpos de esmeralda",
+    from: 440,
+    to: 550,
+    fill: "#132a20",
+    hatch: "var(--hatch-gnaisse)",
+    pFrom: 0.78,
+    pTo: 0.88,
+  },
+  {
+    id: "turmalina",
+    label: "Turmalina Paraíba",
+    fact: "descoberta no interior da Paraíba no fim dos anos 1980",
+    from: 550,
+    to: 640,
+    fill: "#0f2629",
+    hatch: "var(--hatch-quartzito)",
+    pFrom: 0.88,
+    pTo: 0.95,
+  },
+  {
+    id: "diamante",
+    label: "Diamante",
+    fact: "Diamantina, em Minas Gerais, nasceu do garimpo de diamante",
+    from: 640,
+    to: 700,
+    fill: "#161c22",
+    hatch: "var(--hatch-kimberlito)",
+    pFrom: 0.95,
+    pTo: 1,
+  },
 ];
 
 export function stratumForDepth(depth: number): Stratum {
@@ -68,6 +151,33 @@ export const CATEGORY_LABEL: Record<string, string> = {
   heroi: "heróis",
   comida_mundo: "comida do mundo",
   marca_global: "marcas globais",
+  apresentador: "apresentadores",
+  bairro_rio: "bairros do Rio",
+  bairro_sp: "bairros de SP",
+  bandas: "bandas",
+  cantor_pt: "cantores de Portugal",
+  cervejas: "cervejas",
+  cidade_pt: "cidades de Portugal",
+  cidades_historicas: "cidades históricas",
+  cientista: "cientistas",
+  escola_samba: "escolas de samba",
+  escritor_pt: "escritores portugueses",
+  f1: "Fórmula 1",
+  humorista: "humoristas",
+  jogador_pt: "jogadores de Portugal",
+  jogadora: "seleção feminina",
+  medalhista: "medalhistas",
+  palavras_pt: "português de Portugal",
+  personagens_novela: "personagens de novela",
+  pontos_turisticos: "pontos turísticos",
+  praias: "praias",
+  prato_pt: "pratos portugueses",
+  programas_tv: "programas de TV",
+  salgados: "salgados",
+  time_pt: "times de Portugal",
+  turma_monica: "Turma da Mônica",
+  volei: "vôlei",
+  youtuber: "youtubers",
 };
 
 export function stratumForRarity(rarity: number): Stratum {

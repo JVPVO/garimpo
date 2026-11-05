@@ -1,0 +1,1571 @@
+{
+  "summary": {
+    "overall": 0.9884868421052632,
+    "probes": 7296,
+    "accepted": 7212,
+    "promptsTested": 185,
+    "promptsBelow90": ["marca-lc"],
+    "falsePositives": 40,
+    "negativesTested": 639,
+    "promptsWithoutProbes": [],
+    "unusedProbeIds": [
+      "cidade-lr",
+      "cidade-lt",
+      "jogador-lm",
+      "jogador-la",
+      "jogador-lg",
+      "jogador-ld",
+      "jogador-lf",
+      "rio-lp",
+      "rio-ls",
+      "rio-la",
+      "fruta-lc",
+      "fruta-lp",
+      "prato-lc",
+      "prato-lb",
+      "prato-lp",
+      "prato-lm",
+      "doce-lb",
+      "doce-lc",
+      "doce-lp",
+      "banda-rock",
+      "globinho-todos",
+      "ave-lp",
+      "mamifero-lc",
+      "mamifero-lm",
+      "fruta-la",
+      "fruta-lb",
+      "fruta-lm",
+      "fruta-lg",
+      "ave-lb",
+      "ave-lc",
+      "ave-lg",
+      "ave-lj",
+      "mamifero-lp",
+      "prato-lf",
+      "doce-lm",
+      "desenho-la",
+      "desenho-lb",
+      "desenho-lp",
+      "cantor-lb",
+      "cantor-ld",
+      "cantor-lg",
+      "cantor-lj",
+      "cantor-lt",
+      "escritor-la",
+      "escritor-lg",
+      "escritor-ll",
+      "escritor-lr",
+      "ator-lj",
+      "ator-ll",
+      "ator-ls",
+      "ator-lt",
+      "marca-la",
+      "marca-lt",
+      "marca-ld",
+      "tupi-lp",
+      "tupi-lc",
+      "tupi-lm",
+      "tupi-la",
+      "tupi-li",
+      "tupi-lj",
+      "pais-la",
+      "pais-lb",
+      "pais-lc",
+      "pais-le",
+      "pais-lg",
+      "pais-li",
+      "pais-lm",
+      "pais-ls",
+      "pais-lt",
+      "cidade-mundo-ll",
+      "cidade-mundo-ls"
+    ]
+  },
+  "prompts": [
+    {
+      "id": "uf-todos",
+      "text": "Cite um estado do Brasil",
+      "probes": 31,
+      "accepted": 31,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "uf-litoral",
+      "text": "Cite um estado brasileiro com litoral",
+      "probes": 17,
+      "accepted": 17,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "capital-br",
+      "text": "Cite uma capital de estado brasileiro",
+      "probes": 31,
+      "accepted": 31,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-todas",
+      "text": "Cite uma cidade brasileira",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": ["lisboa -> João Lisboa"]
+    },
+    {
+      "id": "cidade-500mil",
+      "text": "Cite uma cidade brasileira com mais de 500 mil habitantes",
+      "probes": 42,
+      "accepted": 41,
+      "missed": ["osasco"],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-sp",
+      "text": "Cite uma cidade do estado de São Paulo",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-mg",
+      "text": "Cite uma cidade de Minas Gerais",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": ["vitoria -> Santa Vitória"]
+    },
+    {
+      "id": "cidade-rj",
+      "text": "Cite uma cidade do estado do Rio de Janeiro",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-rs",
+      "text": "Cite uma cidade do Rio Grande do Sul",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-pr",
+      "text": "Cite uma cidade do Paraná",
+      "probes": 40,
+      "accepted": 39,
+      "missed": ["foz"],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-sc",
+      "text": "Cite uma cidade de Santa Catarina",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-ba",
+      "text": "Cite uma cidade da Bahia",
+      "probes": 40,
+      "accepted": 38,
+      "missed": ["morro de sao paulo", "trancoso"],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-nordeste",
+      "text": "Cite uma cidade do Nordeste",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": ["goiania -> Goiana"]
+    },
+    {
+      "id": "cidade-norte",
+      "text": "Cite uma cidade da Região Norte",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-co",
+      "text": "Cite uma cidade do Centro-Oeste",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-la",
+      "text": "Cite uma cidade brasileira que começa com A",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-lb",
+      "text": "Cite uma cidade brasileira que começa com B",
+      "probes": 30,
+      "accepted": 29,
+      "missed": ["buzios"],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-lc",
+      "text": "Cite uma cidade brasileira que começa com C",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-lm",
+      "text": "Cite uma cidade brasileira que começa com M",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-lp",
+      "text": "Cite uma cidade brasileira que começa com P",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-ls",
+      "text": "Cite uma cidade brasileira que começa com S",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-lj",
+      "text": "Cite uma cidade brasileira que começa com J",
+      "probes": 30,
+      "accepted": 29,
+      "missed": ["jaraguari"],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-historica",
+      "text": "Cite uma cidade histórica brasileira",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": ["brasilia -> Brasília"]
+    },
+    {
+      "id": "presidente-todos",
+      "text": "Cite um presidente do Brasil",
+      "probes": 37,
+      "accepted": 37,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cientista",
+      "text": "Cite um cientista ou inventor brasileiro",
+      "probes": 44,
+      "accepted": 44,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "jogador-todos",
+      "text": "Cite um jogador da Seleção Brasileira",
+      "probes": 49,
+      "accepted": 48,
+      "missed": ["marta"],
+      "falsePositives": ["cristiano ronaldo -> Ronaldo"]
+    },
+    {
+      "id": "jogador-atacante",
+      "text": "Cite um atacante da Seleção Brasileira",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "jogador-goleiro",
+      "text": "Cite um goleiro da Seleção Brasileira",
+      "probes": 30,
+      "accepted": 29,
+      "missed": ["danilo fernandes"],
+      "falsePositives": []
+    },
+    {
+      "id": "jogador-zagueiro",
+      "text": "Cite um zagueiro da Seleção Brasileira",
+      "probes": 30,
+      "accepted": 28,
+      "missed": ["gamarra", "beto"],
+      "falsePositives": []
+    },
+    {
+      "id": "jogador-meia",
+      "text": "Cite um meio-campista da Seleção Brasileira",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "jogador-lateral",
+      "text": "Cite um lateral da Seleção Brasileira",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "jogador-lr",
+      "text": "Cite um jogador da Seleção Brasileira cujo nome começa com R",
+      "probes": 26,
+      "accepted": 24,
+      "missed": ["rincon", "romerito"],
+      "falsePositives": []
+    },
+    {
+      "id": "jogadora-todas",
+      "text": "Cite uma jogadora da Seleção Brasileira feminina",
+      "probes": 38,
+      "accepted": 38,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "time-todos",
+      "text": "Cite um time de futebol brasileiro",
+      "probes": 52,
+      "accepted": 52,
+      "missed": [],
+      "falsePositives": ["barcelona -> Barcelona de Ilhéus", "boca juniors -> Boca Júnior-SE"]
+    },
+    {
+      "id": "time-campeao",
+      "text": "Cite um time que já foi campeão brasileiro",
+      "probes": 23,
+      "accepted": 23,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "time-sp",
+      "text": "Cite um time de futebol paulista",
+      "probes": 35,
+      "accepted": 34,
+      "missed": ["guarulhos"],
+      "falsePositives": ["gremio -> Novorizontino"]
+    },
+    {
+      "id": "time-rj",
+      "text": "Cite um time de futebol do estado do Rio de Janeiro",
+      "probes": 24,
+      "accepted": 24,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "time-mg",
+      "text": "Cite um time de futebol mineiro",
+      "probes": 23,
+      "accepted": 21,
+      "missed": ["url", "uniao luziense"],
+      "falsePositives": []
+    },
+    {
+      "id": "time-sul",
+      "text": "Cite um time de futebol do Sul do Brasil",
+      "probes": 31,
+      "accepted": 31,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "time-nordeste",
+      "text": "Cite um time de futebol do Nordeste",
+      "probes": 39,
+      "accepted": 39,
+      "missed": [],
+      "falsePositives": ["flamengo -> Flamengo-PI"]
+    },
+    {
+      "id": "time-la",
+      "text": "Cite um time de futebol brasileiro que começa com A",
+      "probes": 22,
+      "accepted": 22,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "time-lc",
+      "text": "Cite um time de futebol brasileiro que começa com C",
+      "probes": 23,
+      "accepted": 22,
+      "missed": ["cascavel"],
+      "falsePositives": []
+    },
+    {
+      "id": "time-ls",
+      "text": "Cite um time de futebol brasileiro que começa com S",
+      "probes": 20,
+      "accepted": 19,
+      "missed": ["santa rita"],
+      "falsePositives": []
+    },
+    {
+      "id": "time-pt",
+      "text": "Cite um clube de futebol de Portugal",
+      "probes": 31,
+      "accepted": 31,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "jogador-pt",
+      "text": "Cite um jogador da seleção de Portugal",
+      "probes": 50,
+      "accepted": 50,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "estadio-todos",
+      "text": "Cite um estádio de futebol no Brasil",
+      "probes": 47,
+      "accepted": 47,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "volei-todos",
+      "text": "Cite um jogador ou jogadora de vôlei do Brasil",
+      "probes": 70,
+      "accepted": 70,
+      "missed": [],
+      "falsePositives": ["oscar schmidt -> Bruno Schmidt"]
+    },
+    {
+      "id": "f1-br",
+      "text": "Cite um piloto brasileiro de Fórmula 1",
+      "probes": 38,
+      "accepted": 38,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "medalhista",
+      "text": "Cite um medalhista olímpico brasileiro",
+      "probes": 84,
+      "accepted": 84,
+      "missed": [],
+      "falsePositives": ["oscar schmidt -> Bruno Schmidt"]
+    },
+    {
+      "id": "rio-todos",
+      "text": "Cite um rio brasileiro",
+      "probes": 50,
+      "accepted": 50,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "parque-todos",
+      "text": "Cite um parque nacional brasileiro",
+      "probes": 40,
+      "accepted": 38,
+      "missed": ["serra do mar", "jalapao"],
+      "falsePositives": []
+    },
+    {
+      "id": "fruta-todas",
+      "text": "Cite uma fruta nativa do Brasil",
+      "probes": 43,
+      "accepted": 43,
+      "missed": [],
+      "falsePositives": ["banana -> Abacaxi"]
+    },
+    {
+      "id": "fruta-amazonia",
+      "text": "Cite uma fruta da Amazônia",
+      "probes": 26,
+      "accepted": 26,
+      "missed": [],
+      "falsePositives": ["pequi -> Piquiá"]
+    },
+    {
+      "id": "fruta-cerrado",
+      "text": "Cite uma fruta do Cerrado",
+      "probes": 24,
+      "accepted": 24,
+      "missed": [],
+      "falsePositives": ["banana -> Abacaxi", "jabuticaba -> Jabuticaba-do-cerrado"]
+    },
+    {
+      "id": "fruta-mata",
+      "text": "Cite uma fruta da Mata Atlântica",
+      "probes": 23,
+      "accepted": 23,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "fruta-caatinga",
+      "text": "Cite uma fruta da Caatinga",
+      "probes": 15,
+      "accepted": 15,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ave-todas",
+      "text": "Cite uma ave brasileira",
+      "probes": 55,
+      "accepted": 53,
+      "missed": ["marreco", "irere"],
+      "falsePositives": []
+    },
+    {
+      "id": "ave-la",
+      "text": "Cite uma ave brasileira que começa com A",
+      "probes": 22,
+      "accepted": 22,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ave-ls",
+      "text": "Cite uma ave brasileira que começa com S",
+      "probes": 11,
+      "accepted": 11,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ave-lt",
+      "text": "Cite uma ave brasileira que começa com T",
+      "probes": 11,
+      "accepted": 11,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "mamifero-todos",
+      "text": "Cite um mamífero da fauna brasileira",
+      "probes": 55,
+      "accepted": 52,
+      "missed": ["porco espinho", "cuxiú", "tapir"],
+      "falsePositives": [
+        "leao -> Onça-parda",
+        "elefante -> Elefante-marinho",
+        "canguru -> Onça-pintada"
+      ]
+    },
+    {
+      "id": "prato-todos",
+      "text": "Cite um prato típico brasileiro",
+      "probes": 56,
+      "accepted": 56,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "prato-nordeste",
+      "text": "Cite um prato típico do Nordeste",
+      "probes": 42,
+      "accepted": 42,
+      "missed": [],
+      "falsePositives": ["tacaca -> Acaçá"]
+    },
+    {
+      "id": "prato-bahia",
+      "text": "Cite um prato típico da Bahia",
+      "probes": 22,
+      "accepted": 22,
+      "missed": [],
+      "falsePositives": ["tacaca -> Acaçá"]
+    },
+    {
+      "id": "prato-minas",
+      "text": "Cite um prato típico de Minas Gerais",
+      "probes": 22,
+      "accepted": 21,
+      "missed": ["chouriço"],
+      "falsePositives": []
+    },
+    {
+      "id": "prato-sul",
+      "text": "Cite um prato típico do Sul",
+      "probes": 19,
+      "accepted": 19,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "prato-norte",
+      "text": "Cite um prato típico do Norte",
+      "probes": 21,
+      "accepted": 21,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "prato-sudeste",
+      "text": "Cite um prato típico do Sudeste",
+      "probes": 22,
+      "accepted": 22,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "prato-co",
+      "text": "Cite um prato típico do Centro-Oeste",
+      "probes": 16,
+      "accepted": 16,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "doce-todos",
+      "text": "Cite um doce brasileiro",
+      "probes": 48,
+      "accepted": 48,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "salgado-festa",
+      "text": "Cite um salgadinho de festa",
+      "probes": 32,
+      "accepted": 32,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "petisco-boteco",
+      "text": "Cite um petisco de boteco",
+      "probes": 39,
+      "accepted": 39,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "bebida-todas",
+      "text": "Cite uma bebida brasileira",
+      "probes": 31,
+      "accepted": 31,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "refrigerante-br",
+      "text": "Cite um refrigerante de marca brasileira",
+      "probes": 20,
+      "accepted": 19,
+      "missed": ["frutaina"],
+      "falsePositives": []
+    },
+    {
+      "id": "cerveja-br",
+      "text": "Cite uma marca de cerveja brasileira",
+      "probes": 35,
+      "accepted": 35,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "prato-pt",
+      "text": "Cite um prato ou doce típico de Portugal",
+      "probes": 50,
+      "accepted": 50,
+      "missed": [],
+      "falsePositives": ["feijoada -> Feijoada à transmontana"]
+    },
+    {
+      "id": "novela-globo",
+      "text": "Cite uma novela da Globo",
+      "probes": 54,
+      "accepted": 53,
+      "missed": ["beleza fatal"],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-todas",
+      "text": "Cite uma novela brasileira",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": ["maria do bairro -> Maria, Maria"]
+    },
+    {
+      "id": "novela-70",
+      "text": "Cite uma novela dos anos 1970",
+      "probes": 27,
+      "accepted": 27,
+      "missed": [],
+      "falsePositives": ["roque santeiro -> Roque Santeiro"]
+    },
+    {
+      "id": "novela-80",
+      "text": "Cite uma novela dos anos 1980",
+      "probes": 27,
+      "accepted": 26,
+      "missed": ["o amor esta no ar"],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-90",
+      "text": "Cite uma novela dos anos 1990",
+      "probes": 35,
+      "accepted": 35,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-2000",
+      "text": "Cite uma novela dos anos 2000",
+      "probes": 37,
+      "accepted": 36,
+      "missed": ["agua na boca"],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-2010",
+      "text": "Cite uma novela dos anos 2010",
+      "probes": 42,
+      "accepted": 41,
+      "missed": ["tititi"],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-2020",
+      "text": "Cite uma novela de 2020 para cá",
+      "probes": 26,
+      "accepted": 26,
+      "missed": [],
+      "falsePositives": ["avenida brasil -> Avenida Brasil 2"]
+    },
+    {
+      "id": "novela-seis",
+      "text": "Cite uma novela das seis da Globo",
+      "probes": 24,
+      "accepted": 24,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-sete",
+      "text": "Cite uma novela das sete da Globo",
+      "probes": 34,
+      "accepted": 31,
+      "missed": ["explode coracao", "cara e coragem", "a gata comeu"],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-nove",
+      "text": "Cite uma novela das oito ou das nove da Globo",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-sbt",
+      "text": "Cite uma novela produzida pelo SBT",
+      "probes": 29,
+      "accepted": 28,
+      "missed": ["Pra Sempre Amor"],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-record",
+      "text": "Cite uma novela da Record",
+      "probes": 34,
+      "accepted": 34,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-la",
+      "text": "Cite uma novela brasileira que começa com A",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-lo",
+      "text": "Cite uma novela brasileira que começa com O",
+      "probes": 30,
+      "accepted": 29,
+      "missed": ["o sabor da paixao"],
+      "falsePositives": []
+    },
+    {
+      "id": "novela-lt",
+      "text": "Cite uma novela brasileira que começa com T",
+      "probes": 12,
+      "accepted": 11,
+      "missed": ["tititi"],
+      "falsePositives": []
+    },
+    {
+      "id": "personagem-novela",
+      "text": "Cite um personagem marcante de novela",
+      "probes": 48,
+      "accepted": 48,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "filme-todos",
+      "text": "Cite um filme brasileiro",
+      "probes": 53,
+      "accepted": 53,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "filme-90",
+      "text": "Cite um filme brasileiro dos anos 1990",
+      "probes": 15,
+      "accepted": 15,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "filme-2000",
+      "text": "Cite um filme brasileiro dos anos 2000",
+      "probes": 39,
+      "accepted": 37,
+      "missed": ["a mulher invisivel", "o maior amor do mundo"],
+      "falsePositives": []
+    },
+    {
+      "id": "filme-2010",
+      "text": "Cite um filme brasileiro dos anos 2010",
+      "probes": 43,
+      "accepted": 42,
+      "missed": ["real o plano por tras da historia"],
+      "falsePositives": []
+    },
+    {
+      "id": "filme-lo",
+      "text": "Cite um filme brasileiro que começa com O",
+      "probes": 30,
+      "accepted": 28,
+      "missed": ["o menino maluquinho", "o maior amor do mundo"],
+      "falsePositives": []
+    },
+    {
+      "id": "filme-la",
+      "text": "Cite um filme brasileiro que começa com A",
+      "probes": 10,
+      "accepted": 9,
+      "missed": ["auto da compadecida"],
+      "falsePositives": []
+    },
+    {
+      "id": "filme-lc",
+      "text": "Cite um filme brasileiro que começa com C",
+      "probes": 11,
+      "accepted": 11,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "programa-tv",
+      "text": "Cite um programa da TV brasileira",
+      "probes": 75,
+      "accepted": 75,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "apresentador",
+      "text": "Cite um apresentador ou uma apresentadora da TV brasileira",
+      "probes": 59,
+      "accepted": 59,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "humorista",
+      "text": "Cite um humorista brasileiro",
+      "probes": 60,
+      "accepted": 59,
+      "missed": ["chico city"],
+      "falsePositives": ["chaves -> Juca Chaves"]
+    },
+    {
+      "id": "youtuber",
+      "text": "Cite um youtuber ou influenciador brasileiro",
+      "probes": 57,
+      "accepted": 56,
+      "missed": ["flow podcast"],
+      "falsePositives": []
+    },
+    {
+      "id": "bbb-todos",
+      "text": "Cite um participante do Big Brother Brasil",
+      "probes": 82,
+      "accepted": 81,
+      "missed": ["boninho"],
+      "falsePositives": []
+    },
+    {
+      "id": "bbb-campeao",
+      "text": "Cite um campeão do Big Brother Brasil",
+      "probes": 38,
+      "accepted": 38,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "desenho-todos",
+      "text": "Cite um desenho animado que marcou a sua infância",
+      "probes": 97,
+      "accepted": 94,
+      "missed": ["looney tunes", "castelo ra tim bum", "teletubbies"],
+      "falsePositives": []
+    },
+    {
+      "id": "turma-monica",
+      "text": "Cite um personagem da Turma da Mônica",
+      "probes": 57,
+      "accepted": 56,
+      "missed": ["rita najura"],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-todos",
+      "text": "Cite um cantor ou uma cantora brasileira",
+      "probes": 81,
+      "accepted": 81,
+      "missed": [],
+      "falsePositives": ["beyonce -> Ludmilla"]
+    },
+    {
+      "id": "cantora",
+      "text": "Cite uma cantora brasileira",
+      "probes": 50,
+      "accepted": 49,
+      "missed": ["pabllo vittar"],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-masc",
+      "text": "Cite um cantor brasileiro",
+      "probes": 25,
+      "accepted": 25,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-mpb",
+      "text": "Cite um cantor ou cantora de MPB",
+      "probes": 50,
+      "accepted": 50,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-sertanejo",
+      "text": "Cite um cantor, cantora ou dupla sertaneja",
+      "probes": 52,
+      "accepted": 52,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-funk",
+      "text": "Cite um MC, cantor ou grupo de funk",
+      "probes": 49,
+      "accepted": 49,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-forro",
+      "text": "Cite um cantor ou banda de forró",
+      "probes": 44,
+      "accepted": 44,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-samba",
+      "text": "Cite um cantor ou grupo de samba ou pagode",
+      "probes": 48,
+      "accepted": 48,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-axe",
+      "text": "Cite um cantor ou banda de axé",
+      "probes": 38,
+      "accepted": 38,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-rap",
+      "text": "Cite um rapper ou grupo de rap brasileiro",
+      "probes": 50,
+      "accepted": 49,
+      "missed": ["detentos do rap"],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-gospel",
+      "text": "Cite um cantor, cantora ou banda gospel brasileira",
+      "probes": 39,
+      "accepted": 39,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-rock",
+      "text": "Cite um cantor ou banda do rock brasileiro",
+      "probes": 51,
+      "accepted": 51,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "dupla-sertaneja",
+      "text": "Cite uma dupla sertaneja",
+      "probes": 40,
+      "accepted": 40,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-la",
+      "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com A",
+      "probes": 13,
+      "accepted": 13,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-lc",
+      "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com C",
+      "probes": 12,
+      "accepted": 12,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-lm",
+      "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com M",
+      "probes": 12,
+      "accepted": 12,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-lr",
+      "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com R",
+      "probes": 10,
+      "accepted": 9,
+      "missed": ["raimundo fagner"],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-ll",
+      "text": "Cite um cantor ou uma cantora do Brasil cujo nome começa com L",
+      "probes": 11,
+      "accepted": 11,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "banda-br",
+      "text": "Cite uma banda ou grupo musical brasileiro",
+      "probes": 60,
+      "accepted": 60,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cantor-pt",
+      "text": "Cite um cantor, cantora ou banda de Portugal",
+      "probes": 48,
+      "accepted": 47,
+      "missed": ["paulo goncalves"],
+      "falsePositives": []
+    },
+    {
+      "id": "escritor-todos",
+      "text": "Cite um escritor ou uma escritora brasileira",
+      "probes": 54,
+      "accepted": 54,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "escritora",
+      "text": "Cite uma escritora brasileira",
+      "probes": 40,
+      "accepted": 37,
+      "missed": ["chiquinha gonzaga", "rosa amanda strausz", "orides fontela"],
+      "falsePositives": []
+    },
+    {
+      "id": "escritor-lc",
+      "text": "Cite um escritor brasileiro cujo nome começa com C",
+      "probes": 20,
+      "accepted": 19,
+      "missed": ["celso furtado"],
+      "falsePositives": []
+    },
+    {
+      "id": "escritor-lm",
+      "text": "Cite um escritor brasileiro cujo nome começa com M",
+      "probes": 20,
+      "accepted": 19,
+      "missed": ["mia couto"],
+      "falsePositives": []
+    },
+    {
+      "id": "escritor-lj",
+      "text": "Cite um escritor brasileiro cujo nome começa com J",
+      "probes": 17,
+      "accepted": 17,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "escritor-pt",
+      "text": "Cite um escritor ou poeta português",
+      "probes": 45,
+      "accepted": 45,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ator-todos",
+      "text": "Cite um ator ou uma atriz brasileira",
+      "probes": 60,
+      "accepted": 60,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "atriz",
+      "text": "Cite uma atriz brasileira",
+      "probes": 50,
+      "accepted": 50,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ator-masc",
+      "text": "Cite um ator brasileiro",
+      "probes": 50,
+      "accepted": 50,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ator-lm",
+      "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com M",
+      "probes": 29,
+      "accepted": 29,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ator-lc",
+      "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com C",
+      "probes": 20,
+      "accepted": 20,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ator-lf",
+      "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com F",
+      "probes": 20,
+      "accepted": 20,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ator-lr",
+      "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com R",
+      "probes": 20,
+      "accepted": 20,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "ator-la",
+      "text": "Cite um ator ou uma atriz do Brasil cujo nome começa com A",
+      "probes": 11,
+      "accepted": 11,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "marca-todas",
+      "text": "Cite uma marca brasileira",
+      "probes": 174,
+      "accepted": 172,
+      "missed": ["51", "trakinas"],
+      "falsePositives": []
+    },
+    {
+      "id": "banco-br",
+      "text": "Cite um banco brasileiro",
+      "probes": 42,
+      "accepted": 40,
+      "missed": ["mercantil", "abc brasil"],
+      "falsePositives": []
+    },
+    {
+      "id": "marca-moda",
+      "text": "Cite uma marca brasileira de roupa ou calçado",
+      "probes": 61,
+      "accepted": 61,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "marca-lb",
+      "text": "Cite uma marca brasileira que começa com B",
+      "probes": 23,
+      "accepted": 22,
+      "missed": ["boticario"],
+      "falsePositives": []
+    },
+    {
+      "id": "marca-lc",
+      "text": "Cite uma marca brasileira que começa com C",
+      "probes": 29,
+      "accepted": 26,
+      "missed": ["cerpa", "chocolates garoto", "cia hering"],
+      "falsePositives": []
+    },
+    {
+      "id": "marca-lp",
+      "text": "Cite uma marca brasileira que começa com P",
+      "probes": 25,
+      "accepted": 23,
+      "missed": ["paquetá", "posto ipiranga"],
+      "falsePositives": ["puma -> Puma"]
+    },
+    {
+      "id": "marca-ls",
+      "text": "Cite uma marca brasileira que começa com S",
+      "probes": 25,
+      "accepted": 24,
+      "missed": ["soya"],
+      "falsePositives": []
+    },
+    {
+      "id": "marca-lm",
+      "text": "Cite uma marca brasileira que começa com M",
+      "probes": 22,
+      "accepted": 22,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "folclore-todos",
+      "text": "Cite uma criatura ou lenda do folclore brasileiro",
+      "probes": 46,
+      "accepted": 46,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "festa-todas",
+      "text": "Cite uma festa popular brasileira",
+      "probes": 44,
+      "accepted": 43,
+      "missed": ["festa da laranja"],
+      "falsePositives": []
+    },
+    {
+      "id": "danca-todas",
+      "text": "Cite uma dança ou ritmo brasileiro",
+      "probes": 43,
+      "accepted": 43,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "instrumento-todos",
+      "text": "Cite um instrumento musical brasileiro",
+      "probes": 41,
+      "accepted": 40,
+      "missed": ["berra boi"],
+      "falsePositives": ["piano -> Piano de Cuia", "gaita de fole -> Sanfona"]
+    },
+    {
+      "id": "instrumento-perc",
+      "text": "Cite um instrumento de percussão brasileiro",
+      "probes": 29,
+      "accepted": 29,
+      "missed": [],
+      "falsePositives": ["piano -> Piano de Cuia"]
+    },
+    {
+      "id": "escola-samba",
+      "text": "Cite uma escola de samba do Rio ou de São Paulo",
+      "probes": 57,
+      "accepted": 56,
+      "missed": ["santa cruz"],
+      "falsePositives": []
+    },
+    {
+      "id": "tupi-todas",
+      "text": "Cite uma palavra de origem indígena que usamos no português",
+      "probes": 84,
+      "accepted": 84,
+      "missed": [],
+      "falsePositives": ["samba -> Gambá"]
+    },
+    {
+      "id": "giria-todas",
+      "text": "Cite uma gíria brasileira",
+      "probes": 97,
+      "accepted": 97,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "giria-nordeste",
+      "text": "Cite uma gíria ou expressão nordestina",
+      "probes": 48,
+      "accepted": 47,
+      "missed": ["aboiar"],
+      "falsePositives": []
+    },
+    {
+      "id": "giria-sul",
+      "text": "Cite uma gíria ou expressão gaúcha",
+      "probes": 38,
+      "accepted": 38,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "giria-rio",
+      "text": "Cite uma gíria carioca",
+      "probes": 43,
+      "accepted": 41,
+      "missed": ["gata", "suave"],
+      "falsePositives": []
+    },
+    {
+      "id": "giria-minas",
+      "text": "Cite uma expressão típica de Minas Gerais",
+      "probes": 28,
+      "accepted": 28,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "palavra-pt",
+      "text": "Cite uma palavra do português de Portugal que é diferente no Brasil (como “autocarro”)",
+      "probes": 67,
+      "accepted": 66,
+      "missed": ["sítio"],
+      "falsePositives": []
+    },
+    {
+      "id": "praia-todas",
+      "text": "Cite uma praia brasileira",
+      "probes": 86,
+      "accepted": 85,
+      "missed": ["garopaba"],
+      "falsePositives": ["copacabana bolivia -> Copacabana"]
+    },
+    {
+      "id": "ponto-turistico",
+      "text": "Cite um ponto turístico do Brasil",
+      "probes": 103,
+      "accepted": 103,
+      "missed": [],
+      "falsePositives": ["estatua da liberdade -> Liberdade"]
+    },
+    {
+      "id": "bairro-rio",
+      "text": "Cite um bairro da cidade do Rio de Janeiro",
+      "probes": 79,
+      "accepted": 79,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "bairro-sp",
+      "text": "Cite um bairro da cidade de São Paulo",
+      "probes": 92,
+      "accepted": 92,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-pt",
+      "text": "Cite uma cidade de Portugal",
+      "probes": 50,
+      "accepted": 50,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "pais-todos",
+      "text": "Cite um país do mundo",
+      "probes": 74,
+      "accepted": 74,
+      "missed": [],
+      "falsePositives": ["africa -> África do Sul", "escocia -> Reino Unido"]
+    },
+    {
+      "id": "pais-lusofono",
+      "text": "Cite um país onde o português é língua oficial",
+      "probes": 9,
+      "accepted": 9,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "pais-europa",
+      "text": "Cite um país da Europa",
+      "probes": 47,
+      "accepted": 46,
+      "missed": ["holanda"],
+      "falsePositives": []
+    },
+    {
+      "id": "pais-africa",
+      "text": "Cite um país da África",
+      "probes": 54,
+      "accepted": 54,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "pais-asia",
+      "text": "Cite um país da Ásia",
+      "probes": 49,
+      "accepted": 45,
+      "missed": ["turquia", "cazaquistao", "georgia", "taiwan"],
+      "falsePositives": []
+    },
+    {
+      "id": "pais-america-sul",
+      "text": "Cite um país da América do Sul",
+      "probes": 12,
+      "accepted": 12,
+      "missed": [],
+      "falsePositives": ["guiana francesa -> Guiana"]
+    },
+    {
+      "id": "capital-todas",
+      "text": "Cite a capital de algum país",
+      "probes": 68,
+      "accepted": 68,
+      "missed": [],
+      "falsePositives": ["sao paulo -> Luanda"]
+    },
+    {
+      "id": "capital-europa",
+      "text": "Cite uma capital da Europa",
+      "probes": 46,
+      "accepted": 46,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "capital-africa",
+      "text": "Cite uma capital da África",
+      "probes": 20,
+      "accepted": 20,
+      "missed": [],
+      "falsePositives": ["cidade do cabo -> Cidade do Cabo"]
+    },
+    {
+      "id": "capital-asia",
+      "text": "Cite uma capital da Ásia",
+      "probes": 25,
+      "accepted": 23,
+      "missed": ["taipe", "ancara"],
+      "falsePositives": []
+    },
+    {
+      "id": "capital-america",
+      "text": "Cite uma capital das Américas",
+      "probes": 30,
+      "accepted": 30,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-mundo-todas",
+      "text": "Cite uma cidade do mundo (fora do Brasil)",
+      "probes": 92,
+      "accepted": 92,
+      "missed": [],
+      "falsePositives": ["sao paulo -> Luanda"]
+    },
+    {
+      "id": "cidade-mundo-lb",
+      "text": "Cite uma cidade do mundo que começa com B",
+      "probes": 15,
+      "accepted": 15,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-mundo-lc",
+      "text": "Cite uma cidade do mundo que começa com C",
+      "probes": 14,
+      "accepted": 14,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-mundo-lm",
+      "text": "Cite uma cidade do mundo que começa com M",
+      "probes": 15,
+      "accepted": 15,
+      "missed": [],
+      "falsePositives": []
+    },
+    {
+      "id": "cidade-mundo-lp",
+      "text": "Cite uma cidade do mundo que começa com P",
+      "probes": 13,
+      "accepted": 13,
+      "missed": [],
+      "falsePositives": ["porto alegre -> Porto"]
+    },
+    {
+      "id": "elemento-todos",
+      "text": "Cite um elemento químico",
+      "probes": 66,
+      "accepted": 66,
+      "missed": [],
+      "falsePositives": []
+    }
+  ]
+}

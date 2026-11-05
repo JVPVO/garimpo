@@ -1,4 +1,6 @@
 import { STRATA, stratumForDepth } from "../game/strata.ts";
+
+const lowerFirst = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
 import type { Dive } from "../game/types.ts";
 import type { Store } from "../game/storage.ts";
 
@@ -37,11 +39,12 @@ function MiniPlate({ depth }: { depth: number }) {
 export function Log({ store, onOpen, onHome }: Props) {
   const dives = store.dives;
   return (
-    <div className="stage-narrow" style={{ maxWidth: 900 }}>
+    <div className="stage-narrow panel" style={{ maxWidth: 900 }}>
       <div className="page-head">
         <h1>Arquivo</h1>
         <span className="quiet">
-          {dives.length} {dives.length === 1 ? "poço" : "poços"} · {store.streak.count} em sequência
+          {dives.length} {dives.length === 1 ? "poço" : "poços"}{" "}
+          {store.streak.count > 1 ? ` · ${store.streak.count} em sequência` : ""}
         </span>
       </div>
 
@@ -52,7 +55,9 @@ export function Log({ store, onOpen, onHome }: Props) {
             <br />
             aberto.
           </h1>
-          <p>Cada descida fica registrada aqui com a profundidade e as sete respostas que você deu.</p>
+          <p>
+            Cada descida fica registrada aqui com a profundidade e as sete respostas que você deu.
+          </p>
           <button type="button" className="btn" onClick={onHome} style={{ maxWidth: 320 }}>
             Descer
             <span className="btn-meta">7 perguntas</span>
@@ -66,7 +71,8 @@ export function Log({ store, onOpen, onHome }: Props) {
                 <MiniPlate depth={dive.depth} />
                 <span className="when">
                   <b>{dive.label}</b>
-                  {dive.mode === "daily" ? "diário" : "ilimitado"} · {stratumForDepth(dive.depth).label.toLowerCase()}
+                  {dive.mode === "daily" ? "diário" : "ilimitado"} ·{" "}
+                  {lowerFirst(stratumForDepth(dive.depth).label)}
                 </span>
                 <span className="depth">{dive.depth} m</span>
                 <span className="mono" style={{ fontSize: 11, color: "var(--iron)" }}>
